@@ -48,12 +48,6 @@ const NavBar: React.FC = () => {
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="bg-redwood text-cream px-4 py-2 rounded-md text-sm font-medium hover:bg-redwood/90 transition-colors font-body focus:outline-none focus:ring-2 focus:ring-cream"
-            >
-              Get In Touch
-            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -108,13 +102,6 @@ const NavBar: React.FC = () => {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                href="/contact"
-                className="block bg-redwood text-cream px-3 py-2 rounded-md text-base font-medium hover:bg-redwood/90 transition-colors font-body"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Get In Touch
-              </Link>
             </div>
           </div>
         )}

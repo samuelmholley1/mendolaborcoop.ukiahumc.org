@@ -6,6 +6,14 @@
 
 /* CSS Custom Properties for Mendo Labor Coop brand colors */
 :root {
+  /* New brand color system */
+  --redwood: #7A3E2E;
+  --moss: #3D6B47;
+  --river: #2D637A;
+  --sand: #E6D9C7;
+  --cream: #FAF7F2;
+  
+  /* Legacy color system (keeping for backward compatibility) */
   --color-solidarity-red: #d63031;
   --color-earth-green: #00b894;
   --color-hope-gold: #fdcb6e;
