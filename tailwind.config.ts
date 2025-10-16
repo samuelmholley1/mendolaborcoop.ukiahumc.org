@@ -10,12 +10,13 @@ const config: Config = {
     extend: {
       fontFamily: {
         'headline': ['Public Sans', 'sans-serif'],
-        'body': ['Source Sans 3', 'sans-serif'],
+        'body': ['Public Sans', 'sans-serif'],
       },
       colors: {
         // Brand color tokens
         'redwood': 'var(--redwood)',
         'moss': 'var(--moss)',
+        'gold': 'var(--gold)',
         'river': 'var(--river)',
         'sand': 'var(--sand)',
         'cream': 'var(--cream)',

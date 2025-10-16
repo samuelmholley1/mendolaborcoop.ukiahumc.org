@@ -24,12 +24,14 @@ const NavBar: React.FC = () => {
             <Link href="/" className="flex-shrink-0 flex items-center">
               <img 
                 src="/mendo_labor_coop_favicon.png" 
-                alt="Mendo Labor Cooperative Logo" 
-                className="h-10 w-10 mr-3"
+                alt="Mendo Labor Cooperative Icon" 
+                className="h-10 w-10"
               />
-              <span className="text-xl font-headline font-bold text-cream">
-                Mendo Labor Cooperative
-              </span>
+              <img 
+                src="/mendo_labor_coop_logo_text.png" 
+                alt="Mendo Labor Cooperative" 
+                className="h-8 ml-3"
+              />
             </Link>
           </div>
           

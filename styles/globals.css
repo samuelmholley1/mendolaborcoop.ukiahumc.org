@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +8,8 @@
 :root {
   /* New brand color system */
   --redwood: #7A3E2E;
-  --moss: #3D6B47;
+  --moss: #4C6E4F;
+  --gold: #D6AE78;
   --river: #2D637A;
   --sand: #E6D9C7;
   --cream: #FAF7F2;
@@ -31,7 +32,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,23 +42,23 @@ body {
 
 /* Headline font styling */
 h2, h3, h4, h5, h6 {
-  font-family: 'Merriweather', serif;
+  font-family: 'Public Sans', sans-serif;
   font-weight: 700;
   color: var(--color-solidarity-red);
 }
 
 /* h1 elements inherit color from their parent unless overridden */
 h1 {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 800;
 }
 
 .font-headline {
-  font-family: 'Merriweather', serif;
+  font-family: 'Public Sans', sans-serif;
 }
 
 .font-body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Public Sans', sans-serif;
 }
 
 /* Ensure custom colors work even if Tailwind doesn't load */
