@@ -27,13 +27,9 @@ const NavBar: React.FC = () => {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <img 
-                src="/logo.png" 
+                src="/mendo_labor_coop_logo.png" 
                 alt="Mendo Labor Cooperative Logo" 
                 className="h-10 w-auto mr-3"
-                onError={(e) => {
-                  // Fallback if logo doesn't exist yet
-                  e.currentTarget.style.display = 'none';
-                }}
               />
               <span className="text-xl font-headline font-bold text-redwood">
                 Mendo Labor Cooperative
