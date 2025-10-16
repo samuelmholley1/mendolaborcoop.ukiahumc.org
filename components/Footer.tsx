@@ -35,26 +35,6 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-cream hover:text-sand transition-colors font-body">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/get-help" className="text-cream hover:text-sand transition-colors font-body">
-                  Get Help
-                </Link>
-              </li>
-              <li>
-                <Link href="/join" className="text-cream hover:text-sand transition-colors font-body">
-                  Join the Cooperative
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources" className="text-cream hover:text-sand transition-colors font-body">
-                  Resources
-                </Link>
-              </li>
-              <li>
                 <Link href="/contact" className="text-cream hover:text-sand transition-colors font-body">
                   Contact
                 </Link>
@@ -66,8 +46,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-headline font-bold mb-4 text-cream">Get Connected</h3>
             <div className="space-y-2 text-cream font-body">
-              <p>📧 <a href="mailto:info@mendolaborcoop.ukiahumc.org" className="underline">info@mendolaborcoop.ukiahumc.org</a></p>
-              <p>📞 Call/Text: (TBD)</p>
+              <p>� Phone: Coming soon</p>
               <p className="pt-2">Serving unhoused workers in Mendocino County</p>
               <p>Mutual aid • Worker organizing • Economic justice</p>
             </div>

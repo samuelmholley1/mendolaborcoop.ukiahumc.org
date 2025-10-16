@@ -52,11 +52,6 @@ const HomePage: React.FC = () => {
               "@type": "Organization",
               "name": "Mendo Labor Cooperative",
               "areaServed": "Mendocino County",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "email": "info@mendolaborcoop.ukiahumc.org",
-                "telephone": "+1-XXX-XXX-XXXX"
-              },
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Ukiah",
