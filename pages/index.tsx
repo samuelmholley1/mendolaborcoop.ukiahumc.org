@@ -10,7 +10,6 @@ Add to tailwind.config.ts theme.extend.colors:
 
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const HomePage: React.FC = () => {
@@ -124,24 +123,13 @@ const HomePage: React.FC = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <svg
+              <img
+                src="/mendo_labor_coop_favicon.png"
+                alt="Mendo Labor Cooperative Logo"
                 width="40"
                 height="40"
-                viewBox="0 0 40 40"
                 className="mr-3"
-                aria-label="Mendo Labor Cooperative Logo"
-              >
-                <rect width="40" height="40" fill="var(--redwood)" rx="4" />
-                <path
-                  d="M8 12h6v16h-6zm10 0h6v16h-6zm10 0h6v16h-6z"
-                  fill="var(--cream)"
-                />
-                <circle cx="20" cy="10" r="6" fill="var(--cream)" />
-                <path
-                  d="M16 8h8v4h-8z"
-                  fill="var(--redwood)"
-                />
-              </svg>
+              />
               <span className="font-headline font-bold text-redwood text-lg">
                 Mendo Labor Cooperative
               </span>
@@ -202,27 +190,8 @@ const HomePage: React.FC = () => {
       <main id="content">
         {/* Hero Section */}
         <section className="relative h-screen min-h-[600px] w-full overflow-hidden">
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <Image
-              src="/hero-workers.jpg"
-              alt="Skilled workers from Ukiah and Mendocino County working together"
-              fill
-              priority
-              className="object-cover"
-              style={{ 
-                backgroundColor: 'var(--sand)' // Fallback if image missing
-              }}
-              onError={(e) => {
-                // Fallback to solid color background if image fails
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-              }}
-            />
-          </div>
-          
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-[color:var(--sand)] bg-opacity-75"></div>
+          {/* Background - Solid color (no image) */}
+          <div className="absolute inset-0 bg-sand"></div>
           
           {/* Content */}
           <div className="relative z-10 h-full flex items-center">
@@ -230,25 +199,14 @@ const HomePage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 {/* Left Column */}
                 <div className="text-center md:text-left">
-                  {/* Small Logo */}
-                  <svg
-                    width="60"
-                    height="60"
-                    viewBox="0 0 40 40"
+                  {/* Logo */}
+                  <img
+                    src="/mendo_labor_coop_logo.png"
+                    alt="Mendo Labor Cooperative Logo"
+                    width="120"
+                    height="120"
                     className="mb-6 mx-auto md:mx-0"
-                    aria-label="Mendo Labor Cooperative Logo"
-                  >
-                    <rect width="40" height="40" fill="var(--redwood)" rx="4" />
-                    <path
-                      d="M8 12h6v16h-6zm10 0h6v16h-6zm10 0h6v16h-6z"
-                      fill="var(--cream)"
-                    />
-                    <circle cx="20" cy="10" r="6" fill="var(--cream)" />
-                    <path
-                      d="M16 8h8v4h-8z"
-                      fill="var(--redwood)"
-                    />
-                  </svg>
+                  />
                   
                   {/* Headlines */}
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-redwood mb-4">

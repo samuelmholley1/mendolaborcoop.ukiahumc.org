@@ -9,10 +9,6 @@ const NavBar: React.FC = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Get Help', href: '/get-help' },
-    { name: 'Join Us', href: '/join' },
-    { name: 'Resources', href: '/resources' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -21,17 +17,17 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-cream border-b border-sand">
+    <nav className="bg-moss border-b border-moss">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <img 
-                src="/mendo_labor_coop_logo.png" 
+                src="/mendo_labor_coop_favicon.png" 
                 alt="Mendo Labor Cooperative Logo" 
-                className="h-10 w-auto mr-3"
+                className="h-10 w-10 mr-3"
               />
-              <span className="text-xl font-headline font-bold text-redwood">
+              <span className="text-xl font-headline font-bold text-cream">
                 Mendo Labor Cooperative
               </span>
             </Link>
@@ -45,18 +41,18 @@ const NavBar: React.FC = () => {
                 href={item.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActivePage(item.href)
-                    ? 'text-redwood bg-cream'
-                    : 'text-redwood hover:text-moss hover:bg-cream'
+                    ? 'text-cream bg-moss/80'
+                    : 'text-cream hover:text-sand hover:bg-moss/60'
                 } font-body`}
               >
                 {item.name}
               </Link>
             ))}
             <Link
-              href="/get-help"
-              className="bg-redwood text-cream px-4 py-2 rounded-md text-sm font-medium hover:bg-redwood/90 transition-colors font-body focus:outline-none focus:ring-2 focus:ring-moss"
+              href="/contact"
+              className="bg-redwood text-cream px-4 py-2 rounded-md text-sm font-medium hover:bg-redwood/90 transition-colors font-body focus:outline-none focus:ring-2 focus:ring-cream"
             >
-              Get Help Now
+              Get In Touch
             </Link>
           </div>
 
@@ -64,7 +60,7 @@ const NavBar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-redwood hover:text-moss focus:outline-none focus:text-moss focus:ring-2 focus:ring-moss rounded"
+              className="text-cream hover:text-sand focus:outline-none focus:text-sand focus:ring-2 focus:ring-cream rounded"
               aria-expanded={isMenuOpen}
               aria-label="Toggle navigation menu"
             >
@@ -97,15 +93,15 @@ const NavBar: React.FC = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-cream">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-moss">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                     isActivePage(item.href)
-                      ? 'text-redwood bg-cream'
-                      : 'text-redwood hover:text-moss hover:bg-cream'
+                      ? 'text-cream bg-moss/80'
+                      : 'text-cream hover:text-sand hover:bg-moss/60'
                   } font-body`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -113,11 +109,11 @@ const NavBar: React.FC = () => {
                 </Link>
               ))}
               <Link
-                href="/get-help"
+                href="/contact"
                 className="block bg-redwood text-cream px-3 py-2 rounded-md text-base font-medium hover:bg-redwood/90 transition-colors font-body"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Get Help Now
+                Get In Touch
               </Link>
             </div>
           </div>
