@@ -1,319 +1,465 @@
-import React from 'react';
-import Layout from '../components/Layout';
+/*
+Tailwind CSS Custom Color Extensions:
+Add to tailwind.config.ts theme.extend.colors:
+'redwood': 'var(--redwood)',
+'moss': 'var(--moss)', 
+'river': 'var(--river)',
+'sand': 'var(--sand)',
+'cream': 'var(--cream)',
+*/
+
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const HomePage: React.FC = () => {
+  const [language, setLanguage] = useState<'en' | 'es'>('en');
+
+  const content = {
+    en: {
+      heroTitle: "Skilled local workers. Fair pay. Simple hiring.",
+      heroSubtitle: "Building economic justice and worker solidarity in Mendocino County.",
+      hireCTA: "Hire a Crew",
+      joinCTA: "Join the Co-op",
+      skipLink: "Skip to main content"
+    },
+    es: {
+      heroTitle: "Trabajadores locales calificados. Pago justo. Contratación simple.",
+      heroSubtitle: "Construyendo justicia económica y solidaridad obrera en el Condado de Mendocino.",
+      hireCTA: "Contratar un Equipo",
+      joinCTA: "Únete a la Cooperativa",
+      skipLink: "Ir al contenido principal"
+    }
+  };
+
+  const currentContent = content[language];
+
   return (
-    <Layout 
-      title="Home | Mendo Labor Cooperative - Worker Power in Mendocino County"
-      description="Building worker solidarity and economic justice in Mendocino County. Unhoused workers cooperative providing mutual aid, job placement, and community organizing support."
-    >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-coop-red to-red-800 text-white py-20">
+    <>
+      <Head>
+        <title>Mendo Labor Cooperative - Skilled Local Workers | Mendocino County</title>
+        <meta name="description" content="Building economic justice through worker solidarity in Mendocino County. Fair pay, safe workers, local hiring." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Mendo Labor Cooperative",
+              "areaServed": "Mendocino County",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "info@mendolaborcoop.ukiahumc.org",
+                "telephone": "+1-XXX-XXX-XXXX"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ukiah",
+                "addressRegion": "CA",
+                "addressCountry": "US"
+              }
+            })
+          }}
+        />
+      </Head>
+
+      <style jsx global>{`
+        :root {
+          --redwood: #7A3E2E;
+          --moss: #3D6B47;
+          --river: #2D637A;
+          --sand: #E6D9C7;
+          --cream: #FAF7F2;
+        }
+        
+        .bg-redwood { background-color: var(--redwood); }
+        .bg-moss { background-color: var(--moss); }
+        .bg-river { background-color: var(--river); }
+        .bg-sand { background-color: var(--sand); }
+        .bg-cream { background-color: var(--cream); }
+        
+        .text-redwood { color: var(--redwood); }
+        .text-moss { color: var(--moss); }
+        .text-river { color: var(--river); }
+        .text-sand { color: var(--sand); }
+        .text-cream { color: var(--cream); }
+        
+        .border-redwood { border-color: var(--redwood); }
+        .border-moss { border-color: var(--moss); }
+        .border-river { border-color: var(--river); }
+        .border-sand { border-color: var(--sand); }
+        .border-cream { border-color: var(--cream); }
+        
+        .border-l-moss { border-left-color: var(--moss); }
+        
+        .font-headline { font-family: 'Public Sans', sans-serif; }
+        .font-body { font-family: 'Source Sans 3', sans-serif; }
+        
+        @media (prefers-reduced-motion: reduce) {
+          * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
+      `}</style>
+
+      {/* Skip Link */}
+      <a
+        href="#content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-redwood text-cream px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-cream"
+      >
+        {currentContent.skipLink}
+      </a>
+
+      {/* Header */}
+      <header className="bg-cream border-b border-sand">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-            {/* Main Content */}
-            <div className="text-center lg:text-left order-2 lg:order-1">
-              <div className="mb-8">
-                <img 
-                  src="/logo.png" 
-                  alt="Mendo Labor Cooperative Logo" 
-                  className="h-16 w-auto mx-auto lg:mx-0 mb-4"
-                  onError={(e) => {
-                    // Fallback if logo doesn't exist yet
-                    e.currentTarget.style.display = 'none';
-                  }}
+          <div className="flex justify-between items-center h-16">
+            {/* Logo */}
+            <Link href="/" className="flex items-center">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                className="mr-3"
+                aria-label="Mendo Labor Cooperative Logo"
+              >
+                <rect width="40" height="40" fill="var(--redwood)" rx="4" />
+                <path
+                  d="M8 12h6v16h-6zm10 0h6v16h-6zm10 0h6v16h-6z"
+                  fill="var(--cream)"
                 />
-                <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 text-coop-gold">
-                  Mendo Labor Cooperative
-                </h1>
-                <p className="text-2xl md:text-3xl font-headline italic text-coop-gold mb-6">
-                  &ldquo;Worker power builds community power&rdquo;
-                </p>
-              </div>
-              
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto lg:mx-0">
-                Building economic justice and worker solidarity in Mendocino County.
-              </p>
-              
-              <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto lg:mx-0 opacity-90">
-                Unhoused workers supporting unhoused workers through mutual aid, job placement, and organizing.
-              </p>
-              
-              <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center lg:justify-start">
-                <Link
-                  href="/get-help"
-                  className="bg-coop-gold text-coop-red px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition-colors inline-block shadow-lg"
-                >
-                  Get Help Now
-                </Link>
-                <Link
-                  href="/join"
-                  className="border-2 border-coop-gold text-coop-gold px-8 py-4 rounded-lg text-lg font-semibold hover:bg-coop-gold hover:text-coop-red transition-colors inline-block"
-                >
-                  Join the Cooperative
-                </Link>
-              </div>
+                <circle cx="20" cy="10" r="6" fill="var(--cream)" />
+                <path
+                  d="M16 8h8v4h-8z"
+                  fill="var(--redwood)"
+                />
+              </svg>
+              <span className="font-headline font-bold text-redwood text-lg">
+                Mendo Labor Cooperative
+              </span>
+            </Link>
+
+            {/* Navigation */}
+            <nav className="hidden md:flex items-center space-x-6">
+              <Link href="/" className="text-redwood font-body hover:text-moss transition-colors focus:outline-none focus:ring-2 focus:ring-moss rounded px-2 py-1">
+                Home
+              </Link>
+              <Link href="/about" className="text-redwood font-body hover:text-moss transition-colors focus:outline-none focus:ring-2 focus:ring-moss rounded px-2 py-1">
+                About
+              </Link>
+              <Link href="/services" className="text-redwood font-body hover:text-moss transition-colors focus:outline-none focus:ring-2 focus:ring-moss rounded px-2 py-1">
+                Services
+              </Link>
+              <Link href="/get-help" className="text-redwood font-body hover:text-moss transition-colors focus:outline-none focus:ring-2 focus:ring-moss rounded px-2 py-1">
+                Get Help
+              </Link>
+              <Link href="/join" className="text-redwood font-body hover:text-moss transition-colors focus:outline-none focus:ring-2 focus:ring-moss rounded px-2 py-1">
+                Join
+              </Link>
+              <Link href="/resources" className="text-redwood font-body hover:text-moss transition-colors focus:outline-none focus:ring-2 focus:ring-moss rounded px-2 py-1">
+                Resources
+              </Link>
+              <Link href="/contact" className="text-redwood font-body hover:text-moss transition-colors focus:outline-none focus:ring-2 focus:ring-moss rounded px-2 py-1">
+                Contact
+              </Link>
+              <Link
+                href="/hire"
+                className="bg-redwood text-cream px-4 py-2 rounded font-body font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-cream"
+                aria-label="Hire a crew now"
+              >
+                {currentContent.hireCTA}
+              </Link>
+            </nav>
+
+            {/* Language Toggle */}
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={() => setLanguage('en')}
+                className={`px-2 py-1 text-sm font-body ${language === 'en' ? 'text-redwood font-semibold' : 'text-moss'} hover:text-redwood transition-colors focus:outline-none focus:ring-2 focus:ring-moss rounded`}
+              >
+                EN
+              </button>
+              <span className="text-sand">|</span>
+              <button
+                onClick={() => setLanguage('es')}
+                className={`px-2 py-1 text-sm font-body ${language === 'es' ? 'text-redwood font-semibold' : 'text-moss'} hover:text-redwood transition-colors focus:outline-none focus:ring-2 focus:ring-moss rounded`}
+              >
+                ES
+              </button>
             </div>
-            
-            {/* Community Photo */}
-            <div className="order-1 lg:order-2">
-              <div className="relative max-w-md mx-auto">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-coop-gold">
-                  <div className="bg-coop-green h-80 sm:h-96 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <div className="text-6xl mb-4">✊</div>
-                      <p className="text-white text-lg font-medium">
-                        Solidarity with all workers
-                      </p>
-                      <p className="text-green-200 text-sm mt-2">
-                        Photo coming soon: Our community in action
-                      </p>
-                    </div>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-coop-red via-coop-red/90 to-transparent p-6">
-                    <h3 className="text-xl font-headline font-bold text-white mb-1">United We Stand</h3>
-                    <p className="text-coop-gold font-medium mb-1">Workers Supporting Workers</p>
-                    <p className="text-white text-sm opacity-90">Mendocino County Labor Cooperative</p>
-                  </div>
+          </div>
+        </div>
+      </header>
+
+      <main id="content">
+        {/* Hero Section */}
+        <section className="relative h-screen min-h-[600px] w-full overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <Image
+              src="/hero-workers.jpg"
+              alt="Skilled workers from Ukiah and Mendocino County working together"
+              fill
+              priority
+              className="object-cover"
+              style={{ 
+                backgroundColor: 'var(--sand)' // Fallback if image missing
+              }}
+              onError={(e) => {
+                // Fallback to solid color background if image fails
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+              }}
+            />
+          </div>
+          
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-[color:var(--sand)] bg-opacity-75"></div>
+          
+          {/* Content */}
+          <div className="relative z-10 h-full flex items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                {/* Left Column */}
+                <div className="text-center md:text-left">
+                  {/* Small Logo */}
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 40 40"
+                    className="mb-6 mx-auto md:mx-0"
+                    aria-label="Mendo Labor Cooperative Logo"
+                  >
+                    <rect width="40" height="40" fill="var(--redwood)" rx="4" />
+                    <path
+                      d="M8 12h6v16h-6zm10 0h6v16h-6zm10 0h6v16h-6z"
+                      fill="var(--cream)"
+                    />
+                    <circle cx="20" cy="10" r="6" fill="var(--cream)" />
+                    <path
+                      d="M16 8h8v4h-8z"
+                      fill="var(--redwood)"
+                    />
+                  </svg>
+                  
+                  {/* Headlines */}
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-redwood mb-4">
+                    {currentContent.heroTitle}
+                  </h1>
+                  <p className="text-xl md:text-2xl font-body text-moss mb-8">
+                    {currentContent.heroSubtitle}
+                  </p>
+                </div>
+
+                {/* Right Column - CTAs */}
+                <div className="flex flex-col space-y-4">
+                  <button
+                    type="button"
+                    className="bg-redwood text-cream px-8 py-4 rounded-lg text-lg font-headline font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-4 focus:ring-cream"
+                    aria-label="Hire a crew now"
+                  >
+                    {currentContent.hireCTA}
+                  </button>
+                  <button
+                    type="button"
+                    className="bg-moss text-cream px-8 py-4 rounded-lg text-lg font-headline font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-4 focus:ring-cream"
+                  >
+                    {currentContent.joinCTA}
+                  </button>
                 </div>
               </div>
             </div>
-            
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* About Section */}
-      <section id="about" className="py-16 bg-gradient-to-b from-coop-cream to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-headline font-bold text-coop-red mb-6">
+        {/* Trust Strip */}
+        <section className="bg-sand py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <li className="text-center">
+                <div 
+                  className="bg-moss text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+                  aria-label="Fair pay icon"
+                >
+                  <span className="text-2xl">💰</span>
+                </div>
+                <h3 className="text-xl font-headline font-semibold text-redwood mb-2">Fair Pay</h3>
+                <p className="font-body text-moss">Living wages for skilled local workers</p>
+              </li>
+              <li className="text-center">
+                <div 
+                  className="bg-river text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+                  aria-label="Safe and vetted icon"
+                >
+                  <span className="text-2xl">🛡️</span>
+                </div>
+                <h3 className="text-xl font-headline font-semibold text-redwood mb-2">Safe & Vetted</h3>
+                <p className="font-body text-moss">Background-checked, trained professionals</p>
+              </li>
+              <li className="text-center">
+                <div 
+                  className="bg-redwood text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+                  aria-label="Local workers icon"
+                >
+                  <span className="text-2xl">🏠</span>
+                </div>
+                <h3 className="text-xl font-headline font-semibold text-redwood mb-2">Local Workers</h3>
+                <p className="font-body text-moss">Supporting our Mendocino County community</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Who We Are */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-redwood text-center mb-12">
               Who We Are
             </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Photo placeholder */}
-            <div className="order-2 lg:order-1">
-              <div className="bg-coop-green h-80 rounded-lg flex items-center justify-center shadow-lg">
-                <div className="text-center text-white p-8">
-                  <div className="text-5xl mb-4">🏠</div>
-                  <span className="font-medium">Our community organizing space</span>
-                  <p className="text-green-200 text-sm mt-2">Photo coming soon</p>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
+                <h3 className="text-xl font-headline font-semibold text-redwood mb-3">Worker-Owned Cooperative</h3>
+                <p className="font-body text-moss">Democratically managed by the workers themselves, ensuring fair treatment and shared prosperity.</p>
               </div>
-            </div>
-            
-            {/* Content */}
-            <div className="order-1 lg:order-2">
-              <div className="prose-custom space-y-6">
-                <p className="text-lg leading-relaxed">
-                  The Mendo Labor Cooperative is a worker-owned collective of unhoused and precariously housed 
-                  people organizing for economic justice in Mendocino County.
-                </p>
-                
-                <p className="text-lg leading-relaxed">
-                  We believe that those most impacted by economic inequality are best positioned to create 
-                  solutions. Our cooperative provides mutual aid, job placement, skills training, and 
-                  organizing support to build worker power in our community.
-                </p>
-                
-                <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-coop-gold">
-                  <p className="text-lg font-medium text-coop-red italic">
-                    &ldquo;We don't just want a seat at the table—we want to build our own table.&rdquo;
-                  </p>
-                  <p className="text-sm text-gray-600 mt-2">— Cooperative Member</p>
-                </div>
+              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
+                <h3 className="text-xl font-headline font-semibold text-redwood mb-3">Local Community Focus</h3>
+                <p className="font-body text-moss">Rooted in Mendocino County, supporting local economic development and community resilience.</p>
+              </div>
+              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
+                <h3 className="text-xl font-headline font-semibold text-redwood mb-3">Economic Justice</h3>
+                <p className="font-body text-moss">Building alternative economic models that prioritize workers and community over profit extraction.</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Services - What We Do */}
-      <section id="services" className="py-16 bg-warm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-headline font-bold text-coop-red mb-4">
+        {/* How We Support */}
+        <section className="py-16 bg-sand">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-redwood text-center mb-12">
               How We Support Each Other
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Worker-to-worker support through mutual aid and collective action
-            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
+                <h3 className="text-xl font-headline font-semibold text-redwood mb-3">Job Placement</h3>
+                <p className="font-body text-moss">Connecting skilled workers with meaningful employment opportunities throughout the region.</p>
+              </div>
+              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
+                <h3 className="text-xl font-headline font-semibold text-redwood mb-3">Skills Training</h3>
+                <p className="font-body text-moss">Providing education and certification programs to enhance worker capabilities and earning potential.</p>
+              </div>
+              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
+                <h3 className="text-xl font-headline font-semibold text-redwood mb-3">Mutual Aid</h3>
+                <p className="font-body text-moss">Emergency support, resource sharing, and collective care for our cooperative members.</p>
+              </div>
+            </div>
           </div>
-          
+        </section>
+
+        {/* CTA Band */}
+        <section className="bg-redwood py-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-cream mb-4">
+              Ready to Work Together?
+            </h2>
+            <p className="text-xl font-body text-cream mb-8 opacity-90">
+              Join the movement for economic justice in Mendocino County
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                type="button"
+                className="bg-cream text-redwood px-8 py-3 rounded-lg text-lg font-headline font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-4 focus:ring-sand"
+              >
+                Hire a Crew
+              </button>
+              <button
+                type="button"
+                className="bg-moss text-cream px-8 py-3 rounded-lg text-lg font-headline font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-4 focus:ring-sand"
+              >
+                Join the Co-op
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-redwood text-cream py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Service 1 */}
-            <div className="bg-white p-8 rounded-lg shadow-lg text-center border-t-4 border-coop-red">
-              <div className="bg-coop-red text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-6">
-                <span>💼</span>
-              </div>
-              <h3 className="text-xl font-headline font-semibold mb-4 text-coop-red">
-                Job Placement & Advocacy
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                We help members find dignified work and advocate for fair wages, safe conditions, 
-                and workers' rights in every workplace.
-              </p>
+            {/* Navigation */}
+            <div>
+              <h3 className="text-lg font-headline font-semibold mb-4">Navigate</h3>
+              <nav className="space-y-2">
+                <Link href="/" className="block font-body hover:text-sand transition-colors focus:outline-none focus:ring-2 focus:ring-sand rounded px-1">
+                  Home
+                </Link>
+                <Link href="/about" className="block font-body hover:text-sand transition-colors focus:outline-none focus:ring-2 focus:ring-sand rounded px-1">
+                  About
+                </Link>
+                <Link href="/services" className="block font-body hover:text-sand transition-colors focus:outline-none focus:ring-2 focus:ring-sand rounded px-1">
+                  Services
+                </Link>
+                <Link href="/join" className="block font-body hover:text-sand transition-colors focus:outline-none focus:ring-2 focus:ring-sand rounded px-1">
+                  Join
+                </Link>
+              </nav>
             </div>
-            
-            {/* Service 2 */}
-            <div className="bg-white p-8 rounded-lg shadow-lg text-center border-t-4 border-coop-green">
-              <div className="bg-coop-green text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-6">
-                <span>🤝</span>
-              </div>
-              <h3 className="text-xl font-headline font-semibold mb-4 text-coop-red">
-                Mutual Aid Network
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Emergency assistance, resource sharing, and collective support to help members 
-                meet basic needs and stay housed and healthy.
-              </p>
-            </div>
-            
-            {/* Service 3 */}
-            <div className="bg-white p-8 rounded-lg shadow-lg text-center border-t-4 border-coop-gold">
-              <div className="bg-coop-gold text-coop-red rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-6">
-                <span>✊</span>
-              </div>
-              <h3 className="text-xl font-headline font-semibold mb-4 text-coop-red">
-                Organizing & Education
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Building collective power through worker education, community organizing, 
-                and campaigns for economic and housing justice.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Values */}
-      <section className="py-16 bg-coop-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-headline font-bold text-coop-red mb-4">
-              Our Values
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="text-coop-gold text-2xl mb-4">✊</div>
-              <h3 className="text-lg font-headline font-semibold mb-3 text-coop-red">Solidarity</h3>
-              <p className="text-gray-700 leading-relaxed">
-                We stand together as workers, understanding that our individual struggles are 
-                part of a collective fight for dignity and justice.
-              </p>
+            {/* Contact */}
+            <div>
+              <h3 className="text-lg font-headline font-semibold mb-4">Contact</h3>
+              <div className="space-y-2 font-body">
+                <p>
+                  <a 
+                    href="mailto:info@mendolaborcoop.ukiahumc.org" 
+                    className="hover:text-sand transition-colors focus:outline-none focus:ring-2 focus:ring-sand rounded px-1"
+                  >
+                    info@mendolaborcoop.ukiahumc.org
+                  </a>
+                </p>
+                <p>
+                  <a 
+                    href="tel:+1-XXX-XXX-XXXX" 
+                    className="hover:text-sand transition-colors focus:outline-none focus:ring-2 focus:ring-sand rounded px-1"
+                  >
+                    (XXX) XXX-XXXX
+                  </a>
+                </p>
+                <p>Mendocino County, CA</p>
+              </div>
             </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="text-coop-green text-2xl mb-4">🏠</div>
-              <h3 className="text-lg font-headline font-semibold mb-3 text-coop-red">Housing Justice</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Everyone deserves stable, dignified housing. We organize for policies and practices 
-                that treat housing as a human right, not a commodity.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="text-coop-blue text-2xl mb-4">⚖️</div>
-              <h3 className="text-lg font-headline font-semibold mb-3 text-coop-red">Economic Democracy</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Workers should have control over their workplaces and communities. We build 
-                cooperative alternatives to exploitative economic systems.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="text-coop-earth text-2xl mb-4">🌱</div>
-              <h3 className="text-lg font-headline font-semibold mb-3 text-coop-red">Mutual Aid</h3>
-              <p className="text-gray-700 leading-relaxed">
-                We care for each other through direct action and resource sharing, building 
-                community resilience from the ground up.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Call to Action */}
-      <section id="contact" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-headline font-bold text-coop-red mb-4">
-              Join the Movement
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Whether you need support or want to support others, there's a place for you in our cooperative
+            {/* Legal */}
+            <div>
+              <h3 className="text-lg font-headline font-semibold mb-4">Legal</h3>
+              <p className="font-body text-sm opacity-75 leading-relaxed">
+                Independent worker cooperative. Building Bridges is a meeting venue, not a party to services.
+              </p>
+            </div>
+          </div>
+
+          <div className="border-t border-cream border-opacity-20 mt-8 pt-8 text-center">
+            <p className="font-body text-sm opacity-75">
+              © 2025 Mendo Labor Cooperative. Worker power builds community power.
             </p>
           </div>
-          
-          {/* Action CTAs */}
-          <div className="bg-gradient-to-br from-coop-red to-red-800 rounded-lg shadow-lg p-12 mb-12 text-center text-white">
-            <div className="max-w-3xl mx-auto">
-              <h3 className="text-3xl font-headline font-bold mb-4 text-coop-gold">
-                Ready to Build Worker Power?
-              </h3>
-              <p className="text-xl mb-8 opacity-90">
-                Join fellow workers in creating economic justice in Mendocino County. 
-                Together we are stronger.
-              </p>
-              <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-                <Link
-                  href="/get-help"
-                  className="bg-coop-gold text-coop-red px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition-colors inline-block shadow-lg"
-                >
-                  Get Support
-                </Link>
-                <Link
-                  href="/join"
-                  className="border-2 border-coop-gold text-coop-gold px-8 py-4 rounded-lg text-lg font-semibold hover:bg-coop-gold hover:text-coop-red transition-colors inline-block"
-                >
-                  Join the Co-op
-                </Link>
-                <Link
-                  href="/contact"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-coop-red transition-colors inline-block"
-                >
-                  Get In Touch
-                </Link>
-              </div>
-            </div>
-          </div>
-          
-          {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="bg-coop-red text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📧</span>
-              </div>
-              <h3 className="text-lg font-headline font-semibold mb-2 text-coop-red">Email</h3>
-              <p className="text-gray-600">info@mendolaborcoop.ukiahumc.org</p>
-            </div>
-            
-            <div>
-              <div className="bg-coop-green text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📞</span>
-              </div>
-              <h3 className="text-lg font-headline font-semibold mb-2 text-coop-red">Phone/Text</h3>
-              <p className="text-gray-600">Coming soon</p>
-            </div>
-            
-            <div>
-              <div className="bg-coop-gold text-coop-red rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📍</span>
-              </div>
-              <h3 className="text-lg font-headline font-semibold mb-2 text-coop-red">Location</h3>
-              <p className="text-gray-600">Mendocino County, CA</p>
-            </div>
-          </div>
         </div>
-      </section>
-    </Layout>
+      </footer>
+    </>
   );
 };
 
 export default HomePage;
+
+
+
+

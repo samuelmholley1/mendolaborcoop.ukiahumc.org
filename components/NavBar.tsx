@@ -21,7 +21,7 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="bg-cream border-b border-sand">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -35,7 +35,7 @@ const NavBar: React.FC = () => {
                   e.currentTarget.style.display = 'none';
                 }}
               />
-              <span className="text-xl font-headline font-bold text-coop-red">
+              <span className="text-xl font-headline font-bold text-redwood">
                 Mendo Labor Cooperative
               </span>
             </Link>
@@ -49,16 +49,16 @@ const NavBar: React.FC = () => {
                 href={item.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActivePage(item.href)
-                    ? 'text-coop-red bg-coop-cream'
-                    : 'text-gray-700 hover:text-coop-red hover:bg-coop-cream'
-                }`}
+                    ? 'text-redwood bg-cream'
+                    : 'text-redwood hover:text-moss hover:bg-cream'
+                } font-body`}
               >
                 {item.name}
               </Link>
             ))}
             <Link
               href="/get-help"
-              className="bg-coop-red text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
+              className="bg-redwood text-cream px-4 py-2 rounded-md text-sm font-medium hover:bg-redwood/90 transition-colors font-body focus:outline-none focus:ring-2 focus:ring-moss"
             >
               Get Help Now
             </Link>
@@ -68,7 +68,9 @@ const NavBar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-coop-red focus:outline-none focus:text-coop-red"
+              className="text-redwood hover:text-moss focus:outline-none focus:text-moss focus:ring-2 focus:ring-moss rounded"
+              aria-expanded={isMenuOpen}
+              aria-label="Toggle navigation menu"
             >
               <svg
                 className="h-6 w-6"
@@ -99,16 +101,16 @@ const NavBar: React.FC = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-cream">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                     isActivePage(item.href)
-                      ? 'text-coop-red bg-coop-cream'
-                      : 'text-gray-700 hover:text-coop-red hover:bg-coop-cream'
-                  }`}
+                      ? 'text-redwood bg-cream'
+                      : 'text-redwood hover:text-moss hover:bg-cream'
+                  } font-body`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -116,7 +118,7 @@ const NavBar: React.FC = () => {
               ))}
               <Link
                 href="/get-help"
-                className="block bg-coop-red text-white px-3 py-2 rounded-md text-base font-medium hover:bg-red-700 transition-colors"
+                className="block bg-redwood text-cream px-3 py-2 rounded-md text-base font-medium hover:bg-redwood/90 transition-colors font-body"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Help Now

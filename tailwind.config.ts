@@ -9,22 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        'headline': ['Merriweather', 'serif'],
-        'body': ['Inter', 'sans-serif'],
+        'headline': ['Public Sans', 'sans-serif'],
+        'body': ['Source Sans 3', 'sans-serif'],
       },
       colors: {
+        // Brand color tokens
+        'redwood': 'var(--redwood)',
+        'moss': 'var(--moss)',
+        'river': 'var(--river)',
+        'sand': 'var(--sand)',
+        'cream': 'var(--cream)',
+        // Legacy coop colors for existing components
         'coop': {
-          // Solidarity red - worker power
           'red': '#d63031',
-          // Deep forest green - environmental justice
           'green': '#00b894',
-          // Golden yellow - prosperity and hope
           'gold': '#fdcb6e',
-          // Warm earth brown - groundedness and community
           'earth': '#8b5a2b',
-          // Deep blue - stability and trust
           'blue': '#0984e3',
-          // Light backgrounds
           'cream': '#fef9f3',
           'light': '#f9f9f9',
         },
