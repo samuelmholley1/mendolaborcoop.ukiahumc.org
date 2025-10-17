@@ -78,9 +78,9 @@ const HomePage: React.FC = () => {
                   <img
                     src="/mendo_labor_coop_logo.png"
                     alt="Mendo Labor Cooperative Logo"
-                    width="120"
-                    height="120"
-                    className="mb-6 mx-auto md:mx-0"
+                    width="300"
+                    height="300"
+                    className="mb-8 mx-auto md:mx-0 w-64 h-64 md:w-80 md:h-80"
                   />
                   
                   {/* Headlines */}
@@ -109,116 +109,6 @@ const HomePage: React.FC = () => {
                   </button>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Trust Strip */}
-        <section className="bg-sand py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <ul className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <li className="text-center">
-                <div 
-                  className="bg-moss text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
-                  aria-label="Fair pay icon"
-                >
-                  <span className="text-2xl">💰</span>
-                </div>
-                <h3 className="text-xl font-headline font-semibold text-redwood mb-2">Fair Pay</h3>
-                <p className="font-body text-moss">Living wages for skilled local workers</p>
-              </li>
-              <li className="text-center">
-                <div 
-                  className="bg-river text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
-                  aria-label="Safe and vetted icon"
-                >
-                  <span className="text-2xl">🛡️</span>
-                </div>
-                <h3 className="text-xl font-headline font-semibold text-redwood mb-2">Safe & Vetted</h3>
-                <p className="font-body text-moss">Background-checked, trained professionals</p>
-              </li>
-              <li className="text-center">
-                <div 
-                  className="bg-redwood text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
-                  aria-label="Local workers icon"
-                >
-                  <span className="text-2xl">🏠</span>
-                </div>
-                <h3 className="text-xl font-headline font-semibold text-redwood mb-2">Local Workers</h3>
-                <p className="font-body text-moss">Supporting our Mendocino County community</p>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        {/* Who We Are */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-redwood text-center mb-12">
-              Who We Are
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
-                <h3 className="text-xl font-headline font-semibold text-redwood mb-3">Worker-Owned Cooperative</h3>
-                <p className="font-body text-moss">Democratically managed by the workers themselves, ensuring fair treatment and shared prosperity.</p>
-              </div>
-              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
-                <h3 className="text-xl font-headline font-semibold text-redwood mb-3">Local Community Focus</h3>
-                <p className="font-body text-moss">Rooted in Mendocino County, supporting local economic development and community resilience.</p>
-              </div>
-              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
-                <h3 className="text-xl font-headline font-semibold text-redwood mb-3">Economic Justice</h3>
-                <p className="font-body text-moss">Building alternative economic models that prioritize workers and community over profit extraction.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* How We Support */}
-        <section className="py-16 bg-sand">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-redwood text-center mb-12">
-              How We Support Each Other
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
-                <h3 className="text-xl font-headline font-semibold text-redwood mb-3">Job Placement</h3>
-                <p className="font-body text-moss">Connecting skilled workers with meaningful employment opportunities throughout the region.</p>
-              </div>
-              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
-                <h3 className="text-xl font-headline font-semibold text-redwood mb-3">Skills Training</h3>
-                <p className="font-body text-moss">Providing education and certification programs to enhance worker capabilities and earning potential.</p>
-              </div>
-              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
-                <h3 className="text-xl font-headline font-semibold text-redwood mb-3">Mutual Aid</h3>
-                <p className="font-body text-moss">Emergency support, resource sharing, and collective care for our cooperative members.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Band */}
-        <section className="bg-redwood py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-cream mb-4">
-              Ready to Work Together?
-            </h2>
-            <p className="text-xl font-body text-cream mb-8 opacity-90">
-              Join the movement for economic justice in Mendocino County
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                type="button"
-                className="bg-cream text-redwood px-8 py-3 rounded-lg text-lg font-headline font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-4 focus:ring-sand"
-              >
-                Hire a Crew
-              </button>
-              <button
-                type="button"
-                className="bg-moss text-cream px-8 py-3 rounded-lg text-lg font-headline font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-4 focus:ring-sand"
-              >
-                Join the Co-op
-              </button>
             </div>
           </div>
         </section>
