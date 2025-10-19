@@ -1,0 +1,11 @@
+# Mendo Labor Cooperative - robots.txt
+
+# Allow all bots to crawl everything
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mendolaborcoop.ukiahumc.org/sitemap.xml
+
+# Crawl delay (optional, helps with server load)
+Crawl-delay: 1

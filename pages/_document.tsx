@@ -4,6 +4,24 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* Google Analytics - GA4 */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-XXXXXXXXXX', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+        
         {/* Favicon - multiple sizes for different devices */}
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -20,8 +38,8 @@ export default function Document() {
         <link rel="manifest" href="/site.webmanifest" />
         
         {/* Theme color for mobile browsers */}
-        <meta name="theme-color" content="#5A3A31" />
-        <meta name="msapplication-TileColor" content="#5A3A31" />
+        <meta name="theme-color" content="#39714B" />
+        <meta name="msapplication-TileColor" content="#39714B" />
       </Head>
       <body>
         <Main />

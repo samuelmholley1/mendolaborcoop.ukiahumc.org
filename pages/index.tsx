@@ -49,15 +49,82 @@ const HomePage: React.FC = () => {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": "CooperativeOrganization",
               "name": "Mendo Labor Cooperative",
-              "areaServed": "Mendocino County",
+              "alternateName": "Mendo Labor Co-op",
+              "url": "https://mendolaborcoop.ukiahumc.org",
+              "logo": "https://mendolaborcoop.ukiahumc.org/mendo_labor_coop_logo.png",
+              "description": "Worker-owned cooperative providing job placement, mutual aid, and organizing support for workers in Mendocino County, California.",
+              "foundingDate": "2025",
+              "areaServed": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "39.1502",
+                  "longitude": "-123.2078"
+                },
+                "geoRadius": "50000"
+              },
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Ukiah",
                 "addressRegion": "CA",
+                "postalCode": "95482",
                 "addressCountry": "US"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "39.1502",
+                "longitude": "-123.2078"
+              },
+              "sameAs": [
+                "https://www.facebook.com/mendolaborcoop",
+                "https://www.instagram.com/mendolaborcoop"
+              ],
+              "knowsAbout": [
+                "Worker Rights",
+                "Labor Organizing",
+                "Cooperative Economics",
+                "Mutual Aid",
+                "Economic Justice",
+                "Worker Solidarity"
+              ],
+              "memberOf": {
+                "@type": "Organization",
+                "name": "Worker Cooperative Movement"
+              },
+              "slogan": "Worker Power Builds Community Power"
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Mendo Labor Cooperative",
+              "url": "https://mendolaborcoop.ukiahumc.org",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://mendolaborcoop.ukiahumc.org/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
               }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://mendolaborcoop.ukiahumc.org"
+              }]
             })
           }}
         />
