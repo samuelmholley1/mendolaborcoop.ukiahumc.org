@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
   return (
     <Layout
       title="Mendo Labor Cooperative - Skilled Local Workers | Mendocino County"
-      description="Building economic justice through worker solidarity in Mendocino County. Fair pay, safe workers, local hiring."
+      description="Building economic justice through worker solidarity in Mendocino County. Fair pay, skilled professionals, local hiring."
     >
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -130,12 +130,12 @@ const HomePage: React.FC = () => {
               <li className="text-center">
                 <div 
                   className="bg-river text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
-                  aria-label="Safe and vetted icon"
+                  aria-label="Trained professionals icon"
                 >
                   <span className="text-2xl">🛡️</span>
                 </div>
-                <h3 className="text-xl font-headline font-semibold text-redwood mb-2">Safe & Vetted</h3>
-                <p className="font-body text-moss">Background-checked, trained professionals</p>
+                <h3 className="text-xl font-headline font-semibold text-redwood mb-2">Trained Professionals</h3>
+                <p className="font-body text-moss">Skilled workers committed to quality and safety</p>
               </li>
               <li className="text-center">
                 <div 

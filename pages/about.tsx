@@ -148,6 +148,18 @@ const AboutPage: React.FC = () => {
                 capacity and develop new leaders from within our community.
               </p>
             </div>
+            
+            <div className="bg-white border-l-8 border-l-gold p-6 rounded-r-lg shadow-md">
+              <h3 className="text-xl font-headline font-semibold mb-3 text-redwood">
+                Member Screening Program (In Development)
+              </h3>
+              <p className="text-moss leading-relaxed font-body">
+                We are actively seeking grant funding to implement a comprehensive member screening 
+                program, including background checks, to ensure the safety and trust of both our 
+                worker-members and the communities we serve. This investment will strengthen our 
+                cooperative while maintaining our commitment to second-chance employment.
+              </p>
+            </div>
           </div>
         </div>
       </section>
