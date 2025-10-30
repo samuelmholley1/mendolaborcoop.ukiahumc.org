@@ -12,7 +12,7 @@ const MeetingLogPage: React.FC = () => {
         { name: 'Ed Dick', phone: '707 952 2134' },
         { name: 'Samuel Holley', phone: '714-496-7006' },
         { name: 'Dale Klingsorge', phone: '916-639-7141' },
-        { name: 'Sheryl Vinson', phone: '916-639-7174' },
+        { name: 'Cheryl Vinson', phone: '916-639-7174' },
         { name: 'Louie Cedano', phone: '707 510-7199' }
       ]
     },
@@ -24,7 +24,7 @@ const MeetingLogPage: React.FC = () => {
         { name: 'Ed Dick', phone: '707 952 2134' },
         { name: 'Samuel Holley', phone: '714-496-7006' },
         { name: 'Dale Klingsorge', phone: '916-639-7141' },
-        { name: 'Sheryl Vinson', phone: '916-639-7174' },
+        { name: 'Cheryl Vinson', phone: '916-639-7174' },
         { name: 'Louie Cedano', phone: '707 510-7199' },
         { name: 'Braven', phone: '559 880 0960' }
       ]
