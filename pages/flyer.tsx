@@ -40,75 +40,50 @@ const FlyerPage: React.FC = () => {
           <div className="flyer-container bg-white p-12 shadow-lg rounded-lg border-8 border-moss">
             
             {/* Logo */}
-            <div className="text-center mb-8">
+            <div className="text-center mb-12">
               <img
                 src="/mendo_labor_coop_logo.png"
-                alt="Mendo Labor Cooperative Logo"
-                className="mx-auto w-64 h-64 mb-6"
-              />
-              <img
-                src="/mendo_labor_coop_logo_text.png"
                 alt="Mendo Labor Cooperative"
-                className="mx-auto h-16 mb-4"
+                className="mx-auto w-80 h-80"
               />
             </div>
 
-            {/* Tagline */}
-            <div className="text-center mb-8">
-              <h1 className="text-3xl md:text-4xl font-headline font-bold text-redwood mb-4">
-                Worker Power Builds Community Power
+            {/* Main CTA Headline */}
+            <div className="text-center mb-12">
+              <h1 className="text-5xl md:text-6xl font-headline font-extrabold text-redwood mb-6 leading-tight">
+                Hire a Temporary Worker
               </h1>
-              <p className="text-xl text-moss font-body">
-                Building economic justice and worker solidarity in Mendocino County
+              <p className="text-2xl text-moss font-body font-semibold">
+                Skilled Local Workers • Fair Pay • Mendocino County
               </p>
             </div>
 
-            {/* Contact Info */}
-            <div className="bg-sand border-l-8 border-l-moss rounded-r-lg p-8 mb-8">
-              <h2 className="text-2xl font-headline font-bold text-redwood mb-4 text-center">
-                Get Connected
-              </h2>
-              <div className="text-center space-y-3">
-                <div>
-                  <p className="text-lg text-moss font-semibold">Coop Coordinator: Cheryl</p>
-                  <a 
-                    href="tel:+19166397174" 
-                    className="text-3xl font-headline font-bold text-moss hover:text-redwood transition-colors"
-                  >
-                    (916) 639-7174
-                  </a>
-                </div>
-              </div>
+            {/* Primary CTA - Contact Info */}
+            <div className="bg-moss text-cream p-12 rounded-lg mb-8 text-center">
+              <p className="text-2xl font-headline font-semibold mb-3">
+                Call or Text Cheryl
+              </p>
+              <a 
+                href="tel:+19166397174" 
+                className="text-6xl font-headline font-extrabold block mb-2 hover:opacity-90 transition-opacity"
+              >
+                (916) 639-7174
+              </a>
             </div>
 
-            {/* QR Code & Website */}
-            <div className="border-t-4 border-moss pt-8 text-center">
-              <p className="text-xl font-headline font-semibold text-moss mb-4">
-                Scan to Visit Our Website
-              </p>
-              
-              {/* QR Code - Using QR Code API */}
-              <div className="flex justify-center mb-4">
+            {/* Secondary Info - QR Code & Website */}
+            <div className="text-center pt-6 border-t border-sand">
+              <div className="flex justify-center items-center gap-6">
+                {/* QR Code - Using QR Code API */}
                 <img
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://mendolaborcoop.ukiahumc.org"
-                  alt="QR Code to mendolaborcoop.ukiahumc.org"
-                  className="w-64 h-64 border-4 border-moss rounded-lg"
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://mendolaborcoop.ukiahumc.org"
+                  alt="QR Code"
+                  className="w-32 h-32 border-2 border-sand rounded"
                 />
+                <p className="text-lg font-body text-moss">
+                  mendolaborcoop.ukiahumc.org
+                </p>
               </div>
-              
-              <p className="text-2xl font-headline font-bold text-redwood mb-2">
-                mendolaborcoop.ukiahumc.org
-              </p>
-            </div>
-
-            {/* Bottom Tagline */}
-            <div className="text-center mt-8 pt-6 border-t-2 border-sand">
-              <p className="text-lg font-body text-moss italic">
-                Unhoused workers supporting unhoused workers
-              </p>
-              <p className="text-md font-body text-moss mt-2">
-                Mutual Aid • Worker Organizing • Economic Justice
-              </p>
             </div>
 
           </div>
