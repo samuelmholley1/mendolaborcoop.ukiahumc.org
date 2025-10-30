@@ -43,7 +43,7 @@ const MeetingLogPage: React.FC = () => {
       </Head>
 
       <div className="min-h-screen bg-cream">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-headline font-bold text-redwood mb-4">
               Meeting Attendance Log
@@ -53,51 +53,55 @@ const MeetingLogPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-12">
             {meetings.map((meeting, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg border-4 border-moss p-8">
-                <div className="border-b border-sand pb-6 mb-6">
-                  <h2 className="text-2xl font-headline font-bold text-redwood mb-2">
+              <div key={index} className="bg-white rounded-lg shadow-lg border border-moss overflow-hidden">
+                {/* Meeting Header */}
+                <div className="bg-moss text-cream px-6 py-4">
+                  <h2 className="text-xl font-headline font-bold">
                     {meeting.date}
                   </h2>
-                  <p className="text-lg font-body text-moss mb-1">
-                    <span className="font-semibold">Time:</span> {meeting.time}
-                  </p>
-                  <p className="text-lg font-body text-moss">
-                    <span className="font-semibold">Location:</span> {meeting.location}
+                  <p className="text-sm font-body opacity-90">
+                    {meeting.time} • {meeting.location}
                   </p>
                 </div>
 
-                <div>
-                  <h3 className="text-xl font-headline font-semibold text-redwood mb-4">
-                    Attendees ({meeting.attendees.length})
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {meeting.attendees.map((attendee, attendeeIndex) => (
-                      <div key={attendeeIndex} className="bg-sand rounded-lg p-4">
-                        <div className="font-headline font-semibold text-redwood">
-                          {attendee.name}
-                        </div>
-                        <div className="font-body text-moss mt-1">
-                          {attendee.phone}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                {/* Spreadsheet Table */}
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-sand border-b border-moss">
+                        <th className="px-6 py-3 text-left text-sm font-headline font-semibold text-redwood uppercase tracking-wider">
+                          Attendee Name
+                        </th>
+                        <th className="px-6 py-3 text-left text-sm font-headline font-semibold text-redwood uppercase tracking-wider">
+                          Phone Number
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-sand">
+                      {meeting.attendees.map((attendee, attendeeIndex) => (
+                        <tr key={attendeeIndex} className={attendeeIndex % 2 === 0 ? 'bg-white' : 'bg-cream'}>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-body text-moss">
+                            {attendee.name}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-body text-moss">
+                            {attendee.phone}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Footer with count */}
+                <div className="bg-sand px-6 py-3 border-t border-moss">
+                  <p className="text-sm font-body text-moss">
+                    Total Attendees: {meeting.attendees.length}
+                  </p>
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <div className="bg-moss text-cream rounded-lg p-6">
-              <h3 className="text-xl font-headline font-semibold mb-2">
-                Meeting Coordinator
-              </h3>
-              <p className="font-body">
-                Sheryl Vinson • (916) 639-7174
-              </p>
-            </div>
           </div>
         </div>
       </div>
