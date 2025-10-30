@@ -71,10 +71,10 @@ const MeetingLogPage: React.FC = () => {
                   <table className="w-full">
                     <thead>
                       <tr className="bg-sand border-b border-moss">
-                        <th className="px-6 py-3 text-left text-sm font-headline font-semibold text-redwood uppercase tracking-wider">
+                        <th className="px-6 py-3 text-left text-sm font-headline font-semibold text-white uppercase tracking-wider">
                           Attendee Name
                         </th>
-                        <th className="px-6 py-3 text-left text-sm font-headline font-semibold text-redwood uppercase tracking-wider">
+                        <th className="px-6 py-3 text-left text-sm font-headline font-semibold text-white uppercase tracking-wider">
                           Phone Number
                         </th>
                       </tr>
