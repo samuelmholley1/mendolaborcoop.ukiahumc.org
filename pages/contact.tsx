@@ -32,9 +32,11 @@ const ContactPage: React.FC = () => {
               <div className="bg-moss text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">📞</span>
               </div>
-              <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">Call or Text</h3>
-              <p className="text-moss mb-4 font-body">For urgent needs or quick questions</p>
-              <p className="text-moss italic font-body">Phone number coming soon</p>
+              <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">Call or Text Cheryl</h3>
+              <p className="text-moss mb-4 font-body">Coop Coordinator</p>
+              <a href="tel:+19166397174" className="text-2xl font-headline font-bold text-moss hover:text-redwood transition-colors">
+                (916) 639-7174
+              </a>
             </div>
 
             {/* In Person */}

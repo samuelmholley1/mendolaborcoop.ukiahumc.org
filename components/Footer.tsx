@@ -46,7 +46,12 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-headline font-bold mb-4 text-cream">Get Connected</h3>
             <div className="space-y-2 text-cream font-body">
-              <p>� Phone: Coming soon</p>
+              <p>📞 Cheryl (Coordinator)</p>
+              <p>
+                <a href="tel:+19166397174" className="hover:text-sand transition-colors">
+                  (916) 639-7174
+                </a>
+              </p>
               <p className="pt-2">Serving unhoused workers in Mendocino County</p>
               <p>Mutual aid • Worker organizing • Economic justice</p>
             </div>
