@@ -13,7 +13,6 @@ const FlyerPage: React.FC = () => {
             .flyer-container { 
               width: 8.5in; 
               height: 11in; 
-              page-break-after: always;
             }
           }
           @page {
