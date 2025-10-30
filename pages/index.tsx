@@ -20,14 +20,14 @@ const HomePage: React.FC = () => {
     en: {
       heroTitle: "Skilled local workers. Fair pay. Simple hiring.",
       heroSubtitle: "Building economic justice and worker solidarity in Mendocino County.",
-      hireCTA: "Hire a Crew",
+      hireCTA: "Hire a Worker",
       joinCTA: "Join the Co-op",
       skipLink: "Skip to main content"
     },
     es: {
       heroTitle: "Trabajadores locales calificados. Pago justo. Contratación simple.",
       heroSubtitle: "Construyendo justicia económica y solidaridad obrera en el Condado de Mendocino.",
-      hireCTA: "Contratar un Equipo",
+      hireCTA: "Contratar un Trabajador",
       joinCTA: "Únete a la Cooperativa",
       skipLink: "Ir al contenido principal"
     }
