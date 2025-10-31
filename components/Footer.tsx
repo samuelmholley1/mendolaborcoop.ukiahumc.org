@@ -56,23 +56,8 @@ const Footer: React.FC<{ onContactClick?: () => void }> = ({ onContactClick }) =
               <p>Mutual aid • Worker organizing • Economic justice</p>
             </div>
             
-            {/* Social Links */}
-            <div className="mt-4 space-y-2">
-              <p className="text-sm text-cream">Follow our organizing:</p>
-              <div className="flex space-x-4">
-                <button 
-                  onClick={onContactClick}
-                  className="text-cream hover:text-sand transition-colors text-sm cursor-pointer"
-                >
-                  Facebook
-                </button>
-                <button 
-                  onClick={onContactClick}
-                  className="text-cream hover:text-sand transition-colors text-sm cursor-pointer"
-                >
-                  Instagram
-                </button>
-              </div>
+            <div className="mt-4">
+              <p className="text-sm text-cream">Building worker power in Mendocino County</p>
             </div>
           </div>
         </div>

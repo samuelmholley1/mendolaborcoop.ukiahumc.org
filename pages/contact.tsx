@@ -76,51 +76,25 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Social & Community */}
+      {/* Community Engagement */}
       <section className="py-16 bg-cream">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-headline font-bold text-redwood mb-12 text-center">
-            Follow Our Organizing
+            Get Involved
           </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white border-l-8 border-l-moss p-8 rounded-r-lg shadow-md text-center">
-              <div className="text-4xl mb-4">📱</div>
-              <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">Social Media</h3>
-              <p className="text-moss mb-4 font-body">
-                Stay updated on our campaigns, victories, and calls to action
-              </p>
-              <div className="space-x-4">
-                <button
-                  onClick={() => setShowContactPopup(true)}
-                  className="text-moss hover:text-redwood font-medium transition-colors bg-transparent border-none cursor-pointer"
-                >
-                  Facebook
-                </button>
-                <span className="text-sand">|</span>
-                <button
-                  onClick={() => setShowContactPopup(true)}
-                  className="text-moss hover:text-redwood font-medium transition-colors bg-transparent border-none cursor-pointer"
-                >
-                  Instagram
-                </button>
-              </div>
-              <p className="text-sm text-moss mt-2 italic">Contact us for social media updates</p>
-            </div>
-            
-            <div className="bg-white border-l-8 border-l-river p-8 rounded-r-lg shadow-md text-center">
-              <div className="text-4xl mb-4">📢</div>
-              <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">Join the Movement</h3>
-              <p className="text-moss mb-4 font-body">
-                Learn more about becoming a cooperative member or supporting our work
-              </p>
-              <Link 
-                href="/about"
-                className="bg-moss text-cream px-6 py-3 rounded-lg font-medium hover:bg-moss/90 transition-colors inline-block font-headline"
-              >
-                Learn More About Us
-              </Link>
-            </div>
+
+          <div className="bg-white border-l-8 border-l-river p-8 rounded-r-lg shadow-md text-center max-w-2xl mx-auto">
+            <div className="text-4xl mb-4">📢</div>
+            <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">Join the Movement</h3>
+            <p className="text-moss mb-4 font-body">
+              Learn more about becoming a cooperative member or supporting our work
+            </p>
+            <Link
+              href="/about"
+              className="bg-moss text-cream px-6 py-3 rounded-lg font-medium hover:bg-moss/90 transition-colors inline-block font-headline"
+            >
+              Learn More About Us
+            </Link>
           </div>
         </div>
       </section>

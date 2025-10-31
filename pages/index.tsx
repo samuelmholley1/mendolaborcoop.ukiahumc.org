@@ -80,10 +80,6 @@ const HomePage: React.FC = () => {
                 "latitude": "39.1502",
                 "longitude": "-123.2078"
               },
-              "sameAs": [
-                "https://www.facebook.com/mendolaborcoop",
-                "https://www.instagram.com/mendolaborcoop"
-              ],
               "knowsAbout": [
                 "Worker Rights",
                 "Labor Organizing",
