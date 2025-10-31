@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 
 const ContactPage: React.FC = () => {
+  const [showContactPopup, setShowContactPopup] = useState(false);
   return (
-    <Layout 
+    <>
+      <Layout 
       title="Contact | Mendo Labor Cooperative"
       description="Get in touch with the Mendo Labor Cooperative. Connect for support, organizing, or joining our worker-owned collective."
+      onContactClick={() => setShowContactPopup(true)}
     >
       {/* Hero Section */}
       <section className="bg-redwood text-cream py-20">
@@ -88,11 +91,21 @@ const ContactPage: React.FC = () => {
                 Stay updated on our campaigns, victories, and calls to action
               </p>
               <div className="space-x-4">
-                <a href="#" className="text-moss hover:text-redwood font-medium transition-colors">Facebook</a>
+                <button
+                  onClick={() => setShowContactPopup(true)}
+                  className="text-moss hover:text-redwood font-medium transition-colors bg-transparent border-none cursor-pointer"
+                >
+                  Facebook
+                </button>
                 <span className="text-sand">|</span>
-                <a href="#" className="text-moss hover:text-redwood font-medium transition-colors">Instagram</a>
+                <button
+                  onClick={() => setShowContactPopup(true)}
+                  className="text-moss hover:text-redwood font-medium transition-colors bg-transparent border-none cursor-pointer"
+                >
+                  Instagram
+                </button>
               </div>
-              <p className="text-sm text-moss mt-2 italic">Links coming soon</p>
+              <p className="text-sm text-moss mt-2 italic">Contact us for social media updates</p>
             </div>
             
             <div className="bg-white border-l-8 border-l-river p-8 rounded-r-lg shadow-md text-center">
@@ -130,7 +143,47 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
     </Layout>
-  );
+
+    {/* Contact Popup Modal */}
+    {showContactPopup && (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div className="bg-white rounded-lg shadow-xl max-w-md w-full border-4 border-moss">
+          <div className="bg-moss text-cream px-6 py-4 rounded-t-lg">
+            <h3 className="text-xl font-headline font-bold">Contact Cheryl</h3>
+            <p className="text-sm font-body opacity-90">Cooperative Coordinator</p>
+          </div>
+          <div className="p-6">
+            <div className="text-center">
+              <p className="text-lg font-body text-moss mb-4">
+                Ready to hire a worker or join our cooperative?
+              </p>
+              <div className="bg-sand rounded-lg p-4 mb-6">
+                <p className="text-sm font-body text-moss mb-2">Call or Text:</p>
+                <a
+                  href="tel:+19166397174"
+                  className="text-2xl font-headline font-bold text-redwood hover:text-moss transition-colors"
+                >
+                  (916) 639-7174
+                </a>
+              </div>
+              <p className="text-sm font-body text-moss">
+                Cheryl will be happy to discuss your needs and answer any questions.
+              </p>
+            </div>
+            <div className="flex justify-center mt-6">
+              <button
+                onClick={() => setShowContactPopup(false)}
+                className="bg-moss text-cream px-6 py-2 rounded-lg font-headline font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-4 focus:ring-sand"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+  </>
+);
 };
 
 export default ContactPage;

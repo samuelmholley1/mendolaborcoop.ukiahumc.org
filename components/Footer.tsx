@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Footer: React.FC = () => {
+const Footer: React.FC<{ onContactClick?: () => void }> = ({ onContactClick }) => {
   return (
     <footer className="bg-redwood text-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -60,13 +60,18 @@ const Footer: React.FC = () => {
             <div className="mt-4 space-y-2">
               <p className="text-sm text-cream">Follow our organizing:</p>
               <div className="flex space-x-4">
-                {/* Placeholder for social media links */}
-                <a href="#" className="text-cream hover:text-sand transition-colors text-sm">
+                <button 
+                  onClick={onContactClick}
+                  className="text-cream hover:text-sand transition-colors text-sm cursor-pointer"
+                >
                   Facebook
-                </a>
-                <a href="#" className="text-cream hover:text-sand transition-colors text-sm">
+                </button>
+                <button 
+                  onClick={onContactClick}
+                  className="text-cream hover:text-sand transition-colors text-sm cursor-pointer"
+                >
                   Instagram
-                </a>
+                </button>
               </div>
             </div>
           </div>

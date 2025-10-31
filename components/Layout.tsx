@@ -10,6 +10,7 @@ interface LayoutProps {
   keywords?: string;
   ogImage?: string;
   canonical?: string;
+  onContactClick?: () => void;
 }
 
 const Layout: React.FC<LayoutProps> = ({ 
@@ -18,7 +19,8 @@ const Layout: React.FC<LayoutProps> = ({
   description = "Building worker solidarity and economic justice in Mendocino County. Unhoused workers cooperative providing mutual aid, job placement, and community organizing support.",
   keywords = "worker cooperative, Mendocino County, labor rights, economic justice, mutual aid, Ukiah CA, worker solidarity, cooperative jobs, unhoused workers",
   ogImage = "/mendo_labor_coop_logo.png",
-  canonical
+  canonical,
+  onContactClick
 }) => {
   const siteUrl = "https://mendolaborcoop.ukiahumc.org";
   const canonicalUrl = canonical || siteUrl;
@@ -63,7 +65,7 @@ const Layout: React.FC<LayoutProps> = ({
         <main className="flex-grow">
           {children}
         </main>
-        <Footer />
+        <Footer onContactClick={onContactClick} />
       </div>
     </>
   );

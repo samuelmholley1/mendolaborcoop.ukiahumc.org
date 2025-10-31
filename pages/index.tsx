@@ -15,6 +15,7 @@ import Head from 'next/head';
 
 const HomePage: React.FC = () => {
   const [language, setLanguage] = useState<'en' | 'es'>('en');
+  const [showContactPopup, setShowContactPopup] = useState(false);
 
   const content = {
     en: {
@@ -36,9 +37,11 @@ const HomePage: React.FC = () => {
   const currentContent = content[language];
 
   return (
-    <Layout
+    <>
+      <Layout
       title="Mendo Labor Cooperative - Skilled Local Workers | Mendocino County"
       description="Building economic justice through worker solidarity in Mendocino County. Fair pay, skilled professionals, local hiring."
+      onContactClick={() => setShowContactPopup(true)}
     >
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -163,14 +166,17 @@ const HomePage: React.FC = () => {
                 <div className="flex flex-col space-y-4">
                   <button
                     type="button"
+                    onClick={() => setShowContactPopup(true)}
                     className="bg-redwood text-cream px-8 py-4 rounded-lg text-lg font-headline font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-4 focus:ring-cream"
-                    aria-label="Hire a crew now"
+                    aria-label="Hire a worker - contact Cheryl"
                   >
                     {currentContent.hireCTA}
                   </button>
                   <button
                     type="button"
+                    onClick={() => setShowContactPopup(true)}
                     className="bg-moss text-cream px-8 py-4 rounded-lg text-lg font-headline font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-4 focus:ring-cream"
+                    aria-label="Join the co-op - contact Cheryl"
                   >
                     {currentContent.joinCTA}
                   </button>
@@ -289,12 +295,50 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Contact Popup Modal */}
+        {showContactPopup && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-lg shadow-xl max-w-md w-full border-4 border-moss">
+              <div className="bg-moss text-cream px-6 py-4 rounded-t-lg">
+                <h3 className="text-xl font-headline font-bold">Contact Cheryl</h3>
+                <p className="text-sm font-body opacity-90">Cooperative Coordinator</p>
+              </div>
+              <div className="p-6">
+                <div className="text-center">
+                  <p className="text-lg font-body text-moss mb-4">
+                    Ready to hire a worker or join our cooperative?
+                  </p>
+                  <div className="bg-sand rounded-lg p-4 mb-6">
+                    <p className="text-sm font-body text-moss mb-2">Call or Text:</p>
+                    <a
+                      href="tel:+19166397174"
+                      className="text-2xl font-headline font-bold text-redwood hover:text-moss transition-colors"
+                    >
+                      (916) 639-7174
+                    </a>
+                  </div>
+                  <p className="text-sm font-body text-moss">
+                    Cheryl will be happy to discuss your needs and answer any questions.
+                  </p>
+                </div>
+                <div className="flex justify-center mt-6">
+                  <button
+                    onClick={() => setShowContactPopup(false)}
+                    className="bg-moss text-cream px-6 py-2 rounded-lg font-headline font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-4 focus:ring-sand"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </Layout>
+    </>
   );
 };
 
 export default HomePage;
-
-
 
 
