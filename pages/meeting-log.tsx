@@ -26,7 +26,8 @@ const MeetingLogPage: React.FC = () => {
         { name: 'Dale Klingsorge', phone: '916-639-7141' },
         { name: 'Cheryl Vinson', phone: '916-639-7174' },
         { name: 'Louie Cedano', phone: '707 510-7199' },
-        { name: 'Braven', phone: '559 880 0960' }
+        { name: 'Braven', phone: '559 880 0960' },
+        { name: 'Rev. Dr. Michele Robbins', phone: '' }
       ]
     }
   ];
