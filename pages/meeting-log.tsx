@@ -27,7 +27,7 @@ const MeetingLogPage: React.FC = () => {
         { name: 'Cheryl Vinson', phone: '916-639-7174' },
         { name: 'Louie Cedano', phone: '707-510-7199' },
         { name: 'Braven', phone: '559-880-0960' },
-        { name: 'Rev. Dr. Michele Robbins', phone: '530-801-1030' }
+        { name: 'Michele Robbins', phone: '530-801-1030' }
       ]
     }
   ];
@@ -72,10 +72,10 @@ const MeetingLogPage: React.FC = () => {
                   <table className="w-full">
                     <thead>
                       <tr className="bg-sand border-b border-moss">
-                        <th className="px-6 py-3 text-left text-sm font-headline font-semibold text-white uppercase tracking-wider">
+                        <th className="px-6 py-3 text-left text-sm font-headline font-semibold text-black uppercase tracking-wider">
                           Attendee Name
                         </th>
-                        <th className="px-6 py-3 text-left text-sm font-headline font-semibold text-white uppercase tracking-wider">
+                        <th className="px-6 py-3 text-left text-sm font-headline font-semibold text-black uppercase tracking-wider">
                           Phone Number
                         </th>
                       </tr>
@@ -97,7 +97,7 @@ const MeetingLogPage: React.FC = () => {
 
                 {/* Footer with count */}
                 <div className="bg-sand px-6 py-3 border-t border-moss">
-                  <p className="text-sm font-body text-moss">
+                  <p className="text-sm font-body text-black">
                     Total Attendees: {meeting.attendees.length}
                   </p>
                 </div>
