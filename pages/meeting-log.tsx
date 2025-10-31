@@ -9,11 +9,11 @@ const MeetingLogPage: React.FC = () => {
       time: '10:00 AM - 11:00 AM',
       location: 'Building Bridges Homeless Resource Center',
       attendees: [
+        { name: 'Louie Cedano', phone: '707-510-7199' },
         { name: 'Ed Dick', phone: '707-952-2134' },
         { name: 'Samuel Holley', phone: '714-496-7006' },
         { name: 'Dale Klingsorge', phone: '916-639-7141' },
-        { name: 'Cheryl Vinson', phone: '916-639-7174' },
-        { name: 'Louie Cedano', phone: '707-510-7199' }
+        { name: 'Cheryl Vinson', phone: '916-639-7174' }
       ]
     },
     {
@@ -21,13 +21,13 @@ const MeetingLogPage: React.FC = () => {
       time: '10:00 AM - 11:00 AM',
       location: 'Building Bridges Homeless Resource Center',
       attendees: [
+        { name: 'Braven', phone: '559-880-0960' },
+        { name: 'Louie Cedano', phone: '707-510-7199' },
         { name: 'Ed Dick', phone: '707-952-2134' },
         { name: 'Samuel Holley', phone: '714-496-7006' },
         { name: 'Dale Klingsorge', phone: '916-639-7141' },
-        { name: 'Cheryl Vinson', phone: '916-639-7174' },
-        { name: 'Louie Cedano', phone: '707-510-7199' },
-        { name: 'Braven', phone: '559-880-0960' },
-        { name: 'Michele Robbins', phone: '530-801-1030' }
+        { name: 'Michele Robbins', phone: '530-801-1030' },
+        { name: 'Cheryl Vinson', phone: '916-639-7174' }
       ]
     }
   ];
