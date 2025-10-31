@@ -58,7 +58,7 @@ const MeetingLogPage: React.FC = () => {
               <div key={index} className="bg-white rounded-lg shadow-lg border border-moss overflow-hidden">
                 {/* Meeting Header */}
                 <div className="bg-moss text-cream px-6 py-4">
-                  <h2 className="text-xl font-headline font-bold">
+                  <h2 className="text-xl font-headline font-bold text-cream">
                     {meeting.date}
                   </h2>
                   <p className="text-sm font-body opacity-90">
