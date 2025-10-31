@@ -47,10 +47,10 @@ const MeetingLogPage: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-headline font-bold text-redwood mb-4">
-              Meeting Attendance Log
+              Attendance Log
             </h1>
             <p className="text-xl font-body text-moss">
-              Mendo Labor Cooperative Board & Planning Meetings
+              Mendo Labor Cooperative Planning Meetings
             </p>
           </div>
 
