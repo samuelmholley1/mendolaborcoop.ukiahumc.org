@@ -14,7 +14,7 @@ const AttendancePage: React.FC = () => {
       date: 'November 6, 2025',
       time: '10:00 AM - 11:00 AM',
       location: 'Building Bridges Homeless Resource Center',
-      notes: 'Read through the provisional work agreement out loud',
+      notes: 'Read through and approved the provisional work agreement. Revision: adding phone number fields for coop coordinator names/contacts at the beginning of contract.',
       attendees: [
         { name: 'Braven', phone: '559-880-0960' },
         { name: 'Louie Cedano', phone: '707-510-7199' },
