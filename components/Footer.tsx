@@ -44,19 +44,13 @@ const Footer: React.FC<{ onContactClick?: () => void }> = ({ onContactClick }) =
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-headline font-bold mb-4 text-cream">Get Connected</h3>
-            <div className="space-y-2 text-cream font-body">
-              <p>📞 Cheryl (Coordinator)</p>
-              <p>
-                <a href="tel:+19166397174" className="hover:text-sand transition-colors">
-                  (916) 639-7174
+              <h3 className="text-lg font-headline font-semibold text-cream mb-3">Contact</h3>
+              <div>
+                <p className="text-sm text-cream">Cheryl Vinson, Coordinator</p>
+                <a href="tel:+13692161512" className="hover:text-sand transition-colors">
+                  (369) 216-1512
                 </a>
-              </p>
-              <p className="pt-2">Serving unhoused workers in Mendocino County</p>
-              <p>Mutual aid • Worker organizing • Economic justice</p>
-            </div>
-            
-            <div className="mt-4">
+              </div>            <div className="mt-4">
               <p className="text-sm text-cream">Building worker power in Mendocino County</p>
             </div>
           </div>

@@ -308,10 +308,10 @@ const HomePage: React.FC = () => {
                   <div className="bg-sand rounded-lg p-4 mb-6">
                     <p className="text-sm font-body text-moss mb-2">Call or Text:</p>
                     <a
-                      href="tel:+19166397174"
+                      href="tel:+13692161512"
                       className="text-2xl font-headline font-bold text-redwood hover:text-moss transition-colors"
                     >
-                      (916) 639-7174
+                      (369) 216-1512
                     </a>
                   </div>
                   <p className="text-sm font-body text-moss">

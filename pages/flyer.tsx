@@ -63,10 +63,10 @@ const FlyerPage: React.FC = () => {
                 Call or Text Cheryl
               </p>
               <a 
-                href="tel:+19166397174" 
+                href="tel:+13692161512" 
                 className="text-6xl font-headline font-extrabold block mb-2 hover:opacity-90 transition-opacity"
               >
-                (916) 639-7174
+                (369) 216-1512
               </a>
             </div>
 
