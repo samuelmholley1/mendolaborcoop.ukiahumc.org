@@ -3,12 +3,20 @@ import Layout from '../components/Layout';
 import Head from 'next/head';
 
 const AttendancePage: React.FC = () => {
-  const meetings = [
+  const meetings: Array<{
+    date: string;
+    time: string;
+    location: string;
+    notes?: string;
+    attendees: Array<{ name: string; phone: string }>;
+  }> = [
     {
       date: 'November 6, 2025',
       time: '10:00 AM - 11:00 AM',
       location: 'Building Bridges Homeless Resource Center',
+      notes: 'Read through the provisional work agreement out loud',
       attendees: [
+        { name: 'Braven', phone: '559-880-0960' },
         { name: 'Louie Cedano', phone: '707-510-7199' },
         { name: 'Ed Dick', phone: '707-952-2134' },
         { name: 'Samuel Holley', phone: '714-496-7006' },
@@ -77,6 +85,11 @@ const AttendancePage: React.FC = () => {
                   <p className="text-sm font-body opacity-90">
                     {meeting.time} • {meeting.location}
                   </p>
+                  {meeting.notes && (
+                    <p className="text-sm font-body mt-2 italic">
+                      📋 {meeting.notes}
+                    </p>
+                  )}
                 </div>
 
                 {/* Spreadsheet Table */}
