@@ -124,11 +124,11 @@ const RecordsPage: React.FC = () => {
             </p>
 
             <div className="space-y-6">
-              {/* Meeting 4 - November 6, 2025 */}
+              {/* Meeting - November 6, 2025 */}
               <div className="bg-white border-l-8 border-l-moss p-6 rounded-r-lg shadow-md">
                 <div className="mb-4">
                   <h3 className="text-2xl font-headline font-bold text-redwood mb-2">
-                    📋 Meeting #4 - November 6, 2025
+                    📋 November 6, 2025
                   </h3>
                   <p className="text-sm text-moss font-body">
                     <strong>Attendees:</strong> 6 members present
@@ -161,11 +161,11 @@ const RecordsPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Meeting 3 - October 30, 2025 */}
+              {/* Meeting - October 30, 2025 */}
               <div className="bg-white border-l-8 border-l-river p-6 rounded-r-lg shadow-md">
                 <div className="mb-4">
                   <h3 className="text-2xl font-headline font-bold text-redwood mb-2">
-                    📋 Meeting #3 - October 30, 2025
+                    📋 October 30, 2025
                   </h3>
                   <p className="text-sm text-moss font-body">
                     <strong>Attendees:</strong> 5 members present
@@ -189,11 +189,11 @@ const RecordsPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Meeting 2 - October 16, 2025 */}
+              {/* Meeting - October 16, 2025 */}
               <div className="bg-white border-l-8 border-l-river p-6 rounded-r-lg shadow-md">
                 <div className="mb-4">
                   <h3 className="text-2xl font-headline font-bold text-redwood mb-2">
-                    📋 Meeting #2 - October 16, 2025
+                    📋 October 16, 2025
                   </h3>
                   <p className="text-sm text-moss font-body">
                     <strong>Attendees:</strong> 7 members present
