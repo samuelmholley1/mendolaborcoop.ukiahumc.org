@@ -34,7 +34,7 @@ const RecordsPage: React.FC = () => {
                 Current Treasury Balance
               </h2>
               <p className="text-5xl font-headline font-bold text-moss mb-2">
-                $17.00
+                $15.00
               </p>
               <p className="text-sm text-moss font-body italic">
                 Cash maintained by Financial Secretary
@@ -51,40 +51,14 @@ const RecordsPage: React.FC = () => {
             </h2>
 
             <div className="space-y-6">
-              {/* Transaction 3 - Initial Deposit */}
+              {/* Transaction 1 - Ed Dick Job (Initial Deposit) */}
               <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg shadow-md">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div className="flex-grow">
                     <div className="flex items-center gap-3 mb-2">
-                      <span className="text-2xl">💰</span>
+                      <span className="text-2xl">�</span>
                       <h3 className="text-xl font-headline font-semibold text-redwood">
-                        Initial Deposit
-                      </h3>
-                    </div>
-                    <p className="text-moss font-body ml-11">
-                      Founding deposit to establish co-op treasury
-                    </p>
-                    <p className="text-sm text-moss font-body mt-2 ml-11">
-                      Date: November 6, 2025
-                    </p>
-                  </div>
-                  <div className="text-right md:text-left md:min-w-[120px]">
-                    <p className="text-3xl font-headline font-bold text-moss">
-                      +$20.00
-                    </p>
-                    <p className="text-sm text-moss font-body">Deposit</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Transaction 2 - Job Payment from Ed Dick */}
-              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg shadow-md">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div className="flex-grow">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-2xl">🚜</span>
-                      <h3 className="text-xl font-headline font-semibold text-redwood">
-                        Farm Labor Job - Ed Dick
+                        Farm Labor Job - Ed Dick (Initial Deposit)
                       </h3>
                     </div>
                     <p className="text-moss font-body ml-11">
@@ -92,29 +66,30 @@ const RecordsPage: React.FC = () => {
                       <strong>Client:</strong> Ed Dick (Founding Member & First Client)<br />
                       <strong>Work:</strong> Physical labor on Ed's farm<br />
                       <strong>Hours:</strong> 6 hours @ $3/hour to co-op = $18.00<br />
-                      <strong>Tip:</strong> $2.00 cash tip to co-op
+                      <strong>Tip:</strong> $2.00 cash tip to co-op<br />
+                      <strong>Note:</strong> First revenue deposited to establish treasury
                     </p>
                     <p className="text-sm text-moss font-body mt-2 ml-11">
-                      Date: October 31, 2025 (Friday)
+                      Date: October 31, 2025 (Friday) - Reported at Nov 6 meeting
                     </p>
                   </div>
                   <div className="text-right md:text-left md:min-w-[120px]">
                     <p className="text-3xl font-headline font-bold text-moss">
                       +$20.00
                     </p>
-                    <p className="text-sm text-moss font-body">Job Revenue</p>
+                    <p className="text-sm text-moss font-body">Initial Deposit</p>
                   </div>
                 </div>
               </div>
 
-              {/* Transaction 1 - Payment to Cheryl */}
+              {/* Transaction 2 - Payment to Cheryl */}
               <div className="bg-cream border-l-8 border-l-redwood p-6 rounded-r-lg shadow-md">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div className="flex-grow">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-2xl">📤</span>
                       <h3 className="text-xl font-headline font-semibold text-redwood">
-                        Coordinator Payment - Cheryl
+                        Coordinator Payment - Cheryl Vinson
                       </h3>
                     </div>
                     <p className="text-moss font-body ml-11">
@@ -149,11 +124,68 @@ const RecordsPage: React.FC = () => {
             </p>
 
             <div className="space-y-6">
-              {/* Meeting 2 - November 6, 2025 */}
+              {/* Meeting 4 - November 6, 2025 */}
               <div className="bg-white border-l-8 border-l-moss p-6 rounded-r-lg shadow-md">
                 <div className="mb-4">
                   <h3 className="text-2xl font-headline font-bold text-redwood mb-2">
-                    📋 Meeting #2 - November 6, 2025
+                    📋 Meeting #4 - November 6, 2025
+                  </h3>
+                  <p className="text-sm text-moss font-body">
+                    <strong>Attendees:</strong> 5 members present
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="font-headline font-semibold text-moss mb-1">Financial Updates:</h4>
+                    <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
+                      <li>Ed Dick reported completion of first paid job (Oct 31): $20 revenue to co-op</li>
+                      <li>Motion passed unanimously to pay Cheryl Vinson $5.00 for coordinator work completed</li>
+                      <li>Current treasury balance: $15.00</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-headline font-semibold text-moss mb-1">Official Appointments (Signed):</h4>
+                    <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
+                      <li>Cheryl Vinson officially confirmed as Coordinator (tentatively appointed Oct 30)</li>
+                      <li>Samuel Holley officially confirmed as Financial Secretary & Digital Systems Steward</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Meeting 3 - October 30, 2025 */}
+              <div className="bg-white border-l-8 border-l-river p-6 rounded-r-lg shadow-md">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-headline font-bold text-redwood mb-2">
+                    📋 Meeting #3 - October 30, 2025
+                  </h3>
+                  <p className="text-sm text-moss font-body">
+                    <strong>Attendees:</strong> 5 members present
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="font-headline font-semibold text-moss mb-1">Key Decisions:</h4>
+                    <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
+                      <li>Tentatively appointed Cheryl Vinson as Coordinator (confirmed and signed Nov 6)</li>
+                      <li>Continued organizational planning and structure development</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-headline font-semibold text-moss mb-1">First Job Arranged:</h4>
+                    <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
+                      <li>Ed Dick arranged to hire Dale and Louie for farm labor on October 31</li>
+                      <li>Job completed successfully, revenue reported at Nov 6 meeting</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Meeting 2 - October 16, 2025 */}
+              <div className="bg-white border-l-8 border-l-river p-6 rounded-r-lg shadow-md">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-headline font-bold text-redwood mb-2">
+                    📋 Meeting #2 - October 16, 2025
                   </h3>
                   <p className="text-sm text-moss font-body">
                     <strong>Attendees:</strong> 7 members present
@@ -161,18 +193,10 @@ const RecordsPage: React.FC = () => {
                 </div>
                 <div className="space-y-3">
                   <div>
-                    <h4 className="font-headline font-semibold text-moss mb-1">Financial Transactions:</h4>
+                    <h4 className="font-headline font-semibold text-moss mb-1">Key Activities:</h4>
                     <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
-                      <li>Initial deposit of $20.00 to establish co-op treasury</li>
-                      <li>Motion passed unanimously to pay Cheryl Vinson $5.00 for coordinator work completed</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-headline font-semibold text-moss mb-1">Key Decisions:</h4>
-                    <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
-                      <li>Samuel Holley officially appointed as Financial Secretary & Digital Systems Steward</li>
-                      <li>Cheryl Vinson officially recognized as Coordinator</li>
-                      <li>Website updates approved for transparency and record-keeping</li>
+                      <li>Continued cooperative planning and organization</li>
+                      <li>Member engagement and goal-setting discussions</li>
                     </ul>
                   </div>
                 </div>
@@ -190,19 +214,10 @@ const RecordsPage: React.FC = () => {
                 </div>
                 <div className="space-y-3">
                   <div>
-                    <h4 className="font-headline font-semibold text-moss mb-1">First Job Completed:</h4>
-                    <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
-                      <li>Ed Dick (founding member) hired Dale and Louie for farm labor - October 31, 2025</li>
-                      <li>6 hours of physical labor on Ed's farm</li>
-                      <li>Co-op earned $18.00 ($3/hour × 6 hours) + $2.00 tip = $20.00 total</li>
-                    </ul>
-                  </div>
-                  <div>
                     <h4 className="font-headline font-semibold text-moss mb-1">Key Decisions:</h4>
                     <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
                       <li>Founding meeting to establish cooperative structure</li>
                       <li>Initial organizational planning and goal-setting</li>
-                      <li>First client engagement and job placement success</li>
                     </ul>
                   </div>
                 </div>
@@ -224,7 +239,7 @@ const RecordsPage: React.FC = () => {
                   Total Income
                 </h3>
                 <p className="text-3xl font-headline font-bold text-moss">
-                  $40.00
+                  $20.00
                 </p>
               </div>
 
@@ -242,9 +257,8 @@ const RecordsPage: React.FC = () => {
                   Current Balance
                 </h3>
                 <p className="text-3xl font-headline font-bold text-river">
-                  $17.00
+                  $15.00
                 </p>
-                <p className="text-xs text-moss mt-1">($20 initial + $20 job - $5 payment - $18 disbursed to workers)</p>
               </div>
             </div>
           </div>
