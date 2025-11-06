@@ -14,6 +14,11 @@ const FlyerPage: React.FC = () => {
               width: 8.5in; 
               height: 11in; 
             }
+            .contact-box {
+              -webkit-print-color-adjust: exact !important;
+              print-color-adjust: exact !important;
+              color-adjust: exact !important;
+            }
           }
           @page {
             margin: 0.5in;
@@ -58,7 +63,7 @@ const FlyerPage: React.FC = () => {
             </div>
 
             {/* Primary CTA - Contact Info */}
-            <div className="bg-moss text-cream p-12 rounded-lg mb-8 text-center">
+            <div className="contact-box bg-moss text-cream p-12 rounded-lg mb-8 text-center">
               <p className="text-2xl font-headline font-semibold mb-3">
                 Call or Text Cheryl
               </p>
