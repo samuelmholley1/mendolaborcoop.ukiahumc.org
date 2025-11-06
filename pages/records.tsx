@@ -45,14 +45,14 @@ const RecordsPage: React.FC = () => {
                 <h2 className="text-2xl font-headline font-semibold text-redwood mb-4">
                   Founding Members
                 </h2>
-                <ul className="space-y-2 text-moss font-body">
-                  <li>• Braven Haynes</li>
-                  <li>• Louie Cedano</li>
-                  <li>• <strong>Cheryl Vinson</strong> - Coordinator</li>
+                <ul className="space-y-2 text-moss font-body text-sm">
+                  <li>• Ed Dick - Lead Organizer</li>
+                  <li>• Michele Robbins - Pastor, Ukiah United Methodist Church (Co-op Sponsor)</li>
+                  <li>• Samuel Holley - Financial Secretary & Digital Systems Steward</li>
+                  <li>• Cheryl Vinson - Coordinator</li>
+                  <li>• Braven Haynes - Backup Coordinator</li>
                   <li>• Dale Klingsorge</li>
-                  <li>• Ed Dick</li>
-                  <li>• <strong>Samuel Holley</strong> - Financial Secretary & Digital Systems Steward</li>
-                  <li>• Michele Robbins</li>
+                  <li>• Louie Cedano</li>
                 </ul>
               </div>
             </div>
