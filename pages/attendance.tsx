@@ -5,6 +5,18 @@ import Head from 'next/head';
 const AttendancePage: React.FC = () => {
   const meetings = [
     {
+      date: 'November 6, 2025',
+      time: '10:00 AM - 11:00 AM',
+      location: 'Building Bridges Homeless Resource Center',
+      attendees: [
+        { name: 'Louie Cedano', phone: '707-510-7199' },
+        { name: 'Ed Dick', phone: '707-952-2134' },
+        { name: 'Samuel Holley', phone: '714-496-7006' },
+        { name: 'Michele Robbins', phone: '530-801-1030' },
+        { name: 'Cheryl Vinson', phone: '369-216-1512' }
+      ]
+    },
+    {
       date: 'October 30, 2025',
       time: '10:00 AM - 11:00 AM',
       location: 'Building Bridges Homeless Resource Center',
