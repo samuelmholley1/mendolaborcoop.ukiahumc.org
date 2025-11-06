@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Head from 'next/head';
 
-const MeetingLogPage: React.FC = () => {
+const AttendancePage: React.FC = () => {
   const meetings = [
     {
       date: 'October 30, 2025',
@@ -34,7 +34,7 @@ const MeetingLogPage: React.FC = () => {
 
   return (
     <Layout
-      title="Meeting Attendance Log - Mendo Labor Cooperative"
+      title="Meeting Attendance - Mendo Labor Cooperative"
       description="Meeting attendance records for Mendo Labor Cooperative board and planning meetings."
     >
       <Head>
@@ -47,10 +47,10 @@ const MeetingLogPage: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-headline font-bold text-redwood mb-4">
-              Attendance Log
+              Meeting Attendance
             </h1>
             <p className="text-xl font-body text-moss">
-              Mendo Labor Cooperative Planning Meetings
+              Detailed attendance records for all co-op meetings
             </p>
           </div>
 
@@ -110,4 +110,4 @@ const MeetingLogPage: React.FC = () => {
   );
 };
 
-export default MeetingLogPage;
+export default AttendancePage;
