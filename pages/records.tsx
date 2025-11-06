@@ -60,75 +60,75 @@ const RecordsPage: React.FC = () => {
         </section>
 
         {/* Transaction History */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-gradient-to-b from-white to-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-headline font-bold text-black mb-6 uppercase tracking-wide">
+            <h2 className="text-2xl font-headline font-bold text-redwood mb-6 uppercase tracking-wide border-b-2 border-moss pb-2">
               Transaction Ledger
             </h2>
 
             {/* Ledger Table */}
-            <div className="overflow-x-auto border border-gray-300">
+            <div className="overflow-x-auto border-2 border-moss rounded-lg shadow-md">
               <table className="w-full bg-white">
                 <thead>
-                  <tr className="bg-gray-100 border-b-2 border-gray-400">
-                    <th className="px-4 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border-r border-gray-300">
+                  <tr className="bg-moss text-cream border-b-2 border-moss">
+                    <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider border-r border-sand">
                       Date
                     </th>
-                    <th className="px-4 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border-r border-gray-300">
+                    <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider border-r border-sand">
                       Description
                     </th>
-                    <th className="px-4 py-3 text-right text-xs font-bold text-black uppercase tracking-wider border-r border-gray-300">
+                    <th className="px-4 py-3 text-right text-xs font-bold uppercase tracking-wider border-r border-sand">
                       Debit
                     </th>
-                    <th className="px-4 py-3 text-right text-xs font-bold text-black uppercase tracking-wider border-r border-gray-300">
+                    <th className="px-4 py-3 text-right text-xs font-bold uppercase tracking-wider border-r border-sand">
                       Credit
                     </th>
-                    <th className="px-4 py-3 text-right text-xs font-bold text-black uppercase tracking-wider">
+                    <th className="px-4 py-3 text-right text-xs font-bold uppercase tracking-wider">
                       Balance
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-300">
+                <tbody className="divide-y divide-gray-200">
+                  {/* Transaction 2 - Payment to Cheryl (Most Recent) */}
+                  <tr className="hover:bg-sand/30 transition-colors">
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-200 whitespace-nowrap">
+                      11/06/2025
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-200">
+                      <strong>Coordinator Payment - Cheryl Vinson</strong><br/>
+                      <span className="text-xs text-gray-600">Payment for coordinator work completed<br/>
+                      Authorization: Unanimous membership approval</span>
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-200 text-right font-mono">
+                      $5.00
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-200 text-right">
+                      —
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black text-right font-mono font-bold">
+                      $15.00
+                    </td>
+                  </tr>
+
                   {/* Transaction 1 - Initial Deposit */}
-                  <tr className="hover:bg-gray-50">
-                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300 whitespace-nowrap">
+                  <tr className="hover:bg-sand/30 transition-colors">
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-200 whitespace-nowrap">
                       10/31/2025
                     </td>
-                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300">
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-200">
                       <strong>Farm Labor Job - Ed Dick</strong><br/>
                       <span className="text-xs text-gray-600">Workers: Dale Klingsorge, Louie Cedano<br/>
                       6 hrs @ $3/hr to co-op ($18.00) + $2.00 tip<br/>
                       Initial deposit establishing treasury</span>
                     </td>
-                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300 text-right">
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-200 text-right">
                       —
                     </td>
-                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300 text-right font-mono">
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-200 text-right font-mono">
                       $20.00
                     </td>
                     <td className="px-4 py-3 text-sm text-black text-right font-mono font-bold">
                       $20.00
-                    </td>
-                  </tr>
-
-                  {/* Transaction 2 - Payment to Cheryl */}
-                  <tr className="hover:bg-gray-50">
-                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300 whitespace-nowrap">
-                      11/06/2025
-                    </td>
-                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300">
-                      <strong>Coordinator Payment - Cheryl Vinson</strong><br/>
-                      <span className="text-xs text-gray-600">Payment for coordinator work completed<br/>
-                      Authorization: Unanimous membership approval</span>
-                    </td>
-                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300 text-right font-mono">
-                      $5.00
-                    </td>
-                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300 text-right">
-                      —
-                    </td>
-                    <td className="px-4 py-3 text-sm text-black text-right font-mono font-bold">
-                      $15.00
                     </td>
                   </tr>
                 </tbody>
@@ -136,33 +136,33 @@ const RecordsPage: React.FC = () => {
             </div>
 
             {/* Ledger Footer */}
-            <div className="mt-6 bg-gray-100 border border-gray-300 p-4">
+            <div className="mt-6 bg-moss text-cream border-2 border-moss rounded-lg p-4 shadow-md">
               <div className="flex justify-between items-center">
-                <span className="text-sm font-bold text-black uppercase">Current Balance:</span>
-                <span className="text-2xl font-mono font-bold text-black">$15.00</span>
+                <span className="text-sm font-bold uppercase">Current Balance:</span>
+                <span className="text-2xl font-mono font-bold">$15.00</span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Meeting Records */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-sand/30">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-headline font-bold text-black mb-2 uppercase tracking-wide">
+            <h2 className="text-2xl font-headline font-bold text-redwood mb-2 uppercase tracking-wide border-b-2 border-moss pb-2">
               Meeting Minutes
             </h2>
-            <p className="text-sm text-gray-600 mb-6">
-              For full attendance records, see the <Link href="/attendance" className="text-black font-semibold hover:underline">Attendance page</Link>
+            <p className="text-sm text-moss mb-6">
+              For full attendance records, see the <Link href="/attendance" className="text-redwood font-semibold hover:underline">Attendance page</Link>
             </p>
 
             <div className="space-y-4">
               {/* Meeting - November 6, 2025 */}
-              <div className="bg-white border border-gray-300 p-6">
-                <div className="border-b border-gray-300 pb-3 mb-4">
-                  <h3 className="text-lg font-bold text-black mb-1">
+              <div className="bg-white border-l-4 border-l-moss rounded-r-lg shadow-md p-6">
+                <div className="border-b border-sand pb-3 mb-4">
+                  <h3 className="text-lg font-bold text-redwood mb-1">
                     November 6, 2025
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-moss">
                     Attendees: 6 members present
                   </p>
                 </div>
@@ -194,12 +194,12 @@ const RecordsPage: React.FC = () => {
               </div>
 
               {/* Meeting - October 30, 2025 */}
-              <div className="bg-white border border-gray-300 p-6">
-                <div className="border-b border-gray-300 pb-3 mb-4">
-                  <h3 className="text-lg font-bold text-black mb-1">
+              <div className="bg-white border-l-4 border-l-moss rounded-r-lg shadow-md p-6">
+                <div className="border-b border-sand pb-3 mb-4">
+                  <h3 className="text-lg font-bold text-redwood mb-1">
                     October 30, 2025
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-moss">
                     Attendees: 5 members present
                   </p>
                 </div>
@@ -222,12 +222,12 @@ const RecordsPage: React.FC = () => {
               </div>
 
               {/* Meeting - October 16, 2025 */}
-              <div className="bg-white border border-gray-300 p-6">
-                <div className="border-b border-gray-300 pb-3 mb-4">
-                  <h3 className="text-lg font-bold text-black mb-1">
+              <div className="bg-white border-l-4 border-l-moss rounded-r-lg shadow-md p-6">
+                <div className="border-b border-sand pb-3 mb-4">
+                  <h3 className="text-lg font-bold text-redwood mb-1">
                     October 16, 2025
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-moss">
                     Attendees: 7 members present
                   </p>
                 </div>
@@ -246,25 +246,25 @@ const RecordsPage: React.FC = () => {
         </section>
 
         {/* Financial Summary */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-gradient-to-b from-white to-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-black mb-6 uppercase tracking-wide">
+            <h2 className="text-2xl font-bold text-redwood mb-6 uppercase tracking-wide border-b-2 border-moss pb-2">
               Financial Summary
             </h2>
 
-            <div className="border border-gray-300">
+            <div className="border-2 border-moss rounded-lg shadow-md overflow-hidden">
               <table className="w-full bg-white">
                 <tbody>
-                  <tr className="border-b border-gray-300">
+                  <tr className="border-b border-gray-200">
                     <td className="px-4 py-3 text-sm font-bold text-black">Total Credits (Income)</td>
                     <td className="px-4 py-3 text-sm text-right font-mono">$20.00</td>
                   </tr>
-                  <tr className="border-b-2 border-gray-400">
+                  <tr className="border-b-2 border-moss">
                     <td className="px-4 py-3 text-sm font-bold text-black">Total Debits (Expenses)</td>
                     <td className="px-4 py-3 text-sm text-right font-mono">$5.00</td>
                   </tr>
-                  <tr className="bg-gray-100">
-                    <td className="px-4 py-4 text-base font-bold text-black uppercase">Current Balance</td>
+                  <tr className="bg-moss text-cream">
+                    <td className="px-4 py-4 text-base font-bold uppercase">Current Balance</td>
                     <td className="px-4 py-4 text-xl text-right font-mono font-bold">$15.00</td>
                   </tr>
                 </tbody>
