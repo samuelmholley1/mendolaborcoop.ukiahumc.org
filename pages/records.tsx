@@ -60,145 +60,161 @@ const RecordsPage: React.FC = () => {
         </section>
 
         {/* Transaction History */}
-        <section className="py-16">
+        <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-headline font-bold text-redwood mb-8 text-center">
-              Transaction History
+            <h2 className="text-2xl font-headline font-bold text-black mb-6 uppercase tracking-wide">
+              Transaction Ledger
             </h2>
 
-            <div className="space-y-6">
-              {/* Transaction 2 - Payment to Cheryl (Most Recent) */}
-              <div className="bg-cream border-l-8 border-l-redwood p-6 rounded-r-lg shadow-md">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div className="flex-grow">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-2xl">📤</span>
-                      <h3 className="text-xl font-headline font-semibold text-redwood">
-                        Coordinator Payment - Cheryl Vinson
-                      </h3>
-                    </div>
-                    <p className="text-moss font-body ml-11">
-                      Payment for coordinator work already completed<br />
-                      <strong>Recipient:</strong> Cheryl Vinson, Coordinator<br />
-                      <strong>Authorization:</strong> Unanimous approval by membership
-                    </p>
-                    <p className="text-sm text-moss font-body mt-2 ml-11">
-                      Date: November 6, 2025
-                    </p>
-                  </div>
-                  <div className="text-right md:text-left md:min-w-[120px]">
-                    <p className="text-3xl font-headline font-bold text-redwood">
-                      -$5.00
-                    </p>
-                    <p className="text-sm text-moss font-body">Expense</p>
-                  </div>
-                </div>
-              </div>
+            {/* Ledger Table */}
+            <div className="overflow-x-auto border border-gray-300">
+              <table className="w-full bg-white">
+                <thead>
+                  <tr className="bg-gray-100 border-b-2 border-gray-400">
+                    <th className="px-4 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border-r border-gray-300">
+                      Date
+                    </th>
+                    <th className="px-4 py-3 text-left text-xs font-bold text-black uppercase tracking-wider border-r border-gray-300">
+                      Description
+                    </th>
+                    <th className="px-4 py-3 text-right text-xs font-bold text-black uppercase tracking-wider border-r border-gray-300">
+                      Debit
+                    </th>
+                    <th className="px-4 py-3 text-right text-xs font-bold text-black uppercase tracking-wider border-r border-gray-300">
+                      Credit
+                    </th>
+                    <th className="px-4 py-3 text-right text-xs font-bold text-black uppercase tracking-wider">
+                      Balance
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-300">
+                  {/* Transaction 1 - Initial Deposit */}
+                  <tr className="hover:bg-gray-50">
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300 whitespace-nowrap">
+                      10/31/2025
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300">
+                      <strong>Farm Labor Job - Ed Dick</strong><br/>
+                      <span className="text-xs text-gray-600">Workers: Dale Klingsorge, Louie Cedano<br/>
+                      6 hrs @ $3/hr to co-op ($18.00) + $2.00 tip<br/>
+                      Initial deposit establishing treasury</span>
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300 text-right">
+                      —
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300 text-right font-mono">
+                      $20.00
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black text-right font-mono font-bold">
+                      $20.00
+                    </td>
+                  </tr>
 
-              {/* Transaction 1 - Ed Dick Job (Initial Deposit) */}
-              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg shadow-md">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div className="flex-grow">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-2xl">🚜</span>
-                      <h3 className="text-xl font-headline font-semibold text-redwood">
-                        Farm Labor Job - Ed Dick (Initial Deposit)
-                      </h3>
-                    </div>
-                    <p className="text-moss font-body ml-11">
-                      <strong>Workers:</strong> Dale and Louie<br />
-                      <strong>Client:</strong> Ed Dick (Founding Member & First Client)<br />
-                      <strong>Work:</strong> Physical labor on Ed's farm<br />
-                      <strong>Hours:</strong> 6 hours @ $3/hour to co-op = $18.00<br />
-                      <strong>Tip:</strong> $2.00 cash tip to co-op<br />
-                      <strong>Note:</strong> First revenue deposited to establish treasury
-                    </p>
-                    <p className="text-sm text-moss font-body mt-2 ml-11">
-                      Date: October 31, 2025 (Friday) - Reported at Nov 6 meeting
-                    </p>
-                  </div>
-                  <div className="text-right md:text-left md:min-w-[120px]">
-                    <p className="text-3xl font-headline font-bold text-moss">
-                      +$20.00
-                    </p>
-                    <p className="text-sm text-moss font-body">Initial Deposit</p>
-                  </div>
-                </div>
+                  {/* Transaction 2 - Payment to Cheryl */}
+                  <tr className="hover:bg-gray-50">
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300 whitespace-nowrap">
+                      11/06/2025
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300">
+                      <strong>Coordinator Payment - Cheryl Vinson</strong><br/>
+                      <span className="text-xs text-gray-600">Payment for coordinator work completed<br/>
+                      Authorization: Unanimous membership approval</span>
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300 text-right font-mono">
+                      $5.00
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-300 text-right">
+                      —
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black text-right font-mono font-bold">
+                      $15.00
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Ledger Footer */}
+            <div className="mt-6 bg-gray-100 border border-gray-300 p-4">
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-bold text-black uppercase">Current Balance:</span>
+                <span className="text-2xl font-mono font-bold text-black">$15.00</span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Meeting Records */}
-        <section className="py-16 bg-sand">
+        <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-headline font-bold text-redwood mb-8 text-center">
-              Meeting Records
+            <h2 className="text-2xl font-headline font-bold text-black mb-2 uppercase tracking-wide">
+              Meeting Minutes
             </h2>
-            <p className="text-center text-moss font-body mb-8">
-              For full attendance records, see the <Link href="/attendance" className="text-redwood font-semibold hover:underline">Attendance page</Link>
+            <p className="text-sm text-gray-600 mb-6">
+              For full attendance records, see the <Link href="/attendance" className="text-black font-semibold hover:underline">Attendance page</Link>
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {/* Meeting - November 6, 2025 */}
-              <div className="bg-white border-l-8 border-l-moss p-6 rounded-r-lg shadow-md">
-                <div className="mb-4">
-                  <h3 className="text-2xl font-headline font-bold text-redwood mb-2">
-                    📋 November 6, 2025
+              <div className="bg-white border border-gray-300 p-6">
+                <div className="border-b border-gray-300 pb-3 mb-4">
+                  <h3 className="text-lg font-bold text-black mb-1">
+                    November 6, 2025
                   </h3>
-                  <p className="text-sm text-moss font-body">
-                    <strong>Attendees:</strong> 6 members present
+                  <p className="text-sm text-gray-600">
+                    Attendees: 6 members present
                   </p>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-3 text-sm">
                   <div>
-                    <h4 className="font-headline font-semibold text-moss mb-1">Major Accomplishment:</h4>
-                    <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
-                      <li><strong>Approved the provisional work agreement</strong> - historic milestone for the co-op</li>
-                      <li>Revisions: (1) Added phone number fields for coop coordinator contact info at contract start, (2) Added photo/video opt-out clause</li>
-                      <li>Discussed taking worker photos (job action shots and headshots) for website profiles and marketing materials</li>
+                    <p className="font-bold text-black mb-1">Major Accomplishment:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li>Approved the provisional work agreement - historic milestone</li>
+                      <li>Revisions: (1) Added phone number fields for coordinator contact, (2) Added photo/video opt-out clause</li>
+                      <li>Discussed worker photos for website profiles and marketing</li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-headline font-semibold text-moss mb-1">Financial Updates:</h4>
-                    <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
-                      <li>Ed Dick reported completion of first paid job (Oct 31): $20 revenue to co-op</li>
-                      <li>Motion passed unanimously to pay Cheryl Vinson $5.00 for coordinator work completed</li>
-                      <li>Current treasury balance: $15.00</li>
+                    <p className="font-bold text-black mb-1">Financial Updates:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li>Ed Dick reported first paid job (Oct 31): $20 revenue</li>
+                      <li>Motion passed: Pay Cheryl Vinson $5.00 for coordinator work</li>
+                      <li>Treasury balance: $15.00</li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-headline font-semibold text-moss mb-1">Official Appointments (Signed):</h4>
-                    <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
-                      <li>Cheryl Vinson officially confirmed as Coordinator (tentatively appointed Oct 30)</li>
-                      <li>Samuel Holley officially confirmed as Financial Secretary & Digital Systems Steward</li>
+                    <p className="font-bold text-black mb-1">Official Appointments (Signed):</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li>Cheryl Vinson - Coordinator (confirmed)</li>
+                      <li>Samuel Holley - Financial Secretary & Digital Systems Steward (confirmed)</li>
                     </ul>
                   </div>
                 </div>
               </div>
 
               {/* Meeting - October 30, 2025 */}
-              <div className="bg-white border-l-8 border-l-river p-6 rounded-r-lg shadow-md">
-                <div className="mb-4">
-                  <h3 className="text-2xl font-headline font-bold text-redwood mb-2">
-                    📋 October 30, 2025
+              <div className="bg-white border border-gray-300 p-6">
+                <div className="border-b border-gray-300 pb-3 mb-4">
+                  <h3 className="text-lg font-bold text-black mb-1">
+                    October 30, 2025
                   </h3>
-                  <p className="text-sm text-moss font-body">
-                    <strong>Attendees:</strong> 5 members present
+                  <p className="text-sm text-gray-600">
+                    Attendees: 5 members present
                   </p>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-3 text-sm">
                   <div>
-                    <h4 className="font-headline font-semibold text-moss mb-1">Key Decisions:</h4>
-                    <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
-                      <li>Tentatively appointed Cheryl Vinson as Coordinator (confirmed and signed Nov 6)</li>
+                    <p className="font-bold text-black mb-1">Key Decisions:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li>Tentatively appointed Cheryl Vinson as Coordinator</li>
                       <li>Continued organizational planning and structure development</li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-headline font-semibold text-moss mb-1">First Job Arranged:</h4>
-                    <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
-                      <li>Ed Dick arranged to hire Dale and Louie for farm labor on October 31</li>
+                    <p className="font-bold text-black mb-1">First Job Arranged:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li>Ed Dick hired Dale and Louie for farm labor on October 31</li>
                       <li>Job completed successfully, revenue reported at Nov 6 meeting</li>
                     </ul>
                   </div>
@@ -206,19 +222,19 @@ const RecordsPage: React.FC = () => {
               </div>
 
               {/* Meeting - October 16, 2025 */}
-              <div className="bg-white border-l-8 border-l-river p-6 rounded-r-lg shadow-md">
-                <div className="mb-4">
-                  <h3 className="text-2xl font-headline font-bold text-redwood mb-2">
-                    📋 October 16, 2025
+              <div className="bg-white border border-gray-300 p-6">
+                <div className="border-b border-gray-300 pb-3 mb-4">
+                  <h3 className="text-lg font-bold text-black mb-1">
+                    October 16, 2025
                   </h3>
-                  <p className="text-sm text-moss font-body">
-                    <strong>Attendees:</strong> 7 members present
+                  <p className="text-sm text-gray-600">
+                    Attendees: 7 members present
                   </p>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-3 text-sm">
                   <div>
-                    <h4 className="font-headline font-semibold text-moss mb-1">Key Activities:</h4>
-                    <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
+                    <p className="font-bold text-black mb-1">Key Activities:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
                       <li>Continued cooperative planning and organization</li>
                       <li>Member engagement and goal-setting discussions</li>
                     </ul>
@@ -230,96 +246,30 @@ const RecordsPage: React.FC = () => {
         </section>
 
         {/* Financial Summary */}
-        <section className="py-16">
+        <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-headline font-bold text-redwood mb-8 text-center">
+            <h2 className="text-2xl font-bold text-black mb-6 uppercase tracking-wide">
               Financial Summary
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white border-l-8 border-l-moss p-6 rounded-r-lg shadow-md text-center">
-                <h3 className="text-lg font-headline font-semibold text-redwood mb-2">
-                  Total Income
-                </h3>
-                <p className="text-3xl font-headline font-bold text-moss">
-                  $20.00
-                </p>
-              </div>
-
-              <div className="bg-white border-l-8 border-l-redwood p-6 rounded-r-lg shadow-md text-center">
-                <h3 className="text-lg font-headline font-semibold text-redwood mb-2">
-                  Total Expenses
-                </h3>
-                <p className="text-3xl font-headline font-bold text-redwood">
-                  $5.00
-                </p>
-              </div>
-
-              <div className="bg-white border-l-8 border-l-river p-6 rounded-r-lg shadow-md text-center">
-                <h3 className="text-lg font-headline font-semibold text-redwood mb-2">
-                  Current Balance
-                </h3>
-                <p className="text-3xl font-headline font-bold text-river">
-                  $15.00
-                </p>
-              </div>
+            <div className="border border-gray-300">
+              <table className="w-full bg-white">
+                <tbody>
+                  <tr className="border-b border-gray-300">
+                    <td className="px-4 py-3 text-sm font-bold text-black">Total Credits (Income)</td>
+                    <td className="px-4 py-3 text-sm text-right font-mono">$20.00</td>
+                  </tr>
+                  <tr className="border-b-2 border-gray-400">
+                    <td className="px-4 py-3 text-sm font-bold text-black">Total Debits (Expenses)</td>
+                    <td className="px-4 py-3 text-sm text-right font-mono">$5.00</td>
+                  </tr>
+                  <tr className="bg-gray-100">
+                    <td className="px-4 py-4 text-base font-bold text-black uppercase">Current Balance</td>
+                    <td className="px-4 py-4 text-xl text-right font-mono font-bold">$15.00</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </div>
-        </section>
-
-        {/* Financial Principles */}
-        <section className="py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-headline font-bold text-redwood mb-8 text-center">
-              Our Financial Principles
-            </h2>
-
-            <div className="space-y-4">
-              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
-                <h3 className="text-xl font-headline font-semibold text-redwood mb-2">
-                  🔍 Full Transparency
-                </h3>
-                <p className="text-moss font-body">
-                  All financial transactions are recorded and accessible to all cooperative members. This page is updated to reflect current account status.
-                </p>
-              </div>
-
-              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
-                <h3 className="text-xl font-headline font-semibold text-redwood mb-2">
-                  🗳️ Democratic Control
-                </h3>
-                <p className="text-moss font-body">
-                  All expenses require membership approval. Major financial decisions are made democratically by the cooperative membership.
-                </p>
-              </div>
-
-              <div className="bg-cream border-l-8 border-l-moss p-6 rounded-r-lg">
-                <h3 className="text-xl font-headline font-semibold text-redwood mb-2">
-                  💪 Worker-Centered
-                </h3>
-                <p className="text-moss font-body">
-                  Our finances exist to support worker livelihoods, not extract profit. All members share equitably in the cooperative's success.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-redwood text-cream">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-headline font-bold mb-6">
-              Questions About Our Finances?
-            </h2>
-            <p className="text-xl mb-8 opacity-90 font-body">
-              We believe in complete transparency. Contact us to learn more.
-            </p>
-            <Link
-              href="/contact"
-              className="bg-cream text-redwood px-8 py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors inline-block font-headline"
-            >
-              Get In Touch
-            </Link>
           </div>
         </section>
       </Layout>
