@@ -16,7 +16,7 @@ const AttendancePage: React.FC = () => {
       location: 'Building Bridges Homeless Resource Center',
       notes: 'Read through and approved the provisional work agreement. Revisions: (1) adding phone number fields for coop coordinator names/contacts at the beginning of contract, (2) adding photo/video opt-out clause. Discussed taking photos of workers doing jobs and headshots for worker profiles for website and publicity/marketing purposes.',
       attendees: [
-        { name: 'Braven', phone: '559-880-0960' },
+        { name: 'Braven Haynes', phone: '559-880-0960' },
         { name: 'Louie Cedano', phone: '707-510-7199' },
         { name: 'Ed Dick', phone: '707-952-2134' },
         { name: 'Samuel Holley', phone: '714-496-7006' },
@@ -41,7 +41,7 @@ const AttendancePage: React.FC = () => {
       time: '10:00 AM - 11:00 AM',
       location: 'Building Bridges Homeless Resource Center',
       attendees: [
-        { name: 'Braven', phone: '559-880-0960' },
+        { name: 'Braven Haynes', phone: '559-880-0960' },
         { name: 'Louie Cedano', phone: '707-510-7199' },
         { name: 'Ed Dick', phone: '707-952-2134' },
         { name: 'Samuel Holley', phone: '714-496-7006' },

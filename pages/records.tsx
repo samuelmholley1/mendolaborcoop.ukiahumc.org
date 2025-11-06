@@ -131,10 +131,18 @@ const RecordsPage: React.FC = () => {
                     📋 Meeting #4 - November 6, 2025
                   </h3>
                   <p className="text-sm text-moss font-body">
-                    <strong>Attendees:</strong> 5 members present
+                    <strong>Attendees:</strong> 6 members present
                   </p>
                 </div>
                 <div className="space-y-3">
+                  <div>
+                    <h4 className="font-headline font-semibold text-moss mb-1">Major Accomplishment:</h4>
+                    <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
+                      <li><strong>Approved the provisional work agreement</strong> - historic milestone for the co-op</li>
+                      <li>Revisions: (1) Added phone number fields for coop coordinator contact info at contract start, (2) Added photo/video opt-out clause</li>
+                      <li>Discussed taking worker photos (job action shots and headshots) for website profiles and marketing materials</li>
+                    </ul>
+                  </div>
                   <div>
                     <h4 className="font-headline font-semibold text-moss mb-1">Financial Updates:</h4>
                     <ul className="list-disc list-inside text-moss font-body ml-4 space-y-1">
