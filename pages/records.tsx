@@ -19,26 +19,42 @@ const RecordsPage: React.FC = () => {
               <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
                 Meeting minutes, financial records, and organizational history
               </p>
-              <p className="text-lg mt-4 opacity-80">
-                Maintained by Samuel Holley, Financial Secretary & Digital Systems Steward
-              </p>
             </div>
           </div>
         </section>
 
         {/* Current Balance */}
         <section className="py-12 bg-sand">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white border-l-8 border-l-moss p-8 rounded-r-lg shadow-lg text-center">
-              <h2 className="text-2xl font-headline font-semibold text-redwood mb-2">
-                Current Treasury Balance
-              </h2>
-              <p className="text-5xl font-headline font-bold text-moss mb-2">
-                $15.00
-              </p>
-              <p className="text-sm text-moss font-body italic">
-                Cash maintained by Financial Secretary
-              </p>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Treasury Balance */}
+              <div className="bg-white border-l-8 border-l-moss p-8 rounded-r-lg shadow-lg text-center">
+                <h2 className="text-2xl font-headline font-semibold text-redwood mb-2">
+                  Current Treasury Balance
+                </h2>
+                <p className="text-5xl font-headline font-bold text-moss mb-2">
+                  $15.00
+                </p>
+                <p className="text-sm text-moss font-body italic">
+                  Cash maintained by Financial Secretary
+                </p>
+              </div>
+
+              {/* Member List */}
+              <div className="bg-white border-l-8 border-l-redwood p-8 rounded-r-lg shadow-lg">
+                <h2 className="text-2xl font-headline font-semibold text-redwood mb-4">
+                  Founding Members
+                </h2>
+                <ul className="space-y-2 text-moss font-body">
+                  <li>• Braven Haynes</li>
+                  <li>• Louie Cedano</li>
+                  <li>• <strong>Cheryl Vinson</strong> - Coordinator</li>
+                  <li>• Dale Klingsorge</li>
+                  <li>• Ed Dick</li>
+                  <li>• <strong>Samuel Holley</strong> - Financial Secretary & Digital Systems Steward</li>
+                  <li>• Michele Robbins</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
