@@ -159,23 +159,22 @@ const HomePage: React.FC = () => {
                 </div>
 
                 {/* Right Column - CTAs */}
-                <div className="flex flex-col space-y-4">
-                  <button
-                    type="button"
-                    onClick={() => setShowContactPopup(true)}
-                    className="bg-redwood text-cream px-8 py-4 rounded-lg text-lg font-headline font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-4 focus:ring-cream"
-                    aria-label="Hire a worker - contact Cheryl"
-                  >
-                    {currentContent.hireCTA}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setShowContactPopup(true)}
-                    className="bg-moss text-cream px-8 py-4 rounded-lg text-lg font-headline font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-4 focus:ring-cream"
-                    aria-label="Join the co-op - contact Cheryl"
-                  >
-                    {currentContent.joinCTA}
-                  </button>
+                <div className="flex flex-col space-y-6">
+                  {/* Primary Phone CTA */}
+                  <div className="bg-moss text-cream p-8 rounded-lg text-center border-4 border-redwood shadow-xl">
+                    <p className="text-xl font-headline font-semibold mb-3">
+                      Call or Text Cheryl
+                    </p>
+                    <a 
+                      href="tel:+13692161512" 
+                      className="text-5xl md:text-6xl font-headline font-extrabold block hover:opacity-90 transition-opacity"
+                    >
+                      (369) 216-1512
+                    </a>
+                    <p className="text-sm font-body mt-3 opacity-90">
+                      Hire a Worker • Join the Co-op
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
