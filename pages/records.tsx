@@ -170,7 +170,7 @@ const RecordsPage: React.FC = () => {
                   <div>
                     <p className="font-bold text-black mb-1">Major Accomplishment:</p>
                     <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
-                      <li>Approved the provisional work agreement - historic milestone</li>
+                      <li>Approved the provisional work agreement</li>
                       <li>Revisions: (1) Added phone number fields for coordinator contact, (2) Added photo/video opt-out clause</li>
                       <li>Discussed worker photos for website profiles and marketing</li>
                     </ul>
@@ -208,6 +208,7 @@ const RecordsPage: React.FC = () => {
                     <p className="font-bold text-black mb-1">Key Decisions:</p>
                     <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
                       <li>Tentatively appointed Cheryl Vinson as Coordinator</li>
+                      <li>Decided to keep a cash reserve and wait on opening a bank account until co-op can formalize as an institution</li>
                       <li>Continued organizational planning and structure development</li>
                     </ul>
                   </div>
@@ -215,7 +216,6 @@ const RecordsPage: React.FC = () => {
                     <p className="font-bold text-black mb-1">First Job Arranged:</p>
                     <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
                       <li>Ed Dick hired Dale and Louie for farm labor on October 31</li>
-                      <li>Job completed successfully, revenue reported at Nov 6 meeting</li>
                     </ul>
                   </div>
                 </div>
@@ -235,6 +235,7 @@ const RecordsPage: React.FC = () => {
                   <div>
                     <p className="font-bold text-black mb-1">Key Activities:</p>
                     <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li>Made co-op website</li>
                       <li>Continued cooperative planning and organization</li>
                       <li>Member engagement and goal-setting discussions</li>
                     </ul>
