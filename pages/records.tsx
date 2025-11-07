@@ -26,35 +26,35 @@ const RecordsPage: React.FC = () => {
         {/* Current Balance */}
         <section className="py-12 bg-sand">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Treasury Balance */}
-              <div className="bg-white border-l-8 border-l-moss p-8 rounded-r-lg shadow-lg text-center">
-                <h2 className="text-2xl font-headline font-semibold text-redwood mb-2">
+            {/* Treasury Balance - Compact centered box */}
+            <div className="flex justify-center mb-6">
+              <div className="bg-white border-l-8 border-l-moss p-4 rounded-r-lg shadow-lg text-center inline-block">
+                <h2 className="text-xl font-headline font-semibold text-redwood mb-1">
                   Current Treasury Balance
                 </h2>
-                <p className="text-5xl font-headline font-bold text-moss mb-2">
+                <p className="text-4xl font-headline font-bold text-moss mb-1">
                   $15.00
                 </p>
-                <p className="text-sm text-moss font-body italic">
+                <p className="text-xs text-moss font-body italic">
                   Cash maintained by Financial Secretary
                 </p>
               </div>
+            </div>
 
-              {/* Member List */}
-              <div className="bg-white border-l-8 border-l-redwood p-8 rounded-r-lg shadow-lg">
-                <h2 className="text-2xl font-headline font-semibold text-redwood mb-4">
-                  Founding Members
-                </h2>
-                <ul className="space-y-2 text-moss font-body text-sm">
-                  <li>• Ed Dick - Lead Organizer</li>
-                  <li>• Michele Robbins - Pastor, Ukiah United Methodist Church (Co-op Sponsor)</li>
-                  <li>• Samuel Holley - Financial Secretary & Digital Systems Steward</li>
-                  <li>• Cheryl Vinson - Coordinator</li>
-                  <li>• Braven Haynes - Backup Coordinator</li>
-                  <li>• Dale Klingsorge</li>
-                  <li>• Louie Cedano</li>
-                </ul>
-              </div>
+            {/* Member List - Full width below */}
+            <div className="bg-white border-l-8 border-l-redwood p-4 rounded-r-lg shadow-lg">
+              <h2 className="text-xl font-headline font-semibold text-redwood mb-3">
+                Founding Members
+              </h2>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1 text-moss font-body text-sm">
+                <li>• Ed Dick - Lead Organizer</li>
+                <li>• Michele Robbins - Pastor, Ukiah United Methodist Church (Co-op Sponsor)</li>
+                <li>• Samuel Holley - Financial Secretary & Digital Systems Steward</li>
+                <li>• Cheryl Vinson - Coordinator</li>
+                <li>• Braven Haynes - Backup Coordinator</li>
+                <li>• Dale Klingsorge</li>
+                <li>• Louie Cedano</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -95,7 +95,7 @@ const RecordsPage: React.FC = () => {
                       11/06/2025
                     </td>
                     <td className="px-4 py-3 text-sm text-black border-r border-gray-200">
-                      <strong>Coordinator Payment - Cheryl Vinson</strong><br/>
+                      <strong>Coordinator Payment - Cheryl Vinson (2nd transaction)</strong><br/>
                       <span className="text-xs text-gray-600">Payment for coordinator work completed<br/>
                       Authorization: Unanimous membership approval</span>
                     </td>
@@ -113,12 +113,12 @@ const RecordsPage: React.FC = () => {
                   {/* Transaction 1 - Initial Deposit */}
                   <tr className="hover:bg-sand/30 transition-colors">
                     <td className="px-4 py-3 text-sm text-black border-r border-gray-200 whitespace-nowrap">
-                      10/31/2025
+                      11/06/2025
                     </td>
                     <td className="px-4 py-3 text-sm text-black border-r border-gray-200">
-                      <strong>Farm Labor Job - Ed Dick</strong><br/>
+                      <strong>Farm Labor Job - Ed Dick (1st transaction)</strong><br/>
                       <span className="text-xs text-gray-600">Workers: Dale Klingsorge, Louie Cedano<br/>
-                      6 hrs @ $3/hr to co-op ($18.00) + $2.00 tip<br/>
+                      Job completed 10/31/2025: 6 hrs @ $3/hr to co-op ($18.00) + $2.00 tip<br/>
                       Initial deposit establishing treasury</span>
                     </td>
                     <td className="px-4 py-3 text-sm text-black border-r border-gray-200 text-right">
