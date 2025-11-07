@@ -90,12 +90,12 @@ const RecordsPage: React.FC = () => {
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   {/* Transaction 2 - Payment to Cheryl (Most Recent) */}
-                  <tr className="hover:bg-sand/30 transition-colors">
+                  <tr className="bg-gray-50 hover:bg-sand/30 transition-colors">
                     <td className="px-4 py-3 text-sm text-black border-r border-gray-200 whitespace-nowrap">
                       11/06/2025
                     </td>
                     <td className="px-4 py-3 text-sm text-black border-r border-gray-200">
-                      <strong>Coordinator Payment - Cheryl Vinson (2nd transaction)</strong><br/>
+                      <strong>Coordinator Payment - Cheryl Vinson</strong><br/>
                       <span className="text-xs text-gray-600">Payment for coordinator work completed<br/>
                       Authorization: Unanimous membership approval</span>
                     </td>
@@ -111,15 +111,15 @@ const RecordsPage: React.FC = () => {
                   </tr>
 
                   {/* Transaction 1 - Initial Deposit */}
-                  <tr className="hover:bg-sand/30 transition-colors">
+                  <tr className="bg-white hover:bg-sand/30 transition-colors">
                     <td className="px-4 py-3 text-sm text-black border-r border-gray-200 whitespace-nowrap">
                       11/06/2025
                     </td>
                     <td className="px-4 py-3 text-sm text-black border-r border-gray-200">
-                      <strong>Farm Labor Job - Ed Dick (1st transaction)</strong><br/>
+                      <strong>Farm Labor Job - Ed Dick</strong><br/>
                       <span className="text-xs text-gray-600">Workers: Dale Klingsorge, Louie Cedano<br/>
                       Job completed 10/31/2025: 6 hrs @ $3/hr to co-op ($18.00) + $2.00 tip<br/>
-                      Initial deposit establishing treasury</span>
+                      Co-op fee paid to treasury - Initial deposit</span>
                     </td>
                     <td className="px-4 py-3 text-sm text-black border-r border-gray-200 text-right">
                       —
