@@ -66,6 +66,14 @@ const RecordsPage: React.FC = () => {
               Transaction Ledger
             </h2>
 
+            {/* Current Balance - Above Ledger */}
+            <div className="mb-6 bg-moss text-cream border-2 border-moss rounded-lg p-4 shadow-md">
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-bold uppercase">Current Balance:</span>
+                <span className="text-2xl font-mono font-bold">$15.00</span>
+              </div>
+            </div>
+
             {/* Ledger Table */}
             <div className="overflow-x-auto border-2 border-moss rounded-lg shadow-md">
               <table className="w-full bg-white">
@@ -134,14 +142,6 @@ const RecordsPage: React.FC = () => {
                 </tbody>
               </table>
             </div>
-
-            {/* Ledger Footer */}
-            <div className="mt-6 bg-moss text-cream border-2 border-moss rounded-lg p-4 shadow-md">
-              <div className="flex justify-between items-center">
-                <span className="text-sm font-bold uppercase">Current Balance:</span>
-                <span className="text-2xl font-mono font-bold">$15.00</span>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -157,8 +157,8 @@ const RecordsPage: React.FC = () => {
 
             <div className="space-y-4">
               {/* Meeting - November 6, 2025 */}
-              <div className="bg-white border-l-4 border-l-moss rounded-r-lg shadow-md p-6">
-                <div className="border-b border-sand pb-3 mb-4">
+              <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
+                <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
                   <h3 className="text-lg font-bold text-redwood mb-1">
                     November 6, 2025
                   </h3>
@@ -194,8 +194,8 @@ const RecordsPage: React.FC = () => {
               </div>
 
               {/* Meeting - October 30, 2025 */}
-              <div className="bg-white border-l-4 border-l-moss rounded-r-lg shadow-md p-6">
-                <div className="border-b border-sand pb-3 mb-4">
+              <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
+                <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
                   <h3 className="text-lg font-bold text-redwood mb-1">
                     October 30, 2025
                   </h3>
@@ -222,8 +222,8 @@ const RecordsPage: React.FC = () => {
               </div>
 
               {/* Meeting - October 16, 2025 */}
-              <div className="bg-white border-l-4 border-l-moss rounded-r-lg shadow-md p-6">
-                <div className="border-b border-sand pb-3 mb-4">
+              <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
+                <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
                   <h3 className="text-lg font-bold text-redwood mb-1">
                     October 16, 2025
                   </h3>
