@@ -156,6 +156,29 @@ const RecordsPage: React.FC = () => {
             </p>
 
             <div className="space-y-4">
+              {/* Meeting - November 13, 2025 */}
+              <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
+                <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
+                  <h3 className="text-lg font-bold text-redwood mb-1">
+                    November 13, 2025
+                  </h3>
+                  <p className="text-sm text-moss">
+                    Attendees: 5 members present
+                  </p>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <p className="font-bold text-black mb-1">Scheduling Discussions:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li>Ed traveling Thursday-Sunday next week</li>
+                      <li>Samuel has recurring commitment on the third Thursday of each month</li>
+                      <li><strong>Decision:</strong> Next meeting will be Tuesday, November 18 at 10:00 AM</li>
+                      <li>Will decide at November 18 meeting about Thanksgiving week meeting schedule</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
               {/* Meeting - November 6, 2025 */}
               <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
                 <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
