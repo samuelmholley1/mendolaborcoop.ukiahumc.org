@@ -65,8 +65,10 @@ const AttendancePage: React.FC = () => {
 
   return (
     <Layout
-      title="Meeting Attendance - Mendo Labor Cooperative"
-      description="Meeting attendance records for Mendo Labor Cooperative board and planning meetings."
+      title="Meeting Attendance Records | Mendo Labor Cooperative"
+      description="Complete meeting attendance records for Mendo Labor Cooperative. Transparent documentation of member participation and organizational meetings."
+      keywords="meeting attendance, cooperative transparency, member participation, Mendo Labor meetings, organizational records"
+      canonical="https://mendolaborcoop.ukiahumc.org/attendance"
     >
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />

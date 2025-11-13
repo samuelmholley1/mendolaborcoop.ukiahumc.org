@@ -7,7 +7,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://mendolaborcoop.ukiahumc.org/</loc>
-    <lastmod>2025-10-19</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
   <!-- About Page -->
   <url>
     <loc>https://mendolaborcoop.ukiahumc.org/about</loc>
-    <lastmod>2025-10-19</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23,9 +23,25 @@
   <!-- Contact Page -->
   <url>
     <loc>https://mendolaborcoop.ukiahumc.org/contact</loc>
-    <lastmod>2025-10-19</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Attendance Page -->
+  <url>
+    <loc>https://mendolaborcoop.ukiahumc.org/attendance</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Flyer Page -->
+  <url>
+    <loc>https://mendolaborcoop.ukiahumc.org/flyer</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
 </urlset>

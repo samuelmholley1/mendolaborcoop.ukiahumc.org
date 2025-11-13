@@ -5,7 +5,9 @@ const FlyerPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Mendo Labor Cooperative - Printable Flyer</title>
+        <title>Printable Flyer - Hire Local Workers | Mendo Labor Cooperative</title>
+        <meta name="description" content="Print our flyer to spread the word about fair wages and worker solidarity in Mendocino County. Mendo Labor Cooperative - Worker Power Builds Community Power." />
+        <meta name="robots" content="noindex, follow" />
         <style>{`
           @media print {
             body { margin: 0; padding: 0; }

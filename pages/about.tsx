@@ -5,8 +5,10 @@ import Link from 'next/link';
 const AboutPage: React.FC = () => {
   return (
     <Layout 
-      title="About Us | Mendo Labor Cooperative"
-      description="Learn about the Mendo Labor Cooperative: unhoused workers organizing for economic justice, worker power, and housing rights in Mendocino County."
+      title="About Us - Worker-Owned Cooperative | Mendo Labor Cooperative"
+      description="Learn about the Mendo Labor Cooperative: unhoused workers organizing for economic justice, worker power, and housing rights in Mendocino County, California."
+      keywords="worker cooperative history, Mendocino County workers, labor organizing, economic justice, worker ownership, cooperative movement, Ukiah CA"
+      canonical="https://mendolaborcoop.ukiahumc.org/about"
     >
       {/* Hero Section */}
       <section className="bg-moss text-cream py-20">

@@ -7,8 +7,10 @@ const ContactPage: React.FC = () => {
   return (
     <>
       <Layout 
-      title="Contact | Mendo Labor Cooperative"
-      description="Get in touch with the Mendo Labor Cooperative. Connect for support, organizing, or joining our worker-owned collective."
+      title="Contact Us - Get Connected | Mendo Labor Cooperative"
+      description="Connect with the Mendo Labor Cooperative in Ukiah, CA. Call (369) 216-1512 for worker support, job placement, or to join our worker-owned collective."
+      keywords="contact Mendo Labor, hire workers Ukiah, join worker cooperative, Mendocino County jobs, worker solidarity, cooperative contact"
+      canonical="https://mendolaborcoop.ukiahumc.org/contact"
       onContactClick={() => setShowContactPopup(true)}
     >
       {/* Hero Section */}

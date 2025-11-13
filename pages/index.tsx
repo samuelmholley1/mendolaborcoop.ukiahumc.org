@@ -39,8 +39,10 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Layout
-      title="Mendo Labor Cooperative - Skilled Local Workers | Mendocino County"
-      description="Building economic justice through worker solidarity in Mendocino County. Fair pay, skilled professionals, local hiring."
+      title="Mendo Labor Cooperative - Skilled Local Workers | Mendocino County, CA"
+      description="Worker-owned cooperative providing skilled local labor in Ukiah and Mendocino County. Fair wages, quality work, community solidarity. Call (369) 216-1512 to hire or join."
+      keywords="Ukiah workers, Mendocino County jobs, hire local workers, worker cooperative, fair wages, skilled labor, job placement Ukiah, cooperative jobs California"
+      canonical="https://mendolaborcoop.ukiahumc.org"
       onContactClick={() => setShowContactPopup(true)}
     >
       <Head>
@@ -59,6 +61,8 @@ const HomePage: React.FC = () => {
               "logo": "https://mendolaborcoop.ukiahumc.org/mendo_labor_coop_logo.png",
               "description": "Worker-owned cooperative providing job placement, mutual aid, and organizing support for workers in Mendocino County, California.",
               "foundingDate": "2025",
+              "telephone": "+1-369-216-1512",
+              "email": "coordinator@mendolaborcoop.ukiahumc.org",
               "areaServed": {
                 "@type": "GeoCircle",
                 "geoMidpoint": {
@@ -92,7 +96,42 @@ const HomePage: React.FC = () => {
                 "@type": "Organization",
                 "name": "Worker Cooperative Movement"
               },
-              "slogan": "Worker Power Builds Community Power"
+              "slogan": "Worker Power Builds Community Power",
+              "sameAs": [
+                "https://mendolaborcoop.ukiahumc.org"
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Mendo Labor Cooperative",
+              "image": "https://mendolaborcoop.ukiahumc.org/mendo_labor_coop_logo.png",
+              "telephone": "+1-369-216-1512",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ukiah",
+                "addressRegion": "CA",
+                "postalCode": "95482",
+                "addressCountry": "US"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "39.1502",
+                "longitude": "-123.2078"
+              },
+              "url": "https://mendolaborcoop.ukiahumc.org",
+              "priceRange": "$$",
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "17:00"
+              }
             })
           }}
         />
