@@ -176,7 +176,23 @@ const RecordsPage: React.FC = () => {
                       <li>Ed traveling Thursday-Sunday next week</li>
                       <li>Samuel has recurring commitment on the third Thursday of each month</li>
                       <li><strong>Decision:</strong> Next meeting will be Tuesday, November 18 at 10:00 AM</li>
+                      <li><strong>Location Change:</strong> Next meeting moved to Ukiah Natural Foods Co-op for a quieter meeting space</li>
                       <li>Will decide at November 18 meeting about Thanksgiving week meeting schedule</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black mb-1">Communications Infrastructure:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li>Set up voicemail for co-op phone line (369-216-1512)</li>
+                      <li>Tested voicemail system successfully</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black mb-1">Website Updates:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li>Optimized mobile view for phone number CTA visibility</li>
+                      <li>Began SEO optimization: updated sitemap, added structured data, improved meta tags</li>
+                      <li>Added Google Search Console verification setup for search indexing</li>
                     </ul>
                   </div>
                 </div>
