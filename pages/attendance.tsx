@@ -8,18 +8,18 @@ const AttendancePage: React.FC = () => {
     time: string;
     location: string;
     notes?: string;
-    attendees: Array<{ name: string; phone: string }>;
+    attendees: Array<{ name: string; phone: string; email?: string }>;
   }> = [
     {
       date: 'November 13, 2025',
       time: '10:00 AM - 11:00 AM',
       location: 'Building Bridges Homeless Resource Center',
       attendees: [
-        { name: 'Braven Haynes', phone: '559-880-0960' },
-        { name: 'Louie Cedano', phone: '707-510-7199' },
+        { name: 'Braven Haynes', phone: '559-880-0960', email: 'braven14u2nv@gmail.com' },
+        { name: 'Louie Cedano', phone: '707-510-7199', email: 'louieboy3182@gmail.com' },
         { name: 'Ed Dick', phone: '707-952-2134' },
-        { name: 'Samuel Holley', phone: '714-496-7006' },
-        { name: 'Cheryl Vinson', phone: '369-216-1512' }
+        { name: 'Samuel Holley', phone: '714-496-7006', email: 'sam@samuelholley.com' },
+        { name: 'Cheryl Vinson', phone: '369-216-1512', email: 'cvinson@gmail.com' }
       ]
     },
     {
@@ -27,12 +27,12 @@ const AttendancePage: React.FC = () => {
       time: '10:00 AM - 11:00 AM',
       location: 'Building Bridges Homeless Resource Center',
       attendees: [
-        { name: 'Braven Haynes', phone: '559-880-0960' },
-        { name: 'Louie Cedano', phone: '707-510-7199' },
+        { name: 'Braven Haynes', phone: '559-880-0960', email: 'braven14u2nv@gmail.com' },
+        { name: 'Louie Cedano', phone: '707-510-7199', email: 'louieboy3182@gmail.com' },
         { name: 'Ed Dick', phone: '707-952-2134' },
-        { name: 'Samuel Holley', phone: '714-496-7006' },
+        { name: 'Samuel Holley', phone: '714-496-7006', email: 'sam@samuelholley.com' },
         { name: 'Michele Robbins', phone: '530-801-1030' },
-        { name: 'Cheryl Vinson', phone: '369-216-1512' }
+        { name: 'Cheryl Vinson', phone: '369-216-1512', email: 'cvinson@gmail.com' }
       ]
     },
     {
@@ -40,11 +40,11 @@ const AttendancePage: React.FC = () => {
       time: '10:00 AM - 11:00 AM',
       location: 'Building Bridges Homeless Resource Center',
       attendees: [
-        { name: 'Louie Cedano', phone: '707-510-7199' },
+        { name: 'Louie Cedano', phone: '707-510-7199', email: 'louieboy3182@gmail.com' },
         { name: 'Ed Dick', phone: '707-952-2134' },
-        { name: 'Samuel Holley', phone: '714-496-7006' },
+        { name: 'Samuel Holley', phone: '714-496-7006', email: 'sam@samuelholley.com' },
         { name: 'Dale Klingsorge', phone: '916-639-7141' },
-        { name: 'Cheryl Vinson', phone: '369-216-1512' }
+        { name: 'Cheryl Vinson', phone: '369-216-1512', email: 'cvinson@gmail.com' }
       ]
     },
     {
@@ -52,13 +52,13 @@ const AttendancePage: React.FC = () => {
       time: '10:00 AM - 11:00 AM',
       location: 'Building Bridges Homeless Resource Center',
       attendees: [
-        { name: 'Braven Haynes', phone: '559-880-0960' },
-        { name: 'Louie Cedano', phone: '707-510-7199' },
+        { name: 'Braven Haynes', phone: '559-880-0960', email: 'braven14u2nv@gmail.com' },
+        { name: 'Louie Cedano', phone: '707-510-7199', email: 'louieboy3182@gmail.com' },
         { name: 'Ed Dick', phone: '707-952-2134' },
-        { name: 'Samuel Holley', phone: '714-496-7006' },
+        { name: 'Samuel Holley', phone: '714-496-7006', email: 'sam@samuelholley.com' },
         { name: 'Dale Klingsorge', phone: '916-639-7141' },
         { name: 'Michele Robbins', phone: '530-801-1030' },
-        { name: 'Cheryl Vinson', phone: '369-216-1512' }
+        { name: 'Cheryl Vinson', phone: '369-216-1512', email: 'cvinson@gmail.com' }
       ]
     }
   ];
@@ -117,6 +117,9 @@ const AttendancePage: React.FC = () => {
                         <th className="px-6 py-3 text-left text-sm font-headline font-semibold text-black uppercase tracking-wider">
                           Phone Number
                         </th>
+                        <th className="px-6 py-3 text-left text-sm font-headline font-semibold text-black uppercase tracking-wider">
+                          Email
+                        </th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-sand">
@@ -127,6 +130,9 @@ const AttendancePage: React.FC = () => {
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm font-body text-moss">
                             {attendee.phone}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-body text-moss">
+                            {attendee.email || '—'}
                           </td>
                         </tr>
                       ))}
