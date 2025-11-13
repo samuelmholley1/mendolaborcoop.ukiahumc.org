@@ -1,0 +1,13 @@
+Contact: mailto:sam@samuelholley.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://mendolaborcoop.ukiahumc.org/.well-known/security.txt
+
+# Security Policy for Mendo Labor Cooperative Website
+# 
+# If you discover a security vulnerability, please report it responsibly:
+# 1. Email sam@samuelholley.com with details
+# 2. Do not publicly disclose until we've had time to address it
+# 3. We aim to respond within 48 hours
+#
+# Thank you for helping keep our cooperative's website secure!
