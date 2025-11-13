@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const RecordsPage: React.FC = () => {
   return (
@@ -9,6 +10,9 @@ const RecordsPage: React.FC = () => {
         title="Co-op Records | Mendo Labor Cooperative"
         description="Meeting minutes, financial records, and organizational history of the Mendo Labor Cooperative."
       >
+        <Head>
+          <meta name="robots" content="noindex, nofollow" />
+        </Head>
         {/* Hero Section */}
         <section className="bg-moss text-cream py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,7 +196,25 @@ const RecordsPage: React.FC = () => {
                     <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
                       <li>Optimized mobile view for phone number CTA visibility</li>
                       <li>Began SEO optimization: updated sitemap, added structured data, improved meta tags</li>
-                      <li>Added Google Search Console verification setup for search indexing</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black mb-1">Privacy & Access Policy:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li>Agreed internal pages (records, attendance) remain accessible by exact URL only</li>
+                      <li>No password protection needed at this stage - no public navigation links to internal pages</li>
+                      <li>Pages will not be indexed by search engines</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black mb-1">Action Items:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li><strong>Braven:</strong> Set up co-op Gmail account</li>
+                      <li><strong>Braven & Cheryl:</strong> Log into co-op Gmail account on Samsung Galaxy</li>
+                      <li><strong>Braven & Cheryl:</strong> Configure voicemail to avoid password prompt each time (link Google account), download update for transcription</li>
+                      <li><strong>Samuel:</strong> Complete Google Search Console setup for website indexing</li>
+                      <li><strong>Ed:</strong> Print more flyers</li>
+                      <li><strong>Braven:</strong> Distribute flyers to Plowshares, Ukiah Natural Foods Co-op, Black Oak, etc.</li>
                     </ul>
                   </div>
                 </div>

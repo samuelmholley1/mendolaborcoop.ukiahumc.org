@@ -71,6 +71,7 @@ const AttendancePage: React.FC = () => {
       canonical="https://mendolaborcoop.ukiahumc.org/attendance"
     >
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />

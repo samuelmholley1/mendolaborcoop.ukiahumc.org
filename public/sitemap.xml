@@ -28,14 +28,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Attendance Page -->
-  <url>
-    <loc>https://mendolaborcoop.ukiahumc.org/attendance</loc>
-    <lastmod>2025-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <!-- Flyer Page -->
   <url>
     <loc>https://mendolaborcoop.ukiahumc.org/flyer</loc>
