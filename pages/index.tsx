@@ -169,44 +169,44 @@ const HomePage: React.FC = () => {
       </Head>
 
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] w-full overflow-hidden">
+      <section className="relative min-h-screen w-full overflow-hidden">
           {/* Background - Solid color (no image) */}
           <div className="absolute inset-0 bg-sand"></div>
           
           {/* Content */}
-          <div className="relative z-10 h-full flex items-center">
+          <div className="relative z-10 min-h-screen flex items-center py-8 sm:py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                 {/* Left Column */}
-                <div className="text-center md:text-left">
+                <div className="text-center md:text-left order-2 md:order-1">
                   {/* Logo */}
                   <img
                     src="/mendo_labor_coop_logo.png"
                     alt="Mendo Labor Cooperative Logo"
                     width="300"
                     height="300"
-                    className="mb-8 mx-auto md:mx-0 w-64 h-64 md:w-80 md:h-80"
+                    className="mb-6 mx-auto md:mx-0 w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80"
                   />
                   
                   {/* Headlines */}
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-redwood mb-4">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-redwood mb-4">
                     {currentContent.heroTitle}
                   </h1>
-                  <p className="text-xl md:text-2xl font-body text-moss mb-8">
+                  <p className="text-lg sm:text-xl md:text-2xl font-body text-moss mb-6 md:mb-8">
                     {currentContent.heroSubtitle}
                   </p>
                 </div>
 
                 {/* Right Column - CTAs */}
-                <div className="flex flex-col space-y-6">
+                <div className="flex flex-col space-y-6 order-1 md:order-2">
                   {/* Primary Phone CTA */}
-                  <div className="bg-moss text-cream p-8 rounded-lg text-center border-4 border-redwood shadow-xl">
-                    <p className="text-xl font-headline font-semibold mb-3">
+                  <div className="bg-moss text-cream p-6 sm:p-8 rounded-lg text-center border-4 border-redwood shadow-xl mx-4 sm:mx-0">
+                    <p className="text-lg sm:text-xl font-headline font-semibold mb-3">
                       Call or Text Cheryl
                     </p>
                     <a 
                       href="tel:+13692161512" 
-                      className="text-5xl md:text-6xl font-headline font-extrabold block hover:opacity-90 transition-opacity"
+                      className="text-4xl sm:text-5xl md:text-6xl font-headline font-extrabold block hover:opacity-90 transition-opacity break-words"
                     >
                       (369) 216-1512
                     </a>
