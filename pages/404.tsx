@@ -12,7 +12,7 @@ const Custom404: React.FC = () => {
         <div className="max-w-md w-full text-center">
           <div className="mb-8">
             <div className="text-8xl mb-4">🏠</div>
-            <h1 className="text-4xl font-headline font-bold text-coop-red mb-4">
+            <h1 className="text-4xl font-headline font-bold text-moss mb-4">
               Page Not Found
             </h1>
             <p className="text-lg text-gray-600 mb-8">
@@ -23,21 +23,21 @@ const Custom404: React.FC = () => {
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
             <Link
               href="/"
-              className="bg-coop-red text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors inline-block"
+              className="bg-moss text-white px-6 py-3 rounded-lg font-semibold hover:bg-moss/90 transition-colors inline-block"
             >
               Back to Home
             </Link>
             <Link
-              href="/get-help"
-              className="border-2 border-coop-red text-coop-red px-6 py-3 rounded-lg font-semibold hover:bg-coop-red hover:text-white transition-colors inline-block"
+              href="/contact"
+              className="border-2 border-moss text-moss px-6 py-3 rounded-lg font-semibold hover:bg-moss hover:text-white transition-colors inline-block"
             >
-              Get Help
+              Contact Us
             </Link>
           </div>
           
           <div className="mt-8">
             <p className="text-sm text-gray-500">
-              Lost? <Link href="/contact" className="text-coop-red hover:text-red-700 font-medium">Contact us</Link> and we'll help you find what you need.
+              Lost? <Link href="/contact" className="text-moss hover:text-moss/80 font-medium">Contact us</Link> and we'll help you find what you need.
             </p>
           </div>
         </div>

@@ -22,7 +22,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <div className={`${iconBgColor} ${iconTextColor} rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-6`}>
         <span>{icon}</span>
       </div>
-      <h3 className="text-xl font-headline font-semibold mb-4 text-coop-red">
+      <h3 className="text-xl font-headline font-semibold mb-4 text-moss">
         {title}
       </h3>
       <p className="text-gray-600 leading-relaxed">
