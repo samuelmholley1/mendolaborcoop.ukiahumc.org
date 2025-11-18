@@ -37,7 +37,7 @@ const RecordsPage: React.FC = () => {
                   Current Treasury Balance
                 </h2>
                 <p className="text-4xl font-headline font-bold text-moss mb-1">
-                  $15.00
+                  $10.00
                 </p>
                 <p className="text-xs text-moss font-body italic">
                   Cash maintained by Financial Secretary
@@ -77,7 +77,7 @@ const RecordsPage: React.FC = () => {
             <div className="mb-6 bg-moss text-cream border-2 border-moss rounded-lg p-4 shadow-md">
               <div className="flex justify-between items-center">
                 <span className="text-sm font-bold uppercase">Current Balance:</span>
-                <span className="text-2xl font-mono font-bold">$15.00</span>
+                <span className="text-2xl font-mono font-bold">$10.00</span>
               </div>
             </div>
 
@@ -104,7 +104,28 @@ const RecordsPage: React.FC = () => {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
-                  {/* Transaction 2 - Payment to Cheryl (Most Recent) */}
+                  {/* Transaction 3 - Payment to Braven (Most Recent) */}
+                  <tr className="bg-white hover:bg-sand/30 transition-colors">
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-200 whitespace-nowrap">
+                      11/18/2025
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-200">
+                      <strong>Gmail Setup Payment - Braven Haynes</strong><br/>
+                      <span className="text-xs text-gray-600">Payment for setting up co-op Gmail account<br/>
+                      Authorization: Unanimous membership approval (3-0)</span>
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-200 text-right font-mono">
+                      $5.00
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black border-r border-gray-200 text-right">
+                      —
+                    </td>
+                    <td className="px-4 py-3 text-sm text-black text-right font-mono font-bold">
+                      $10.00
+                    </td>
+                  </tr>
+
+                  {/* Transaction 2 - Payment to Cheryl */}
                   <tr className="bg-gray-50 hover:bg-sand/30 transition-colors">
                     <td className="px-4 py-3 text-sm text-black border-r border-gray-200 whitespace-nowrap">
                       11/06/2025
@@ -189,6 +210,15 @@ const RecordsPage: React.FC = () => {
                       <li><strong>Seconded:</strong> Ed seconded the motion</li>
                       <li><strong>Decision:</strong> Unanimously approved as draft mission statement (3-0)</li>
                       <li>Draft will be reviewed and voted on by full membership at future meeting</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black mb-1">Financial Decisions:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li><strong>Motion:</strong> Samuel motioned to pay Braven Haynes $5.00 for setting up the co-op Gmail account</li>
+                      <li><strong>Seconded:</strong> Ed seconded the motion</li>
+                      <li><strong>Decision:</strong> Unanimously approved (3-0)</li>
+                      <li>Payment authorized for completed work on communications infrastructure</li>
                     </ul>
                   </div>
                 </div>
@@ -369,11 +399,11 @@ const RecordsPage: React.FC = () => {
                   </tr>
                   <tr className="border-b-2 border-moss">
                     <td className="px-4 py-3 text-sm font-bold text-black">Total Debits (Expenses)</td>
-                    <td className="px-4 py-3 text-sm text-right font-mono">$5.00</td>
+                    <td className="px-4 py-3 text-sm text-right font-mono">$10.00</td>
                   </tr>
                   <tr className="bg-moss text-cream">
                     <td className="px-4 py-4 text-base font-bold uppercase">Current Balance</td>
-                    <td className="px-4 py-4 text-xl text-right font-mono font-bold">$15.00</td>
+                    <td className="px-4 py-4 text-xl text-right font-mono font-bold">$10.00</td>
                   </tr>
                 </tbody>
               </table>
