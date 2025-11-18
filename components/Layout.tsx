@@ -47,6 +47,10 @@ const Layout: React.FC<LayoutProps> = ({
         <meta property="og:site_name" content="Mendo Labor Cooperative" />
         <meta property="og:locale" content="en_US" />
         
+        {/* Additional meta for site name override */}
+        <meta name="application-name" content="Mendo Labor Cooperative" />
+        <meta name="apple-mobile-web-app-title" content="Mendo Labor" />
+        
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={canonicalUrl} />
