@@ -75,6 +75,9 @@ const FlyerPage: React.FC = () => {
               >
                 (369) 216-1512
               </a>
+              <p className="text-lg font-body mt-4 opacity-90">
+                mendolaborcoop@gmail.com
+              </p>
             </div>
 
             {/* Secondary Info - QR Code & Website */}

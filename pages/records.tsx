@@ -169,8 +169,11 @@ const RecordsPage: React.FC = () => {
                   <h3 className="text-lg font-bold text-redwood mb-1">
                     November 13, 2025
                   </h3>
-                  <p className="text-sm text-moss">
-                    Attendees: 5 members present
+                  <p className="text-sm text-moss mb-1">
+                    Attendees: Braven Haynes, Louie Cedano, Ed Dick, Samuel Holley, Cheryl Vinson
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    5 members present
                   </p>
                 </div>
                 <div className="space-y-3 text-sm">
@@ -226,8 +229,11 @@ const RecordsPage: React.FC = () => {
                   <h3 className="text-lg font-bold text-redwood mb-1">
                     November 6, 2025
                   </h3>
-                  <p className="text-sm text-moss">
-                    Attendees: 6 members present
+                  <p className="text-sm text-moss mb-1">
+                    Attendees: Braven Haynes, Louie Cedano, Ed Dick, Samuel Holley, Michele Robbins, Cheryl Vinson
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    6 members present
                   </p>
                 </div>
                 <div className="space-y-3 text-sm">
@@ -263,8 +269,11 @@ const RecordsPage: React.FC = () => {
                   <h3 className="text-lg font-bold text-redwood mb-1">
                     October 30, 2025
                   </h3>
-                  <p className="text-sm text-moss">
-                    Attendees: 5 members present
+                  <p className="text-sm text-moss mb-1">
+                    Attendees: Louie Cedano, Ed Dick, Samuel Holley, Dale Klingsorge, Cheryl Vinson
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    5 members present
                   </p>
                 </div>
                 <div className="space-y-3 text-sm">
@@ -291,8 +300,11 @@ const RecordsPage: React.FC = () => {
                   <h3 className="text-lg font-bold text-redwood mb-1">
                     October 16, 2025
                   </h3>
-                  <p className="text-sm text-moss">
-                    Attendees: 7 members present
+                  <p className="text-sm text-moss mb-1">
+                    Attendees: Braven Haynes, Louie Cedano, Ed Dick, Samuel Holley, Dale Klingsorge, Michele Robbins, Cheryl Vinson
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    7 members present
                   </p>
                 </div>
                 <div className="space-y-3 text-sm">

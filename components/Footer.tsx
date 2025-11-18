@@ -50,7 +50,14 @@ const Footer: React.FC<{ onContactClick?: () => void }> = ({ onContactClick }) =
                 <a href="tel:+13692161512" className="hover:text-sand transition-colors">
                   (369) 216-1512
                 </a>
-              </div>            <div className="mt-4">
+              </div>
+              <div className="mt-3">
+                <p className="text-sm text-cream">Email</p>
+                <a href="mailto:mendolaborcoop@gmail.com" className="hover:text-sand transition-colors text-sm">
+                  mendolaborcoop@gmail.com
+                </a>
+              </div>
+              <div className="mt-4">
               <p className="text-sm text-cream">Building worker power in Mendocino County</p>
             </div>
           </div>

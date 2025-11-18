@@ -44,16 +44,30 @@ const ContactPage: React.FC = () => {
               </a>
             </div>
 
-            {/* In Person */}
+            {/* Email */}
             <div className="text-center p-8 bg-white border-l-8 border-l-river rounded-r-lg shadow-md">
               <div className="bg-river text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl">📧</span>
+              </div>
+              <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">Email Us</h3>
+              <p className="text-moss mb-4 font-body">General inquiries</p>
+              <a href="mailto:mendolaborcoop@gmail.com" className="text-xl font-headline font-bold text-moss hover:text-redwood transition-colors break-all">
+                mendolaborcoop@gmail.com
+              </a>
+            </div>
+
+          </div>
+
+          {/* In Person - Full Width Below */}
+          <div className="mt-8">
+            <div className="text-center p-8 bg-white border-l-8 border-l-redwood rounded-r-lg shadow-md">
+              <div className="bg-redwood text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">🤝</span>
               </div>
               <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">Meet In Person</h3>
               <p className="text-moss mb-4 font-body">Join us at community meetings and events</p>
               <p className="text-moss italic font-body">Check back for meeting locations</p>
             </div>
-
           </div>
         </div>
       </section>

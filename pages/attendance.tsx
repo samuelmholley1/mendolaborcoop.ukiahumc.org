@@ -17,7 +17,7 @@ const AttendancePage: React.FC = () => {
       attendees: [
         { name: 'Braven Haynes', phone: '559-880-0960', email: 'braven14u2nv@gmail.com' },
         { name: 'Louie Cedano', phone: '707-510-7199', email: 'louieboy3182@gmail.com' },
-        { name: 'Ed Dick', phone: '707-952-2134' },
+        { name: 'Ed Dick', phone: '707-952-2134', email: 'edwardpdick@gmail.com' },
         { name: 'Samuel Holley', phone: '714-496-7006', email: 'sam@samuelholley.com' },
         { name: 'Cheryl Vinson', phone: '369-216-1512', email: 'cvinson@gmail.com' }
       ]
@@ -29,9 +29,9 @@ const AttendancePage: React.FC = () => {
       attendees: [
         { name: 'Braven Haynes', phone: '559-880-0960', email: 'braven14u2nv@gmail.com' },
         { name: 'Louie Cedano', phone: '707-510-7199', email: 'louieboy3182@gmail.com' },
-        { name: 'Ed Dick', phone: '707-952-2134' },
+        { name: 'Ed Dick', phone: '707-952-2134', email: 'edwardpdick@gmail.com' },
         { name: 'Samuel Holley', phone: '714-496-7006', email: 'sam@samuelholley.com' },
-        { name: 'Michele Robbins', phone: '530-801-1030' },
+        { name: 'Michele Robbins', phone: '530-801-1030', email: 'shalompastor3@gmail.com' },
         { name: 'Cheryl Vinson', phone: '369-216-1512', email: 'cvinson@gmail.com' }
       ]
     },
@@ -41,7 +41,7 @@ const AttendancePage: React.FC = () => {
       location: 'Building Bridges Homeless Resource Center',
       attendees: [
         { name: 'Louie Cedano', phone: '707-510-7199', email: 'louieboy3182@gmail.com' },
-        { name: 'Ed Dick', phone: '707-952-2134' },
+        { name: 'Ed Dick', phone: '707-952-2134', email: 'edwardpdick@gmail.com' },
         { name: 'Samuel Holley', phone: '714-496-7006', email: 'sam@samuelholley.com' },
         { name: 'Dale Klingsorge', phone: '916-639-7141' },
         { name: 'Cheryl Vinson', phone: '369-216-1512', email: 'cvinson@gmail.com' }
@@ -54,10 +54,10 @@ const AttendancePage: React.FC = () => {
       attendees: [
         { name: 'Braven Haynes', phone: '559-880-0960', email: 'braven14u2nv@gmail.com' },
         { name: 'Louie Cedano', phone: '707-510-7199', email: 'louieboy3182@gmail.com' },
-        { name: 'Ed Dick', phone: '707-952-2134' },
+        { name: 'Ed Dick', phone: '707-952-2134', email: 'edwardpdick@gmail.com' },
         { name: 'Samuel Holley', phone: '714-496-7006', email: 'sam@samuelholley.com' },
         { name: 'Dale Klingsorge', phone: '916-639-7141' },
-        { name: 'Michele Robbins', phone: '530-801-1030' },
+        { name: 'Michele Robbins', phone: '530-801-1030', email: 'shalompastor3@gmail.com' },
         { name: 'Cheryl Vinson', phone: '369-216-1512', email: 'cvinson@gmail.com' }
       ]
     }
