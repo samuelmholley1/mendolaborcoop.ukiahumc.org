@@ -30,6 +30,8 @@ export default function Document() {
         />
         
         {/* Favicon - multiple sizes for different devices */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -47,6 +49,24 @@ export default function Document() {
         {/* Theme color for mobile browsers */}
         <meta name="theme-color" content="#39714B" />
         <meta name="msapplication-TileColor" content="#39714B" />
+        
+        {/* Organization Schema - Defines the site publisher */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Mendo Labor Cooperative",
+              "alternateName": "Mendo Labor Co-op",
+              "url": "https://mendolaborcoop.ukiahumc.org",
+              "logo": "https://mendolaborcoop.ukiahumc.org/mendo_labor_coop_logo.png",
+              "sameAs": [
+                "https://mendolaborcoop.ukiahumc.org"
+              ]
+            })
+          }}
+        />
       </Head>
       <body>
         <Main />
