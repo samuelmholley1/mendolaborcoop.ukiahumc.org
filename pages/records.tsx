@@ -221,6 +221,17 @@ const RecordsPage: React.FC = () => {
                       <li>Payment authorized for completed work on communications infrastructure</li>
                     </ul>
                   </div>
+                  <div>
+                    <p className="font-bold text-black mb-1">Action Items:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li><strong>Samuel:</strong> Continue working on website Hire Worker(s) page</li>
+                      <li><strong>Samuel:</strong> Begin interviewing workers for worker profile pages on website</li>
+                      <li><strong>Braven:</strong> Text Cheryl, Louie, and Dale with next meeting info (Thursday, December 4, 10:00 AM at Ukiah Natural Foods Co-op) and link to records page: https://mendolaborcoop.ukiahumc.org/records</li>
+                      <li><strong>Braven:</strong> Establish Facebook and Nextdoor accounts for the co-op</li>
+                      <li><strong>Braven:</strong> Try creating a Google Business Profile (optional if time-consuming)</li>
+                      <li><strong>Everyone:</strong> Continue putting up flyers around the community</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
