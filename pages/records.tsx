@@ -163,6 +163,37 @@ const RecordsPage: React.FC = () => {
             </p>
 
             <div className="space-y-4">
+              {/* Meeting - November 18, 2025 */}
+              <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
+                <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
+                  <h3 className="text-lg font-bold text-redwood mb-1">
+                    November 18, 2025
+                  </h3>
+                  <p className="text-sm text-moss mb-1">
+                    Attendees: Braven Haynes, Ed Dick, Samuel Holley
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    3 members present
+                  </p>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <p className="font-bold text-black mb-1">Mission Statement (Draft):</p>
+                    <div className="bg-sand/50 p-3 rounded border-l-4 border-redwood mb-2">
+                      <p className="text-gray-800 italic">
+                        "Local workers. Local jobs. Local prosperity. We connect unemployed and underemployed community members with opportunities that build economic stability, support housing security, and keep wealth where we live."
+                      </p>
+                    </div>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li><strong>Motion:</strong> Samuel proposed draft mission statement</li>
+                      <li><strong>Seconded:</strong> Ed seconded the motion</li>
+                      <li><strong>Decision:</strong> Unanimously approved as draft mission statement (3-0)</li>
+                      <li>Draft will be reviewed and voted on by full membership at future meeting</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
               {/* Meeting - November 13, 2025 */}
               <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
                 <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
