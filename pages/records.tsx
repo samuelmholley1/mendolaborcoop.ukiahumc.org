@@ -55,7 +55,7 @@ const RecordsPage: React.FC = () => {
                 <li>• <strong>Michele Robbins</strong> - Pastor, Ukiah United Methodist Church (Co-op Sponsor)</li>
                 <li>• <strong>Samuel Holley</strong> - Financial Secretary & Digital Systems Steward (sam@samuelholley.com)</li>
                 <li>• <strong>Cheryl Vinson</strong> - Coordinator</li>
-                <li>• <strong>Braven Haynes</strong> - Backup Coordinator (braven14u2nv@gmail.com)</li>
+                <li>• <strong>Braven Haynes</strong> - Backup Coordinator (bravenhaynes@gmail.com)</li>
                 <li>• <strong>Dale Klingsorge</strong></li>
                 <li>• <strong>Louie Cedano</strong></li>
               </ul>

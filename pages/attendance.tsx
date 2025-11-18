@@ -14,8 +14,8 @@ const AttendancePage: React.FC = () => {
       date: 'November 13, 2025',
       time: '10:00 AM - 11:00 AM',
       location: 'Building Bridges Homeless Resource Center',
-      attendees: [
-        { name: 'Braven Haynes', phone: '559-880-0960', email: 'braven14u2nv@gmail.com' },
+  attendees: [
+  { name: 'Braven Haynes', phone: '559-880-0960', email: 'bravenhaynes@gmail.com' },
         { name: 'Louie Cedano', phone: '707-510-7199', email: 'louieboy3182@gmail.com' },
         { name: 'Ed Dick', phone: '707-952-2134', email: 'edwardpdick@gmail.com' },
         { name: 'Samuel Holley', phone: '714-496-7006', email: 'sam@samuelholley.com' },
@@ -26,8 +26,8 @@ const AttendancePage: React.FC = () => {
       date: 'November 6, 2025',
       time: '10:00 AM - 11:00 AM',
       location: 'Building Bridges Homeless Resource Center',
-      attendees: [
-        { name: 'Braven Haynes', phone: '559-880-0960', email: 'braven14u2nv@gmail.com' },
+  attendees: [
+  { name: 'Braven Haynes', phone: '559-880-0960', email: 'bravenhaynes@gmail.com' },
         { name: 'Louie Cedano', phone: '707-510-7199', email: 'louieboy3182@gmail.com' },
         { name: 'Ed Dick', phone: '707-952-2134', email: 'edwardpdick@gmail.com' },
         { name: 'Samuel Holley', phone: '714-496-7006', email: 'sam@samuelholley.com' },
@@ -51,8 +51,8 @@ const AttendancePage: React.FC = () => {
       date: 'October 16, 2025',
       time: '10:00 AM - 11:00 AM',
       location: 'Building Bridges Homeless Resource Center',
-      attendees: [
-        { name: 'Braven Haynes', phone: '559-880-0960', email: 'braven14u2nv@gmail.com' },
+  attendees: [
+  { name: 'Braven Haynes', phone: '559-880-0960', email: 'bravenhaynes@gmail.com' },
         { name: 'Louie Cedano', phone: '707-510-7199', email: 'louieboy3182@gmail.com' },
         { name: 'Ed Dick', phone: '707-952-2134', email: 'edwardpdick@gmail.com' },
         { name: 'Samuel Holley', phone: '714-496-7006', email: 'sam@samuelholley.com' },
