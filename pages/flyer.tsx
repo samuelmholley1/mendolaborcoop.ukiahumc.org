@@ -56,7 +56,7 @@ const FlyerPage: React.FC = () => {
 
             {/* Main CTA Headline */}
             <div className="text-center mb-12">
-              <h1 className="text-5xl md:text-6xl font-headline font-extrabold text-redwood mb-6 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-headline font-extrabold text-gold mb-6 leading-tight">
                 Hire a Temporary Worker
               </h1>
               <p className="text-2xl text-moss font-body font-semibold">

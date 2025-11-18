@@ -33,7 +33,7 @@ const RecordsPage: React.FC = () => {
             {/* Treasury Balance - Compact centered box */}
             <div className="flex justify-center mb-6">
               <div className="bg-white border-l-8 border-l-moss p-4 rounded-r-lg shadow-lg text-center inline-block">
-                <h2 className="text-xl font-headline font-semibold text-redwood mb-1">
+                <h2 className="text-xl font-headline font-semibold text-gold mb-1">
                   Current Treasury Balance
                 </h2>
                 <p className="text-4xl font-headline font-bold text-moss mb-1">
@@ -46,8 +46,8 @@ const RecordsPage: React.FC = () => {
             </div>
 
             {/* Member List - Full width below */}
-            <div className="bg-white border-l-8 border-l-redwood p-4 rounded-r-lg shadow-lg">
-              <h2 className="text-xl font-headline font-semibold text-redwood mb-3">
+            <div className="bg-white border-l-8 border-l-gold p-4 rounded-r-lg shadow-lg">
+              <h2 className="text-xl font-headline font-semibold text-gold mb-3">
                 Founding Members
               </h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1 text-moss font-body text-sm">
@@ -69,7 +69,7 @@ const RecordsPage: React.FC = () => {
         {/* Transaction History */}
         <section className="py-16 bg-gradient-to-b from-white to-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-headline font-bold text-redwood mb-6 uppercase tracking-wide border-b-2 border-moss pb-2">
+            <h2 className="text-2xl font-headline font-bold text-gold mb-6 uppercase tracking-wide border-b-2 border-moss pb-2">
               Transaction Ledger
             </h2>
 
@@ -176,18 +176,18 @@ const RecordsPage: React.FC = () => {
         {/* Meeting Records */}
         <section className="py-16 bg-sand/30">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-headline font-bold text-redwood mb-2 uppercase tracking-wide border-b-2 border-moss pb-2">
+            <h2 className="text-2xl font-headline font-bold text-gold mb-2 uppercase tracking-wide border-b-2 border-moss pb-2">
               Meeting Minutes
             </h2>
             <p className="text-sm text-moss mb-6">
-              For full attendance records, see the <Link href="/attendance" className="text-redwood font-semibold hover:underline">Attendance page</Link>
+              For full attendance records, see the <Link href="/attendance" className="text-gold font-semibold hover:underline">Attendance page</Link>
             </p>
 
             <div className="space-y-4">
               {/* Meeting - November 18, 2025 */}
               <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
                 <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
-                  <h3 className="text-lg font-bold text-redwood mb-1">
+                  <h3 className="text-lg font-bold text-gold mb-1">
                     November 18, 2025
                   </h3>
                   <p className="text-sm text-moss mb-1">
@@ -200,7 +200,7 @@ const RecordsPage: React.FC = () => {
                 <div className="space-y-3 text-sm">
                   <div>
                     <p className="font-bold text-black mb-1">Mission Statement (Draft):</p>
-                    <div className="bg-sand/50 p-3 rounded border-l-4 border-redwood mb-2">
+                    <div className="bg-sand/50 p-3 rounded border-l-4 border-gold mb-2">
                       <p className="text-gray-800 italic">
                         "Local workers. Local jobs. Local prosperity. We connect unemployed and underemployed community members with opportunities that build economic stability, support housing security, and keep wealth where we live."
                       </p>
@@ -227,7 +227,7 @@ const RecordsPage: React.FC = () => {
               {/* Meeting - November 13, 2025 */}
               <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
                 <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
-                  <h3 className="text-lg font-bold text-redwood mb-1">
+                  <h3 className="text-lg font-bold text-gold mb-1">
                     November 13, 2025
                   </h3>
                   <p className="text-sm text-moss mb-1">
@@ -287,7 +287,7 @@ const RecordsPage: React.FC = () => {
               {/* Meeting - November 6, 2025 */}
               <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
                 <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
-                  <h3 className="text-lg font-bold text-redwood mb-1">
+                  <h3 className="text-lg font-bold text-gold mb-1">
                     November 6, 2025
                   </h3>
                   <p className="text-sm text-moss mb-1">
@@ -327,7 +327,7 @@ const RecordsPage: React.FC = () => {
               {/* Meeting - October 30, 2025 */}
               <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
                 <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
-                  <h3 className="text-lg font-bold text-redwood mb-1">
+                  <h3 className="text-lg font-bold text-gold mb-1">
                     October 30, 2025
                   </h3>
                   <p className="text-sm text-moss mb-1">
@@ -358,7 +358,7 @@ const RecordsPage: React.FC = () => {
               {/* Meeting - October 16, 2025 */}
               <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
                 <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
-                  <h3 className="text-lg font-bold text-redwood mb-1">
+                  <h3 className="text-lg font-bold text-gold mb-1">
                     October 16, 2025
                   </h3>
                   <p className="text-sm text-moss mb-1">
@@ -386,7 +386,7 @@ const RecordsPage: React.FC = () => {
         {/* Financial Summary */}
         <section className="py-16 bg-gradient-to-b from-white to-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-redwood mb-6 uppercase tracking-wide border-b-2 border-moss pb-2">
+            <h2 className="text-2xl font-bold text-gold mb-6 uppercase tracking-wide border-b-2 border-moss pb-2">
               Financial Summary
             </h2>
 

@@ -27,7 +27,7 @@ const AboutPage: React.FC = () => {
       {/* Our Story */}
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-headline font-bold text-redwood mb-8 text-center">
+          <h2 className="text-3xl font-headline font-bold text-gold mb-8 text-center">
             Our Story
           </h2>
           
@@ -55,13 +55,13 @@ const AboutPage: React.FC = () => {
       {/* Our Approach */}
       <section className="py-16 bg-sand">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-headline font-bold text-redwood mb-12 text-center">
+          <h2 className="text-3xl font-headline font-bold text-gold mb-12 text-center">
             Our Approach
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white border-l-8 border-l-moss p-8 rounded-r-lg shadow-md">
-              <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">
+              <h3 className="text-xl font-headline font-semibold mb-4 text-gold">
                 Worker-Led Solutions
               </h3>
               <p className="text-moss leading-relaxed font-body">
@@ -71,7 +71,7 @@ const AboutPage: React.FC = () => {
             </div>
             
             <div className="bg-white border-l-8 border-l-river p-8 rounded-r-lg shadow-md">
-              <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">
+              <h3 className="text-xl font-headline font-semibold mb-4 text-gold">
                 Mutual Aid + Organizing
               </h3>
               <p className="text-moss leading-relaxed font-body">
@@ -81,7 +81,7 @@ const AboutPage: React.FC = () => {
             </div>
             
             <div className="bg-white border-l-8 border-l-moss p-8 rounded-r-lg shadow-md">
-              <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">
+              <h3 className="text-xl font-headline font-semibold mb-4 text-gold">
                 Economic Democracy
               </h3>
               <p className="text-moss leading-relaxed font-body">
@@ -91,7 +91,7 @@ const AboutPage: React.FC = () => {
             </div>
             
             <div className="bg-white border-l-8 border-l-river p-8 rounded-r-lg shadow-md">
-              <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">
+              <h3 className="text-xl font-headline font-semibold mb-4 text-gold">
                 Housing Justice
               </h3>
               <p className="text-moss leading-relaxed font-body">
@@ -106,13 +106,13 @@ const AboutPage: React.FC = () => {
       {/* What We Do */}
       <section className="py-16 bg-cream">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-headline font-bold text-redwood mb-12 text-center">
+          <h2 className="text-3xl font-headline font-bold text-gold mb-12 text-center">
             What We Do
           </h2>
           
           <div className="space-y-8">
             <div className="bg-white border-l-8 border-l-moss p-6 rounded-r-lg shadow-md">
-              <h3 className="text-xl font-headline font-semibold mb-3 text-redwood">
+              <h3 className="text-xl font-headline font-semibold mb-3 text-gold">
                 Job Placement & Worker Advocacy
               </h3>
               <p className="text-moss leading-relaxed font-body">
@@ -122,7 +122,7 @@ const AboutPage: React.FC = () => {
             </div>
             
             <div className="bg-white border-l-8 border-l-river p-6 rounded-r-lg shadow-md">
-              <h3 className="text-xl font-headline font-semibold mb-3 text-redwood">
+              <h3 className="text-xl font-headline font-semibold mb-3 text-gold">
                 Mutual Aid Network
               </h3>
               <p className="text-moss leading-relaxed font-body">
@@ -132,7 +132,7 @@ const AboutPage: React.FC = () => {
             </div>
             
             <div className="bg-white border-l-8 border-l-moss p-6 rounded-r-lg shadow-md">
-              <h3 className="text-xl font-headline font-semibold mb-3 text-redwood">
+              <h3 className="text-xl font-headline font-semibold mb-3 text-gold">
                 Community Organizing
               </h3>
               <p className="text-moss leading-relaxed font-body">
@@ -142,7 +142,7 @@ const AboutPage: React.FC = () => {
             </div>
             
             <div className="bg-white border-l-8 border-l-river p-6 rounded-r-lg shadow-md">
-              <h3 className="text-xl font-headline font-semibold mb-3 text-redwood">
+              <h3 className="text-xl font-headline font-semibold mb-3 text-gold">
                 Skills & Leadership Development
               </h3>
               <p className="text-moss leading-relaxed font-body">
@@ -152,7 +152,7 @@ const AboutPage: React.FC = () => {
             </div>
             
             <div className="bg-white border-l-8 border-l-gold p-6 rounded-r-lg shadow-md">
-              <h3 className="text-xl font-headline font-semibold mb-3 text-redwood">
+              <h3 className="text-xl font-headline font-semibold mb-3 text-gold">
                 Member Screening Program (In Development)
               </h3>
               <p className="text-moss leading-relaxed font-body">
@@ -167,7 +167,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Join Us CTA */}
-      <section className="py-16 bg-redwood text-cream">
+      <section className="py-16 bg-gold text-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-headline font-bold mb-4">
             Ready to Join the Movement?
@@ -178,7 +178,7 @@ const AboutPage: React.FC = () => {
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
             <Link
               href="/contact"
-              className="bg-cream text-redwood px-8 py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors inline-block font-headline"
+              className="bg-cream text-gold px-8 py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors inline-block font-headline"
             >
               Get In Touch
             </Link>

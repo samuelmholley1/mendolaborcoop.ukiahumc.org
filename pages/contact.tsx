@@ -14,7 +14,7 @@ const ContactPage: React.FC = () => {
       onContactClick={() => setShowContactPopup(true)}
     >
       {/* Hero Section */}
-      <section className="bg-redwood text-cream py-20">
+      <section className="bg-gold text-cream py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-headline font-bold mb-6">
@@ -37,9 +37,9 @@ const ContactPage: React.FC = () => {
               <div className="bg-moss text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">📞</span>
               </div>
-              <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">Call or Text Cheryl</h3>
+              <h3 className="text-xl font-headline font-semibold mb-4 text-gold">Call or Text Cheryl</h3>
               <p className="text-moss mb-4 font-body">Coop Coordinator</p>
-              <a href="tel:+13692161512" className="text-2xl font-headline font-bold text-moss hover:text-redwood transition-colors">
+              <a href="tel:+13692161512" className="text-2xl font-headline font-bold text-moss hover:text-gold transition-colors">
                 (369) 216-1512
               </a>
             </div>
@@ -49,9 +49,9 @@ const ContactPage: React.FC = () => {
               <div className="bg-river text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">📧</span>
               </div>
-              <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">Email Us</h3>
+              <h3 className="text-xl font-headline font-semibold mb-4 text-gold">Email Us</h3>
               <p className="text-moss mb-4 font-body">General inquiries</p>
-              <a href="mailto:mendolaborcoop@gmail.com" className="text-xl font-headline font-bold text-moss hover:text-redwood transition-colors break-all">
+              <a href="mailto:mendolaborcoop@gmail.com" className="text-xl font-headline font-bold text-moss hover:text-gold transition-colors break-all">
                 mendolaborcoop@gmail.com
               </a>
             </div>
@@ -60,11 +60,11 @@ const ContactPage: React.FC = () => {
 
           {/* In Person - Full Width Below */}
           <div className="mt-8">
-            <div className="text-center p-8 bg-white border-l-8 border-l-redwood rounded-r-lg shadow-md">
-              <div className="bg-redwood text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-8 bg-white border-l-8 border-l-gold rounded-r-lg shadow-md">
+              <div className="bg-gold text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">🤝</span>
               </div>
-              <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">Meet In Person</h3>
+              <h3 className="text-xl font-headline font-semibold mb-4 text-gold">Meet In Person</h3>
               <p className="text-moss mb-4 font-body">Join us at community meetings and events</p>
               <p className="text-moss italic font-body">Check back for meeting locations</p>
             </div>
@@ -75,7 +75,7 @@ const ContactPage: React.FC = () => {
       {/* About Location */}
       <section className="py-16 bg-sand">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-redwood mb-6">
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-gold mb-6">
             Serving Mendocino County
           </h2>
           <p className="text-xl font-body text-moss mb-8">
@@ -95,13 +95,13 @@ const ContactPage: React.FC = () => {
       {/* Community Engagement */}
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-headline font-bold text-redwood mb-12 text-center">
+          <h2 className="text-3xl font-headline font-bold text-gold mb-12 text-center">
             Get Involved
           </h2>
 
           <div className="bg-white border-l-8 border-l-river p-8 rounded-r-lg shadow-md text-center max-w-2xl mx-auto">
             <div className="text-4xl mb-4">📢</div>
-            <h3 className="text-xl font-headline font-semibold mb-4 text-redwood">Join the Movement</h3>
+            <h3 className="text-xl font-headline font-semibold mb-4 text-gold">Join the Movement</h3>
             <p className="text-moss mb-4 font-body">
               Learn more about becoming a cooperative member or supporting our work
             </p>
@@ -116,7 +116,7 @@ const ContactPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-redwood text-cream">
+      <section className="py-16 bg-gold text-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-headline font-bold mb-6">
             Worker Power Builds Community Power
@@ -126,7 +126,7 @@ const ContactPage: React.FC = () => {
           </p>
           <Link
             href="/"
-            className="bg-cream text-redwood px-8 py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors inline-block font-headline"
+            className="bg-cream text-gold px-8 py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors inline-block font-headline"
           >
             Back to Home
           </Link>
@@ -151,7 +151,7 @@ const ContactPage: React.FC = () => {
                 <p className="text-sm font-body text-moss mb-2">Call or Text:</p>
                 <a
                   href="tel:+13692161512"
-                  className="text-2xl font-headline font-bold text-redwood hover:text-moss transition-colors"
+                  className="text-2xl font-headline font-bold text-gold hover:text-moss transition-colors"
                 >
                   (369) 216-1512
                 </a>
