@@ -43,5 +43,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
+  <!-- Newsletter Page -->
+  <url>
+    <loc>https://mendolaborcoop.ukiahumc.org/newsletter</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>

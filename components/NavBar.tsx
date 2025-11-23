@@ -11,6 +11,7 @@ const NavBar: React.FC = () => {
     { name: 'Hire Worker(s)', href: '/hire' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Newsletter', href: '/newsletter' },
   ];
 
   const isActivePage = (href: string) => {
