@@ -19,132 +19,154 @@ const NewsletterPage: React.FC = () => {
         <div className="max-w-3xl mx-auto px-6">
           
           {/* Header with Logo */}
-          <div className="text-center mb-8 border-b-4 border-gold pb-6">
+          <div className="text-center mb-6 border-b-4 border-moss pb-6">
             <img
               src="/mendo_labor_coop_logo.png"
               alt="Mendo Labor Cooperative Logo"
-              className="w-32 h-32 mx-auto mb-4"
+              className="w-40 h-40 mx-auto mb-4"
             />
-            <h1 className="text-3xl font-headline font-bold text-moss mb-2">
+            <h1 className="text-4xl font-headline font-bold text-moss mb-3">
               Mendo Labor Cooperative
             </h1>
-            <p className="text-lg font-body text-gold italic">
-              Local workers. Local jobs. Local prosperity.
+            <p className="text-base font-body text-moss italic leading-relaxed max-w-2xl mx-auto border-2 border-moss rounded-lg p-4 bg-sand">
+              "Local workers. Local jobs. Local prosperity. We connect unemployed and underemployed 
+              community members with opportunities that build economic stability, support housing 
+              security, and keep wealth where we live."
             </p>
           </div>
 
           {/* Article Content */}
-          <article className="space-y-6 text-moss font-body leading-relaxed">
-            <h2 className="text-2xl font-headline font-bold text-gold mb-4">
-              Supporting Our Community Through Cooperative Work
+          <article className="space-y-5 text-black font-body leading-relaxed text-base">
+            <h2 className="text-2xl font-headline font-bold text-moss mb-4 text-center">
+              A New Way to Help Our Neighbors
             </h2>
 
-            <p className="text-lg">
-              We're excited to share news about an important community project the church 
-              is sponsoring: the <strong>Mendo Labor Cooperative</strong>, a worker-owned 
-              cooperative connecting unemployed and underemployed community members with 
-              opportunities for meaningful work right here in Ukiah.
+            <p className="text-lg leading-loose">
+              Dear Church Family,
             </p>
 
-            <div className="bg-sand p-6 rounded-lg border-l-4 border-moss my-6">
-              <h3 className="text-xl font-headline font-semibold text-moss mb-3">
-                What is the Mendo Labor Cooperative?
+            <p className="leading-loose">
+              You may have noticed that some of our neighbors in Ukiah are struggling to find steady 
+              work. At the same time, many of us have tasks around the house or yard that we could 
+              use help with—raking leaves, cleaning gutters, organizing the garage, or light repairs.
+            </p>
+
+            <p className="leading-loose">
+              That's why our church is proud to sponsor the <strong>Mendo Labor Cooperative</strong>—a 
+              new program that brings these two needs together. It's a simple idea: connect local 
+              people who need work with local people who need help.
+            </p>
+
+            <div className="bg-sand p-6 rounded-lg border-2 border-moss my-6">
+              <h3 className="text-xl font-headline font-semibold text-moss mb-3 text-center">
+                How It Works
               </h3>
-              <p>
-                The cooperative connects local residents who need work with community members 
-                who need help with projects—everything from yard work and cleaning to home 
-                repairs and moving assistance. It's a democratic, worker-led organization 
-                focused on building economic stability, supporting housing security, and 
-                keeping wealth in our community.
-              </p>
+              <div className="space-y-3 text-base leading-loose">
+                <p>
+                  <strong>1.</strong> You call or text Cheryl at <strong>(369) 216-1512</strong> and 
+                  tell her what kind of help you need.
+                </p>
+                <p>
+                  <strong>2.</strong> Cheryl matches you with a worker from our cooperative who has 
+                  the right skills.
+                </p>
+                <p>
+                  <strong>3.</strong> The worker comes to your home, does quality work, and you pay 
+                  them a fair wage directly.
+                </p>
+              </div>
             </div>
 
-            <h3 className="text-xl font-headline font-semibold text-gold mt-8 mb-3">
-              How You Can Help
+            <h3 className="text-xl font-headline font-semibold text-moss mt-8 mb-3">
+              What Kind of Work?
             </h3>
 
-            <p>
-              As we work out the details and get the cooperative fully operational, we're 
-              looking for <strong>early supporters</strong> from our church community who 
-              might have projects—big or small—that could provide work opportunities for 
-              our members.
-            </p>
-
-            <div className="bg-cream p-6 rounded-lg my-6">
-              <h4 className="text-lg font-headline font-semibold text-moss mb-3">
-                We're looking for help with:
-              </h4>
-              <ul className="space-y-2 ml-6 list-disc">
-                <li>Yard work and landscaping</li>
-                <li>House cleaning and organization</li>
-                <li>Moving and hauling</li>
-                <li>Home repairs and maintenance</li>
-                <li>Painting and general labor</li>
-                <li>Seasonal projects (storm cleanup, etc.)</li>
+            <div className="bg-cream p-5 rounded-lg my-4 border border-moss">
+              <ul className="space-y-2 text-base leading-loose">
+                <li>• <strong>Yard Work:</strong> Raking leaves, weeding, mowing, trimming bushes</li>
+                <li>• <strong>House Cleaning:</strong> Inside cleaning, organizing, decluttering</li>
+                <li>• <strong>Small Repairs:</strong> Fixing fences, minor carpentry, painting</li>
+                <li>• <strong>Moving & Hauling:</strong> Help moving furniture or taking things to the dump</li>
+                <li>• <strong>Storm Cleanup:</strong> Clearing branches, cleaning up after weather</li>
+                <li>• <strong>Whatever You Need:</strong> If you're not sure, just call and ask!</li>
               </ul>
             </div>
 
-            <p>
-              By hiring through the cooperative, you're not just getting quality work done—you're 
-              directly supporting community members working toward economic stability while helping 
-              us develop sustainable systems that will serve Ukiah for years to come.
+            <h3 className="text-xl font-headline font-semibold text-moss mt-8 mb-3">
+              Why Your Help Matters
+            </h3>
+
+            <p className="leading-loose">
+              We're just getting started, and we need <strong>patient, supportive church members</strong> who 
+              are willing to give us a try. Your first job with the cooperative might take a little extra 
+              communication as we learn, but you'll be directly helping a neighbor get back on their feet.
             </p>
 
-            <div className="bg-moss text-cream p-6 rounded-lg my-8 text-center">
+            <p className="leading-loose">
+              Every job we book—no matter how small—helps someone in Ukiah pay for food, medicine, or a 
+              place to stay. And it helps us build something that can serve our community for years to come.
+            </p>
+
+            <div className="bg-moss text-white p-8 rounded-lg my-8 text-center">
               <h3 className="text-2xl font-headline font-bold mb-4">
-                Ready to Support Local Workers?
+                Ready to Help?
               </h3>
-              <p className="text-lg mb-4">
-                Contact Cheryl, our Cooperative Coordinator
+              <p className="text-xl mb-6 leading-relaxed">
+                Call or text Cheryl to schedule work
               </p>
-              <div className="bg-cream text-moss px-6 py-4 rounded-lg inline-block mb-4">
-                <p className="text-sm font-semibold mb-1">Call or Text:</p>
-                <p className="text-3xl font-headline font-bold text-gold">
+              <div className="bg-white text-moss px-8 py-6 rounded-lg inline-block mb-5">
+                <p className="text-base font-semibold mb-2">Cheryl Vinson, Coordinator</p>
+                <p className="text-5xl font-headline font-bold text-moss mb-1">
                   (369) 216-1512
                 </p>
+                <p className="text-sm text-gray-600 mt-2">
+                  Call or Text • Available Daily
+                </p>
               </div>
-              <p className="text-sm opacity-90">
+              <p className="text-base opacity-90">
                 Email: mendolaborcoop@gmail.com
               </p>
             </div>
 
-            <p className="text-sm italic border-t-2 border-gold pt-6 mt-8">
-              Your patience and support as we work through the early stages of this project 
-              means everything. Every job, no matter how small, helps us learn, grow, and 
-              build a model that can truly make a difference in our community. Thank you 
-              for being part of this journey with us.
-            </p>
+            <div className="border-t-2 border-moss pt-6 mt-8 text-center">
+              <p className="text-base leading-loose italic">
+                Thank you for supporting our neighbors and helping us build a stronger, 
+                more caring Ukiah community. Every call makes a difference.
+              </p>
+              <p className="mt-4 text-base font-semibold">
+                — With gratitude, The Mendo Labor Cooperative Team
+              </p>
+            </div>
           </article>
 
           {/* QR Code Section */}
-          <div className="mt-12 pt-8 border-t-4 border-gold text-center">
-            <h3 className="text-xl font-headline font-semibold text-moss mb-4">
-              Learn More & See Current Opportunities
+          <div className="mt-10 pt-8 border-t-2 border-sand text-center">
+            <h3 className="text-lg font-headline font-semibold text-moss mb-3">
+              Want to Learn More?
             </h3>
-            <div className="bg-cream p-6 rounded-lg inline-block">
-              <p className="text-sm text-moss mb-3 font-body">Scan to visit our website:</p>
-              {/* QR Code placeholder - will be generated */}
-              <div className="w-48 h-48 mx-auto bg-white border-4 border-moss rounded-lg flex items-center justify-center">
+            <p className="text-sm text-gray-700 mb-4">
+              Visit our website or have a family member scan this code with their phone:
+            </p>
+            <div className="bg-cream p-5 rounded-lg inline-block border-2 border-moss">
+              <div className="w-40 h-40 mx-auto bg-white border-2 border-moss rounded-lg flex items-center justify-center">
                 <img 
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent('https://mendolaborcoop.ukiahumc.org')}`}
+                  src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent('https://mendolaborcoop.ukiahumc.org')}`}
                   alt="QR Code for mendolaborcoop.ukiahumc.org"
-                  className="w-full h-full p-2"
+                  className="w-full h-full p-1"
                 />
               </div>
-              <p className="text-xs text-moss mt-3 font-body">
+              <p className="text-sm text-moss mt-3 font-body font-semibold">
                 mendolaborcoop.ukiahumc.org
               </p>
             </div>
           </div>
 
           {/* Footer */}
-          <div className="mt-12 pt-6 border-t-2 border-sand text-center text-sm text-moss">
-            <p className="font-body">
-              The Mendo Labor Cooperative is a project sponsored by<br />
-              Ukiah United Methodist Church
-            </p>
-            <p className="mt-2 text-xs opacity-75">
-              Empowering workers. Strengthening community.
+          <div className="mt-10 pt-6 border-t-2 border-sand text-center text-sm text-gray-700">
+            <p className="font-body leading-relaxed">
+              <strong>The Mendo Labor Cooperative</strong><br />
+              A ministry project of Ukiah United Methodist Church<br />
+              Connecting neighbors • Building community • Sharing God's love through service
             </p>
           </div>
 
@@ -162,6 +184,22 @@ const NewsletterPage: React.FC = () => {
           }
           section {
             padding: 0.5in;
+          }
+          body {
+            font-size: 12pt;
+            line-height: 1.6;
+          }
+          h1 {
+            font-size: 24pt;
+          }
+          h2 {
+            font-size: 18pt;
+          }
+          h3 {
+            font-size: 14pt;
+          }
+          p, li {
+            font-size: 12pt;
           }
         }
       `}</style>
