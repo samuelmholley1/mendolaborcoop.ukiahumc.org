@@ -24,13 +24,13 @@ const NewsletterPage: React.FC = () => {
               alt="Mendo Labor Cooperative Logo"
               className="w-40 h-40 mx-auto mb-4"
             />
-            <h1 className="text-4xl font-headline font-bold text-moss mb-3">
+            <h1 className="text-4xl font-headline font-bold text-moss mb-4">
               Mendo Labor Cooperative
             </h1>
-            <p className="text-base font-body text-moss italic leading-relaxed max-w-2xl mx-auto border-2 border-moss rounded-lg p-4 bg-sand">
-              "Local workers. Local jobs. Local prosperity. We connect unemployed and underemployed 
+            <p className="text-base leading-relaxed max-w-2xl mx-auto">
+              <strong>Mission Statement:</strong> <em>Local workers. Local jobs. Local prosperity. We connect unemployed and underemployed 
               community members with opportunities that build economic stability, support housing 
-              security, and keep wealth where we live."
+              security, and keep wealth where we live.</em>
             </p>
           </div>
 
@@ -63,40 +63,36 @@ const NewsletterPage: React.FC = () => {
               recently hired two workers through the cooperative for a job, and it went great!
             </p>
 
-            <div className="bg-sand p-6 rounded-lg border-2 border-moss my-6">
-              <h3 className="text-xl font-headline font-semibold text-moss mb-3 text-center">
-                How It Works
-              </h3>
-              <div className="space-y-3 text-base leading-loose">
-                <p>
-                  <strong>1.</strong> You call or text Cheryl at <strong>(369) 216-1512</strong> and 
-                  tell her what kind of help you need.
-                </p>
-                <p>
-                  <strong>2.</strong> Cheryl matches you with a worker from our cooperative who has 
-                  the right skills.
-                </p>
-                <p>
-                  <strong>3.</strong> The worker comes to your home, does quality work, and you pay 
-                  them a fair wage directly.
-                </p>
-              </div>
+            <h3 className="text-xl font-semibold text-moss mt-8 mb-3">
+              How It Works
+            </h3>
+            <div className="space-y-3 text-base leading-loose ml-4">
+              <p>
+                <strong>1.</strong> You call or text Cheryl at <strong>(369) 216-1512</strong> and 
+                tell her what kind of help you need.
+              </p>
+              <p>
+                <strong>2.</strong> Cheryl matches you with a worker from our cooperative who has 
+                the right skills.
+              </p>
+              <p>
+                <strong>3.</strong> The worker comes to your home, does quality work, and you pay 
+                them a fair wage directly.
+              </p>
             </div>
 
-            <h3 className="text-xl font-headline font-semibold text-moss mt-8 mb-3">
+            <h3 className="text-xl font-semibold text-moss mt-8 mb-3">
               What Kind of Work?
             </h3>
 
-            <div className="bg-cream p-5 rounded-lg my-4 border border-moss">
-              <ul className="space-y-2 text-base leading-loose">
-                <li>• <strong>Yard Work:</strong> Raking leaves, weeding, mowing, trimming bushes</li>
-                <li>• <strong>House Cleaning:</strong> Inside cleaning, organizing, decluttering</li>
-                <li>• <strong>Small Repairs:</strong> Fixing fences, minor carpentry, painting</li>
-                <li>• <strong>Moving & Hauling:</strong> Help moving furniture or taking things to the dump</li>
-                <li>• <strong>Storm Cleanup:</strong> Clearing branches, cleaning up after weather</li>
-                <li>• <strong>Whatever You Need:</strong> If you're not sure, just call and ask!</li>
-              </ul>
-            </div>
+            <ul className="space-y-2 text-base leading-loose ml-4">
+              <li>• <strong>Yard Work:</strong> Raking leaves, weeding, mowing, trimming bushes</li>
+              <li>• <strong>House Cleaning:</strong> Inside cleaning, organizing, decluttering</li>
+              <li>• <strong>Small Repairs:</strong> Fixing fences, minor carpentry, painting</li>
+              <li>• <strong>Moving & Hauling:</strong> Help moving furniture or taking things to the dump</li>
+              <li>• <strong>Storm Cleanup:</strong> Clearing branches, cleaning up after weather</li>
+              <li>• <strong>Whatever You Need:</strong> If you're not sure, just call and ask!</li>
+            </ul>
 
             <h3 className="text-xl font-headline font-semibold text-moss mt-8 mb-3">
               Why Your Help Matters
@@ -122,8 +118,9 @@ const NewsletterPage: React.FC = () => {
               Thank you for supporting our neighbors and helping us build a stronger, 
               more caring Ukiah community. Every call makes a difference.
             </p>
-            <p className="mt-3 text-base font-semibold text-black text-center">
-              — With gratitude, The Mendo Labor Cooperative Team
+            <p className="mt-3 text-base text-black text-center">
+              With Gratitude,<br />
+              Mendo Labor Co-op Team
             </p>
 
             <div className="border-4 border-moss p-8 rounded-lg my-8 text-center bg-sand">
