@@ -1,20 +1,19 @@
 import React from 'react';
-import Layout from '../components/Layout';
 import Head from 'next/head';
 
 const NewsletterPage: React.FC = () => {
   return (
-    <Layout
-      title="Newsletter Article - Mendo Labor Cooperative"
-      description="Newsletter article about the Mendo Labor Cooperative for church and community distribution"
-      keywords="Mendo Labor Cooperative, Ukiah, church newsletter, community support"
-      canonical="https://mendolaborcoop.ukiahumc.org/newsletter"
-    >
+    <>
       <Head>
+        <title>Newsletter Article - Mendo Labor Cooperative</title>
+        <meta name="description" content="Newsletter article about the Mendo Labor Cooperative for church and community distribution" />
         <meta name="robots" content="noindex, follow" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
       </Head>
 
-      {/* Print-optimized Newsletter Article */}
+      {/* Newsletter Article - No Nav/Footer */}
       <section className="bg-white min-h-screen py-8">
         <div className="max-w-3xl mx-auto px-6">
           
@@ -114,18 +113,35 @@ const NewsletterPage: React.FC = () => {
               <p className="text-xl mb-6 leading-relaxed">
                 Call or text Cheryl to schedule work
               </p>
-              <div className="bg-white text-moss px-8 py-6 rounded-lg inline-block mb-5">
+              <div className="bg-white text-moss px-8 py-6 rounded-lg mb-6">
                 <p className="text-base font-semibold mb-2">Cheryl Vinson, Coordinator</p>
                 <p className="text-5xl font-headline font-bold text-moss mb-1">
                   (369) 216-1512
                 </p>
-                <p className="text-sm text-gray-600 mt-2">
+                <p className="text-sm text-gray-600 mt-2 mb-4">
                   Call or Text • Available Daily
                 </p>
+                <p className="text-base text-gray-700 mt-4 pt-4 border-t border-gray-300">
+                  Email: mendolaborcoop@gmail.com
+                </p>
+                
+                {/* QR Code integrated in CTA */}
+                <div className="mt-6 pt-4 border-t border-gray-300">
+                  <p className="text-sm text-gray-700 mb-3">
+                    Or visit our website:
+                  </p>
+                  <div className="w-40 h-40 mx-auto bg-white border-2 border-moss rounded-lg flex items-center justify-center mb-2">
+                    <img 
+                      src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent('https://mendolaborcoop.ukiahumc.org')}`}
+                      alt="QR Code for mendolaborcoop.ukiahumc.org"
+                      className="w-full h-full p-1"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-600 font-body">
+                    mendolaborcoop.ukiahumc.org
+                  </p>
+                </div>
               </div>
-              <p className="text-base opacity-90">
-                Email: mendolaborcoop@gmail.com
-              </p>
             </div>
 
             <div className="border-t-2 border-moss pt-6 mt-8 text-center">
@@ -139,28 +155,6 @@ const NewsletterPage: React.FC = () => {
             </div>
           </article>
 
-          {/* QR Code Section */}
-          <div className="mt-10 pt-8 border-t-2 border-sand text-center">
-            <h3 className="text-lg font-headline font-semibold text-moss mb-3">
-              Want to Learn More?
-            </h3>
-            <p className="text-sm text-gray-700 mb-4">
-              Visit our website or have a family member scan this code with their phone:
-            </p>
-            <div className="bg-cream p-5 rounded-lg inline-block border-2 border-moss">
-              <div className="w-40 h-40 mx-auto bg-white border-2 border-moss rounded-lg flex items-center justify-center">
-                <img 
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent('https://mendolaborcoop.ukiahumc.org')}`}
-                  alt="QR Code for mendolaborcoop.ukiahumc.org"
-                  className="w-full h-full p-1"
-                />
-              </div>
-              <p className="text-sm text-moss mt-3 font-body font-semibold">
-                mendolaborcoop.ukiahumc.org
-              </p>
-            </div>
-          </div>
-
           {/* Footer */}
           <div className="mt-10 pt-6 border-t-2 border-sand text-center text-sm text-gray-700">
             <p className="font-body leading-relaxed">
@@ -173,37 +167,43 @@ const NewsletterPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Print Styles */}
-      <style jsx>{`
-        @media print {
-          nav, footer, button {
-            display: none !important;
-          }
-          .max-w-3xl {
-            max-width: 100%;
-          }
-          section {
-            padding: 0.5in;
-          }
-          body {
-            font-size: 12pt;
-            line-height: 1.6;
-          }
-          h1 {
-            font-size: 24pt;
-          }
-          h2 {
-            font-size: 18pt;
-          }
-          h3 {
-            font-size: 14pt;
-          }
-          p, li {
-            font-size: 12pt;
-          }
+      {/* Global Styles */}
+      <style jsx global>{`
+        body {
+          font-family: 'Source Sans 3', sans-serif;
+        }
+        .font-headline {
+          font-family: 'Public Sans', sans-serif;
+        }
+        .font-body {
+          font-family: 'Source Sans 3', sans-serif;
+        }
+        .text-moss {
+          color: #39714B;
+        }
+        .text-gold {
+          color: #E2A673;
+        }
+        .bg-moss {
+          background-color: #39714B;
+        }
+        .bg-sand {
+          background-color: #E6D9C7;
+        }
+        .bg-cream {
+          background-color: #FAF7F2;
+        }
+        .border-moss {
+          border-color: #39714B;
+        }
+        .border-gold {
+          border-color: #E2A673;
+        }
+        .border-sand {
+          border-color: #E6D9C7;
         }
       `}</style>
-    </Layout>
+    </>
   );
 };
 
