@@ -57,10 +57,10 @@ const NewsletterPage: React.FC = () => {
             </p>
 
             <p className="leading-loose">
-              The cooperative grew out of meetings at Building Bridges Homeless Resource Center, where 
+              The co-op grew out of meetings at Building Bridges Homeless Resource Center, where 
               a few of us from church began meeting with folks staying at the center. Together, we realized 
-              we could create real job opportunities for our neighbors. We've already had success—Ed Dick 
-              recently hired two workers through the cooperative for a job, and it went great!
+              we could create real job opportunities for our neighbors. We've already had success—Ed 
+              recently hired two workers through the co-op for a job, and it went great!
             </p>
 
             <h3 className="text-xl font-semibold text-moss mt-8 mb-3">
@@ -72,7 +72,7 @@ const NewsletterPage: React.FC = () => {
                 tell her what kind of help you need.
               </p>
               <p>
-                <strong>2.</strong> Cheryl matches you with a worker from our cooperative who has 
+                <strong>2.</strong> Cheryl matches you with a worker from our co-op who has 
                 the right skills.
               </p>
               <p>
@@ -100,7 +100,7 @@ const NewsletterPage: React.FC = () => {
 
             <p className="leading-loose">
               We're just getting started, and we need <strong>patient, supportive church members</strong> who 
-              are willing to give us a try. Your first job with the cooperative might take a little extra 
+              are willing to give us a try. Your first job with the co-op might take a little extra 
               communication as we learn, but you'll be directly helping a neighbor get back on their feet.
             </p>
 
@@ -110,7 +110,7 @@ const NewsletterPage: React.FC = () => {
             </p>
 
             <p className="leading-loose">
-              If you have questions about the cooperative or want to learn more, please reach out to 
+              If you have questions about the co-op or want to learn more, please reach out to 
               Pastor Michele, Ed Dick, or Samuel Holley.
             </p>
 
