@@ -76,8 +76,12 @@ const NewsletterPage: React.FC = () => {
                 the right skills.
               </p>
               <p>
-                <strong>3.</strong> The worker comes to your home, does quality work, and you pay 
-                them a fair wage directly.
+                <strong>3.</strong> You, the worker, and the co-op sign a simple work agreement 
+                to ensure everyone is protected and knows what to expect.
+              </p>
+              <p>
+                <strong>4.</strong> The worker comes to your home, does quality work, and you pay 
+                them directly at the agreed rate.
               </p>
             </div>
 
