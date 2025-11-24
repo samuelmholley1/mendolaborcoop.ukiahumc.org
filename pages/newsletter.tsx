@@ -106,22 +106,22 @@ const NewsletterPage: React.FC = () => {
               place to stay. And it helps us build something that can serve our community for years to come.
             </p>
 
-            <div className="bg-moss text-white p-8 rounded-lg my-8 text-center">
-              <h3 className="text-2xl font-headline font-bold mb-4">
+            <div className="border-4 border-gray-800 p-8 rounded-lg my-8 text-center bg-gray-50">
+              <h3 className="text-3xl font-headline font-bold mb-4 text-gray-900">
                 Ready to Help?
               </h3>
-              <p className="text-xl mb-6 leading-relaxed">
+              <p className="text-xl mb-6 leading-relaxed text-black">
                 Call or text Cheryl to schedule work
               </p>
-              <div className="bg-white text-moss px-8 py-6 rounded-lg mb-6">
-                <p className="text-base font-semibold mb-2">Cheryl Vinson, Coordinator</p>
-                <p className="text-5xl font-headline font-bold text-moss mb-1">
+              <div className="border-2 border-gray-400 px-8 py-6 rounded-lg mb-6 bg-white">
+                <p className="text-base font-semibold mb-2 text-black">Cheryl Vinson, Coordinator</p>
+                <p className="text-5xl font-headline font-bold text-black mb-1">
                   (369) 216-1512
                 </p>
-                <p className="text-sm text-gray-600 mt-2 mb-4">
+                <p className="text-sm text-gray-700 mt-2 mb-4">
                   Call or Text • Available Daily
                 </p>
-                <p className="text-base text-gray-700 mt-4 pt-4 border-t border-gray-300">
+                <p className="text-base text-black mt-4 pt-4 border-t border-gray-300">
                   Email: mendolaborcoop@gmail.com
                 </p>
                 
@@ -130,39 +130,30 @@ const NewsletterPage: React.FC = () => {
                   <p className="text-sm text-gray-700 mb-3">
                     Or visit our website:
                   </p>
-                  <div className="w-40 h-40 mx-auto bg-white border-2 border-moss rounded-lg flex items-center justify-center mb-2">
+                  <div className="w-40 h-40 mx-auto bg-white border-2 border-gray-800 rounded-lg flex items-center justify-center mb-2">
                     <img 
                       src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent('https://mendolaborcoop.ukiahumc.org')}`}
                       alt="QR Code for mendolaborcoop.ukiahumc.org"
                       className="w-full h-full p-1"
                     />
                   </div>
-                  <p className="text-xs text-gray-600 font-body">
+                  <p className="text-xs text-gray-700 font-body">
                     mendolaborcoop.ukiahumc.org
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="border-t-2 border-moss pt-6 mt-8 text-center">
-              <p className="text-base leading-loose italic">
+            <div className="mt-8 text-center">
+              <p className="text-base leading-loose italic text-black">
                 Thank you for supporting our neighbors and helping us build a stronger, 
                 more caring Ukiah community. Every call makes a difference.
               </p>
-              <p className="mt-4 text-base font-semibold">
+              <p className="mt-4 text-base font-semibold text-black">
                 — With gratitude, The Mendo Labor Cooperative Team
               </p>
             </div>
           </article>
-
-          {/* Footer */}
-          <div className="mt-10 pt-6 border-t-2 border-sand text-center text-sm text-gray-700">
-            <p className="font-body leading-relaxed">
-              <strong>The Mendo Labor Cooperative</strong><br />
-              A ministry project of Ukiah United Methodist Church<br />
-              Connecting neighbors • Building community • Sharing God's love through service
-            </p>
-          </div>
 
         </div>
       </section>
