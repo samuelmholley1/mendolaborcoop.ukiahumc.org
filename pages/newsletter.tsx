@@ -56,6 +56,13 @@ const NewsletterPage: React.FC = () => {
               people who need work with local people who need help.
             </p>
 
+            <p className="leading-loose">
+              The cooperative grew out of meetings at Building Bridges Homeless Resource Center, where 
+              local workers began organizing to create job opportunities for themselves and their neighbors. 
+              We've already had success—Ed Dick recently hired two workers through the cooperative for a 
+              job, and it went great!
+            </p>
+
             <div className="bg-sand p-6 rounded-lg border-2 border-moss my-6">
               <h3 className="text-xl font-headline font-semibold text-moss mb-3 text-center">
                 How It Works
@@ -118,9 +125,6 @@ const NewsletterPage: React.FC = () => {
                 <p className="text-6xl font-bold text-moss mb-2" style={{ letterSpacing: '0.02em' }}>
                   (369) 216-1512
                 </p>
-                <p className="text-base text-gray-700 mt-3 mb-5 font-semibold">
-                  Call or Text • Available Daily
-                </p>
                 <p className="text-lg text-black mt-5 pt-5 border-t-2 border-gray-300 font-semibold">
                   mendolaborcoop@gmail.com
                 </p>
@@ -144,15 +148,17 @@ const NewsletterPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-8 text-center">
-              <p className="text-base leading-loose italic text-black">
-                Thank you for supporting our neighbors and helping us build a stronger, 
-                more caring Ukiah community. Every call makes a difference.
-              </p>
-              <p className="mt-4 text-base font-semibold text-black">
-                — With gratitude, The Mendo Labor Cooperative Team
-              </p>
-            </div>
+            <p className="text-base leading-loose italic text-black mt-6 text-center">
+              Thank you for supporting our neighbors and helping us build a stronger, 
+              more caring Ukiah community. Every call makes a difference.
+            </p>
+            <p className="mt-3 text-base font-semibold text-black text-center">
+              — With gratitude, The Mendo Labor Cooperative Team
+            </p>
+
+            <p className="text-sm text-gray-700 mt-6 text-center leading-relaxed">
+              Questions? Ask Samuel Holley, Ed Dick, or Pastor Michele after service.
+            </p>
           </article>
 
         </div>
