@@ -157,7 +157,7 @@ const NewsletterPage: React.FC = () => {
             </p>
 
             <p className="text-sm text-gray-700 mt-6 text-center leading-relaxed">
-              Questions? Ask Samuel Holley, Ed Dick, or Pastor Michele after service.
+              Questions? Reach out to Pastor Michele, Ed Dick, or Samuel Holley.
             </p>
           </article>
 
