@@ -10,7 +10,7 @@ const NewsletterPage: React.FC = () => {
         <meta name="robots" content="noindex, follow" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
       </Head>
 
       {/* Newsletter Article - No Nav/Footer */}
@@ -106,38 +106,38 @@ const NewsletterPage: React.FC = () => {
               place to stay. And it helps us build something that can serve our community for years to come.
             </p>
 
-            <div className="border-4 border-gray-800 p-8 rounded-lg my-8 text-center bg-gray-50">
-              <h3 className="text-3xl font-headline font-bold mb-4 text-gray-900">
+            <div className="border-4 border-moss p-8 rounded-lg my-8 text-center bg-sand">
+              <h3 className="text-3xl font-bold mb-4 text-moss">
                 Ready to Help?
               </h3>
-              <p className="text-xl mb-6 leading-relaxed text-black">
+              <p className="text-xl mb-6 leading-relaxed text-black font-semibold">
                 Call or text Cheryl to schedule work
               </p>
-              <div className="border-2 border-gray-400 px-8 py-6 rounded-lg mb-6 bg-white">
-                <p className="text-base font-semibold mb-2 text-black">Cheryl Vinson, Coordinator</p>
-                <p className="text-5xl font-headline font-bold text-black mb-1">
+              <div className="border-2 border-moss px-8 py-8 rounded-lg mb-6 bg-white">
+                <p className="text-lg font-bold mb-3 text-black">Cheryl Vinson, Coordinator</p>
+                <p className="text-6xl font-bold text-moss mb-2" style={{ letterSpacing: '0.02em' }}>
                   (369) 216-1512
                 </p>
-                <p className="text-sm text-gray-700 mt-2 mb-4">
+                <p className="text-base text-gray-700 mt-3 mb-5 font-semibold">
                   Call or Text • Available Daily
                 </p>
-                <p className="text-base text-black mt-4 pt-4 border-t border-gray-300">
-                  Email: mendolaborcoop@gmail.com
+                <p className="text-lg text-black mt-5 pt-5 border-t-2 border-gray-300 font-semibold">
+                  mendolaborcoop@gmail.com
                 </p>
                 
                 {/* QR Code integrated in CTA */}
-                <div className="mt-6 pt-4 border-t border-gray-300">
-                  <p className="text-sm text-gray-700 mb-3">
-                    Or visit our website:
+                <div className="mt-8 pt-6 border-t-2 border-gray-300">
+                  <p className="text-base text-gray-700 mb-4 font-semibold">
+                    Visit our website:
                   </p>
-                  <div className="w-40 h-40 mx-auto bg-white border-2 border-gray-800 rounded-lg flex items-center justify-center mb-2">
+                  <div className="w-48 h-48 mx-auto bg-white border-3 border-moss rounded-lg flex items-center justify-center mb-3">
                     <img 
-                      src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent('https://mendolaborcoop.ukiahumc.org')}`}
+                      src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent('https://mendolaborcoop.ukiahumc.org')}`}
                       alt="QR Code for mendolaborcoop.ukiahumc.org"
-                      className="w-full h-full p-1"
+                      className="w-full h-full p-2"
                     />
                   </div>
-                  <p className="text-xs text-gray-700 font-body">
+                  <p className="text-sm text-gray-700 font-semibold">
                     mendolaborcoop.ukiahumc.org
                   </p>
                 </div>
@@ -160,14 +160,11 @@ const NewsletterPage: React.FC = () => {
 
       {/* Global Styles */}
       <style jsx global>{`
+        * {
+          font-family: 'Montserrat', sans-serif;
+        }
         body {
-          font-family: 'Source Sans 3', sans-serif;
-        }
-        .font-headline {
-          font-family: 'Public Sans', sans-serif;
-        }
-        .font-body {
-          font-family: 'Source Sans 3', sans-serif;
+          font-family: 'Montserrat', sans-serif;
         }
         .text-moss {
           color: #39714B;
@@ -192,6 +189,17 @@ const NewsletterPage: React.FC = () => {
         }
         .border-sand {
           border-color: #E6D9C7;
+        }
+        @media print {
+          .bg-sand {
+            background-color: #f5f5f5 !important;
+          }
+          .border-moss {
+            border-color: #000 !important;
+          }
+          .text-moss {
+            color: #000 !important;
+          }
         }
       `}</style>
     </>
