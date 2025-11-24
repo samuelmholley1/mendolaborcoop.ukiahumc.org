@@ -58,9 +58,9 @@ const NewsletterPage: React.FC = () => {
 
             <p className="leading-loose">
               The cooperative grew out of meetings at Building Bridges Homeless Resource Center, where 
-              local workers began organizing to create job opportunities for themselves and their neighbors. 
-              We've already had success—Ed Dick recently hired two workers through the cooperative for a 
-              job, and it went great!
+              a few of us from church began meeting with folks staying at the center. Together, we realized 
+              we could create real job opportunities for our neighbors. We've already had success—Ed Dick 
+              recently hired two workers through the cooperative for a job, and it went great!
             </p>
 
             <div className="bg-sand p-6 rounded-lg border-2 border-moss my-6">
