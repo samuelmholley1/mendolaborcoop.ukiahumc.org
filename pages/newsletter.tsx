@@ -113,6 +113,19 @@ const NewsletterPage: React.FC = () => {
               place to stay. And it helps us build something that can serve our community for years to come.
             </p>
 
+            <p className="leading-loose">
+              If you have questions about the cooperative or want to learn more, please reach out to 
+              Pastor Michele, Ed Dick, or Samuel Holley.
+            </p>
+
+            <p className="text-base leading-loose italic text-black mt-6 text-center">
+              Thank you for supporting our neighbors and helping us build a stronger, 
+              more caring Ukiah community. Every call makes a difference.
+            </p>
+            <p className="mt-3 text-base font-semibold text-black text-center">
+              — With gratitude, The Mendo Labor Cooperative Team
+            </p>
+
             <div className="border-4 border-moss p-8 rounded-lg my-8 text-center bg-sand">
               <h3 className="text-3xl font-bold mb-4 text-moss">
                 Ready to Help?
@@ -147,18 +160,6 @@ const NewsletterPage: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            <p className="text-base leading-loose italic text-black mt-6 text-center">
-              Thank you for supporting our neighbors and helping us build a stronger, 
-              more caring Ukiah community. Every call makes a difference.
-            </p>
-            <p className="mt-3 text-base font-semibold text-black text-center">
-              — With gratitude, The Mendo Labor Cooperative Team
-            </p>
-
-            <p className="text-sm text-gray-700 mt-6 text-center leading-relaxed">
-              Questions? Reach out to Pastor Michele, Ed Dick, or Samuel Holley.
-            </p>
           </article>
 
         </div>
