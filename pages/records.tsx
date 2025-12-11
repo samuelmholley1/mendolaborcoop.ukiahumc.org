@@ -223,6 +223,14 @@ const RecordsPage: React.FC = () => {
                       <li>Louie did not have schedule available at meeting</li>
                     </ul>
                   </div>
+                  <div>
+                    <p className="font-bold text-black mb-1">Action Items:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li><strong>Samuel:</strong> Optimize flyer for 4x4 printing</li>
+                      <li><strong>Samuel:</strong> Bring small flyers for Ed (for church distribution) and to give to workers at Saturday interviews</li>
+                      <li><strong>Samuel:</strong> Coordinate with Cheryl and Louie via text/phone for Louie's profile interview scheduling</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
