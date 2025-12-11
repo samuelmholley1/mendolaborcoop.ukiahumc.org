@@ -224,11 +224,22 @@ const RecordsPage: React.FC = () => {
                     </ul>
                   </div>
                   <div>
+                    <p className="font-bold text-black mb-1">Marketing & Pricing Strategy Discussion:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li><strong>Topic:</strong> Samuel proposed introductory special or discount</li>
+                      <li><strong>Ed's concern:</strong> Don't want to lower perception of value right out the gate - it's a fair wage</li>
+                      <li><strong>Decision:</strong> Begin advertising at full price (flyering at cars in parking lots, etc.) and assess demand</li>
+                      <li><strong>Consensus:</strong> Samuel agreed he got ahead of himself - if demand is insufficient, specials can be discussed later</li>
+                      <li><strong>Ed's recommendation:</strong> If someone donates funds, better spent on advertising than discounts</li>
+                    </ul>
+                  </div>
+                  <div>
                     <p className="font-bold text-black mb-1">Action Items:</p>
                     <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
                       <li><strong>Samuel:</strong> Optimize flyer for 4x4 printing</li>
                       <li><strong>Samuel:</strong> Bring small flyers for Ed (for church distribution) and to give to workers at Saturday interviews</li>
                       <li><strong>Samuel:</strong> Coordinate with Cheryl and Louie via text/phone for Louie's profile interview scheduling</li>
+                      <li><strong>Samuel:</strong> Pursue getting flyer into Senior Center newsletter, Ukiah Daily Journal, and other publications</li>
                     </ul>
                   </div>
                 </div>
