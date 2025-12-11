@@ -11,6 +11,19 @@ const AttendancePage: React.FC = () => {
     attendees: Array<{ name: string; phone: string; email?: string }>;
   }> = [
     {
+      date: 'December 11, 2025',
+      time: '10:00 AM',
+      location: 'Building Bridges Homeless Resource Center',
+      attendees: [
+        { name: 'Samuel Holley', phone: '714-496-7006', email: 'sam@samuelholley.com' },
+        { name: 'Braven Haynes', phone: '559-880-0960', email: 'bravenhaynes@gmail.com' },
+        { name: 'Louie Cedano', phone: '707-510-7199', email: 'louieboy3182@gmail.com' },
+        { name: 'Ed Dick', phone: '707-952-2134', email: 'edwardpdick@gmail.com' },
+        { name: 'Tony Maples', phone: '707-510-9708' },
+        { name: 'David', phone: 'Pending' }
+      ]
+    },
+    {
       date: 'November 18, 2025',
       time: '10:00 AM - 11:00 AM',
       location: 'Ukiah Natural Foods Co-op',
