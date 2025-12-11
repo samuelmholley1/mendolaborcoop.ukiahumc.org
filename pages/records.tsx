@@ -184,6 +184,48 @@ const RecordsPage: React.FC = () => {
             </p>
 
             <div className="space-y-4">
+              {/* Meeting - December 11, 2025 */}
+              <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
+                <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
+                  <h3 className="text-lg font-bold text-gold mb-1">
+                    December 11, 2025
+                  </h3>
+                  <p className="text-sm text-moss mb-1">
+                    Attendees: Samuel Holley, Braven Haynes, Louie Cedano, Ed Dick, Tony Maples, David Churchill
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    6 members present (including 2 new members)
+                  </p>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <p className="font-bold text-black mb-1">Mission Statement Amendment:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li><strong>Motion:</strong> Amend mission statement to change "wealth" to "resources"</li>
+                      <li><strong>Decision:</strong> Voted and approved</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black mb-1">Profile Interviews Scheduled:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li><strong>Saturday, December 14, 2025</strong> at Building Bridges Homeless Resource Center</li>
+                      <li><strong>12:00 PM:</strong> David Churchill interview (Samuel interviewing)</li>
+                      <li><strong>12:30 PM:</strong> Tony Maples interview (Samuel interviewing)</li>
+                      <li><strong>1:00 PM:</strong> Braven Haynes interview (Samuel interviewing)</li>
+                      <li><strong>Note:</strong> Louie Cedano profile interview to be scheduled separately - location and time TBD</li>
+                      <li><strong>Action:</strong> Samuel to coordinate with Cheryl and Louie via text/phone</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-bold text-black mb-1">Administrative Notes:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li>Cheryl Vinson at medical appointment - proactively deputized Co-Coordinator Braven Haynes with meeting binder</li>
+                      <li>Louie did not have schedule available at meeting</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
               {/* Meeting - November 18, 2025 */}
               <div className="bg-white border-2 border-moss rounded-lg shadow-md p-6">
                 <div className="bg-moss/10 -m-6 mb-4 p-4 rounded-t-lg border-b-2 border-moss">
