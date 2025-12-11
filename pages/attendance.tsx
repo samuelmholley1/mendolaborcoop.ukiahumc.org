@@ -20,7 +20,7 @@ const AttendancePage: React.FC = () => {
         { name: 'Louie Cedano', phone: '707-510-7199', email: 'louieboy3182@gmail.com' },
         { name: 'Ed Dick', phone: '707-952-2134', email: 'edwardpdick@gmail.com' },
         { name: 'Tony Maples', phone: '707-510-9708' },
-        { name: 'David', phone: 'Pending' }
+        { name: 'David Churchill', phone: '707-313-2339' }
       ]
     },
     {
