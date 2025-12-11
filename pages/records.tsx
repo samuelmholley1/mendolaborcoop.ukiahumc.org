@@ -191,10 +191,10 @@ const RecordsPage: React.FC = () => {
                     December 11, 2025
                   </h3>
                   <p className="text-sm text-moss mb-1">
-                    Attendees: Samuel Holley, Braven Haynes, Louie Cedano, Ed Dick, Tony Maples, David Churchill
+                    Attendees: Samuel Holley, Braven Haynes, Louie Cedano, Ed Dick, Tony Maples, David Churchill, Joel (Tony) Gama (arrived late)
                   </p>
                   <p className="text-xs text-gray-600 italic">
-                    6 members present (including 2 new members)
+                    7 members present (including 3 new members)
                   </p>
                 </div>
                 <div className="space-y-3 text-sm">
@@ -206,9 +206,17 @@ const RecordsPage: React.FC = () => {
                     </ul>
                   </div>
                   <div>
+                    <p className="font-bold text-black mb-1">New Member:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li><strong>Joel (Tony) Gama</strong> joined meeting late and wants to join co-op</li>
+                      <li>Phone number pending</li>
+                    </ul>
+                  </div>
+                  <div>
                     <p className="font-bold text-black mb-1">Profile Interviews Scheduled:</p>
                     <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
                       <li><strong>Saturday, December 14, 2025</strong> at Building Bridges Homeless Resource Center</li>
+                      <li><strong>11:30 AM:</strong> Joel (Tony) Gama interview (Samuel interviewing)</li>
                       <li><strong>12:00 PM:</strong> David Churchill interview (Samuel interviewing)</li>
                       <li><strong>12:30 PM:</strong> Tony Maples interview (Samuel interviewing)</li>
                       <li><strong>1:00 PM:</strong> Braven Haynes interview (Samuel interviewing)</li>
@@ -234,12 +242,26 @@ const RecordsPage: React.FC = () => {
                     </ul>
                   </div>
                   <div>
+                    <p className="font-bold text-black mb-1">Members Agreement Development:</p>
+                    <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                      <li><strong>Assignment:</strong> Samuel to commission AI-assisted members agreement adapted from existing work agreement</li>
+                      <li><strong>Key provisions to include:</strong></li>
+                      <li className="ml-4">Waiver/permission for using digital likeness under CA law</li>
+                      <li className="ml-4">Grant co-op and Samuel Holley all permissions to use member data/likeness</li>
+                      <li className="ml-4">Protect workers from co-op taking advantage of existing work agreement</li>
+                      <li className="ml-4">Policy on workers comp insurance, background checks, tax paperwork, disability insurance</li>
+                      <li><strong>Current status:</strong> Co-op is not employer of record - no background checks, tax paperwork, or disability insurance currently provided</li>
+                      <li><strong>Future aspirations:</strong> Document aspirations to obtain grant funding, become nonprofit or B Corp, potentially provide background checks and workers comp insurance</li>
+                    </ul>
+                  </div>
+                  <div>
                     <p className="font-bold text-black mb-1">Action Items:</p>
                     <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
                       <li><strong>Samuel:</strong> Optimize flyer for 4x4 printing</li>
                       <li><strong>Samuel:</strong> Bring small flyers for Ed (for church distribution) and to give to workers at Saturday interviews</li>
                       <li><strong>Samuel:</strong> Coordinate with Cheryl and Louie via text/phone for Louie's profile interview scheduling</li>
                       <li><strong>Samuel:</strong> Pursue getting flyer into Senior Center newsletter, Ukiah Daily Journal, and other publications</li>
+                      <li><strong>Samuel:</strong> Commission AI-assisted members agreement with digital likeness permissions, worker protections, and insurance policies</li>
                     </ul>
                   </div>
                 </div>
