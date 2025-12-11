@@ -41,7 +41,7 @@ const HireCrewPage: React.FC = () => {
     },
     {
       question: 'How do you set rates?',
-      answer: 'Rates are determined based on the type of work, skill level required, and project scope. We aim for fair compensation that supports our workers while remaining competitive with local market rates. When you contact us, we\'ll discuss your project needs and provide a clear rate estimate. Our goal is to keep wealth circulating in our local community while ensuring workers receive living wages.'
+      answer: 'Rates are determined based on the type of work, skill level required, and project scope. We aim for fair compensation that supports our workers while remaining competitive with local market rates. When you contact us, we\'ll discuss your project needs and provide a clear rate estimate. Our goal is to keep resources circulating in our local community while ensuring workers receive living wages.'
     },
     {
       question: 'How do you handle safety and trust?',

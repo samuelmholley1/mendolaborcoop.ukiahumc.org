@@ -30,7 +30,7 @@ const NewsletterPage: React.FC = () => {
             <p className="text-base leading-relaxed max-w-2xl mx-auto">
               <strong>Mission Statement:</strong> <em>Local workers. Local jobs. Local prosperity. We connect unemployed and underemployed 
               community members with opportunities that build economic stability, support housing 
-              security, and keep wealth where we live.</em>
+              security, and keep resources where we live.</em>
             </p>
           </div>
 

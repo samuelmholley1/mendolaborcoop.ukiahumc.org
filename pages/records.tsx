@@ -199,17 +199,17 @@ const RecordsPage: React.FC = () => {
                 </div>
                 <div className="space-y-3 text-sm">
                   <div>
-                    <p className="font-bold text-black mb-1">Mission Statement (Draft):</p>
+                    <p className="font-bold text-black mb-1">Mission Statement:</p>
                     <div className="bg-sand/50 p-3 rounded border-l-4 border-gold mb-2">
                       <p className="text-gray-800 italic">
-                        "Local workers. Local jobs. Local prosperity. We connect unemployed and underemployed community members with opportunities that build economic stability, support housing security, and keep wealth where we live."
+                        "Local workers. Local jobs. Local prosperity. We connect unemployed and underemployed community members with opportunities that build economic stability, support housing security, and keep resources where we live."
                       </p>
                     </div>
                     <ul className="list-disc list-inside text-gray-700 ml-4 space-y-1">
                       <li><strong>Motion:</strong> Samuel proposed draft mission statement</li>
                       <li><strong>Seconded:</strong> Ed seconded the motion</li>
                       <li><strong>Decision:</strong> Unanimously approved as draft mission statement (3-0)</li>
-                      <li>Draft will be reviewed and voted on by full membership at future meeting</li>
+                      <li><strong>Amendment (12/11/2025):</strong> Motion to change "wealth" to "resources" - Voted and approved</li>
                     </ul>
                   </div>
                   <div>
