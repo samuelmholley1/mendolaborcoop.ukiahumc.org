@@ -96,7 +96,7 @@ const FlyerPage: React.FC = () => {
               </div>
 
               {/* PRIMARY: PHONE NUMBER - Larger, dominant */}
-              <div className="contact-box bg-[#2d5016] text-white py-4 px-4 rounded-lg text-center shadow-inner">
+              <div className="contact-box bg-[#2F5E3E] text-white py-4 px-4 rounded-lg text-center shadow-inner">
                 <p className="text-sm font-headline font-semibold mb-3 opacity-90">
                   Call or Text Cheryl
                 </p>
@@ -140,7 +140,7 @@ const FlyerPage: React.FC = () => {
               </div>
 
               {/* PRIMARY: PHONE NUMBER - Larger, dominant */}
-              <div className="contact-box bg-[#2d5016] text-white py-4 px-4 rounded-lg text-center shadow-inner">
+              <div className="contact-box bg-[#2F5E3E] text-white py-4 px-4 rounded-lg text-center shadow-inner">
                 <p className="text-sm font-headline font-semibold mb-3 opacity-90">
                   Call or Text Cheryl
                 </p>
@@ -184,7 +184,7 @@ const FlyerPage: React.FC = () => {
               </div>
 
               {/* PRIMARY: PHONE NUMBER - Larger, dominant */}
-              <div className="contact-box bg-[#2d5016] text-white py-4 px-4 rounded-lg text-center shadow-inner">
+              <div className="contact-box bg-[#2F5E3E] text-white py-4 px-4 rounded-lg text-center shadow-inner">
                 <p className="text-sm font-headline font-semibold mb-3 opacity-90">
                   Call or Text Cheryl
                 </p>
@@ -228,7 +228,7 @@ const FlyerPage: React.FC = () => {
               </div>
 
               {/* PRIMARY: PHONE NUMBER - Larger, dominant */}
-              <div className="contact-box bg-[#2d5016] text-white py-4 px-4 rounded-lg text-center shadow-inner">
+              <div className="contact-box bg-[#2F5E3E] text-white py-4 px-4 rounded-lg text-center shadow-inner">
                 <p className="text-sm font-headline font-semibold mb-3 opacity-90">
                   Call or Text Cheryl
                 </p>
