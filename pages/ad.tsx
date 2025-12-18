@@ -32,9 +32,10 @@ const AdPage: React.FC = () => {
       const rect = adRef.current.getBoundingClientRect();
       
       const dataUrl = await toPng(adRef.current, {
-        quality: 0.98,
+        quality: 1.0,
         backgroundColor: '#ffffff',
         cacheBust: true,
+        pixelRatio: 3,
         width: Math.round(rect.width),
         height: Math.round(rect.height),
         style: {
@@ -87,10 +88,11 @@ const AdPage: React.FC = () => {
           {/* BLACK & WHITE AD */}
           <div 
             ref={adRef}
-            className="flyer-container bg-white p-5 shadow-lg rounded-lg border-[5px] border-black overflow-hidden flex flex-col justify-between mx-auto"
+            className="bg-white p-5 rounded-lg border-[5px] border-black flex flex-col justify-between mx-auto"
             style={{
               width: '340px',
               height: '440px',
+              overflow: 'visible',
             }}
           >
             
