@@ -17,7 +17,7 @@ const FlyerPage: React.FC = () => {
               height: 5.5in; 
               page-break-after: always;
             }
-            .contact-box {
+            .contact-box, .contact-box-bw {
               -webkit-print-color-adjust: exact !important;
               print-color-adjust: exact !important;
               color-adjust: exact !important;
@@ -38,13 +38,13 @@ const FlyerPage: React.FC = () => {
               onClick={() => window.print()}
               className="bg-moss text-cream px-8 py-3 rounded-lg text-lg font-headline font-semibold hover:bg-moss/90 transition-colors"
             >
-              🖨️ Print Flyer
+              🖨️ Print Flyers
             </button>
-            <p className="text-moss mt-2 font-body">Optimized for quarter-page printing (4.25" x 5.5") - 4 flyers per letter sheet</p>
+            <p className="text-moss mt-2 font-body">Color & Black/White versions - Quarter-page (4.25" x 5.5") - 4 flyers per sheet</p>
           </div>
 
-          {/* Flyer Content */}
-          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-4 border-moss">
+          {/* COLOR FLYER */}
+          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-4 border-moss mb-8">
             
             {/* Logo */}
             <div className="text-center mb-3">
@@ -91,6 +91,61 @@ const FlyerPage: React.FC = () => {
                   className="w-12 h-12 border border-sand rounded"
                 />
                 <p className="text-xs font-body text-moss">
+                  mendolaborcoop.ukiahumc.org
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* BLACK & WHITE FLYER */}
+          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-4 border-black">
+            
+            {/* Logo */}
+            <div className="text-center mb-3">
+              <img
+                src="/mendo_labor_coop_logo.png"
+                alt="Mendo Labor Cooperative"
+                className="mx-auto w-24 h-24 grayscale"
+              />
+            </div>
+
+            {/* Main CTA Headline */}
+            <div className="text-center mb-3">
+              <h1 className="text-xl font-headline font-black text-black mb-1 leading-tight">
+                Hire a Temporary Worker
+              </h1>
+              <p className="text-sm text-black font-body font-bold">
+                Skilled Local Workers • Fair Pay
+              </p>
+            </div>
+
+            {/* Primary CTA - Contact Info - B&W version with heavy border */}
+            <div className="contact-box-bw bg-white text-black p-3 rounded-lg mb-3 text-center border-4 border-black">
+              <p className="text-sm font-headline font-black mb-1">
+                Call or Text Cheryl
+              </p>
+              <a 
+                href="tel:+13692161512" 
+                className="text-2xl font-headline font-black block mb-1 hover:opacity-90 transition-opacity"
+              >
+                (369) 216-1512
+              </a>
+              <p className="text-xs font-body font-bold">
+                mendolaborcoop@gmail.com
+              </p>
+            </div>
+
+            {/* Secondary Info - QR Code & Website */}
+            <div className="text-center pt-2 border-t-2 border-black">
+              <div className="flex justify-center items-center gap-2">
+                {/* QR Code */}
+                <img
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://mendolaborcoop.ukiahumc.org"
+                  alt="QR Code"
+                  className="w-12 h-12 border-2 border-black rounded"
+                />
+                <p className="text-xs font-body text-black font-bold">
                   mendolaborcoop.ukiahumc.org
                 </p>
               </div>
