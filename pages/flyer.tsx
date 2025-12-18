@@ -10,7 +10,7 @@ const FlyerPage: React.FC = () => {
         <meta name="robots" content="noindex, follow" />
         <style>{`
           @media print {
-            body { margin: 0; padding: 0; }
+            html, body { margin: 0; padding: 0; height: 100%; }
             .no-print { display: none !important; }
             .print-page {
               width: 8.5in;
@@ -19,15 +19,15 @@ const FlyerPage: React.FC = () => {
               grid-template-columns: 4.25in 4.25in;
               grid-template-rows: 5.5in 5.5in;
               gap: 0;
-              page-break-after: avoid;
               margin: 0;
-              padding: 0;
+              padding: 0.15in 0.075in;
+              box-sizing: border-box;
             }
             .flyer-container { 
-              width: 4.2in !important; 
-              height: 5.4in !important; 
+              width: 100% !important; 
+              height: 100% !important; 
               page-break-inside: avoid;
-              margin: 0.05in 0.025in !important;
+              margin: 0 !important;
               box-sizing: border-box;
             }
             .contact-box, .bg-black {
