@@ -100,14 +100,14 @@ const FlyerPage: React.FC = () => {
               <p className="text-[10px] font-body text-moss mb-2 font-semibold">
                 Learn more or request workers
               </p>
-              <div className="flex justify-center items-center gap-2">
+              <div className="flex flex-col items-center">
                 <img
                   src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://mendolaborcoop.ukiahumc.org"
                   alt="QR Code"
-                  className="w-12 h-12 border border-moss rounded"
+                  className="w-12 h-12 border border-moss rounded mb-1"
                 />
-                <p className="text-xs font-body text-moss font-semibold leading-tight">
-                  mendolaborcoop<br/>.ukiahumc.org
+                <p className="text-[10px] font-body text-moss font-semibold">
+                  mendolaborcoop.ukiahumc.org
                 </p>
               </div>
             </div>
@@ -157,11 +157,21 @@ const FlyerPage: React.FC = () => {
               </p>
             </div>
 
-            {/* Footer - Email only */}
+            {/* Footer - Email and QR */}
             <div className="text-center pt-3 border-t border-black">
-              <p className="text-xs font-body text-black font-semibold">
+              <p className="text-xs font-body text-black font-semibold mb-2">
                 mendolaborcoop@gmail.com
               </p>
+              <div className="flex flex-col items-center mt-2">
+                <img
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://mendolaborcoop.ukiahumc.org"
+                  alt="QR Code"
+                  className="w-10 h-10 border-2 border-black rounded mb-1"
+                />
+                <p className="text-[9px] font-body text-black font-bold">
+                  mendolaborcoop.ukiahumc.org
+                </p>
+              </div>
             </div>
 
           </div>
