@@ -44,53 +44,56 @@ const FlyerPage: React.FC = () => {
           </div>
 
           {/* COLOR FLYER */}
-          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-4 border-moss mb-8">
+          <div className="flyer-container bg-white p-5 shadow-lg rounded-lg border-4 border-moss mb-8">
             
-            {/* Logo */}
-            <div className="text-center mb-3">
+            {/* Logo - Increased size by 12%, reduced top margin */}
+            <div className="text-center mb-2">
               <img
                 src="/mendo_labor_coop_logo.png"
                 alt="Mendo Labor Cooperative"
-                className="mx-auto w-24 h-24"
+                className="mx-auto w-28 h-28"
               />
             </div>
 
-            {/* Main CTA Headline */}
+            {/* Main CTA Headline - Bolder weight */}
             <div className="text-center mb-3">
-              <h1 className="text-xl font-headline font-extrabold text-gold mb-1 leading-tight">
+              <h1 className="text-xl font-headline font-black text-gold mb-1 leading-tight">
                 Hire a Temporary Worker
               </h1>
-              <p className="text-sm text-moss font-body font-semibold">
-                Skilled Local Workers • Fair Pay
+              <p className="text-sm text-moss font-body font-normal">
+                Skilled local help • Fair pay
               </p>
             </div>
 
-            {/* Primary CTA - Contact Info */}
-            <div className="contact-box bg-moss text-cream p-3 rounded-lg mb-3 text-center">
-              <p className="text-sm font-headline font-semibold mb-1">
+            {/* Primary CTA - Contact Info - Darker green, larger phone, more spacing */}
+            <div className="contact-box bg-[#2d5016] text-white py-4 px-3 rounded-lg mb-3 text-center shadow-inner">
+              <p className="text-xs font-headline font-semibold mb-2">
                 Call or Text Cheryl
               </p>
               <a 
                 href="tel:+13692161512" 
-                className="text-2xl font-headline font-extrabold block mb-1 hover:opacity-90 transition-opacity"
+                className="text-4xl font-headline font-extrabold block my-3 hover:opacity-90 transition-opacity tracking-wide"
+                style={{ color: '#FFFFFF' }}
               >
                 (369) 216-1512
               </a>
-              <p className="text-xs font-body opacity-90">
+              <p className="text-xs font-body mt-2">
                 mendolaborcoop@gmail.com
               </p>
             </div>
 
-            {/* Secondary Info - QR Code & Website */}
-            <div className="text-center pt-2 border-t border-sand">
+            {/* Secondary Info - QR Code & Website - Larger QR, with label, closer spacing */}
+            <div className="text-center pt-2">
+              <p className="text-[9px] font-body text-moss mb-1 font-semibold">
+                Learn more or request workers
+              </p>
               <div className="flex justify-center items-center gap-2">
-                {/* QR Code - Using QR Code API */}
                 <img
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://mendolaborcoop.ukiahumc.org"
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://mendolaborcoop.ukiahumc.org"
                   alt="QR Code"
-                  className="w-12 h-12 border border-sand rounded"
+                  className="w-14 h-14 border-2 border-moss rounded"
                 />
-                <p className="text-xs font-body text-moss">
+                <p className="text-xs font-body text-moss font-semibold">
                   mendolaborcoop.ukiahumc.org
                 </p>
               </div>
@@ -99,54 +102,53 @@ const FlyerPage: React.FC = () => {
           </div>
 
           {/* BLACK & WHITE FLYER */}
-          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-4 border-black">
+          <div className="flyer-container bg-white p-5 shadow-lg rounded-lg border-[3px] border-black">
             
-            {/* Logo */}
-            <div className="text-center mb-3">
+            {/* Logo - Increased size, bolder */}
+            <div className="text-center mb-2">
               <img
                 src="/mendo_labor_coop_logo.png"
                 alt="Mendo Labor Cooperative"
-                className="mx-auto w-24 h-24 grayscale"
+                className="mx-auto w-28 h-28 grayscale contrast-125"
               />
             </div>
 
-            {/* Main CTA Headline */}
-            <div className="text-center mb-3">
-              <h1 className="text-xl font-headline font-black text-black mb-1 leading-tight">
-                Hire a Temporary Worker
-              </h1>
-              <p className="text-sm text-black font-body font-bold">
-                Skilled Local Workers • Fair Pay
-              </p>
-            </div>
-
-            {/* Primary CTA - Contact Info - B&W version with heavy border */}
-            <div className="contact-box-bw bg-white text-black p-3 rounded-lg mb-3 text-center border-4 border-black">
-              <p className="text-sm font-headline font-black mb-1">
-                Call or Text Cheryl
-              </p>
+            {/* Primary CTA - Contact Info FIRST (reordered for seniors) */}
+            <div className="contact-box-bw bg-white text-black py-5 px-4 rounded-lg mb-3 text-center border-[3px] border-black">
               <a 
                 href="tel:+13692161512" 
-                className="text-2xl font-headline font-black block mb-1 hover:opacity-90 transition-opacity"
+                className="text-4xl font-headline font-black block mb-3 hover:opacity-90 transition-opacity tracking-widest leading-tight"
               >
                 (369) 216-1512
               </a>
-              <p className="text-xs font-body font-bold">
-                mendolaborcoop@gmail.com
+              <p className="text-xs font-headline font-black mb-1">
+                Call or Text Cheryl
               </p>
             </div>
 
-            {/* Secondary Info - QR Code & Website */}
-            <div className="text-center pt-2 border-t-2 border-black">
-              <div className="flex justify-center items-center gap-2">
-                {/* QR Code */}
+            {/* Main CTA Headline - After phone for B&W priority */}
+            <div className="text-center mb-3">
+              <h1 className="text-xl font-headline font-black text-black mb-2 leading-tight">
+                Hire a Temporary Worker
+              </h1>
+              <p className="text-base text-black font-body font-bold leading-relaxed">
+                Skilled local help • Fair pay
+              </p>
+            </div>
+
+            {/* Secondary Info - Email & QR Code */}
+            <div className="text-center pt-3 border-t-[2.5px] border-black mt-3">
+              <p className="text-sm font-body font-bold mb-2 text-left px-1">
+                mendolaborcoop@gmail.com
+              </p>
+              <div className="flex justify-center items-center gap-3">
                 <img
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://mendolaborcoop.ukiahumc.org"
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://mendolaborcoop.ukiahumc.org"
                   alt="QR Code"
-                  className="w-12 h-12 border-2 border-black rounded"
+                  className="w-14 h-14 border-[2.5px] border-black rounded"
                 />
-                <p className="text-xs font-body text-black font-bold">
-                  mendolaborcoop.ukiahumc.org
+                <p className="text-xs font-body text-black font-bold text-left leading-snug">
+                  mendolaborcoop<br/>.ukiahumc.org
                 </p>
               </div>
             </div>
