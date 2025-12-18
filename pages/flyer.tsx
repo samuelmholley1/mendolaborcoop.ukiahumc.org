@@ -114,64 +114,42 @@ const FlyerPage: React.FC = () => {
 
           </div>
 
-          {/* BLACK & WHITE FLYER - SENIOR NEWSLETTER OPTIMIZED */}
-          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-[3px] border-black relative overflow-hidden">
+          {/* BLACK & WHITE FLYER - BRUTALIST NEWSLETTER LAYOUT */}
+          <div className="flyer-container bg-white p-6 shadow-lg rounded-lg border-[3px] border-black overflow-hidden">
             
-            {/* Tiny corner logo mark - optional trust signal */}
-            <div className="absolute top-2 right-2">
-              <img
-                src="/mendo_labor_coop_logo.png"
-                alt="Logo"
-                className="w-10 h-10 grayscale opacity-30"
-              />
-            </div>
-
-            {/* Service Description - Context first */}
-            <div className="text-center mb-3 mt-2">
-              <p className="text-base text-black font-body font-bold leading-snug">
-                Yard work • Errands • Odd jobs
-              </p>
-            </div>
-
-            {/* PRIMARY: PHONE NUMBER - MASSIVE but single line */}
-            <div className="contact-box-bw bg-white text-black py-6 px-3 rounded-lg mb-4 text-center border-[3px] border-black">
-              <a 
-                href="tel:+13692161512" 
-                className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
-                style={{ letterSpacing: '0.02em' }}
-              >
-                (369) 216-1512
-              </a>
-              <p className="text-base font-headline font-black mt-4">
+            {/* 1. INSTRUCTION - Above phone */}
+            <div className="text-center mb-3">
+              <p className="text-sm font-body font-semibold text-black opacity-70">
                 Call or Text Cheryl
               </p>
             </div>
 
-            {/* Headline - Supporting role */}
-            <div className="text-center mb-3">
-              <h1 className="text-lg font-headline font-black text-black leading-tight">
+            {/* 2. PHONE NUMBER - DOMINANT 50-60% of space */}
+            <div className="text-center my-8">
+              <a 
+                href="tel:+13692161512" 
+                className="text-7xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
+                style={{ letterSpacing: '0.03em' }}
+              >
+                (369) 216-1512
+              </a>
+            </div>
+
+            {/* 3. WHAT THIS IS - Headline */}
+            <div className="text-center mb-4 mt-8">
+              <h1 className="text-2xl font-headline font-black text-black leading-tight mb-3">
                 Hire a Temporary Worker
               </h1>
-              <p className="text-sm text-black font-body font-bold mt-2 leading-relaxed">
-                Skilled local help • Fair pay
+              <p className="text-lg text-black font-body font-bold leading-snug">
+                Yard work • Errands • Odd jobs
               </p>
             </div>
 
-            {/* Footer - Email and QR */}
-            <div className="text-center pt-3 border-t border-black">
-              <p className="text-xs font-body text-black font-semibold mb-2">
-                mendolaborcoop@gmail.com
+            {/* 4. FOOTER - URL only */}
+            <div className="text-center mt-8 pt-4 border-t border-black">
+              <p className="text-xs font-body text-black font-semibold">
+                mendolaborcoop.ukiahumc.org
               </p>
-              <div className="flex flex-col items-center mt-2">
-                <img
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://mendolaborcoop.ukiahumc.org"
-                  alt="QR Code"
-                  className="w-10 h-10 border-2 border-black rounded mb-1"
-                />
-                <p className="text-[9px] font-body text-black font-bold">
-                  mendolaborcoop.ukiahumc.org
-                </p>
-              </div>
             </div>
 
           </div>
