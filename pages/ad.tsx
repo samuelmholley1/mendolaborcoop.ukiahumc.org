@@ -16,11 +16,20 @@ const AdPage: React.FC = () => {
       // Wait for fonts to load
       await document.fonts?.ready?.catch(() => {});
       
+      // Wait a bit for rendering
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
       const dataUrl = await toPng(adRef.current, {
-        quality: 0.98,
+        quality: 1.0,
         backgroundColor: '#ffffff',
         cacheBust: true,
-        pixelRatio: 3, // Higher resolution for better quality
+        pixelRatio: 4,
+        width: 1360,
+        height: 1760,
+        style: {
+          transform: 'scale(1)',
+          transformOrigin: 'top left',
+        },
       });
       
       const response = await fetch(dataUrl);
