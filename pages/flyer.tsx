@@ -22,14 +22,17 @@ const FlyerPage: React.FC = () => {
               page-break-after: always;
               margin: 0;
               padding: 0;
-              place-items: center;
             }
             .flyer-container { 
-              width: 4in !important; 
-              height: 5.2in !important; 
+              width: 4.25in !important; 
+              height: 5.5in !important; 
               page-break-inside: avoid;
               margin: 0 !important;
               box-sizing: border-box;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
             }
             .contact-box, .bg-black {
               -webkit-print-color-adjust: exact !important;
