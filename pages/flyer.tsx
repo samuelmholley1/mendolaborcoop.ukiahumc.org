@@ -254,21 +254,21 @@ const FlyerPage: React.FC = () => {
             <div className="flyer-container bg-white p-5 shadow-lg rounded-lg border-[5px] border-black overflow-hidden flex flex-col justify-between">
               
               {/* Header - Co-op Name */}
-              <div className="text-center mb-4">
+              <div className="text-center mb-3">
                 <h2 className="text-base font-headline font-black text-black tracking-wider">
                   MENDO LABOR COOPERATIVE
                 </h2>
               </div>
 
               {/* Hook Question */}
-              <div className="text-center mb-3">
+              <div className="text-center mb-2">
                 <h1 className="text-3xl font-headline font-black text-black leading-tight">
                   Need Help<br/>With...
                 </h1>
               </div>
 
               {/* Services - Clean list */}
-              <div className="text-center mb-4">
+              <div className="text-center mb-3">
                 <p className="text-2xl text-black font-headline font-black leading-tight">
                   Yard Work?<br/>
                   Errands?<br/>
@@ -276,26 +276,28 @@ const FlyerPage: React.FC = () => {
                 </p>
               </div>
 
+              {/* Tagline */}
+              <div className="text-center mb-3">
+                <p className="text-sm text-black font-body font-semibold">
+                  Skilled local help • Fair pay
+                </p>
+              </div>
+
               {/* CTA Box - Dominant */}
-              <div className="bg-black text-white py-4 px-4 text-center mb-6">
-                <p className="text-base font-headline font-black mb-3 tracking-widest">
+              <div className="bg-black text-white py-3 px-3 text-center mb-4">
+                <p className="text-sm font-headline font-black mb-2 tracking-widest">
                   CALL OR TEXT
                 </p>
                 <a 
                   href="tel:+13692161512" 
-                  className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
-                  style={{ letterSpacing: '0.08em' }}
+                  className="text-4xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
                 >
-                  369-216-1512
+                  (369) 216-1512
                 </a>
-                <p className="text-xs font-body mt-3 opacity-80">
+                <p className="text-xs font-body mt-2 opacity-80">
                   mendolaborcoop@gmail.com
                 </p>
-              </div>
-
-              {/* Footer */}
-              <div className="text-center">
-                <p className="text-xs text-black font-body font-bold">
+                <p className="text-xs font-body mt-1 opacity-80">
                   mendolaborcoop.ukiahumc.org
                 </p>
               </div>
@@ -306,21 +308,21 @@ const FlyerPage: React.FC = () => {
             <div className="flyer-container bg-white p-5 shadow-lg rounded-lg border-[5px] border-black overflow-hidden flex flex-col justify-between">
               
               {/* Header - Co-op Name */}
-              <div className="text-center mb-4">
+              <div className="text-center mb-3">
                 <h2 className="text-base font-headline font-black text-black tracking-wider">
                   MENDO LABOR COOPERATIVE
                 </h2>
               </div>
 
               {/* Hook Question */}
-              <div className="text-center mb-3">
+              <div className="text-center mb-2">
                 <h1 className="text-3xl font-headline font-black text-black leading-tight">
                   Need Help<br/>With...
                 </h1>
               </div>
 
               {/* Services - Clean list */}
-              <div className="text-center mb-4">
+              <div className="text-center mb-3">
                 <p className="text-2xl text-black font-headline font-black leading-tight">
                   Yard Work?<br/>
                   Errands?<br/>
@@ -328,26 +330,28 @@ const FlyerPage: React.FC = () => {
                 </p>
               </div>
 
+              {/* Tagline */}
+              <div className="text-center mb-3">
+                <p className="text-sm text-black font-body font-semibold">
+                  Skilled local help • Fair pay
+                </p>
+              </div>
+
               {/* CTA Box - Dominant */}
-              <div className="bg-black text-white py-4 px-4 text-center mb-6">
-                <p className="text-base font-headline font-black mb-3 tracking-widest">
+              <div className="bg-black text-white py-3 px-3 text-center mb-4">
+                <p className="text-sm font-headline font-black mb-2 tracking-widest">
                   CALL OR TEXT
                 </p>
                 <a 
                   href="tel:+13692161512" 
-                  className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
-                  style={{ letterSpacing: '0.08em' }}
+                  className="text-4xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
                 >
-                  369-216-1512
+                  (369) 216-1512
                 </a>
-                <p className="text-xs font-body mt-3 opacity-80">
+                <p className="text-xs font-body mt-2 opacity-80">
                   mendolaborcoop@gmail.com
                 </p>
-              </div>
-
-              {/* Footer */}
-              <div className="text-center">
-                <p className="text-xs text-black font-body font-bold">
+                <p className="text-xs font-body mt-1 opacity-80">
                   mendolaborcoop.ukiahumc.org
                 </p>
               </div>
@@ -358,21 +362,21 @@ const FlyerPage: React.FC = () => {
             <div className="flyer-container bg-white p-5 shadow-lg rounded-lg border-[5px] border-black overflow-hidden flex flex-col justify-between">
               
               {/* Header - Co-op Name */}
-              <div className="text-center mb-4">
+              <div className="text-center mb-3">
                 <h2 className="text-base font-headline font-black text-black tracking-wider">
                   MENDO LABOR COOPERATIVE
                 </h2>
               </div>
 
               {/* Hook Question */}
-              <div className="text-center mb-3">
+              <div className="text-center mb-2">
                 <h1 className="text-3xl font-headline font-black text-black leading-tight">
                   Need Help<br/>With...
                 </h1>
               </div>
 
               {/* Services - Clean list */}
-              <div className="text-center mb-4">
+              <div className="text-center mb-3">
                 <p className="text-2xl text-black font-headline font-black leading-tight">
                   Yard Work?<br/>
                   Errands?<br/>
@@ -380,26 +384,28 @@ const FlyerPage: React.FC = () => {
                 </p>
               </div>
 
+              {/* Tagline */}
+              <div className="text-center mb-3">
+                <p className="text-sm text-black font-body font-semibold">
+                  Skilled local help • Fair pay
+                </p>
+              </div>
+
               {/* CTA Box - Dominant */}
-              <div className="bg-black text-white py-4 px-4 text-center mb-6">
-                <p className="text-base font-headline font-black mb-3 tracking-widest">
+              <div className="bg-black text-white py-3 px-3 text-center mb-4">
+                <p className="text-sm font-headline font-black mb-2 tracking-widest">
                   CALL OR TEXT
                 </p>
                 <a 
                   href="tel:+13692161512" 
-                  className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
-                  style={{ letterSpacing: '0.08em' }}
+                  className="text-4xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
                 >
-                  369-216-1512
+                  (369) 216-1512
                 </a>
-                <p className="text-xs font-body mt-3 opacity-80">
+                <p className="text-xs font-body mt-2 opacity-80">
                   mendolaborcoop@gmail.com
                 </p>
-              </div>
-
-              {/* Footer */}
-              <div className="text-center">
-                <p className="text-xs text-black font-body font-bold">
+                <p className="text-xs font-body mt-1 opacity-80">
                   mendolaborcoop.ukiahumc.org
                 </p>
               </div>
@@ -410,21 +416,21 @@ const FlyerPage: React.FC = () => {
             <div className="flyer-container bg-white p-5 shadow-lg rounded-lg border-[5px] border-black overflow-hidden flex flex-col justify-between">
               
               {/* Header - Co-op Name */}
-              <div className="text-center mb-4">
+              <div className="text-center mb-3">
                 <h2 className="text-base font-headline font-black text-black tracking-wider">
                   MENDO LABOR COOPERATIVE
                 </h2>
               </div>
 
               {/* Hook Question */}
-              <div className="text-center mb-3">
+              <div className="text-center mb-2">
                 <h1 className="text-3xl font-headline font-black text-black leading-tight">
                   Need Help<br/>With...
                 </h1>
               </div>
 
               {/* Services - Clean list */}
-              <div className="text-center mb-4">
+              <div className="text-center mb-3">
                 <p className="text-2xl text-black font-headline font-black leading-tight">
                   Yard Work?<br/>
                   Errands?<br/>
@@ -432,26 +438,28 @@ const FlyerPage: React.FC = () => {
                 </p>
               </div>
 
+              {/* Tagline */}
+              <div className="text-center mb-3">
+                <p className="text-sm text-black font-body font-semibold">
+                  Skilled local help • Fair pay
+                </p>
+              </div>
+
               {/* CTA Box - Dominant */}
-              <div className="bg-black text-white py-4 px-4 text-center mb-6">
-                <p className="text-base font-headline font-black mb-3 tracking-widest">
+              <div className="bg-black text-white py-3 px-3 text-center mb-4">
+                <p className="text-sm font-headline font-black mb-2 tracking-widest">
                   CALL OR TEXT
                 </p>
                 <a 
                   href="tel:+13692161512" 
-                  className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
-                  style={{ letterSpacing: '0.08em' }}
+                  className="text-4xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
                 >
-                  369-216-1512
+                  (369) 216-1512
                 </a>
-                <p className="text-xs font-body mt-3 opacity-80">
+                <p className="text-xs font-body mt-2 opacity-80">
                   mendolaborcoop@gmail.com
                 </p>
-              </div>
-
-              {/* Footer */}
-              <div className="text-center">
-                <p className="text-xs text-black font-body font-bold">
+                <p className="text-xs font-body mt-1 opacity-80">
                   mendolaborcoop.ukiahumc.org
                 </p>
               </div>
