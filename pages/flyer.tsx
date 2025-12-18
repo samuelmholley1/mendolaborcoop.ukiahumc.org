@@ -93,23 +93,9 @@ const FlyerPage: React.FC = () => {
               <p className="text-xs font-body mt-2 opacity-80">
                 mendolaborcoop@gmail.com
               </p>
-            </div>
-
-            {/* QR Code - Functional */}
-            <div className="text-center pt-2">
-              <p className="text-[10px] font-body text-moss mb-2 font-semibold">
-                Learn more or request workers
+              <p className="text-xs font-body mt-1 opacity-80">
+                mendolaborcoop.ukiahumc.org
               </p>
-              <div className="flex flex-col items-center">
-                <img
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://mendolaborcoop.ukiahumc.org"
-                  alt="QR Code"
-                  className="w-12 h-12 border border-moss rounded mb-1"
-                />
-                <p className="text-[10px] font-body text-moss font-semibold">
-                  mendolaborcoop.ukiahumc.org
-                </p>
-              </div>
             </div>
 
           </div>
@@ -151,23 +137,9 @@ const FlyerPage: React.FC = () => {
               <p className="text-xs font-body mt-2 opacity-80">
                 mendolaborcoop@gmail.com
               </p>
-            </div>
-
-            {/* QR Code - Functional */}
-            <div className="text-center pt-2">
-              <p className="text-[10px] font-body text-black mb-2 font-semibold">
-                Learn more or request workers
+              <p className="text-xs font-body mt-1 opacity-80">
+                mendolaborcoop.ukiahumc.org
               </p>
-              <div className="flex flex-col items-center">
-                <img
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://mendolaborcoop.ukiahumc.org"
-                  alt="QR Code"
-                  className="w-12 h-12 border-2 border-black rounded mb-1"
-                />
-                <p className="text-[10px] font-body text-black font-semibold">
-                  mendolaborcoop.ukiahumc.org
-                </p>
-              </div>
             </div>
 
           </div>
