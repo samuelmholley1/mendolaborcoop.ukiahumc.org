@@ -88,7 +88,7 @@ const AdPage: React.FC = () => {
           {/* BLACK & WHITE AD */}
           <div 
             ref={adRef}
-            className="bg-white p-5 rounded-lg border-[5px] border-black flex flex-col justify-between"
+            className="bg-white p-5 border-[5px] border-black flex flex-col justify-between"
             style={{
               width: '360px',
               height: '467px',
@@ -145,10 +145,10 @@ const AdPage: React.FC = () => {
                   (369) 216-1512
                 </a>
               </div>
-              <p className="text-xs font-body mt-2 opacity-80">
+              <p className="text-xs font-body mt-2 opacity-80" style={{ textAlign: 'center' }}>
                 mendolaborcoop@gmail.com
               </p>
-              <p className="text-xs font-body mt-1 opacity-80">
+              <p className="text-xs font-body mt-1 opacity-80" style={{ textAlign: 'center' }}>
                 mendolaborcoop.ukiahumc.org
               </p>
             </div>
