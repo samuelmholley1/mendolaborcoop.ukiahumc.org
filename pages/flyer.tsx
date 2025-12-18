@@ -57,43 +57,43 @@ const FlyerPage: React.FC = () => {
           </div>
 
           {/* COLOR FLYER - WINDSHIELD OPTIMIZED */}
-          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-4 border-moss mb-8 overflow-hidden">
+          <div className="flyer-container bg-white p-5 shadow-lg rounded-lg border-4 border-moss mb-8 overflow-hidden">
             
-            {/* Logo - Balanced size */}
-            <div className="text-center mb-3">
+            {/* Logo - Larger */}
+            <div className="text-center mb-4">
               <img
                 src="/mendo_labor_coop_logo.png"
                 alt="Mendo Labor Cooperative"
-                className="mx-auto w-24 h-24"
+                className="mx-auto w-32 h-32"
               />
             </div>
 
             {/* Main CTA Headline */}
-            <div className="text-center mb-3">
-              <h1 className="text-xl font-headline font-black text-gold leading-tight">
+            <div className="text-center mb-5">
+              <h1 className="text-2xl font-headline font-black text-gold leading-tight">
                 Hire a Temporary Worker
               </h1>
-              <p className="text-sm text-moss font-body font-semibold mt-1">
+              <p className="text-base text-moss font-body font-semibold mt-2">
                 Skilled local help • Fair pay
               </p>
             </div>
 
-            {/* PRIMARY: PHONE NUMBER - Single line, dominant */}
-            <div className="contact-box bg-[#2d5016] text-white py-4 px-3 rounded-lg mb-3 text-center shadow-inner">
-              <p className="text-xs font-headline font-semibold mb-2 opacity-90">
+            {/* PRIMARY: PHONE NUMBER - Larger, dominant */}
+            <div className="contact-box bg-[#2d5016] text-white py-6 px-4 rounded-lg text-center shadow-inner">
+              <p className="text-sm font-headline font-semibold mb-3 opacity-90">
                 Call or Text Cheryl
               </p>
               <a 
                 href="tel:+13692161512" 
-                className="text-3xl font-headline font-black block my-3 hover:opacity-90 transition-opacity tracking-wide leading-none whitespace-nowrap"
+                className="text-4xl font-headline font-black block my-4 hover:opacity-90 transition-opacity tracking-wide leading-none whitespace-nowrap"
                 style={{ color: '#FFFFFF' }}
               >
                 (369) 216-1512
               </a>
-              <p className="text-xs font-body mt-2 opacity-80">
+              <p className="text-sm font-body mt-3 opacity-80">
                 mendolaborcoop@gmail.com
               </p>
-              <p className="text-xs font-body mt-1 opacity-80">
+              <p className="text-sm font-body mt-2 opacity-80">
                 mendolaborcoop.ukiahumc.org
               </p>
             </div>
@@ -101,43 +101,43 @@ const FlyerPage: React.FC = () => {
           </div>
 
           {/* GRAYSCALE VERSION - Same layout as color */}
-          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-4 border-black mb-8 overflow-hidden">
+          <div className="flyer-container bg-white p-5 shadow-lg rounded-lg border-4 border-black mb-8 overflow-hidden">
             
-            {/* Logo - Grayscale */}
-            <div className="text-center mb-3">
+            {/* Logo - Grayscale, larger */}
+            <div className="text-center mb-4">
               <img
                 src="/mendo_labor_coop_logo.png"
                 alt="Mendo Labor Cooperative"
-                className="mx-auto w-24 h-24 grayscale"
+                className="mx-auto w-32 h-32 grayscale"
               />
             </div>
 
             {/* Main CTA Headline */}
-            <div className="text-center mb-3">
-              <h1 className="text-xl font-headline font-black text-black leading-tight">
+            <div className="text-center mb-5">
+              <h1 className="text-2xl font-headline font-black text-black leading-tight">
                 Hire a Temporary Worker
               </h1>
-              <p className="text-sm text-black font-body font-semibold mt-1">
+              <p className="text-base text-black font-body font-semibold mt-2">
                 Skilled local help • Fair pay
               </p>
             </div>
 
-            {/* PRIMARY: PHONE NUMBER - Single line, dominant */}
-            <div className="contact-box bg-black text-white py-4 px-3 rounded-lg mb-3 text-center shadow-inner">
-              <p className="text-xs font-headline font-semibold mb-2 opacity-90">
+            {/* PRIMARY: PHONE NUMBER - Larger, dominant */}
+            <div className="contact-box bg-black text-white py-6 px-4 rounded-lg text-center shadow-inner">
+              <p className="text-sm font-headline font-semibold mb-3 opacity-90">
                 Call or Text Cheryl
               </p>
               <a 
                 href="tel:+13692161512" 
-                className="text-3xl font-headline font-black block my-3 hover:opacity-90 transition-opacity tracking-wide leading-none whitespace-nowrap"
+                className="text-4xl font-headline font-black block my-4 hover:opacity-90 transition-opacity tracking-wide leading-none whitespace-nowrap"
                 style={{ color: '#FFFFFF' }}
               >
                 (369) 216-1512
               </a>
-              <p className="text-xs font-body mt-2 opacity-80">
+              <p className="text-sm font-body mt-3 opacity-80">
                 mendolaborcoop@gmail.com
               </p>
-              <p className="text-xs font-body mt-1 opacity-80">
+              <p className="text-sm font-body mt-2 opacity-80">
                 mendolaborcoop.ukiahumc.org
               </p>
             </div>
@@ -145,47 +145,51 @@ const FlyerPage: React.FC = () => {
           </div>
 
           {/* BLACK & WHITE - SENIOR NEWSLETTER OPTIMIZED */}
-          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-[4px] border-black overflow-hidden">
+          <div className="flyer-container bg-white p-6 shadow-lg rounded-lg border-[4px] border-black overflow-hidden flex flex-col justify-between">
             
-            {/* Logo - centered, moderate size */}
-            <div className="text-center mb-3">
-              <img
-                src="/mendo_labor_coop_logo.png"
-                alt="Mendo Labor Cooperative"
-                className="mx-auto w-16 h-16 grayscale contrast-150"
-              />
+            {/* Top Section */}
+            <div>
+              {/* Logo */}
+              <div className="text-center mb-4">
+                <img
+                  src="/mendo_labor_coop_logo.png"
+                  alt="Mendo Labor Cooperative"
+                  className="mx-auto w-20 h-20 grayscale contrast-125"
+                />
+              </div>
+
+              {/* What we do */}
+              <div className="text-center mb-5">
+                <h1 className="text-xl font-headline font-black text-black leading-tight mb-3">
+                  Hire Local Help For:
+                </h1>
+                <p className="text-base text-black font-body font-bold leading-relaxed">
+                  Yard Work<br/>
+                  Errands<br/>
+                  Odd Jobs
+                </p>
+              </div>
             </div>
 
-            {/* Headline - Clear and bold */}
-            <div className="text-center mb-3">
-              <h1 className="text-xl font-headline font-black text-black leading-tight mb-2">
-                Need Help With:
-              </h1>
-              <p className="text-lg text-black font-body font-black leading-snug">
-                Yard Work • Errands • Odd Jobs
-              </p>
-            </div>
-
-            {/* PRIMARY: PHONE NUMBER BOX - Heavily emphasized */}
-            <div className="bg-black text-white py-4 px-3 mb-3 text-center border-[4px] border-black">
-              <p className="text-xs font-headline font-bold mb-2 tracking-wide">
-                CALL OR TEXT CHERYL
+            {/* Phone Section - Center */}
+            <div className="bg-black text-white py-5 px-4 text-center">
+              <p className="text-xs font-headline font-bold mb-2 tracking-wider uppercase">
+                Call or Text Cheryl
               </p>
               <a 
                 href="tel:+13692161512" 
-                className="text-4xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
-                style={{ letterSpacing: '0.04em' }}
+                className="text-3xl font-headline font-black block leading-tight hover:opacity-90 transition-opacity"
               >
                 (369) 216-1512
               </a>
             </div>
 
-            {/* Bottom - Simple info */}
-            <div className="text-center">
-              <p className="text-sm text-black font-body font-bold mb-1">
+            {/* Bottom Section */}
+            <div className="text-center mt-4">
+              <p className="text-xs text-black font-body font-bold mb-1">
                 Mendo Labor Cooperative
               </p>
-              <p className="text-xs text-black font-body font-semibold">
+              <p className="text-[10px] text-black font-body font-semibold">
                 mendolaborcoop.ukiahumc.org
               </p>
             </div>
