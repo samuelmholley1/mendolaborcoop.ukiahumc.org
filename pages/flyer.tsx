@@ -28,10 +28,17 @@ const FlyerPage: React.FC = () => {
             size: 4.25in 5.5in portrait;
           }
           .flyer-container {
-            width: 4.25in;
-            max-width: 4.25in;
-            height: 5.5in;
-            max-height: 5.5in;
+            width: 340px;
+            max-width: 340px;
+            height: 440px;
+            max-height: 440px;
+            aspect-ratio: 17/22;
+          }
+          @media print {
+            .flyer-container {
+              width: 4.25in !important;
+              height: 5.5in !important;
+            }
           }
         `}</style>
       </Head>
