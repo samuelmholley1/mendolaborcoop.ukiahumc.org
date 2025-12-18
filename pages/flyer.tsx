@@ -28,12 +28,9 @@ const FlyerPage: React.FC = () => {
               height: 5.5in !important; 
               page-break-inside: avoid;
               margin: 0 !important;
-              padding: 0.3in !important;
               box-sizing: border-box;
-              box-shadow: none !important;
-              border-radius: 0 !important;
             }
-            .contact-box, .contact-box-bw {
+            .contact-box, .bg-black {
               -webkit-print-color-adjust: exact !important;
               print-color-adjust: exact !important;
               color-adjust: exact !important;
