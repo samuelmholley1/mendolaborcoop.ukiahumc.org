@@ -66,7 +66,7 @@ const FlyerPage: React.FC = () => {
               onClick={() => window.print()}
               className="bg-moss text-cream px-8 py-3 rounded-lg text-lg font-headline font-semibold hover:bg-moss/90 transition-colors"
             >
-              ≡ƒû¿∩╕Å Print Flyers
+              🖨️ Print Flyers
             </button>
             <p className="text-moss mt-2 font-body">Color version - Prints 4 per page</p>
           </div>
