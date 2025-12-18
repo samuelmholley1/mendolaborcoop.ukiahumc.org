@@ -13,8 +13,9 @@ const FlyerPage: React.FC = () => {
             body { margin: 0; padding: 0; }
             .no-print { display: none !important; }
             .flyer-container { 
-              width: 8.5in; 
-              height: 11in; 
+              width: 4.25in; 
+              height: 5.5in; 
+              page-break-after: always;
             }
             .contact-box {
               -webkit-print-color-adjust: exact !important;
@@ -23,8 +24,8 @@ const FlyerPage: React.FC = () => {
             }
           }
           @page {
-            margin: 0.5in;
-            size: letter portrait;
+            margin: 0.25in;
+            size: 4.25in 5.5in;
           }
         `}</style>
       </Head>
@@ -39,57 +40,57 @@ const FlyerPage: React.FC = () => {
             >
               🖨️ Print Flyer
             </button>
-            <p className="text-moss mt-2 font-body">Ready to print on standard letter paper (8.5" x 11")</p>
+            <p className="text-moss mt-2 font-body">Optimized for quarter-page printing (4.25" x 5.5") - 4 flyers per letter sheet</p>
           </div>
 
           {/* Flyer Content */}
-          <div className="flyer-container bg-white p-12 shadow-lg rounded-lg border-8 border-moss">
+          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-4 border-moss">
             
             {/* Logo */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-3">
               <img
                 src="/mendo_labor_coop_logo.png"
                 alt="Mendo Labor Cooperative"
-                className="mx-auto w-80 h-80"
+                className="mx-auto w-24 h-24"
               />
             </div>
 
             {/* Main CTA Headline */}
-            <div className="text-center mb-12">
-              <h1 className="text-5xl md:text-6xl font-headline font-extrabold text-gold mb-6 leading-tight">
+            <div className="text-center mb-3">
+              <h1 className="text-xl font-headline font-extrabold text-gold mb-1 leading-tight">
                 Hire a Temporary Worker
               </h1>
-              <p className="text-2xl text-moss font-body font-semibold">
-                Skilled Local Workers • Fair Pay • Mendocino County
+              <p className="text-sm text-moss font-body font-semibold">
+                Skilled Local Workers • Fair Pay
               </p>
             </div>
 
             {/* Primary CTA - Contact Info */}
-            <div className="contact-box bg-moss text-cream p-12 rounded-lg mb-8 text-center">
-              <p className="text-2xl font-headline font-semibold mb-3">
+            <div className="contact-box bg-moss text-cream p-3 rounded-lg mb-3 text-center">
+              <p className="text-sm font-headline font-semibold mb-1">
                 Call or Text Cheryl
               </p>
               <a 
                 href="tel:+13692161512" 
-                className="text-6xl font-headline font-extrabold block mb-2 hover:opacity-90 transition-opacity"
+                className="text-2xl font-headline font-extrabold block mb-1 hover:opacity-90 transition-opacity"
               >
                 (369) 216-1512
               </a>
-              <p className="text-lg font-body mt-4 opacity-90">
+              <p className="text-xs font-body opacity-90">
                 mendolaborcoop@gmail.com
               </p>
             </div>
 
             {/* Secondary Info - QR Code & Website */}
-            <div className="text-center pt-6 border-t border-sand">
-              <div className="flex justify-center items-center gap-6">
+            <div className="text-center pt-2 border-t border-sand">
+              <div className="flex justify-center items-center gap-2">
                 {/* QR Code - Using QR Code API */}
                 <img
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://mendolaborcoop.ukiahumc.org"
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://mendolaborcoop.ukiahumc.org"
                   alt="QR Code"
-                  className="w-32 h-32 border-2 border-sand rounded"
+                  className="w-12 h-12 border border-sand rounded"
                 />
-                <p className="text-lg font-body text-moss">
+                <p className="text-xs font-body text-moss">
                   mendolaborcoop.ukiahumc.org
                 </p>
               </div>
