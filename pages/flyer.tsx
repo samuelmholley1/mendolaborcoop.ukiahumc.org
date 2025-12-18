@@ -100,7 +100,7 @@ const FlyerPage: React.FC = () => {
                 </p>
                 <a 
                   href="tel:+13692161512" 
-                  className="text-4xl font-headline font-black block my-4 hover:opacity-90 transition-opacity tracking-wide leading-none whitespace-nowrap"
+                  className="text-4xl font-headline font-black block my-4 hover:opacity-90 transition-opacity leading-none whitespace-nowrap"
                   style={{ color: '#FFFFFF' }}
                 >
                   (369) 216-1512
@@ -144,7 +144,7 @@ const FlyerPage: React.FC = () => {
                 </p>
                 <a 
                   href="tel:+13692161512" 
-                  className="text-4xl font-headline font-black block my-4 hover:opacity-90 transition-opacity tracking-wide leading-none whitespace-nowrap"
+                  className="text-4xl font-headline font-black block my-4 hover:opacity-90 transition-opacity leading-none whitespace-nowrap"
                   style={{ color: '#FFFFFF' }}
                 >
                   (369) 216-1512
@@ -188,7 +188,7 @@ const FlyerPage: React.FC = () => {
                 </p>
                 <a 
                   href="tel:+13692161512" 
-                  className="text-4xl font-headline font-black block my-4 hover:opacity-90 transition-opacity tracking-wide leading-none whitespace-nowrap"
+                  className="text-4xl font-headline font-black block my-4 hover:opacity-90 transition-opacity leading-none whitespace-nowrap"
                   style={{ color: '#FFFFFF' }}
                 >
                   (369) 216-1512
@@ -232,7 +232,7 @@ const FlyerPage: React.FC = () => {
                 </p>
                 <a 
                   href="tel:+13692161512" 
-                  className="text-4xl font-headline font-black block my-4 hover:opacity-90 transition-opacity tracking-wide leading-none whitespace-nowrap"
+                  className="text-4xl font-headline font-black block my-4 hover:opacity-90 transition-opacity leading-none whitespace-nowrap"
                   style={{ color: '#FFFFFF' }}
                 >
                   (369) 216-1512
