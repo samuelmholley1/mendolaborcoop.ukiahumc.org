@@ -91,7 +91,7 @@ const FlyerPage: React.FC = () => {
                   Hire a Temporary Worker
                 </h1>
                 <p className="text-base text-moss font-body font-semibold mt-2">
-                  Skilled local help ΓÇó Fair pay
+                  Skilled local help  Fair pay
                 </p>
               </div>
 
@@ -135,7 +135,7 @@ const FlyerPage: React.FC = () => {
                   Hire a Temporary Worker
                 </h1>
                 <p className="text-base text-moss font-body font-semibold mt-2">
-                  Skilled local help ΓÇó Fair pay
+                  Skilled local help  Fair pay
                 </p>
               </div>
 
@@ -179,7 +179,7 @@ const FlyerPage: React.FC = () => {
                   Hire a Temporary Worker
                 </h1>
                 <p className="text-base text-moss font-body font-semibold mt-2">
-                  Skilled local help ΓÇó Fair pay
+                  Skilled local help  Fair pay
                 </p>
               </div>
 
@@ -223,7 +223,7 @@ const FlyerPage: React.FC = () => {
                   Hire a Temporary Worker
                 </h1>
                 <p className="text-base text-moss font-body font-semibold mt-2">
-                  Skilled local help ΓÇó Fair pay
+                  Skilled local help  Fair pay
                 </p>
               </div>
 
