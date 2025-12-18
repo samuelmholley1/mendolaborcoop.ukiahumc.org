@@ -16,19 +16,31 @@ const AdPage: React.FC = () => {
       // Wait for fonts to load
       await document.fonts?.ready?.catch(() => {});
       
-      // Wait a bit for rendering
+      // Wait for any images to load
+      const images = adRef.current.querySelectorAll('img');
+      await Promise.all(
+        Array.from(images).map(img =>
+          img.complete ? Promise.resolve() :
+          new Promise(res => { img.onload = img.onerror = res as any; })
+        )
+      );
+      
+      // Wait for layout to settle
       await new Promise(resolve => setTimeout(resolve, 100));
       
+      // Get exact dimensions from browser
+      const rect = adRef.current.getBoundingClientRect();
+      
       const dataUrl = await toPng(adRef.current, {
-        quality: 1.0,
+        quality: 0.98,
         backgroundColor: '#ffffff',
         cacheBust: true,
-        pixelRatio: 4,
-        width: 1360,
-        height: 1760,
+        width: Math.round(rect.width),
+        height: Math.round(rect.height),
         style: {
-          transform: 'scale(1)',
-          transformOrigin: 'top left',
+          transform: 'none',
+          position: 'static',
+          margin: '0',
         },
       });
       
