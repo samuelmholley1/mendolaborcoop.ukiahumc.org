@@ -53,7 +53,7 @@ const FlyerPage: React.FC = () => {
             >
               🖨️ Print Flyers
             </button>
-            <p className="text-moss mt-2 font-body">Color & Black/White versions - Quarter-page (4.25" x 5.5") - 4 flyers per sheet</p>
+            <p className="text-moss mt-2 font-body">3 versions: Color, Grayscale, B&W - Quarter-page (4.25" x 5.5")</p>
           </div>
 
           {/* COLOR FLYER - WINDSHIELD OPTIMIZED */}
@@ -114,40 +114,108 @@ const FlyerPage: React.FC = () => {
 
           </div>
 
-          {/* BLACK & WHITE FLYER - BRUTALIST NEWSLETTER LAYOUT */}
-          <div className="flyer-container bg-white p-6 shadow-lg rounded-lg border-[3px] border-black overflow-hidden">
+          {/* GRAYSCALE VERSION - Same layout as color */}
+          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-4 border-black mb-8 overflow-hidden">
             
-            {/* 1. INSTRUCTION - Above phone */}
+            {/* Logo - Grayscale */}
             <div className="text-center mb-3">
-              <p className="text-sm font-body font-semibold text-black opacity-70">
-                Call or Text Cheryl
+              <img
+                src="/mendo_labor_coop_logo.png"
+                alt="Mendo Labor Cooperative"
+                className="mx-auto w-24 h-24 grayscale"
+              />
+            </div>
+
+            {/* Main CTA Headline */}
+            <div className="text-center mb-3">
+              <h1 className="text-xl font-headline font-black text-black leading-tight">
+                Hire a Temporary Worker
+              </h1>
+              <p className="text-sm text-black font-body font-semibold mt-1">
+                Skilled local help • Fair pay
               </p>
             </div>
 
-            {/* 2. PHONE NUMBER - DOMINANT 50-60% of space */}
-            <div className="text-center my-8">
+            {/* PRIMARY: PHONE NUMBER - Single line, dominant */}
+            <div className="contact-box bg-black text-white py-4 px-3 rounded-lg mb-3 text-center shadow-inner">
+              <p className="text-xs font-headline font-semibold mb-2 opacity-90">
+                Call or Text Cheryl
+              </p>
               <a 
                 href="tel:+13692161512" 
-                className="text-7xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
-                style={{ letterSpacing: '0.03em' }}
+                className="text-3xl font-headline font-black block my-3 hover:opacity-90 transition-opacity tracking-wide leading-none whitespace-nowrap"
+                style={{ color: '#FFFFFF' }}
               >
                 (369) 216-1512
               </a>
-            </div>
-
-            {/* 3. WHAT THIS IS - Headline */}
-            <div className="text-center mb-4 mt-8">
-              <h1 className="text-2xl font-headline font-black text-black leading-tight mb-3">
-                Hire a Temporary Worker
-              </h1>
-              <p className="text-lg text-black font-body font-bold leading-snug">
-                Yard work • Errands • Odd jobs
+              <p className="text-xs font-body mt-2 opacity-80">
+                mendolaborcoop@gmail.com
               </p>
             </div>
 
-            {/* 4. FOOTER - URL only */}
-            <div className="text-center mt-8 pt-4 border-t border-black">
-              <p className="text-xs font-body text-black font-semibold">
+            {/* QR Code - Functional */}
+            <div className="text-center pt-2">
+              <p className="text-[10px] font-body text-black mb-2 font-semibold">
+                Learn more or request workers
+              </p>
+              <div className="flex flex-col items-center">
+                <img
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://mendolaborcoop.ukiahumc.org"
+                  alt="QR Code"
+                  className="w-12 h-12 border-2 border-black rounded mb-1"
+                />
+                <p className="text-[10px] font-body text-black font-semibold">
+                  mendolaborcoop.ukiahumc.org
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* BLACK & WHITE - SENIOR NEWSLETTER OPTIMIZED */}
+          <div className="flyer-container bg-white p-5 shadow-lg rounded-lg border-[4px] border-black overflow-hidden">
+            
+            {/* Logo - centered, moderate size */}
+            <div className="text-center mb-4">
+              <img
+                src="/mendo_labor_coop_logo.png"
+                alt="Mendo Labor Cooperative"
+                className="mx-auto w-20 h-20 grayscale contrast-150"
+              />
+            </div>
+
+            {/* Headline - Clear and bold */}
+            <div className="text-center mb-4">
+              <h1 className="text-2xl font-headline font-black text-black leading-tight mb-2">
+                Need Help With:
+              </h1>
+              <p className="text-xl text-black font-body font-black leading-relaxed">
+                Yard Work<br/>
+                Errands<br/>
+                Odd Jobs
+              </p>
+            </div>
+
+            {/* PRIMARY: PHONE NUMBER BOX - Heavily emphasized */}
+            <div className="bg-black text-white py-5 px-4 mb-4 text-center border-[4px] border-black">
+              <p className="text-sm font-headline font-bold mb-3 tracking-wide">
+                CALL OR TEXT CHERYL
+              </p>
+              <a 
+                href="tel:+13692161512" 
+                className="text-5xl font-headline font-black block leading-tight hover:opacity-90 transition-opacity"
+                style={{ letterSpacing: '0.05em' }}
+              >
+                (369)<br/>216-1512
+              </a>
+            </div>
+
+            {/* Bottom - Simple info */}
+            <div className="text-center">
+              <p className="text-sm text-black font-body font-bold mb-2">
+                Mendo Labor Cooperative
+              </p>
+              <p className="text-xs text-black font-body font-semibold">
                 mendolaborcoop.ukiahumc.org
               </p>
             </div>
