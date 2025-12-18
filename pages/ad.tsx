@@ -90,8 +90,8 @@ const AdPage: React.FC = () => {
             ref={adRef}
             className="bg-white p-5 rounded-lg border-[5px] border-black flex flex-col justify-between"
             style={{
-              width: '340px',
-              height: '440px',
+              width: '360px',
+              height: '467px',
               boxSizing: 'border-box',
               fontFamily: 'Public Sans, sans-serif',
             }}
@@ -128,17 +128,18 @@ const AdPage: React.FC = () => {
             </div>
 
             {/* CTA Box - Dominant */}
-            <div className="bg-black text-white py-3 px-5 text-center mb-4">
+            <div className="bg-black text-white py-3 px-6 text-center mb-4">
               <p className="text-sm font-headline font-black mb-2" style={{ letterSpacing: '0.1em' }}>
                 CALL OR TEXT
               </p>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                 <a 
                   href="tel:+13692161512" 
-                  className="text-4xl font-headline font-black leading-none hover:opacity-90 transition-opacity"
+                  className="text-[34px] font-headline font-black leading-none hover:opacity-90 transition-opacity"
                   style={{ 
                     whiteSpace: 'nowrap',
                     display: 'inline-block',
+                    letterSpacing: '-0.02em',
                   }}
                 >
                   (369) 216-1512
