@@ -127,13 +127,14 @@ const AdPage: React.FC = () => {
             </div>
 
             {/* CTA Box - Dominant */}
-            <div className="bg-black text-white py-3 px-3 text-center mb-4">
+            <div className="bg-black text-white py-3 px-4 text-center mb-4 flex flex-col items-center">
               <p className="text-sm font-headline font-black mb-2 tracking-widest">
                 CALL OR TEXT
               </p>
               <a 
                 href="tel:+13692161512" 
-                className="text-4xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
+                className="text-4xl font-headline font-black leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
+                style={{ textAlign: 'center', display: 'inline-block' }}
               >
                 (369) 216-1512
               </a>
