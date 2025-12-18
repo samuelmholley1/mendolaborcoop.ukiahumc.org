@@ -22,10 +22,11 @@ const FlyerPage: React.FC = () => {
               page-break-after: always;
               margin: 0;
               padding: 0;
+              place-items: center;
             }
             .flyer-container { 
-              width: 4.25in !important; 
-              height: 5.5in !important; 
+              width: 4in !important; 
+              height: 5.2in !important; 
               page-break-inside: avoid;
               margin: 0 !important;
               box-sizing: border-box;
@@ -41,13 +42,16 @@ const FlyerPage: React.FC = () => {
             size: letter portrait;
           }
           .print-page {
-            display: block;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
           }
           .flyer-container {
-            width: 340px;
-            max-width: 340px;
-            height: 440px;
-            max-height: 440px;
+            width: 380px;
+            max-width: 380px;
+            height: 495px;
+            max-height: 495px;
             aspect-ratio: 17/22;
           }
         `}</style>
