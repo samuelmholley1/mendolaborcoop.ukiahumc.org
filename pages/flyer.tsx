@@ -13,8 +13,8 @@ const FlyerPage: React.FC = () => {
             body { margin: 0; padding: 0; }
             .no-print { display: none !important; }
             .flyer-container { 
-              width: 4.25in; 
-              height: 5.5in; 
+              width: 4.25in !important; 
+              height: 5.5in !important; 
               page-break-after: always;
             }
             .contact-box, .contact-box-bw {
@@ -25,7 +25,13 @@ const FlyerPage: React.FC = () => {
           }
           @page {
             margin: 0.25in;
-            size: 4.25in 5.5in;
+            size: 4.25in 5.5in portrait;
+          }
+          .flyer-container {
+            width: 4.25in;
+            max-width: 4.25in;
+            height: 5.5in;
+            max-height: 5.5in;
           }
         `}</style>
       </Head>
