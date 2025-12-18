@@ -145,46 +145,44 @@ const FlyerPage: React.FC = () => {
           </div>
 
           {/* BLACK & WHITE - SENIOR NEWSLETTER OPTIMIZED */}
-          <div className="flyer-container bg-white p-5 shadow-lg rounded-lg border-[4px] border-black overflow-hidden">
+          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-[4px] border-black overflow-hidden">
             
             {/* Logo - centered, moderate size */}
-            <div className="text-center mb-4">
+            <div className="text-center mb-3">
               <img
                 src="/mendo_labor_coop_logo.png"
                 alt="Mendo Labor Cooperative"
-                className="mx-auto w-20 h-20 grayscale contrast-150"
+                className="mx-auto w-16 h-16 grayscale contrast-150"
               />
             </div>
 
             {/* Headline - Clear and bold */}
-            <div className="text-center mb-4">
-              <h1 className="text-2xl font-headline font-black text-black leading-tight mb-2">
+            <div className="text-center mb-3">
+              <h1 className="text-xl font-headline font-black text-black leading-tight mb-2">
                 Need Help With:
               </h1>
-              <p className="text-xl text-black font-body font-black leading-relaxed">
-                Yard Work<br/>
-                Errands<br/>
-                Odd Jobs
+              <p className="text-lg text-black font-body font-black leading-snug">
+                Yard Work • Errands • Odd Jobs
               </p>
             </div>
 
             {/* PRIMARY: PHONE NUMBER BOX - Heavily emphasized */}
-            <div className="bg-black text-white py-5 px-4 mb-4 text-center border-[4px] border-black">
-              <p className="text-sm font-headline font-bold mb-3 tracking-wide">
+            <div className="bg-black text-white py-4 px-3 mb-3 text-center border-[4px] border-black">
+              <p className="text-xs font-headline font-bold mb-2 tracking-wide">
                 CALL OR TEXT CHERYL
               </p>
               <a 
                 href="tel:+13692161512" 
-                className="text-5xl font-headline font-black block leading-tight hover:opacity-90 transition-opacity"
-                style={{ letterSpacing: '0.05em' }}
+                className="text-4xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
+                style={{ letterSpacing: '0.04em' }}
               >
-                (369)<br/>216-1512
+                (369) 216-1512
               </a>
             </div>
 
             {/* Bottom - Simple info */}
             <div className="text-center">
-              <p className="text-sm text-black font-body font-bold mb-2">
+              <p className="text-sm text-black font-body font-bold mb-1">
                 Mendo Labor Cooperative
               </p>
               <p className="text-xs text-black font-body font-semibold">
