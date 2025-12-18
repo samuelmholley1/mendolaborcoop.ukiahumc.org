@@ -88,11 +88,12 @@ const AdPage: React.FC = () => {
           {/* BLACK & WHITE AD */}
           <div 
             ref={adRef}
-            className="bg-white p-5 rounded-lg border-[5px] border-black flex flex-col justify-between mx-auto"
+            className="bg-white p-5 rounded-lg border-[5px] border-black flex flex-col justify-between"
             style={{
               width: '340px',
               height: '440px',
-              overflow: 'visible',
+              boxSizing: 'border-box',
+              fontFamily: 'Public Sans, sans-serif',
             }}
           >
             
@@ -127,17 +128,22 @@ const AdPage: React.FC = () => {
             </div>
 
             {/* CTA Box - Dominant */}
-            <div className="bg-black text-white py-3 px-4 text-center mb-4 flex flex-col items-center">
-              <p className="text-sm font-headline font-black mb-2 tracking-widest">
+            <div className="bg-black text-white py-3 px-5 text-center mb-4">
+              <p className="text-sm font-headline font-black mb-2" style={{ letterSpacing: '0.1em' }}>
                 CALL OR TEXT
               </p>
-              <a 
-                href="tel:+13692161512" 
-                className="text-4xl font-headline font-black leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
-                style={{ textAlign: 'center', display: 'inline-block' }}
-              >
-                (369) 216-1512
-              </a>
+              <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                <a 
+                  href="tel:+13692161512" 
+                  className="text-4xl font-headline font-black leading-none hover:opacity-90 transition-opacity"
+                  style={{ 
+                    whiteSpace: 'nowrap',
+                    display: 'inline-block',
+                  }}
+                >
+                  (369) 216-1512
+                </a>
+              </div>
               <p className="text-xs font-body mt-2 opacity-80">
                 mendolaborcoop@gmail.com
               </p>
