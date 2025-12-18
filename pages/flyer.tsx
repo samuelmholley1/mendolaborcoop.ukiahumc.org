@@ -19,7 +19,7 @@ const FlyerPage: React.FC = () => {
               grid-template-columns: 4.25in 4.25in;
               grid-template-rows: 5.5in 5.5in;
               gap: 0;
-              page-break-after: always;
+              page-break-after: avoid;
               margin: 0;
               padding: 0;
             }
