@@ -277,17 +277,20 @@ const FlyerPage: React.FC = () => {
               </div>
 
               {/* CTA Box - Dominant */}
-              <div className="bg-black text-white py-6 px-4 text-center mb-4">
+              <div className="bg-black text-white py-4 px-4 text-center mb-6">
                 <p className="text-base font-headline font-black mb-3 tracking-widest">
                   CALL OR TEXT
                 </p>
                 <a 
                   href="tel:+13692161512" 
-                  className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity"
+                  className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
                   style={{ letterSpacing: '0.08em' }}
                 >
                   369-216-1512
                 </a>
+                <p className="text-xs font-body mt-3 opacity-80">
+                  mendolaborcoop@gmail.com
+                </p>
               </div>
 
               {/* Footer */}
@@ -326,17 +329,20 @@ const FlyerPage: React.FC = () => {
               </div>
 
               {/* CTA Box - Dominant */}
-              <div className="bg-black text-white py-6 px-4 text-center mb-4">
+              <div className="bg-black text-white py-4 px-4 text-center mb-6">
                 <p className="text-base font-headline font-black mb-3 tracking-widest">
                   CALL OR TEXT
                 </p>
                 <a 
                   href="tel:+13692161512" 
-                  className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity"
+                  className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
                   style={{ letterSpacing: '0.08em' }}
                 >
                   369-216-1512
                 </a>
+                <p className="text-xs font-body mt-3 opacity-80">
+                  mendolaborcoop@gmail.com
+                </p>
               </div>
 
               {/* Footer */}
@@ -375,17 +381,20 @@ const FlyerPage: React.FC = () => {
               </div>
 
               {/* CTA Box - Dominant */}
-              <div className="bg-black text-white py-6 px-4 text-center mb-4">
+              <div className="bg-black text-white py-4 px-4 text-center mb-6">
                 <p className="text-base font-headline font-black mb-3 tracking-widest">
                   CALL OR TEXT
                 </p>
                 <a 
                   href="tel:+13692161512" 
-                  className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity"
+                  className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
                   style={{ letterSpacing: '0.08em' }}
                 >
                   369-216-1512
                 </a>
+                <p className="text-xs font-body mt-3 opacity-80">
+                  mendolaborcoop@gmail.com
+                </p>
               </div>
 
               {/* Footer */}
@@ -424,17 +433,20 @@ const FlyerPage: React.FC = () => {
               </div>
 
               {/* CTA Box - Dominant */}
-              <div className="bg-black text-white py-6 px-4 text-center mb-4">
+              <div className="bg-black text-white py-4 px-4 text-center mb-6">
                 <p className="text-base font-headline font-black mb-3 tracking-widest">
                   CALL OR TEXT
                 </p>
                 <a 
                   href="tel:+13692161512" 
-                  className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity"
+                  className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
                   style={{ letterSpacing: '0.08em' }}
                 >
                   369-216-1512
                 </a>
+                <p className="text-xs font-body mt-3 opacity-80">
+                  mendolaborcoop@gmail.com
+                </p>
               </div>
 
               {/* Footer */}
