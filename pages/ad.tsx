@@ -128,27 +128,25 @@ const AdPage: React.FC = () => {
             </div>
 
             {/* CTA Box - Dominant */}
-            <div className="bg-black text-white py-3 px-6 text-center mb-4">
+            <div className="bg-black text-white py-3 px-6 mb-4" style={{ textAlign: 'center' }}>
               <p className="text-sm font-headline font-black mb-2" style={{ letterSpacing: '0.1em' }}>
                 CALL OR TEXT
               </p>
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                <a 
-                  href="tel:+13692161512" 
-                  className="text-[34px] font-headline font-black leading-none hover:opacity-90 transition-opacity"
-                  style={{ 
-                    whiteSpace: 'nowrap',
-                    display: 'inline-block',
-                    letterSpacing: '-0.02em',
-                  }}
-                >
-                  (369) 216-1512
-                </a>
-              </div>
-              <p className="text-xs font-body mt-2 opacity-80" style={{ textAlign: 'center' }}>
+              <a 
+                href="tel:+13692161512" 
+                className="text-[34px] font-headline font-black leading-none hover:opacity-90 transition-opacity"
+                style={{ 
+                  whiteSpace: 'nowrap',
+                  display: 'block',
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                (369) 216-1512
+              </a>
+              <p className="text-xs font-body mt-2 opacity-80">
                 mendolaborcoop@gmail.com
               </p>
-              <p className="text-xs font-body mt-1 opacity-80" style={{ textAlign: 'center' }}>
+              <p className="text-xs font-body mt-1 opacity-80">
                 mendolaborcoop.ukiahumc.org
               </p>
             </div>
