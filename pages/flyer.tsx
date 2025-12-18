@@ -57,56 +57,56 @@ const FlyerPage: React.FC = () => {
           </div>
 
           {/* COLOR FLYER - WINDSHIELD OPTIMIZED */}
-          <div className="flyer-container bg-white p-3 shadow-lg rounded-lg border-4 border-moss mb-8">
+          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-4 border-moss mb-8 overflow-hidden">
             
-            {/* Logo - Reduced 40%, tighter spacing */}
-            <div className="text-center mb-1">
+            {/* Logo - Balanced size */}
+            <div className="text-center mb-3">
               <img
                 src="/mendo_labor_coop_logo.png"
                 alt="Mendo Labor Cooperative"
-                className="mx-auto w-20 h-20"
+                className="mx-auto w-24 h-24"
               />
             </div>
 
-            {/* Main CTA Headline - Supporting role */}
-            <div className="text-center mb-2">
-              <h1 className="text-lg font-headline font-black text-gold leading-tight">
+            {/* Main CTA Headline */}
+            <div className="text-center mb-3">
+              <h1 className="text-xl font-headline font-black text-gold leading-tight">
                 Hire a Temporary Worker
               </h1>
-              <p className="text-xs text-moss font-body font-normal mt-1">
+              <p className="text-sm text-moss font-body font-semibold mt-1">
                 Skilled local help • Fair pay
               </p>
             </div>
 
-            {/* PRIMARY: PHONE NUMBER - Dominant, 6xl */}
-            <div className="contact-box bg-[#2d5016] text-white py-5 px-2 rounded-lg mb-2 text-center shadow-inner">
-              <p className="text-[10px] font-headline font-semibold mb-2 opacity-90">
+            {/* PRIMARY: PHONE NUMBER - Single line, dominant */}
+            <div className="contact-box bg-[#2d5016] text-white py-4 px-3 rounded-lg mb-3 text-center shadow-inner">
+              <p className="text-xs font-headline font-semibold mb-2 opacity-90">
                 Call or Text Cheryl
               </p>
               <a 
                 href="tel:+13692161512" 
-                className="text-6xl font-headline font-black block my-4 hover:opacity-90 transition-opacity tracking-wide leading-none"
+                className="text-3xl font-headline font-black block my-3 hover:opacity-90 transition-opacity tracking-wide leading-none whitespace-nowrap"
                 style={{ color: '#FFFFFF' }}
               >
                 (369) 216-1512
               </a>
-              <p className="text-[10px] font-body mt-2 opacity-80">
+              <p className="text-xs font-body mt-2 opacity-80">
                 mendolaborcoop@gmail.com
               </p>
             </div>
 
-            {/* QR Code - Smaller, functional */}
-            <div className="text-center pt-1">
-              <p className="text-[8px] font-body text-moss mb-1 font-semibold">
+            {/* QR Code - Functional */}
+            <div className="text-center pt-2">
+              <p className="text-[10px] font-body text-moss mb-2 font-semibold">
                 Learn more or request workers
               </p>
               <div className="flex justify-center items-center gap-2">
                 <img
                   src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://mendolaborcoop.ukiahumc.org"
                   alt="QR Code"
-                  className="w-10 h-10 border border-moss rounded"
+                  className="w-12 h-12 border border-moss rounded"
                 />
-                <p className="text-[9px] font-body text-moss font-semibold leading-tight">
+                <p className="text-xs font-body text-moss font-semibold leading-tight">
                   mendolaborcoop<br/>.ukiahumc.org
                 </p>
               </div>
@@ -115,51 +115,51 @@ const FlyerPage: React.FC = () => {
           </div>
 
           {/* BLACK & WHITE FLYER - SENIOR NEWSLETTER OPTIMIZED */}
-          <div className="flyer-container bg-white p-3 shadow-lg rounded-lg border-[3px] border-black relative">
+          <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-[3px] border-black relative overflow-hidden">
             
             {/* Tiny corner logo mark - optional trust signal */}
             <div className="absolute top-2 right-2">
               <img
                 src="/mendo_labor_coop_logo.png"
                 alt="Logo"
-                className="w-8 h-8 grayscale opacity-40"
+                className="w-10 h-10 grayscale opacity-30"
               />
             </div>
 
             {/* Service Description - Context first */}
-            <div className="text-center mb-2 mt-1">
-              <p className="text-sm text-black font-body font-bold leading-snug">
+            <div className="text-center mb-3 mt-2">
+              <p className="text-base text-black font-body font-bold leading-snug">
                 Yard work • Errands • Odd jobs
               </p>
             </div>
 
-            {/* PRIMARY: PHONE NUMBER - MASSIVE 7xl, 50% of height */}
-            <div className="contact-box-bw bg-white text-black py-6 px-2 rounded-lg mb-2 text-center border-[3px] border-black">
+            {/* PRIMARY: PHONE NUMBER - MASSIVE but single line */}
+            <div className="contact-box-bw bg-white text-black py-6 px-3 rounded-lg mb-4 text-center border-[3px] border-black">
               <a 
                 href="tel:+13692161512" 
-                className="text-7xl font-headline font-black block leading-none hover:opacity-90 transition-opacity"
-                style={{ letterSpacing: '0.05em' }}
+                className="text-5xl font-headline font-black block leading-none hover:opacity-90 transition-opacity whitespace-nowrap"
+                style={{ letterSpacing: '0.02em' }}
               >
                 (369) 216-1512
               </a>
-              <p className="text-sm font-headline font-black mt-3">
+              <p className="text-base font-headline font-black mt-4">
                 Call or Text Cheryl
               </p>
             </div>
 
             {/* Headline - Supporting role */}
-            <div className="text-center mb-2">
-              <h1 className="text-base font-headline font-black text-black leading-tight">
+            <div className="text-center mb-3">
+              <h1 className="text-lg font-headline font-black text-black leading-tight">
                 Hire a Temporary Worker
               </h1>
-              <p className="text-xs text-black font-body font-bold mt-1 leading-relaxed">
+              <p className="text-sm text-black font-body font-bold mt-2 leading-relaxed">
                 Skilled local help • Fair pay
               </p>
             </div>
 
             {/* Footer - Email only */}
-            <div className="text-center pt-2 border-t border-black">
-              <p className="text-[9px] font-body text-black font-semibold">
+            <div className="text-center pt-3 border-t border-black">
+              <p className="text-xs font-body text-black font-semibold">
                 mendolaborcoop@gmail.com
               </p>
             </div>
