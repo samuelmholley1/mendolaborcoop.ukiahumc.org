@@ -750,10 +750,7 @@ const WorkerProfilePage: React.FC = () => {
               </div>
               <div className="flex flex-col gap-2 text-sm text-cream/90">
                 <a href="tel:3692161512" className="hover:text-cream">
-                  Cheryl: (369) 216-1512
-                </a>
-                <a href="tel:5598800960" className="hover:text-cream">
-                  Braven: (559) 880-0960
+                  Coop Phone: (369) 216-1512
                 </a>
               </div>
 

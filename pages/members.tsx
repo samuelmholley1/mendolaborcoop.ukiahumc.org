@@ -164,7 +164,7 @@ const MembersPage: React.FC = () => {
               </form>
 
               <p className="text-center text-sm text-moss/60 mt-6">
-                Contact Cheryl or Braven if you need the password: Cheryl (369) 216-1512, Braven (559) 880-0960
+                Contact the coop at (369) 216-1512 if you need the password.
               </p>
             </div>
           </div>

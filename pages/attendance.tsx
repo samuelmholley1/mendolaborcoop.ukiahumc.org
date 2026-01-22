@@ -41,7 +41,7 @@ const AttendancePage: React.FC = () => {
       date: 'January 22, 2026',
       time: '10:00 AM',
       location: 'Building Bridges Homeless Resource Center',
-      notes: 'Motioned and voted to pay Braven $25 for ongoing admin work coordinating jobs and working on website. Voted to appoint Braven as Co-Coordinator (official second coordinator alongside Cheryl).',
+      notes: 'Motioned and voted to pay Braven $25 for ongoing admin work coordinating jobs and working on website. Voted to appoint Braven as Co-Coordinator. Motioned and voted to allow hirers to become members of the cooperative with full voting privileges.',
       attendees: [
         { name: 'Samuel Holley', phone: '714-496-7006', email: 'sam@samuelholley.com' },
         { name: 'Braven Haynes', phone: '559-880-0960', email: 'bravenhaynes@gmail.com' },

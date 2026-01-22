@@ -207,18 +207,12 @@ const OurCrewPage: React.FC = () => {
                 Contact our coordinator for the full roster.
               </p>
               <div className="space-y-2">
-                <p className="text-river font-medium">Call Cheryl or Braven:</p>
+                <p className="text-river font-medium">Cooperative Phone:</p>
                 <a
                   href="tel:3692161512"
                   className="text-river hover:text-river/80 font-medium block"
                 >
-                  Cheryl: (369) 216-1512
-                </a>
-                <a
-                  href="tel:5598800960"
-                  className="text-river hover:text-river/80 font-medium block"
-                >
-                  Braven: (559) 880-0960
+                  (369) 216-1512
                 </a>
               </div>
             </div>

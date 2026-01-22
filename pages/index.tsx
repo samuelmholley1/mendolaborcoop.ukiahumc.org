@@ -199,22 +199,14 @@ const HomePage: React.FC = () => {
                   {/* Primary Phone CTA */}
                   <div className="bg-moss text-cream p-4 sm:p-6 md:p-8 rounded-lg text-center border-4 border-gold shadow-xl">
                     <p className="text-base sm:text-lg md:text-xl font-headline font-semibold mb-2 whitespace-nowrap">
-                      Call Cheryl or Braven
+                      Call Our Coordinators
                     </p>
-                    <div className="space-y-3">
-                      <a 
-                        href="tel:+13692161512" 
-                        className="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold block hover:opacity-90 transition-opacity"
-                      >
-                        Cheryl: (369) 216-1512
-                      </a>
-                      <a 
-                        href="tel:+15598800960" 
-                        className="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold block hover:opacity-90 transition-opacity"
-                      >
-                        Braven: (559) 880-0960
-                      </a>
-                    </div>
+                    <a 
+                      href="tel:+13692161512" 
+                      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
+                    >
+                      (369) 216-1512
+                    </a>
                     <p className="text-xs sm:text-sm font-body mt-2 opacity-90 whitespace-nowrap">
                       Hire a Worker • Join the Co-op
                     </p>
@@ -341,32 +333,20 @@ const HomePage: React.FC = () => {
             <div className="bg-white rounded-lg shadow-xl max-w-md w-full border-4 border-moss">
               <div className="bg-moss text-cream px-6 py-4 rounded-t-lg">
                 <h3 className="text-xl font-headline font-bold">Contact Our Coordinators</h3>
-                <p className="text-sm font-body opacity-90">Cooperative Coordinators</p>
+                <p className="text-sm font-body opacity-90">Cooperative Phone</p>
               </div>
               <div className="p-6">
                 <div className="text-center">
                   <p className="text-lg font-body text-moss mb-6">
                     Ready to hire a worker or join our cooperative?
                   </p>
-                  <div className="bg-sand rounded-lg p-4 mb-6 space-y-4">
-                    <div>
-                      <p className="text-sm font-body text-moss mb-2">Cheryl:</p>
-                      <a
-                        href="tel:+13692161512"
-                        className="text-2xl font-headline font-bold text-gold hover:text-moss transition-colors"
-                      >
-                        (369) 216-1512
-                      </a>
-                    </div>
-                    <div>
-                      <p className="text-sm font-body text-moss mb-2">Braven:</p>
-                      <a
-                        href="tel:+15598800960"
-                        className="text-2xl font-headline font-bold text-gold hover:text-moss transition-colors"
-                      >
-                        (559) 880-0960
-                      </a>
-                    </div>
+                  <div className="bg-sand rounded-lg p-4 mb-6">
+                    <a
+                      href="tel:+13692161512"
+                      className="text-2xl font-headline font-bold text-gold hover:text-moss transition-colors"
+                    >
+                      (369) 216-1512
+                    </a>
                   </div>
                   <p className="text-sm font-body text-moss">
                     Cheryl and Braven are our cooperative coordinators and will be happy to discuss your needs and answer any questions.

@@ -38,21 +38,10 @@ const ContactPage: React.FC = () => {
                 <span className="text-2xl">📞</span>
               </div>
               <h3 className="text-xl font-headline font-semibold mb-4 text-gold">Call or Text Our Coordinators</h3>
-              <p className="text-moss mb-4 font-body">Coop Coordinators</p>
-              <div className="space-y-3">
-                <div>
-                  <p className="text-sm font-body text-moss mb-1">Cheryl:</p>
-                  <a href="tel:+13692161512" className="text-2xl font-headline font-bold text-moss hover:text-gold transition-colors">
-                    (369) 216-1512
-                  </a>
-                </div>
-                <div>
-                  <p className="text-sm font-body text-moss mb-1">Braven:</p>
-                  <a href="tel:+15598800960" className="text-2xl font-headline font-bold text-moss hover:text-gold transition-colors">
-                    (559) 880-0960
-                  </a>
-                </div>
-              </div>
+              <p className="text-moss mb-4 font-body">Coop Phone</p>
+              <a href="tel:+13692161512" className="text-2xl font-headline font-bold text-moss hover:text-gold transition-colors">
+                (369) 216-1512
+              </a>
             </div>
 
             {/* Email */}
