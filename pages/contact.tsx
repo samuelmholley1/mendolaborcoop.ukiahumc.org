@@ -37,11 +37,22 @@ const ContactPage: React.FC = () => {
               <div className="bg-moss text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">📞</span>
               </div>
-              <h3 className="text-xl font-headline font-semibold mb-4 text-gold">Call or Text Cheryl</h3>
-              <p className="text-moss mb-4 font-body">Coop Coordinator</p>
-              <a href="tel:+13692161512" className="text-2xl font-headline font-bold text-moss hover:text-gold transition-colors">
-                (369) 216-1512
-              </a>
+              <h3 className="text-xl font-headline font-semibold mb-4 text-gold">Call or Text Our Coordinators</h3>
+              <p className="text-moss mb-4 font-body">Coop Coordinators</p>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-sm font-body text-moss mb-1">Cheryl:</p>
+                  <a href="tel:+13692161512" className="text-2xl font-headline font-bold text-moss hover:text-gold transition-colors">
+                    (369) 216-1512
+                  </a>
+                </div>
+                <div>
+                  <p className="text-sm font-body text-moss mb-1">Braven:</p>
+                  <a href="tel:+15598800960" className="text-2xl font-headline font-bold text-moss hover:text-gold transition-colors">
+                    (559) 880-0960
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Email */}
@@ -139,25 +150,36 @@ const ContactPage: React.FC = () => {
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
         <div className="bg-white rounded-lg shadow-xl max-w-md w-full border-4 border-moss">
           <div className="bg-moss text-cream px-6 py-4 rounded-t-lg">
-            <h3 className="text-xl font-headline font-bold">Contact Cheryl</h3>
-            <p className="text-sm font-body opacity-90">Cooperative Coordinator</p>
+            <h3 className="text-xl font-headline font-bold">Contact Our Coordinators</h3>
+            <p className="text-sm font-body opacity-90">Cooperative Coordinators</p>
           </div>
           <div className="p-6">
             <div className="text-center">
-              <p className="text-lg font-body text-moss mb-4">
+              <p className="text-lg font-body text-moss mb-6">
                 Ready to hire a worker or join our cooperative?
               </p>
-              <div className="bg-sand rounded-lg p-4 mb-6">
-                <p className="text-sm font-body text-moss mb-2">Call or Text:</p>
-                <a
-                  href="tel:+13692161512"
-                  className="text-2xl font-headline font-bold text-gold hover:text-moss transition-colors"
-                >
-                  (369) 216-1512
-                </a>
+              <div className="bg-sand rounded-lg p-4 mb-6 space-y-4">
+                <div>
+                  <p className="text-sm font-body text-moss mb-2">Cheryl:</p>
+                  <a
+                    href="tel:+13692161512"
+                    className="text-2xl font-headline font-bold text-gold hover:text-moss transition-colors"
+                  >
+                    (369) 216-1512
+                  </a>
+                </div>
+                <div>
+                  <p className="text-sm font-body text-moss mb-2">Braven:</p>
+                  <a
+                    href="tel:+15598800960"
+                    className="text-2xl font-headline font-bold text-gold hover:text-moss transition-colors"
+                  >
+                    (559) 880-0960
+                  </a>
+                </div>
               </div>
               <p className="text-sm font-body text-moss">
-                Cheryl will be happy to discuss your needs and answer any questions.
+                Cheryl and Braven are our cooperative coordinators and will be happy to discuss your needs and answer any questions.
               </p>
             </div>
             <div className="flex justify-center mt-6">

@@ -206,12 +206,21 @@ const OurCrewPage: React.FC = () => {
                 Some worker profiles are only visible to authorized users. 
                 Contact our coordinator for the full roster.
               </p>
-              <a
-                href="tel:3692161512"
-                className="text-river hover:text-river/80 font-medium"
-              >
-                Call Cheryl: (369) 216-1512
-              </a>
+              <div className="space-y-2">
+                <p className="text-river font-medium">Call Cheryl or Braven:</p>
+                <a
+                  href="tel:3692161512"
+                  className="text-river hover:text-river/80 font-medium block"
+                >
+                  Cheryl: (369) 216-1512
+                </a>
+                <a
+                  href="tel:5598800960"
+                  className="text-river hover:text-river/80 font-medium block"
+                >
+                  Braven: (559) 880-0960
+                </a>
+              </div>
             </div>
           )}
         </div>
