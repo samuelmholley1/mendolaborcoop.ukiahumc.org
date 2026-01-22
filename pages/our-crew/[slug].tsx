@@ -286,6 +286,72 @@ const workerProfiles: Record<string, WorkerFullProfile> = {
       'In Braven\'s words: "I work to go from a fixed mindset to a growth mindset... to believe in yourself. Most of the time, our biggest limit is set by ourselves."'
     ]
   },
+  'casey': {
+    slug: 'casey',
+    name: 'Casey',
+    photoUrl: '/workers/casey-placeholder.jpg',
+    photoCaption: 'Casey, General Laborer, Landscaper & Former Property Manager',
+    tagline: 'Ukiah native with 17 years property management and industrial experience ready for hands-on work',
+    skills: ['Landscaping', 'Property Maintenance', 'Forklift Operation', 'Heavy Lifting', 'Pressure Washing', 'Tech Support'],
+    yearsExperience: '20+ years',
+    isPublic: true,
+    aboutParagraphs: [
+      'Casey Faahs is a Ukiah native with deep roots in the community, having been born and raised in the area before spending two decades in Brookings, Oregon. He has recently returned to Mendocino County and is motivated to re-establish himself through hard work.',
+      'Casey brings a wealth of diverse experience to the Co-op. He spent 17 years as a landlord and property manager, giving him a sharp eye for what it takes to maintain a home. His industrial background is equally impressive, including 15 years of forklift experience, eight years in mill work, and five years at a fishery where he advanced to the role of superintendent, managing crews of up to 30 people. Casey is currently eager to utilize his strength and experience to help local clients with their property needs.'
+    ],
+    skillDetails: [
+      {
+        category: 'Landscaping & Yard Maintenance',
+        items: [
+          'Skilled in heavy "grunt work"',
+          'Brush clearing and debris removal',
+          'Gutter cleaning and tree pruning'
+        ]
+      },
+      {
+        category: 'Property Upkeep',
+        items: [
+          'Pressure washing and window cleaning',
+          'General demolition',
+          '17 years landlord experience - understands property standards'
+        ]
+      },
+      {
+        category: 'Moving & Logistics',
+        items: [
+          'Heavy lifting and loading/unloading',
+          '15 years forklift operation',
+          'Organizing and arranging spaces'
+        ]
+      },
+      {
+        category: 'Tech Support',
+        items: [
+          'Computer hardware troubleshooting and repair',
+          'RAM replacement and component installation',
+          'General PC maintenance'
+        ]
+      }
+    ],
+    specialties: [
+      'Heavy manual labor and grunt work',
+      'Property maintenance and upkeep',
+      'Crew management (up to 30 people)',
+      'Forklift operation'
+    ],
+    languages: ['English'],
+    comfortableWith: [
+      'Physically demanding work',
+      'Working independently or leading teams',
+      'Dirty or difficult jobs others might avoid',
+      'Tight deadlines and fast-paced environments'
+    ],
+    whyHire: [
+      'Clients appreciate Casey for his efficiency and his "lead by example" attitude. Despite having management experience, he prefers being in the thick of the work rather than standing on the sidelines.',
+      'He prides himself on being fast, efficient, and tidy.',
+      'In Casey\'s words: "I don\'t make messes; I clean up all my messes. I like doing grunt work... I\'m good at it. I like to get in there and show people that I care about the work."'
+    ]
+  },
   // Add more workers here
 };
 

@@ -45,6 +45,14 @@ const members: Member[] = [
     skills: ['CO-OP COORDINATOR', 'Auto Mechanics (brakes/tires/oil)', 'Cosmetology/Hair ($25 cuts)', 'Welding/Metal Art', 'Painting', 'Landscaping', 'Heavy Lifting/Moving', 'Pallet Jack/Logistics'],
     notes: 'CO-OP COORDINATOR (with David) - handles client intake, screening, negotiating. COMPUTER LITERATE - set up Google Business & Gmail, being trained on website. AUTO: General maintenance (brakes, tires, oil, piston rings) but NOT fine-detail engine diagnostics. HAIR: Attended hair school, gentlemen\'s cuts & skin fades (~$25). ART: Welding/metal art, acrylic/oil painting, spray painting cars, bleach art clothing (fashion line). LABOR: Mowing, moving help, furniture assembly, trash crew, catering/dishwashing, stocking/unloading (Hobby Lobby pallet jack exp). Willing to do gross plumbing/septic if needed. Strong "growth mindset" philosophy, good at reading people/situations, natural team leader.'
   },
+  {
+    id: 'casey-faahs',
+    fullName: 'Casey Faahs',
+    displayName: 'Casey',
+    phone: '707-510-9658',
+    skills: ['Landscaping/Grunt Work', 'Property Maintenance', 'Forklift (15 yrs)', 'Mill Work (8 yrs)', 'Heavy Lifting/Moving', 'Pressure Washing', 'Computer Hardware Repair'],
+    notes: 'Ukiah native, spent 20 yrs in Brookings OR, recently returned. HOUSING: Homeless (~6-7 months at shelter). NO CAR - gets around by skateboard. MANAGEMENT: Former fishery superintendent (managed 20-30 people), 17 yrs as landlord/property manager. TECH: Can fix computer hardware (RAM etc), past C++ coding (~10 yrs ago). REFUSES: Fast food (grease) and caregiving (past trauma). BACKGROUND: Lost duplex to water heater explosion/mold/insurance + spouse addiction. Recent trauma from remote cabin caregiving (patient died, no utilities, bear encounters). Ready to work immediately. Prefers manual labor, "grunt work." Calls/texts OK.'
+  },
   // Add more members here as needed
 ];
 

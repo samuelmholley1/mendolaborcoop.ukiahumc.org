@@ -56,6 +56,16 @@ export const workers: WorkerProfile[] = [
     yearsExperience: 'Multi-skilled',
     isPublic: true,
   },
+  {
+    slug: 'casey',
+    name: 'Casey',
+    photoUrl: '/workers/casey-placeholder.jpg',
+    photoCaption: 'Casey, General Laborer, Landscaper & Former Property Manager',
+    tagline: 'Ukiah native with 17 years property management and industrial experience ready for hands-on work',
+    skills: ['Landscaping', 'Property Maintenance', 'Forklift Operation', 'Heavy Lifting', 'Pressure Washing', 'Tech Support'],
+    yearsExperience: '20+ years',
+    isPublic: true,
+  },
   // Add more workers here as they join
 ];
 
