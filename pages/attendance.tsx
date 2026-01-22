@@ -155,7 +155,7 @@ const AttendancePage: React.FC = () => {
                     Password
                   </label>
                   <input
-                    type="password"
+                    type="text"
                     id="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}

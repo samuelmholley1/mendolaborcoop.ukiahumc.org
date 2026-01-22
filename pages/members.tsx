@@ -139,7 +139,7 @@ const MembersPage: React.FC = () => {
                     Password
                   </label>
                   <input
-                    type="password"
+                    type="text"
                     id="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
@@ -208,74 +208,101 @@ const MembersPage: React.FC = () => {
       </section>
 
       {/* Members List */}
-      <section className="py-12 bg-cream">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="bg-sand/50 px-6 py-4 border-b border-sand">
-              <h2 className="text-lg font-semibold text-moss">
-                Active Members ({members.length})
-              </h2>
-            </div>
-            
-            <div className="divide-y divide-sand">
-              {members.map((member) => (
-                <div key={member.id} className="p-6 hover:bg-sand/20 transition-colors">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-gold mb-1">
+      <section className="py-16 bg-gradient-to-b from-cream to-sand/20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <h2 className="text-2xl md:text-3xl font-headline font-bold text-moss mb-2">
+              Active Members ({members.length})
+            </h2>
+            <p className="text-moss/70">
+              Internal contact information and skills directory
+            </p>
+          </div>
+          
+          {/* Member Cards Grid */}
+          <div className="grid gap-6">
+            {members.map((member) => (
+              <div 
+                key={member.id} 
+                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-sand/30 overflow-hidden"
+              >
+                <div className="p-8">
+                  {/* Name and Contact Header */}
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6 pb-6 border-b border-sand/50">
+                    <div>
+                      <h3 className="text-2xl font-semibold text-gold mb-1">
                         {member.fullName}
                       </h3>
                       {member.displayName !== member.fullName.split(' ')[0] && (
-                        <p className="text-sm text-moss/60 mb-2">
-                          Goes by: {member.displayName}
-                        </p>
-                      )}
-                      
-                      {member.skills && member.skills.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mt-3">
-                          {member.skills.map((skill, idx) => (
-                            <span
-                              key={idx}
-                              className="bg-moss/10 text-moss text-xs px-2 py-1 rounded-full"
-                            >
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                      
-                      {member.notes && (
-                        <p className="text-sm text-moss/70 mt-3">
-                          {member.notes}
+                        <p className="text-sm text-moss/60">
+                          <span className="font-medium">Goes by:</span> {member.displayName}
                         </p>
                       )}
                     </div>
                     
-                    <div className="flex items-center gap-3">
-                      <a
-                        href={`tel:${member.phone.replace(/-/g, '')}`}
-                        className="bg-moss text-cream px-4 py-2 rounded-lg hover:bg-moss/90 transition-colors flex items-center gap-2"
-                      >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                        {member.phone}
-                      </a>
-                    </div>
+                    <a
+                      href={`tel:${member.phone.replace(/[^\d+]/g, '')}`}
+                      className="inline-flex items-center gap-2 bg-moss text-cream px-4 py-2 rounded-lg hover:bg-moss/90 transition-colors whitespace-nowrap self-start"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.908.953a16.001 16.001 0 006.753 6.753l.953-1.908a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                      </svg>
+                      <span className="font-semibold">{member.phone}</span>
+                    </a>
                   </div>
+
+                  {/* Skills Section */}
+                  {member.skills && member.skills.length > 0 && (
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-moss mb-3 uppercase tracking-wide">
+                        Skills & Expertise
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {member.skills.map((skill, idx) => (
+                          <span
+                            key={idx}
+                            className="bg-gradient-to-r from-moss/10 to-moss/5 text-moss text-sm px-3 py-1.5 rounded-full border border-moss/20 font-medium"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Notes Section */}
+                  {member.notes && (
+                    <div className="bg-moss/5 rounded-lg p-4 border-l-4 border-river">
+                      <h4 className="text-xs font-semibold text-river mb-2 uppercase tracking-wide">
+                        Additional Information
+                      </h4>
+                      <p className="text-sm text-moss leading-relaxed">
+                        {member.notes}
+                      </p>
+                    </div>
+                  )}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
-          {/* Add Member Note */}
-          <div className="mt-8 bg-river/10 border border-river/20 rounded-lg p-6">
-            <h3 className="font-semibold text-river mb-2">Need to add a member?</h3>
-            <p className="text-moss/80 text-sm">
-              Contact the web coordinator to add new members to this directory. 
-              Please provide their full legal name, preferred display name, phone number, 
-              and a list of their skills.
-            </p>
+          {/* Footer Note */}
+          <div className="mt-12 bg-river/10 border border-river/30 rounded-xl p-8">
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <svg className="w-6 h-6 text-river" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zm-11-1a1 1 0 11-2 0 1 1 0 012 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-river mb-1">Add or Update Members</h3>
+                <p className="text-moss/80 text-sm">
+                  Contact the web coordinator to add new members or update existing information. 
+                  Please include full legal name, preferred display name, phone number, skills, 
+                  and any relevant notes.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
