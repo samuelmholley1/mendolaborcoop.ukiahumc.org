@@ -36,6 +36,16 @@ export const workers: WorkerProfile[] = [
     yearsExperience: '10+ years',
     isPublic: true, // David's profile is public
   },
+  {
+    slug: 'efren',
+    name: 'Efren',
+    photoUrl: '/workers/efren-placeholder.jpg',
+    photoCaption: 'Efren, Skilled Mechanic, Welder & Heavy Equipment Operator',
+    tagline: 'Central Valley veteran with hands-on expertise in mechanics, welding, and heavy machinery',
+    skills: ['Mechanics', 'Welding', 'Heavy Equipment', 'Farm Labor', 'Construction', 'Solar Installation'],
+    yearsExperience: '15+ years',
+    isPublic: true,
+  },
   // Add more workers here as they join
 ];
 

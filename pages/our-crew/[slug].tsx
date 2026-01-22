@@ -153,6 +153,71 @@ const workerProfiles: Record<string, WorkerFullProfile> = {
       'As David describes his approach: "I\'m definitely reliable... I aim to be present, on time, and thorough to complete the task."'
     ]
   },
+  'efren': {
+    slug: 'efren',
+    name: 'Efren',
+    photoUrl: '/workers/efren-placeholder.jpg',
+    photoCaption: 'Efren, Skilled Mechanic, Welder & Heavy Equipment Operator',
+    tagline: 'Central Valley veteran with hands-on expertise in mechanics, welding, and heavy machinery',
+    skills: ['Mechanics', 'Welding', 'Heavy Equipment', 'Farm Labor', 'Construction', 'Solar Installation'],
+    yearsExperience: '15+ years',
+    isPublic: true,
+    aboutParagraphs: [
+      'Efren is a recent arrival to Mendocino County, bringing with him a lifetime of hands-on experience from the Central Valley. Originally from the small agricultural town of Dos Palos, Efren grew up working on farms and has a strong background in hard labor.',
+      'He recently moved to Ukiah to make a fresh start and build a stable, peaceful life. He is highly motivated to stay busy, keep out of trouble, and establish himself as a reliable, hardworking member of our community.'
+    ],
+    skillDetails: [
+      {
+        category: 'Mechanics & Maintenance',
+        items: [
+          'Extensive experience repairing semi-truck trailers (specifically Thermo King units)',
+          'Performing annual inspections and servicing air brakes',
+          'Swapping car motors and general automotive repair'
+        ]
+      },
+      {
+        category: 'Welding & Fabrication',
+        items: [
+          'Skilled in working with aluminum and stainless steel',
+          'Metal preparation and weld finishing',
+          'Fabrication and repair work'
+        ]
+      },
+      {
+        category: 'Heavy Machinery',
+        items: [
+          'Years of experience operating agricultural equipment',
+          'Tractors, discs, caterpillars, and swathers',
+          'Cotton picking machines and farm equipment'
+        ]
+      },
+      {
+        category: 'General Construction',
+        items: [
+          'Solar panel installation',
+          'Basic residential wiring (completed electrical training)',
+          'General site labor and construction support'
+        ]
+      }
+    ],
+    specialties: [
+      'Semi-truck trailer repair (Thermo King)',
+      'Air brake servicing',
+      'Agricultural equipment operation',
+      'Portrait drawing'
+    ],
+    languages: ['English', 'Spanish'],
+    comfortableWith: [
+      'Heavy labor and physically demanding work',
+      'Getting hands dirty - cleaning, maintenance, hard labor',
+      'Farm work and agricultural settings'
+    ],
+    whyHire: [
+      'Efren is the type of worker who isn\'t afraid of a challenge. Clients appreciate his straightforward, respectful demeanor and his willingness to tackle the "dirty work" that others might avoid.',
+      'He combines the grit required for farm labor with the precision needed for mechanical repair and—surprisingly—portrait drawing.',
+      'As Efren puts it: "I\'m not scared to get my hands dirty, and I\'m not scared to get tired. I just want to work."'
+    ]
+  },
   // Add more workers here
 };
 

@@ -29,6 +29,14 @@ const members: Member[] = [
     skills: ['Masonry', 'Concrete/ADA Work', 'Irrigation', 'Groundskeeping', 'Office/Tech Setup', 'Pool Building'],
     notes: 'NO ROOFS - liability concern, uses telescoping poles. Former Masonry/Plasterers Union & SEIU member. State of CA building maintenance experience. Safety-conscious - may refuse unsafe work or negotiate hazard pay. Artist (Flash Heart style). Text or call is fine. 10+ years in Mendo County.'
   },
+  {
+    id: 'efren-de-la-torre',
+    fullName: 'Efren De La Torre',
+    displayName: 'Efren',
+    phone: '559-894-8571',
+    skills: ['Mechanics (Semi-trucks/Thermo King)', 'Welding (Aluminum/Stainless)', 'Heavy Equipment Operation', 'Farm Labor', 'Construction', 'Solar Installation', 'Portrait Drawing'],
+    notes: 'Recently released (~6 years incarcerated). New to Ukiah (arrived ~Jan 2026 from Dos Palos/Merced County). NO VEHICLE - walks or uses public transit. NOT TECH SAVVY - needs help with digital coordination/smartphones. Willing to do dirty work/hard labor. Currently in shelter/transitional housing. Available for calls/texts anytime. May have short-term construction gig - check availability.'
+  },
   // Add more members here as needed
 ];
 
