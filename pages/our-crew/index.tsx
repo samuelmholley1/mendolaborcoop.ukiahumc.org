@@ -46,6 +46,16 @@ export const workers: WorkerProfile[] = [
     yearsExperience: '15+ years',
     isPublic: true,
   },
+  {
+    slug: 'braven',
+    name: 'Braven',
+    photoUrl: '/workers/braven-placeholder.jpg',
+    photoCaption: 'Braven, Co-op Coordinator | Auto Mechanic | Creative & Cosmetologist',
+    tagline: 'Foundational co-op member with diverse skills from auto mechanics to cosmetology and creative arts',
+    skills: ['Co-op Coordinator', 'Auto Maintenance', 'Cosmetology', 'Welding/Art', 'Logistics', 'Landscaping'],
+    yearsExperience: 'Multi-skilled',
+    isPublic: true,
+  },
   // Add more workers here as they join
 ];
 

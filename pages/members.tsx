@@ -37,6 +37,14 @@ const members: Member[] = [
     skills: ['Mechanics (Semi-trucks/Thermo King)', 'Welding (Aluminum/Stainless)', 'Heavy Equipment Operation', 'Farm Labor', 'Construction', 'Solar Installation', 'Portrait Drawing'],
     notes: 'Recently released (~6 years incarcerated). New to Ukiah (arrived ~Jan 2026 from Dos Palos/Merced County). NO VEHICLE - walks or uses public transit. NOT TECH SAVVY - needs help with digital coordination/smartphones. Willing to do dirty work/hard labor. Currently in shelter/transitional housing. Available for calls/texts anytime. May have short-term construction gig - check availability.'
   },
+  {
+    id: 'braven-haynes',
+    fullName: 'Braven Haynes',
+    displayName: 'Braven',
+    phone: '(Contact via Co-op channels)',
+    skills: ['CO-OP COORDINATOR', 'Auto Mechanics (brakes/tires/oil)', 'Cosmetology/Hair ($25 cuts)', 'Welding/Metal Art', 'Painting', 'Landscaping', 'Heavy Lifting/Moving', 'Pallet Jack/Logistics'],
+    notes: 'CO-OP COORDINATOR (with David) - handles client intake, screening, negotiating. COMPUTER LITERATE - set up Google Business & Gmail, being trained on website. AUTO: General maintenance (brakes, tires, oil, piston rings) but NOT fine-detail engine diagnostics. HAIR: Attended hair school, gentlemen\'s cuts & skin fades (~$25). ART: Welding/metal art, acrylic/oil painting, spray painting cars, bleach art clothing (fashion line). LABOR: Mowing, moving help, furniture assembly, trash crew, catering/dishwashing, stocking/unloading (Hobby Lobby pallet jack exp). Willing to do gross plumbing/septic if needed. Strong "growth mindset" philosophy, good at reading people/situations, natural team leader.'
+  },
   // Add more members here as needed
 ];
 

@@ -218,6 +218,74 @@ const workerProfiles: Record<string, WorkerFullProfile> = {
       'As Efren puts it: "I\'m not scared to get my hands dirty, and I\'m not scared to get tired. I just want to work."'
     ]
   },
+  'braven': {
+    slug: 'braven',
+    name: 'Braven',
+    photoUrl: '/workers/braven-placeholder.jpg',
+    photoCaption: 'Braven, Co-op Coordinator | Auto Mechanic | Creative & Cosmetologist',
+    tagline: 'Foundational co-op member with diverse skills from auto mechanics to cosmetology and creative arts',
+    skills: ['Co-op Coordinator', 'Auto Maintenance', 'Cosmetology', 'Welding/Art', 'Logistics', 'Landscaping'],
+    yearsExperience: 'Multi-skilled',
+    isPublic: true,
+    aboutParagraphs: [
+      'Braven Haynes is a foundational member of the Mendo Labor Co-op, serving not only as a skilled worker but also as one of our Coordinators. In his leadership role, Braven handles client intake and operations, ensuring that the right workers are matched with the right jobs.',
+      'His background is incredibly diverse, shaped by a philosophy of lifelong learning. Braven has experience ranging from food service and retail logistics to welding and cosmetology. He operates with a "growth mindset," believing that any skill can be mastered with patience and effort. Whether he is facilitating community connections or getting his hands dirty on a job site, Braven brings professionalism and a calm, problem-solving attitude to every task.'
+    ],
+    skillDetails: [
+      {
+        category: 'Auto Maintenance',
+        items: [
+          'Experienced with general vehicle upkeep',
+          'Tire changes and brake service',
+          'Oil changes and basic troubleshooting'
+        ]
+      },
+      {
+        category: 'Creative & Cosmetology',
+        items: [
+          'Trained cosmetologist - gentlemen\'s cuts and fades (~$25)',
+          'Welding and metal art',
+          'Painting (acrylic and oil)',
+          'Clothing design and bleach art'
+        ]
+      },
+      {
+        category: 'General Labor & Logistics',
+        items: [
+          'Heavy lifting and furniture assembly',
+          'Moving assistance',
+          'Commercial truck unloading (pallet jack experience)',
+          'Landscaping and crew management'
+        ]
+      },
+      {
+        category: 'Cleaning & Sanitation',
+        items: [
+          'Willing to tackle tough cleaning jobs',
+          'Septic and site cleanup',
+          'Professional, non-judgmental approach'
+        ]
+      }
+    ],
+    specialties: [
+      'Co-op coordination and client matching',
+      'Gentlemen\'s haircuts and fades',
+      'Metal art and welding',
+      'Team leadership'
+    ],
+    languages: ['English'],
+    comfortableWith: [
+      'Client communication and intake',
+      'Team management and delegation',
+      'Tough or "gritty" jobs others might avoid',
+      'Customer service and sales'
+    ],
+    whyHire: [
+      'Clients and co-workers alike appreciate Braven for his patience and effective communication. He has a natural ability to read situations and manage teams, having stepped into leadership roles throughout his work history.',
+      'He approaches every job—no matter how gritty—with dignity.',
+      'In Braven\'s words: "I work to go from a fixed mindset to a growth mindset... to believe in yourself. Most of the time, our biggest limit is set by ourselves."'
+    ]
+  },
   // Add more workers here
 };
 
