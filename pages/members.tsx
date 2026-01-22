@@ -18,8 +18,8 @@ const members: Member[] = [
     fullName: 'Joel "Tony" Gama',
     displayName: 'Tony',
     phone: '369-216-7883',
-    skills: ['Painting', 'Drywall', 'Tree Trimming', 'Yard Work', 'Bilingual (Spanish/English)'],
-    notes: '32+ years painting experience. Comfortable with heights up to 60-70 feet.'
+    skills: ['Painting (Expert - 32+ yrs)', 'Drywall', 'Heights/Tree Work (60-70ft)', 'Bilingual (Spanish/English)', 'Crew Management'],
+    notes: 'Goes by "Tony". Nickname "Rambo" among painters for high intensity work. 13 years in Ukiah (from SoCal). HEALTH: Ulcerative Colitis - requires Remicade infusions, needs scheduling flexibility. In recovery (30+ yrs history, currently sober/NA). LEGAL: On probation (~4 months remaining as of Jan 2026). HOUSING: Recently unhoused (~3 weeks as of intake) due to domestic dispute/restraining order. LOW LITERACY: 7th-grade education - uncomfortable with reading/writing/computers, needs help with texts/digital scheduling. NO ELECTRICAL OR PLUMBING. Leaves job sites cleaner than found. Can run crews but prefers just working. Available Saturdays after 2:30 PM (food distribution at Methodist Church).'
   },
   {
     id: 'david-churchill',
