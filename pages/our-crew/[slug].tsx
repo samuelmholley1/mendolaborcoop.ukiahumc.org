@@ -89,6 +89,70 @@ const workerProfiles: Record<string, WorkerFullProfile> = {
       'Whether you need a high-end finish on a living room wall or someone to tackle a difficult yard cleanup that requires working at heights, Tony has the experience and the drive to get it done right.'
     ]
   },
+  'david': {
+    slug: 'david',
+    name: 'David',
+    photoUrl: '/workers/david-placeholder.jpg',
+    photoCaption: 'David, Skilled Tradesman, Maintenance Specialist & Artist',
+    tagline: 'Union-trained tradesman with diverse skills in masonry, maintenance, and grounds work',
+    skills: ['Concrete & Masonry', 'Landscape Maintenance', 'Irrigation', 'Office Setup', 'General Maintenance'],
+    yearsExperience: '10+ years',
+    isPublic: true,
+    aboutParagraphs: [
+      'David has called Mendocino County home for over a decade. With a solid work history rooted in organized labor—including time with the Masonry & Plasterers Union and the SEIU—he brings a professional, "union-grade" work ethic to the local community.',
+      'Having worked for the State of California in building maintenance and the Prison Industry Authority setting up offices, he is a versatile and reliable hand. Beyond his trade skills, he is an aspiring digital creator and artist who values the concept of "heart" in his work.'
+    ],
+    skillDetails: [
+      {
+        category: 'Concrete & Masonry',
+        items: [
+          'Experience as a union apprentice (Masonry & Plasterers Union)',
+          'Custom ADA concrete applications',
+          'Flatwork and pool building'
+        ]
+      },
+      {
+        category: 'Landscape & Grounds Maintenance',
+        items: [
+          'Skilled in installing irrigation systems',
+          'Managing drains and drainage solutions',
+          'General groundskeeping and yard cleanup'
+        ]
+      },
+      {
+        category: 'Office & Tech Setup',
+        items: [
+          'Physical office setup including running wire for computers',
+          'Comfortable navigating PC operating systems',
+          'Experience setting up offices for Prison Industry Authority'
+        ]
+      },
+      {
+        category: 'General Maintenance',
+        items: [
+          'Building maintenance (State of California experience)',
+          'Trash removal and property cleanup',
+          'Gutter cleaning using extension tools from the ground'
+        ]
+      }
+    ],
+    specialties: [
+      'Custom ADA concrete work',
+      'Irrigation installation',
+      'Union-trained craftsmanship'
+    ],
+    languages: ['English'],
+    comfortableWith: [
+      'Ground-level work with telescoping tools',
+      'Domestic tasks (cooking, cleaning, trash removal)',
+      'Office and tech setup projects'
+    ],
+    whyHire: [
+      'Clients appreciate David for being "clean-cut," present, and strictly on time. He is safety-conscious—preferring to use the right tools for the job rather than taking unnecessary risks—and takes pride in seeing a job through to completion.',
+      'He brings a unique mix of artistic creativity and blue-collar reliability to the co-op.',
+      'As David describes his approach: "I\'m definitely reliable... I aim to be present, on time, and thorough to complete the task."'
+    ]
+  },
   // Add more workers here
 };
 

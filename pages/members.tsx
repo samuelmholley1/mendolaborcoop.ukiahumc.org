@@ -21,6 +21,14 @@ const members: Member[] = [
     skills: ['Painting', 'Drywall', 'Tree Trimming', 'Yard Work', 'Bilingual (Spanish/English)'],
     notes: '32+ years painting experience. Comfortable with heights up to 60-70 feet.'
   },
+  {
+    id: 'david-churchill',
+    fullName: 'David Churchill',
+    displayName: 'David',
+    phone: '707-313-2339',
+    skills: ['Masonry', 'Concrete/ADA Work', 'Irrigation', 'Groundskeeping', 'Office/Tech Setup', 'Pool Building'],
+    notes: 'NO ROOFS - liability concern, uses telescoping poles. Former Masonry/Plasterers Union & SEIU member. State of CA building maintenance experience. Safety-conscious - may refuse unsafe work or negotiate hazard pay. Artist (Flash Heart style). Text or call is fine. 10+ years in Mendo County.'
+  },
   // Add more members here as needed
 ];
 

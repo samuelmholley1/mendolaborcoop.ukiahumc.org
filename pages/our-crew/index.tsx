@@ -26,6 +26,16 @@ export const workers: WorkerProfile[] = [
     yearsExperience: '32+ years',
     isPublic: false, // Tony's profile is password protected per request
   },
+  {
+    slug: 'david',
+    name: 'David',
+    photoUrl: '/workers/david-placeholder.jpg',
+    photoCaption: 'David, Skilled Tradesman, Maintenance Specialist & Artist',
+    tagline: 'Union-trained tradesman with diverse skills in masonry, maintenance, and grounds work',
+    skills: ['Concrete & Masonry', 'Landscape Maintenance', 'Irrigation', 'Office Setup', 'General Maintenance'],
+    yearsExperience: '10+ years',
+    isPublic: true, // David's profile is public
+  },
   // Add more workers here as they join
 ];
 
