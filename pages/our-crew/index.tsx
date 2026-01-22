@@ -66,6 +66,16 @@ export const workers: WorkerProfile[] = [
     yearsExperience: '20+ years',
     isPublic: true,
   },
+  {
+    slug: 'tony-maples',
+    name: 'Tony M.',
+    photoUrl: '/workers/tony-maples.jpg',
+    photoCaption: 'Tony M., General Laborer',
+    tagline: 'Profile coming soon — interview scheduled',
+    skills: ['General Labor', 'More Skills Coming Soon'],
+    yearsExperience: 'TBD',
+    isPublic: true,
+  },
   // Add more workers here as they join
 ];
 

@@ -53,6 +53,14 @@ const members: Member[] = [
     skills: ['Landscaping/Grunt Work', 'Property Maintenance', 'Forklift (15 yrs)', 'Mill Work (8 yrs)', 'Heavy Lifting/Moving', 'Pressure Washing', 'Computer Hardware Repair'],
     notes: 'Ukiah native, spent 20 yrs in Brookings OR, recently returned. HOUSING: Homeless (~6-7 months at shelter). NO CAR - gets around by skateboard. MANAGEMENT: Former fishery superintendent (managed 20-30 people), 17 yrs as landlord/property manager. TECH: Can fix computer hardware (RAM etc), past C++ coding (~10 yrs ago). REFUSES: Fast food (grease) and caregiving (past trauma). BACKGROUND: Lost duplex to water heater explosion/mold/insurance + spouse addiction. Recent trauma from remote cabin caregiving (patient died, no utilities, bear encounters). Ready to work immediately. Prefers manual labor, "grunt work." Calls/texts OK.'
   },
+  {
+    id: 'tony-maples',
+    fullName: 'Tony Maples',
+    displayName: 'Tony M.',
+    phone: '707-510-9708',
+    skills: ['General Labor', 'TBD - Interview Pending'],
+    notes: 'PLACEHOLDER - Full profile interview scheduled for Saturday Dec 14, 2025 at 12:30 PM at Building Bridges. Attended December 11, 2025 meeting.'
+  },
   // Add more members here as needed
 ];
 

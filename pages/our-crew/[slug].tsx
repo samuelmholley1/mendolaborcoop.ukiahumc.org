@@ -352,6 +352,36 @@ const workerProfiles: Record<string, WorkerFullProfile> = {
       'In Casey\'s words: "I don\'t make messes; I clean up all my messes. I like doing grunt work... I\'m good at it. I like to get in there and show people that I care about the work."'
     ]
   },
+  'tony-maples': {
+    slug: 'tony-maples',
+    name: 'Tony M.',
+    photoUrl: '/workers/tony-maples.jpg',
+    photoCaption: 'Tony M., General Laborer',
+    tagline: 'Profile coming soon — interview scheduled',
+    skills: ['General Labor', 'More Skills Coming Soon'],
+    yearsExperience: 'TBD',
+    isPublic: true,
+    aboutParagraphs: [
+      'Tony Maples is a new member of the Mendo Labor Cooperative. His full profile is currently being developed following his intake interview.',
+      'Tony attended the December 11, 2025 co-op meeting and is scheduled for a detailed profile interview on Saturday, December 14, 2025 at 12:30 PM at Building Bridges Homeless Resource Center. Check back soon for his complete skills and background information!'
+    ],
+    skillDetails: [
+      {
+        category: 'Coming Soon',
+        items: [
+          'Full skill details will be added after profile interview',
+          'Interview scheduled: Saturday, December 14, 2025 at 12:30 PM'
+        ]
+      }
+    ],
+    specialties: ['To be determined'],
+    languages: ['English'],
+    comfortableWith: ['To be determined during interview'],
+    whyHire: [
+      'Tony\'s full profile is being developed. Please check back after December 14, 2025 for complete information about his skills and experience.',
+      'Contact the co-op at (369) 216-1512 if you have questions about Tony\'s availability.'
+    ]
+  },
   // Add more workers here
 };
 

@@ -1,9 +1,110 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import Head from 'next/head';
 
+const CORRECT_PASSWORD = 'labor1coop!MENDO@';
+
 const RecordsPage: React.FC = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const auth = sessionStorage.getItem('internal_auth');
+    if (auth === 'true') {
+      setIsAuthenticated(true);
+    }
+    setIsLoading(false);
+  }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === CORRECT_PASSWORD) {
+      setIsAuthenticated(true);
+      sessionStorage.setItem('internal_auth', 'true');
+      setError('');
+    } else {
+      setError('Incorrect password. Please try again.');
+      setPassword('');
+    }
+  };
+
+  if (isLoading) {
+    return (
+      <Layout title="Co-op Records | Mendo Labor Cooperative">
+        <div className="min-h-screen bg-cream flex items-center justify-center">
+          <div className="text-moss text-lg">Loading...</div>
+        </div>
+      </Layout>
+    );
+  }
+
+  if (!isAuthenticated) {
+    return (
+      <Layout title="Co-op Records | Mendo Labor Cooperative">
+        <Head>
+          <meta name="robots" content="noindex, nofollow" />
+        </Head>
+        
+        <section className="min-h-screen bg-cream py-20">
+          <div className="max-w-md mx-auto px-4">
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="text-center mb-8">
+                <div className="w-16 h-16 bg-moss rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <h1 className="text-2xl font-headline font-bold text-gold mb-2">
+                  Co-op Records
+                </h1>
+                <p className="text-moss/70">
+                  This page contains internal financial records and meeting minutes. Please enter the password to access.
+                </p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label htmlFor="password" className="block text-sm font-medium text-moss mb-2">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="w-full px-4 py-3 border border-sand rounded-lg focus:ring-2 focus:ring-moss focus:border-moss transition-colors"
+                    placeholder="Enter password"
+                    autoFocus
+                  />
+                </div>
+
+                {error && (
+                  <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                    {error}
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  className="w-full bg-moss text-cream font-semibold py-3 px-6 rounded-lg hover:bg-moss/90 transition-colors"
+                >
+                  Access Records
+                </button>
+              </form>
+
+              <p className="text-center text-sm text-moss/60 mt-6">
+                Contact Cheryl at (369) 216-1512 if you need access.
+              </p>
+            </div>
+          </div>
+        </section>
+      </Layout>
+    );
+  }
+
   return (
     <>
       <Layout
@@ -16,13 +117,24 @@ const RecordsPage: React.FC = () => {
         {/* Hero Section */}
         <section className="bg-moss text-cream py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-headline font-bold mb-6">
-                Co-op Records
-              </h1>
-              <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
-                Meeting minutes, financial records, and organizational history
-              </p>
+            <div className="flex justify-between items-center">
+              <div className="flex-1 text-center">
+                <h1 className="text-4xl md:text-5xl font-headline font-bold mb-6">
+                  Co-op Records
+                </h1>
+                <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+                  Meeting minutes, financial records, and organizational history
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  sessionStorage.removeItem('internal_auth');
+                  setIsAuthenticated(false);
+                }}
+                className="bg-cream/10 hover:bg-cream/20 text-cream px-4 py-2 rounded-lg text-sm transition-colors absolute top-24 right-8"
+              >
+                Log Out
+              </button>
             </div>
           </div>
         </section>
