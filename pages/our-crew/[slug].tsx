@@ -30,7 +30,7 @@ const workerProfiles: Record<string, WorkerFullProfile> = {
   'tony': {
     slug: 'tony',
     name: 'Tony',
-    photoUrl: '/workers/tony-placeholder.jpg',
+    photoUrl: '/workers/tony.jpg',
     photoCaption: 'Tony, Skilled Painter & General Laborer',
     tagline: 'Master painter with 32+ years of experience and a tireless work ethic',
     skills: ['Professional Painting', 'Faux Finishes', 'Venetian Plaster', 'Drywall', 'Tree Trimming', 'Bilingual'],
@@ -92,7 +92,7 @@ const workerProfiles: Record<string, WorkerFullProfile> = {
   'david': {
     slug: 'david',
     name: 'David',
-    photoUrl: '/workers/david-placeholder.jpg',
+    photoUrl: '/workers/david.jpg',
     photoCaption: 'David, Skilled Tradesman, Maintenance Specialist & Artist',
     tagline: 'Union-trained tradesman with diverse skills in masonry, maintenance, and grounds work',
     skills: ['Concrete & Masonry', 'Landscape Maintenance', 'Irrigation', 'Office Setup', 'General Maintenance'],
@@ -156,7 +156,7 @@ const workerProfiles: Record<string, WorkerFullProfile> = {
   'efren': {
     slug: 'efren',
     name: 'Efren',
-    photoUrl: '/workers/efren-placeholder.jpg',
+    photoUrl: '/workers/efren.jpg',
     photoCaption: 'Efren, Skilled Mechanic, Welder & Heavy Equipment Operator',
     tagline: 'Central Valley veteran with hands-on expertise in mechanics, welding, and heavy machinery',
     skills: ['Mechanics', 'Welding', 'Heavy Equipment', 'Farm Labor', 'Construction', 'Solar Installation'],
@@ -221,7 +221,7 @@ const workerProfiles: Record<string, WorkerFullProfile> = {
   'braven': {
     slug: 'braven',
     name: 'Braven',
-    photoUrl: '/workers/braven-placeholder.jpg',
+    photoUrl: '/workers/braven.jpg',
     photoCaption: 'Braven, Co-op Coordinator | Auto Mechanic | Creative & Cosmetologist',
     tagline: 'Foundational co-op member with diverse skills from auto mechanics to cosmetology and creative arts',
     skills: ['Co-op Coordinator', 'Auto Maintenance', 'Cosmetology', 'Welding/Art', 'Logistics', 'Landscaping'],
@@ -289,7 +289,7 @@ const workerProfiles: Record<string, WorkerFullProfile> = {
   'casey': {
     slug: 'casey',
     name: 'Casey',
-    photoUrl: '/workers/casey-placeholder.jpg',
+    photoUrl: '/workers/casey.jpg',
     photoCaption: 'Casey, General Laborer, Landscaper & Former Property Manager',
     tagline: 'Ukiah native with 17 years property management and industrial experience ready for hands-on work',
     skills: ['Landscaping', 'Property Maintenance', 'Forklift Operation', 'Heavy Lifting', 'Pressure Washing', 'Tech Support'],
