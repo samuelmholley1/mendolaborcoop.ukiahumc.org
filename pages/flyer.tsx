@@ -108,7 +108,7 @@ const FlyerPage: React.FC = () => {
   };
 
   // Flyer uses percentage-based heights to work in both screen (495px) and print (5.5in)
-  const Flyer = ({ showDebug = false }: { showDebug?: boolean }) => (
+  const Flyer = () => (
     <div 
       className="flyer-container bg-white p-2 shadow-lg rounded-lg border-4 border-moss overflow-hidden flex flex-col" 
       style={{ height: '495px' }}
@@ -269,7 +269,7 @@ const FlyerPage: React.FC = () => {
 
           {/* Print wrapper for 4-per-page grid */}
           <div ref={printRef} className="print-page">
-            <Flyer showDebug={debug} />
+            <Flyer />
             <Flyer />
             <Flyer />
             <Flyer />
