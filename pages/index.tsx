@@ -17,6 +17,57 @@ import HeroSlideshow from '../components/HeroSlideshow';
 const HomePage: React.FC = () => {
   const [language, setLanguage] = useState<'en' | 'es'>('en');
   const [showContactPopup, setShowContactPopup] = useState(false);
+  
+  // Contact form state
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    jobDescription: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showResultPopup, setShowResultPopup] = useState(false);
+  const [submitResult, setSubmitResult] = useState<{ success: boolean; message: string } | null>(null);
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    console.log('[Contact Form] Submitting form...', formData);
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      
+      console.log('[Contact Form] Response status:', response.status);
+      
+      const data = await response.json();
+      console.log('[Contact Form] Response data:', data);
+      
+      if (response.ok) {
+        console.log('[Contact Form] SUCCESS - Email sent!');
+        setSubmitResult({ success: true, message: 'Your inquiry has been sent successfully! We\'ll get back to you soon.' });
+        setFormData({ name: '', phone: '', email: '', jobDescription: '' });
+      } else {
+        console.error('[Contact Form] ERROR - Server returned error:', data.error);
+        setSubmitResult({ success: false, message: data.error || 'Something went wrong. Please try calling us instead.' });
+      }
+    } catch (error) {
+      console.error('[Contact Form] NETWORK ERROR:', error);
+      setSubmitResult({ success: false, message: 'Network error. Please check your connection and try again.' });
+    } finally {
+      setIsSubmitting(false);
+      setShowResultPopup(true);
+    }
+  };
 
   const content = {
     en: {
@@ -344,7 +395,7 @@ const HomePage: React.FC = () => {
 
             {/* Contact Form */}
             <div className="bg-sand rounded-lg shadow-lg p-6 md:p-8 border-4 border-moss">
-              <form action="/contact-us" method="GET" className="space-y-5">
+              <form onSubmit={handleFormSubmit} className="space-y-5">
                 <div>
                   <label htmlFor="home-name" className="block text-lg font-headline font-semibold text-gold mb-2">
                     Name <span className="text-red-500">*</span>
@@ -353,6 +404,8 @@ const HomePage: React.FC = () => {
                     type="text"
                     id="home-name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleFormChange}
                     required
                     className="w-full px-4 py-3 border-2 border-moss rounded-lg font-body text-moss focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
                     placeholder="Your full name"
@@ -366,6 +419,8 @@ const HomePage: React.FC = () => {
                     type="tel"
                     id="home-phone"
                     name="phone"
+                    value={formData.phone}
+                    onChange={handleFormChange}
                     required
                     className="w-full px-4 py-3 border-2 border-moss rounded-lg font-body text-moss focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
                     placeholder="(555) 123-4567"
@@ -379,6 +434,8 @@ const HomePage: React.FC = () => {
                     type="email"
                     id="home-email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleFormChange}
                     required
                     className="w-full px-4 py-3 border-2 border-moss rounded-lg font-body text-moss focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
                     placeholder="you@example.com"
@@ -391,18 +448,25 @@ const HomePage: React.FC = () => {
                   <textarea
                     id="home-job"
                     name="jobDescription"
+                    value={formData.jobDescription}
+                    onChange={handleFormChange}
                     required
                     rows={4}
                     className="w-full px-4 py-3 border-2 border-moss rounded-lg font-body text-moss focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold resize-vertical"
                     placeholder="Describe the job or work you need done..."
                   />
                 </div>
-                <Link
-                  href="/contact-us"
-                  className="block w-full py-4 rounded-lg text-xl font-headline font-bold bg-gold text-cream hover:bg-opacity-90 transition-colors text-center"
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`w-full py-4 rounded-lg text-xl font-headline font-bold transition-colors ${
+                    isSubmitting
+                      ? 'bg-gray-400 text-gray-200 cursor-not-allowed'
+                      : 'bg-gold text-cream hover:bg-opacity-90'
+                  }`}
                 >
-                  Submit Inquiry
-                </Link>
+                  {isSubmitting ? 'Sending...' : 'Submit Inquiry'}
+                </button>
               </form>
             </div>
           </div>
@@ -467,6 +531,83 @@ const HomePage: React.FC = () => {
                     Close
                   </button>
                 </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Form Result Popup Modal */}
+        {showResultPopup && submitResult && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+            <div className="bg-cream rounded-lg shadow-2xl max-w-md w-full border-4 border-gold overflow-hidden">
+              {/* Header with Logo */}
+              <div className={`${submitResult.success ? 'bg-moss' : 'bg-red-700'} text-cream px-6 py-5`}>
+                <div className="flex items-center justify-center gap-3">
+                  <img
+                    src="/mendo_labor_coop_logo.png"
+                    alt="Mendo Labor Cooperative"
+                    className="w-12 h-12"
+                  />
+                  <div>
+                    <h3 className="text-xl font-headline font-bold">
+                      {submitResult.success ? 'Inquiry Sent!' : 'Something Went Wrong'}
+                    </h3>
+                    <p className="text-sm font-body opacity-90">Mendo Labor Cooperative</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Body */}
+              <div className="p-6">
+                <div className="text-center">
+                  {/* Icon */}
+                  <div className={`mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-4 ${
+                    submitResult.success ? 'bg-moss' : 'bg-red-100'
+                  }`}>
+                    {submitResult.success ? (
+                      <svg className="w-8 h-8 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    )}
+                  </div>
+                  
+                  {/* Message */}
+                  <p className="text-lg font-body text-moss mb-6">
+                    {submitResult.message}
+                  </p>
+                  
+                  {/* Call CTA on error */}
+                  {!submitResult.success && (
+                    <div className="bg-sand rounded-lg p-4 mb-6 border-2 border-moss">
+                      <p className="text-sm font-body text-moss mb-2">You can also reach us by phone:</p>
+                      <a
+                        href="tel:+13692161512"
+                        className="text-xl font-headline font-bold text-gold hover:text-moss transition-colors"
+                      >
+                        (369) 216-1512
+                      </a>
+                    </div>
+                  )}
+                </div>
+                
+                {/* Close Button */}
+                <button
+                  onClick={() => {
+                    setShowResultPopup(false);
+                    setSubmitResult(null);
+                  }}
+                  className={`w-full py-3 rounded-lg font-headline font-semibold transition-colors focus:outline-none focus:ring-4 focus:ring-sand ${
+                    submitResult.success
+                      ? 'bg-gold text-cream hover:bg-opacity-90'
+                      : 'bg-moss text-cream hover:bg-opacity-90'
+                  }`}
+                >
+                  {submitResult.success ? 'Great, Thanks!' : 'Close'}
+                </button>
               </div>
             </div>
           </div>
