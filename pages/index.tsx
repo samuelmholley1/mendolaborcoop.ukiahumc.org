@@ -259,14 +259,14 @@ const HomePage: React.FC = () => {
 
                   {/* Component 3: CTA - Two equal pathways side by side on all screens */}
                   <div className="w-full lg:ml-2" style={{ marginLeft: '-7px', marginRight: '-7px', width: 'calc(100% + 14px)' }}>
-                    <div className="bg-moss text-cream px-3 py-2 lg:px-5 lg:py-3 xl:px-6 xl:py-4 rounded-lg border-4 border-gold shadow-xl">
-                      <p className="text-xs lg:text-base font-headline font-semibold mb-1 lg:mb-2 text-center">
+                    <div className="bg-moss text-cream p-3 lg:p-5 xl:p-6 rounded-lg border-4 border-gold shadow-xl">
+                      <p className="text-xs lg:text-base font-headline font-semibold mb-2 lg:mb-3 text-center">
                         Contact Our Coordinators Cheryl &amp; Braven
                       </p>
                       <div className="flex flex-row items-stretch justify-center">
                         {/* Left: Call - 2/3 width */}
                         <div className="w-2/3 text-center pr-2 lg:pr-4 flex flex-col justify-center">
-                          <p className="text-[10px] lg:text-sm font-body opacity-80 mb-0.5">Call Us</p>
+                          <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1">Call Us</p>
                           <a 
                             href="tel:+13692161512" 
                             className="text-2xl sm:text-4xl lg:text-6xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
@@ -282,7 +282,7 @@ const HomePage: React.FC = () => {
                         
                         {/* Right: Submit Inquiry - 1/3 width */}
                         <div className="w-1/3 text-center pl-2 lg:pl-4 flex flex-col justify-center">
-                          <p className="text-[10px] lg:text-sm font-body opacity-80 mb-0.5 lg:mb-1">Or Online</p>
+                          <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1 lg:mb-2">Or Online</p>
                           <button
                             onClick={() => setShowContactPopup(true)}
                             className="bg-gold text-moss px-3 lg:px-5 py-3 lg:py-4 rounded-md font-headline font-bold text-sm lg:text-lg hover:bg-gold/90 transition-colors mx-auto whitespace-nowrap shadow-lg border-2 border-cream/50 hover:scale-105 transform"
@@ -291,7 +291,7 @@ const HomePage: React.FC = () => {
                           </button>
                         </div>
                       </div>
-                      <p className="text-[10px] lg:text-sm font-body mt-1 lg:mt-2 opacity-80 text-center">
+                      <p className="text-[10px] lg:text-sm font-body mt-2 lg:mt-3 opacity-80 text-center">
                         Get a Helping Hand
                       </p>
                     </div>
