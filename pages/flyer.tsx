@@ -39,7 +39,7 @@ const FlyerPage: React.FC = () => {
     setGenerating(true);
     
     try {
-      const html2canvas = (await import('html2canvas')).default;
+      const domtoimage = (await import('dom-to-image-more')).default;
       const jsPDF = (await import('jspdf')).default;
       
       // Create PDF - Letter size (8.5 x 11 inches)
@@ -56,50 +56,48 @@ const FlyerPage: React.FC = () => {
         { x: 4.25, y: 5.5 }  // bottom-right
       ];
       
+      // Inject style tag to override ALL box-shadows and outlines with !important
+      const styleTag = document.createElement('style');
+      styleTag.id = 'pdf-export-overrides';
+      styleTag.textContent = `
+        .flyer-container,
+        .flyer-container *,
+        .flyer-container *::before,
+        .flyer-container *::after {
+          box-shadow: none !important;
+          -webkit-box-shadow: none !important;
+          outline: none !important;
+          outline-offset: 0 !important;
+          text-shadow: none !important;
+        }
+      `;
+      document.head.appendChild(styleTag);
+      
+      // Small delay to ensure styles are applied
+      await new Promise(resolve => setTimeout(resolve, 50));
+      
       for (let i = 0; i < Math.min(flyers.length, 4); i++) {
         const flyer = flyers[i] as HTMLElement;
         
-        // Strip ALL outlines/borders from all elements before capture
-        const allElements = flyer.querySelectorAll('*');
-        const originalStyles: { el: HTMLElement; outline: string; boxShadow: string }[] = [];
-        
-        allElements.forEach((el) => {
-          if (el instanceof HTMLElement) {
-            originalStyles.push({
-              el,
-              outline: el.style.outline,
-              boxShadow: el.style.boxShadow
-            });
-            el.style.outline = 'none';
-            el.style.boxShadow = 'none';
-          }
-        });
-        
-        // Capture with html2canvas
-        const canvas = await html2canvas(flyer, {
+        // Capture with dom-to-image-more
+        const imgData = await domtoimage.toPng(flyer, {
+          quality: 1,
           scale: 3,
-          useCORS: true,
-          allowTaint: true,
-          backgroundColor: '#ffffff',
-          logging: false,
-          removeContainer: true
+          bgcolor: '#ffffff'
         });
-        
-        // Restore original styles
-        originalStyles.forEach(({ el, outline, boxShadow }) => {
-          el.style.outline = outline;
-          el.style.boxShadow = boxShadow;
-        });
-        
-        const imgData = canvas.toDataURL('image/png');
         
         // Add to PDF at correct position (4.25 x 5.5 inches each)
         pdf.addImage(imgData, 'PNG', positions[i].x, positions[i].y, 4.25, 5.5);
       }
       
+      // Remove the injected style tag
+      styleTag.remove();
+      
       pdf.save('mendo-labor-coop-flyers.pdf');
     } catch (error) {
       console.error('PDF generation error:', error);
+      // Clean up style tag on error too
+      document.getElementById('pdf-export-overrides')?.remove();
       alert('Error generating PDF. Please try again.');
     }
     
