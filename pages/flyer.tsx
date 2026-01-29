@@ -96,8 +96,16 @@ const FlyerPage: React.FC = () => {
         <meta name="robots" content="noindex, follow" />
         <style>{`
           @media print {
-            html, body { margin: 0; padding: 0; }
+            html, body { 
+              margin: 0; 
+              padding: 0;
+              -webkit-print-color-adjust: exact !important;
+              print-color-adjust: exact !important;
+            }
             .no-print { display: none !important; }
+            .min-h-screen { min-height: auto !important; }
+            .bg-cream { background: white !important; }
+            .p-8 { padding: 0 !important; }
             .print-page {
               width: 8.5in;
               height: 11in;
@@ -117,6 +125,12 @@ const FlyerPage: React.FC = () => {
               margin: 0 !important;
               box-sizing: border-box;
               page-break-inside: avoid;
+              border-radius: 0 !important;
+              box-shadow: none !important;
+            }
+            .flyer-container img {
+              max-width: 100%;
+              height: auto;
             }
             .contact-box {
               -webkit-print-color-adjust: exact !important;
