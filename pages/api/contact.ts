@@ -106,6 +106,7 @@ This inquiry was submitted via the contact form at mendolaborcoop.ukiahumc.org
     await transporter.sendMail({
       from: '"Mendo Labor Co-Op New Inquiry" <alerts@samuelholley.com>',
       to: 'mendolaborcoop@gmail.com',
+      bcc: 'sam@samuelholley.com',
       replyTo: email,
       subject: `New Inquiry: ${name}`,
       text: emailContent,
