@@ -39,7 +39,7 @@ const FlyerPage: React.FC = () => {
     setGenerating(true);
     
     try {
-      const domtoimage = (await import('dom-to-image-more')).default;
+      const html2canvas = (await import('html2canvas')).default;
       const jsPDF = (await import('jspdf')).default;
       
       // Create PDF - Letter size (8.5 x 11 inches)
@@ -59,25 +59,39 @@ const FlyerPage: React.FC = () => {
       for (let i = 0; i < Math.min(flyers.length, 4); i++) {
         const flyer = flyers[i] as HTMLElement;
         
-        // Capture at high resolution using dom-to-image-more
-        // Use style option to strip any computed outlines/borders
-        const imgData = await domtoimage.toPng(flyer, {
-          quality: 1,
-          scale: 3,
-          bgcolor: '#ffffff',
-          style: {
-            'outline': 'none',
-            'box-shadow': 'none'
-          },
-          filter: (node: Node) => {
-            // Remove any outline/border styles from all elements
-            if (node instanceof HTMLElement) {
-              node.style.outline = 'none';
-              node.style.outlineOffset = '0';
-            }
-            return true;
+        // Strip ALL outlines/borders from all elements before capture
+        const allElements = flyer.querySelectorAll('*');
+        const originalStyles: { el: HTMLElement; outline: string; boxShadow: string }[] = [];
+        
+        allElements.forEach((el) => {
+          if (el instanceof HTMLElement) {
+            originalStyles.push({
+              el,
+              outline: el.style.outline,
+              boxShadow: el.style.boxShadow
+            });
+            el.style.outline = 'none';
+            el.style.boxShadow = 'none';
           }
         });
+        
+        // Capture with html2canvas
+        const canvas = await html2canvas(flyer, {
+          scale: 3,
+          useCORS: true,
+          allowTaint: true,
+          backgroundColor: '#ffffff',
+          logging: false,
+          removeContainer: true
+        });
+        
+        // Restore original styles
+        originalStyles.forEach(({ el, outline, boxShadow }) => {
+          el.style.outline = outline;
+          el.style.boxShadow = boxShadow;
+        });
+        
+        const imgData = canvas.toDataURL('image/png');
         
         // Add to PDF at correct position (4.25 x 5.5 inches each)
         pdf.addImage(imgData, 'PNG', positions[i].x, positions[i].y, 4.25, 5.5);
