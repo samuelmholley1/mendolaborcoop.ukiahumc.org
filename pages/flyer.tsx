@@ -60,10 +60,23 @@ const FlyerPage: React.FC = () => {
         const flyer = flyers[i] as HTMLElement;
         
         // Capture at high resolution using dom-to-image-more
+        // Use style option to strip any computed outlines/borders
         const imgData = await domtoimage.toPng(flyer, {
           quality: 1,
           scale: 3,
-          bgcolor: '#ffffff'
+          bgcolor: '#ffffff',
+          style: {
+            'outline': 'none',
+            'box-shadow': 'none'
+          },
+          filter: (node: Node) => {
+            // Remove any outline/border styles from all elements
+            if (node instanceof HTMLElement) {
+              node.style.outline = 'none';
+              node.style.outlineOffset = '0';
+            }
+            return true;
+          }
         });
         
         // Add to PDF at correct position (4.25 x 5.5 inches each)
@@ -125,8 +138,8 @@ const FlyerPage: React.FC = () => {
             whiteSpace: 'nowrap',
             display: 'block',
             position: 'relative',
-            top: '-2px',
-            left: '-3px'
+            top: '-4px',
+            left: '-5px'
           }}>
             (369) 216-1512
           </span>
