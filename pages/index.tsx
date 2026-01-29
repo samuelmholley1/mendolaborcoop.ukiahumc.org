@@ -265,7 +265,7 @@ const HomePage: React.FC = () => {
                       </p>
                       <div className="flex flex-row items-stretch justify-center">
                         {/* Left: Call - 2/3 width */}
-                        <div className="w-2/3 text-center pr-2 lg:pr-4 pl-2 lg:pl-5 flex flex-col justify-center">
+                        <div className="w-2/3 text-center pr-1 lg:pr-2 pl-2 lg:pl-5 flex flex-col justify-center">
                           <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1">Call Us</p>
                           <a 
                             href="tel:+13692161512" 
@@ -276,16 +276,16 @@ const HomePage: React.FC = () => {
                         </div>
                         
                         {/* Vertical Divider - always visible */}
-                        <div className="flex items-center px-2 lg:px-4">
+                        <div className="flex items-center px-1 lg:px-2">
                           <div className="w-px h-12 lg:h-16 bg-cream/40"></div>
                         </div>
                         
                         {/* Right: Submit Inquiry - 1/3 width */}
-                        <div className="w-1/3 text-center pl-2 lg:pl-4 pr-3 lg:pr-6 flex flex-col justify-center">
+                        <div className="w-1/3 text-center pl-1 lg:pl-2 pr-4 lg:pr-8 flex flex-col justify-center">
                           <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1 lg:mb-2">Or Online</p>
                           <button
                             onClick={() => setShowContactPopup(true)}
-                            className="bg-gold text-moss px-3 lg:px-5 py-3 lg:py-4 rounded-md font-headline font-bold text-sm lg:text-lg hover:bg-gold/90 transition-colors mr-0 ml-auto whitespace-nowrap shadow-lg border-2 border-cream/50 hover:scale-105 transform"
+                            className="bg-gold text-moss px-3 lg:px-5 py-3 lg:py-4 rounded-md font-headline font-bold text-sm lg:text-lg hover:bg-gold/90 transition-colors mx-auto whitespace-nowrap shadow-lg border-2 border-cream/50 hover:scale-105 transform"
                           >
                             Submit Inquiry
                           </button>
