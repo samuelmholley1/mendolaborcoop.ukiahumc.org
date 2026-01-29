@@ -140,18 +140,20 @@ const FlyerPage: React.FC = () => {
         </p>
         <div style={{ 
           backgroundColor: '#356A45', 
-          padding: '3px 16px', 
-          display: 'inline-flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderRadius: '6px'
+          padding: '5px 16px', 
+          display: 'inline-block',
+          borderRadius: '6px',
+          textAlign: 'center'
         }}>
           <span style={{ 
             color: '#FFFFFF', 
-            fontSize: '20px', 
+            fontSize: '20px',
+            lineHeight: '1',
             fontWeight: 800, 
             fontFamily: 'Montserrat, Arial, sans-serif',
-            whiteSpace: 'nowrap'
+            whiteSpace: 'nowrap',
+            display: 'inline-block',
+            textAlign: 'center'
           }}>
             (369) 216-1512
           </span>
