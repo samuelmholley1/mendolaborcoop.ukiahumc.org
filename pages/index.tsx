@@ -233,8 +233,8 @@ const HomePage: React.FC = () => {
                   
                   {/* Logo + Tagline Row */}
                   <div className="flex flex-col lg:flex-row lg:gap-6 lg:items-center">
-                    {/* Component 1: LOGO - larger, minimal gap */}
-                    <div className="flex-shrink-0 mx-auto lg:mx-0 lg:-ml-2">
+                    {/* Component 1: LOGO - larger, minimal gap, slightly right on desktop */}
+                    <div className="flex-shrink-0 mx-auto lg:mx-0 lg:ml-2 mb-[5px] lg:mb-0">
                       <img
                         src="/mendo_labor_coop_logo.png"
                         alt="Mendo Labor Cooperative Logo"
@@ -247,19 +247,21 @@ const HomePage: React.FC = () => {
                     {/* Component 2: TAGLINE - centered with logo, padded between logo and slideshow */}
                     <div className="text-center lg:text-left flex flex-col justify-center flex-1 lg:px-4">
                       <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-headline font-bold text-gold leading-tight">
-                        {currentContent.heroTitle}
+                        <span className="block sm:inline">Skilled local workers.</span>{' '}
+                        <span className="block sm:inline">Fair pay. Simple hiring.</span>
                       </h1>
                       <p className="text-sm sm:text-base lg:text-lg font-body text-moss mt-2 leading-snug">
-                        {currentContent.heroSubtitle}
+                        <span className="block sm:inline">Building economic justice</span>{' '}
+                        <span className="block sm:inline">and worker solidarity in Mendocino County.</span>
                       </p>
                     </div>
                   </div>
 
-                  {/* Component 3: CTA - Full column width, aligned with logo */}
-                  <div className="w-full lg:-ml-2">
+                  {/* Component 3: CTA - Full column width, 7px wider than content above */}
+                  <div className="w-full lg:ml-2" style={{ marginLeft: '-7px', marginRight: '-7px', width: 'calc(100% + 14px)' }}>
                     <div className="bg-moss text-cream p-5 lg:p-6 xl:p-8 rounded-lg text-center border-4 border-gold shadow-xl">
                       <p className="text-sm lg:text-lg font-headline font-semibold mb-2">
-                        Call Our Coordinators
+                        Call Our Coordinators<span className="inline"> Cheryl &amp; Braven</span>
                       </p>
                       <a 
                         href="tel:+13692161512" 
@@ -267,9 +269,17 @@ const HomePage: React.FC = () => {
                       >
                         (369) 216-1512
                       </a>
-                      <p className="text-sm lg:text-base font-body mt-2 opacity-90">
-                        Hire a Worker • Join the Co-op
-                      </p>
+                      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mt-3">
+                        <button
+                          onClick={() => setShowContactPopup(true)}
+                          className="bg-gold text-moss px-4 py-2 rounded-md font-headline font-semibold text-sm hover:bg-gold/90 transition-colors"
+                        >
+                          📝 Contact Form
+                        </button>
+                        <p className="text-sm lg:text-base font-body opacity-90">
+                          Hire a Worker • Join the Co-op
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
