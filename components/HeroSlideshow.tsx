@@ -66,7 +66,7 @@ const HeroSlideshow: React.FC<HeroSlideshowProps> = ({ autoPlayInterval = 4000 }
               alt={slide.alt}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover object-top"
               priority={index === 0}
             />
           </div>

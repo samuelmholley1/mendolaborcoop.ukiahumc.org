@@ -177,32 +177,35 @@ const HomePage: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
                 
-                {/* Left Column - Logo, Tagline, CTA stacked */}
-                <div className="flex flex-col items-center lg:items-start space-y-4 lg:space-y-5">
+                {/* Left Column - Logo (1/3) + Tagline (2/3) + CTA */}
+                <div className="flex flex-col space-y-4 lg:space-y-5">
                   
-                  {/* Component 1: LOGO - ~100px height */}
-                  <div className="flex-shrink-0">
-                    <img
-                      src="/mendo_labor_coop_logo.png"
-                      alt="Mendo Labor Cooperative Logo"
-                      width="120"
-                      height="120"
-                      className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28"
-                    />
-                  </div>
-                  
-                  {/* Component 2: TAGLINE - ~80px height */}
-                  <div className="text-center lg:text-left">
-                    <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-headline font-bold text-gold leading-tight">
-                      {currentContent.heroTitle}
-                    </h1>
-                    <p className="text-sm sm:text-base lg:text-lg font-body text-moss mt-2 leading-snug max-w-lg">
-                      {currentContent.heroSubtitle}
-                    </p>
+                  {/* Logo + Tagline Row */}
+                  <div className="flex flex-col lg:flex-row lg:gap-4 lg:items-start">
+                    {/* Component 1: LOGO - 1/3 width on desktop */}
+                    <div className="flex-shrink-0 mx-auto lg:mx-0 lg:w-1/3">
+                      <img
+                        src="/mendo_labor_coop_logo.png"
+                        alt="Mendo Labor Cooperative Logo"
+                        width="140"
+                        height="140"
+                        className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32"
+                      />
+                    </div>
+                    
+                    {/* Component 2: TAGLINE - 2/3 width on desktop */}
+                    <div className="text-center lg:text-left lg:w-2/3 flex flex-col justify-start">
+                      <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-headline font-bold text-gold leading-tight">
+                        {currentContent.heroTitle}
+                      </h1>
+                      <p className="text-sm sm:text-base lg:text-lg font-body text-moss mt-2 leading-snug">
+                        {currentContent.heroSubtitle}
+                      </p>
+                    </div>
                   </div>
 
-                  {/* Component 3: CTA - ~120px height */}
-                  <div className="w-full max-w-md">
+                  {/* Component 3: CTA - Full width */}
+                  <div className="w-full max-w-md mx-auto lg:mx-0">
                     <div className="bg-moss text-cream p-4 lg:p-5 rounded-lg text-center border-4 border-gold shadow-xl">
                       <p className="text-sm lg:text-base font-headline font-semibold mb-1">
                         Call Our Coordinators
@@ -221,7 +224,7 @@ const HomePage: React.FC = () => {
                 </div>
 
                 {/* Right Column - Component 4: SLIDESHOW - ~280-320px height */}
-                <div className="w-full h-64 sm:h-72 lg:h-80 xl:h-96">
+                <div className="w-full h-80 sm:h-96 lg:h-[28rem] xl:h-[32rem]">
                   <HeroSlideshow autoPlayInterval={5000} />
                 </div>
 
