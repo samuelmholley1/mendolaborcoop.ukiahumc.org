@@ -4,20 +4,20 @@ import Head from 'next/head';
 const FlyerPage: React.FC = () => {
   // Single flyer component to avoid repetition
   const Flyer = () => (
-    <div className="flyer-container bg-white p-4 shadow-lg rounded-lg border-4 border-moss overflow-hidden flex flex-col">
+    <div className="flyer-container bg-white p-3 shadow-lg rounded-lg border-4 border-moss overflow-hidden flex flex-col justify-between h-full">
       
-      {/* Logo - Compact */}
-      <div className="text-center mb-2">
+      {/* Logo */}
+      <div className="text-center">
         <img
           src="/mendo_labor_coop_logo.png"
           alt="Mendo Labor Cooperative"
-          className="mx-auto w-20 h-20"
+          className="mx-auto w-16 h-16"
         />
       </div>
 
       {/* Main CTA Headline - Benefit focused */}
-      <div className="text-center mb-3">
-        <h1 className="text-xl font-headline font-black text-gold leading-tight">
+      <div className="text-center">
+        <h1 className="text-2xl font-headline font-black text-gold leading-tight">
           Need an Extra Hand?
         </h1>
         <p className="text-sm text-moss font-body font-semibold mt-1">
@@ -26,14 +26,14 @@ const FlyerPage: React.FC = () => {
       </div>
 
       {/* PRIMARY: PHONE NUMBER - Green only around number */}
-      <div className="text-center mb-3">
+      <div className="text-center">
         <p className="text-xs font-headline font-semibold text-moss mb-1">
           Call or Text Cheryl
         </p>
-        <div className="contact-box bg-[#356A45] text-white py-2 px-3 rounded-lg inline-block">
+        <div className="contact-box bg-[#356A45] text-white py-2 px-4 rounded-lg inline-block">
           <a 
             href="tel:+13692161512" 
-            className="text-2xl font-headline font-black hover:opacity-90 transition-opacity leading-none whitespace-nowrap"
+            className="text-3xl font-headline font-black hover:opacity-90 transition-opacity leading-none whitespace-nowrap"
             style={{ color: '#FFFFFF' }}
           >
             (369) 216-1512
@@ -41,17 +41,17 @@ const FlyerPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Photos strip at bottom */}
-      <div className="flex gap-1 mt-auto mb-2">
-        <img src="/co-op-job-photo-1.jpeg" alt="Workers on the job" className="w-1/4 h-14 object-cover object-top rounded" />
-        <img src="/co-op-job-photo-2.jpeg" alt="Workers on the job" className="w-1/4 h-14 object-cover object-top rounded" />
-        <img src="/co-op-job-photo-3.jpeg" alt="Workers on the job" className="w-1/4 h-14 object-cover object-top rounded" />
-        <img src="/co-op-job-photo-4.jpeg" alt="Workers on the job" className="w-1/4 h-14 object-cover object-top rounded" />
+      {/* Photos 2x2 grid */}
+      <div className="grid grid-cols-2 gap-1 flex-1 min-h-0">
+        <img src="/co-op-job-photo-1.jpeg" alt="Workers on the job" className="w-full h-full object-cover object-top rounded" />
+        <img src="/co-op-job-photo-2.jpeg" alt="Workers on the job" className="w-full h-full object-cover object-top rounded" />
+        <img src="/co-op-job-photo-3.jpeg" alt="Workers on the job" className="w-full h-full object-cover object-top rounded" />
+        <img src="/co-op-job-photo-4.jpeg" alt="Workers on the job" className="w-full h-full object-cover object-[center_15%] rounded" />
       </div>
 
       {/* Footer with email and website */}
-      <div className="text-center border-t border-moss/30 pt-2">
-        <p className="text-xs font-body text-moss">
+      <div className="text-center border-t border-moss/30 pt-1">
+        <p className="text-xs font-body text-moss leading-tight">
           mendolaborcoop@gmail.com • mendolaborcoop.ukiahumc.org
         </p>
       </div>
