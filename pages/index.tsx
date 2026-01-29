@@ -204,8 +204,8 @@ const HomePage: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Component 3: CTA - Full column width, taller */}
-                  <div className="w-full">
+                  {/* Component 3: CTA - Full column width, aligned with logo */}
+                  <div className="w-full lg:-ml-2">
                     <div className="bg-moss text-cream p-5 lg:p-6 xl:p-8 rounded-lg text-center border-4 border-gold shadow-xl">
                       <p className="text-sm lg:text-lg font-headline font-semibold mb-2">
                         Call Our Coordinators
