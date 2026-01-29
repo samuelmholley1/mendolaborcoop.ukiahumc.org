@@ -119,18 +119,32 @@ const FlyerPage: React.FC = () => {
               page-break-after: avoid;
             }
             .flyer-container { 
-              width: 100% !important; 
-              height: 100% !important; 
-              padding: 0.15in 0.1in !important;
+              width: 4.25in !important; 
+              height: 5.5in !important; 
+              padding: 0.15in !important;
               margin: 0 !important;
               box-sizing: border-box;
               page-break-inside: avoid;
               border-radius: 0 !important;
               box-shadow: none !important;
+              display: block !important;
             }
-            .flyer-container img {
-              max-width: 100%;
-              height: auto;
+            .flyer-container > div {
+              flex: none !important;
+            }
+            .flyer-container .grid {
+              display: grid !important;
+              grid-template-columns: 1fr 1fr !important;
+              grid-template-rows: 1fr 1fr !important;
+              height: 2.5in !important;
+              width: 80% !important;
+              margin: 0 auto !important;
+              flex: none !important;
+            }
+            .flyer-container .grid img {
+              width: 100% !important;
+              height: 100% !important;
+              aspect-ratio: auto !important;
             }
             .contact-box {
               -webkit-print-color-adjust: exact !important;
