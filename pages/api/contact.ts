@@ -104,8 +104,8 @@ This inquiry was submitted via the contact form at mendolaborcoop.ukiahumc.org
 
   try {
     await transporter.sendMail({
-      from: `"${process.env.CONTACT_EMAIL_FROM_NAME}" <${process.env.CONTACT_EMAIL_FROM}>`,
-      to: process.env.CONTACT_EMAIL_TO,
+      from: '"Mendo Labor Co-Op New Inquiry" <alerts@samuelholley.com>',
+      to: 'mendolaborcoop@gmail.com',
       replyTo: email,
       subject: `New Inquiry: ${name}`,
       text: emailContent,
