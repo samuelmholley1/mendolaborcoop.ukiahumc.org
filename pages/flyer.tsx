@@ -88,7 +88,7 @@ const FlyerPage: React.FC = () => {
     >
       
       {/* Logo - 11% */}
-      <div ref={showDebug ? logoRef : undefined} className="text-center flex-shrink-0 mb-1" style={{ height: '11%', border: showDebug ? '2px solid red' : 'none' }}>
+      <div ref={showDebug ? logoRef : undefined} className="text-center flex-shrink-0 mb-1" style={{ height: '11%', ...(showDebug && { border: '2px solid red' }) }}>
         <img
           src="/mendo_labor_coop_logo.png"
           alt="Mendo Labor Cooperative"
@@ -97,7 +97,7 @@ const FlyerPage: React.FC = () => {
       </div>
 
       {/* Headline - 8% */}
-      <div ref={showDebug ? headlineRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-2" style={{ height: '8%', border: showDebug ? '2px solid orange' : 'none' }}>
+      <div ref={showDebug ? headlineRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-2" style={{ height: '8%', ...(showDebug && { border: '2px solid orange' }) }}>
         <h1 className="text-xl font-headline font-black text-gold leading-none">
           Need an Extra Hand?
         </h1>
@@ -107,8 +107,8 @@ const FlyerPage: React.FC = () => {
       </div>
 
       {/* Phone CTA - 15% */}
-      <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 mb-2" style={{ height: '15%', border: showDebug ? '2px solid blue' : 'none' }}>
-        <p className="text-[10px] font-headline font-semibold text-moss leading-none" style={{ marginTop: '8px', marginBottom: '12px', border: showDebug ? '1px dashed purple' : 'none' }}>
+      <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 mb-2" style={{ height: '15%', ...(showDebug && { border: '2px solid blue' }) }}>
+        <p className="text-[10px] font-headline font-semibold text-moss leading-none" style={{ marginTop: '8px', marginBottom: '12px', ...(showDebug && { border: '1px dashed purple' }) }}>
           Call Our Coordinators Cheryl &amp; Braven
         </p>
         <div style={{ 
@@ -116,7 +116,7 @@ const FlyerPage: React.FC = () => {
           padding: '10px 16px', 
           display: 'inline-block', 
           borderRadius: '6px',
-          border: showDebug ? '2px solid yellow' : 'none' 
+          ...(showDebug && { border: '2px solid yellow' })
         }}>
           <span style={{ 
             color: '#FFFFFF', 
@@ -140,8 +140,8 @@ const FlyerPage: React.FC = () => {
       </div>
 
       {/* Footer - pinned to bottom */}
-      <div ref={showDebug ? footerRef : undefined} className="text-center flex-shrink-0 flex items-center justify-center border-t border-moss/30 mt-1 pt-1" style={{ height: '7%', border: showDebug ? '2px solid green' : 'none' }}>
-        <p className="font-body text-moss leading-none whitespace-nowrap" style={{ fontSize: '11px' }}>
+      <div ref={showDebug ? footerRef : undefined} className="text-center flex-shrink-0 flex items-start justify-center border-t border-moss/30 mt-2 pt-2" style={{ height: '7%', ...(showDebug && { border: '2px solid green' }) }}>
+        <p className="font-body text-moss leading-none whitespace-nowrap" style={{ fontSize: '13px' }}>
           mendolaborcoop@gmail.com • mendolaborcoop.ukiahumc.org
         </p>
       </div>
