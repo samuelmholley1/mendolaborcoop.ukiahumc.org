@@ -8,19 +8,23 @@ interface HeroSlideshowProps {
 const slides = [
   {
     src: '/co-op-job-photo-1.jpeg',
-    alt: 'Mendo Labor Cooperative workers on the job - Photo 1'
+    alt: 'Mendo Labor Cooperative workers on the job - Photo 1',
+    position: 'object-top'
   },
   {
     src: '/co-op-job-photo-2.jpeg',
-    alt: 'Mendo Labor Cooperative workers on the job - Photo 2'
+    alt: 'Mendo Labor Cooperative workers on the job - Photo 2',
+    position: 'object-top'
   },
   {
     src: '/co-op-job-photo-3.jpeg',
-    alt: 'Mendo Labor Cooperative workers on the job - Photo 3'
+    alt: 'Mendo Labor Cooperative workers on the job - Photo 3',
+    position: 'object-top'
   },
   {
     src: '/co-op-job-photo-4.jpeg',
-    alt: 'Mendo Labor Cooperative workers on the job - Photo 4'
+    alt: 'Mendo Labor Cooperative workers on the job - Photo 4',
+    position: 'object-[center_15%]'
   }
 ];
 
@@ -66,7 +70,7 @@ const HeroSlideshow: React.FC<HeroSlideshowProps> = ({ autoPlayInterval = 4000 }
               alt={slide.alt}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-top"
+              className={`object-cover ${slide.position}`}
               priority={index === 0}
             />
           </div>
