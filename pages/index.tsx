@@ -269,7 +269,7 @@ const HomePage: React.FC = () => {
                           <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1">Call Us</p>
                           <a 
                             href="tel:+13692161512" 
-                            className="text-4xl sm:text-4xl lg:text-5xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
+                            className="text-[33px] sm:text-4xl lg:text-5xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
                           >
                             (369) 216-1512
                           </a>
@@ -281,11 +281,11 @@ const HomePage: React.FC = () => {
                         </div>
                         
                         {/* Right: Submit Inquiry - 1/3 width */}
-                        <div className="w-1/3 text-center pl-2 lg:pl-4 pr-2 lg:pr-5 flex flex-col justify-center">
+                        <div className="w-1/3 text-center pl-2 lg:pl-4 pr-3 lg:pr-6 flex flex-col justify-center">
                           <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1 lg:mb-2">Or Online</p>
                           <button
                             onClick={() => setShowContactPopup(true)}
-                            className="bg-gold text-moss px-3 lg:px-5 py-3 lg:py-4 rounded-md font-headline font-bold text-sm lg:text-lg hover:bg-gold/90 transition-colors mx-auto whitespace-nowrap shadow-lg border-2 border-cream/50 hover:scale-105 transform"
+                            className="bg-gold text-moss px-3 lg:px-5 py-3 lg:py-4 rounded-md font-headline font-bold text-sm lg:text-lg hover:bg-gold/90 transition-colors mr-0 ml-auto whitespace-nowrap shadow-lg border-2 border-cream/50 hover:scale-105 transform"
                           >
                             Submit Inquiry
                           </button>
