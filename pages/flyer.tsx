@@ -34,7 +34,8 @@ const FlyerPage: React.FC = () => {
       const styleTag = document.createElement('style');
       styleTag.id = 'pdf-export-overrides';
       styleTag.textContent = `
-        /* NUCLEAR RESET: Kill ALL default Tailwind borders globally */
+        /* NUCLEAR RESET: Kill ALL default Tailwind borders and backgrounds */
+        .flyer-container,
         .flyer-container *,
         .flyer-container *::before,
         .flyer-container *::after {
@@ -44,30 +45,35 @@ const FlyerPage: React.FC = () => {
           outline-offset: 0 !important;
           text-shadow: none !important;
           border-color: transparent !important;
+          border-style: none !important;
+          border-width: 0 !important;
         }
         
-        /* RE-ENABLE borders ONLY for intentional border elements */
-        .flyer-container.border-4.border-moss {
-          border-color: #2e5936 !important;
+        /* Force transparent background on containers */
+        .flyer-container > div {
+          background-color: transparent !important;
         }
-        .flyer-container .border-t.border-moss\\/30 {
-          border-color: rgba(46, 89, 54, 0.3) !important;
+        
+        /* Keep white background on main flyer */
+        .flyer-container {
+          background-color: #ffffff !important;
+        }
+        
+        /* Keep green background on phone box */
+        .flyer-container div[style*="#356A45"] {
+          background-color: #356A45 !important;
         }
         
         /* Ensure images don't get weird borders */
         .flyer-container img {
           border: none !important;
           border-color: transparent !important;
+          background-color: transparent !important;
         }
         
-        /* Fix any text rendering artifacts */
-        .flyer-container h1,
-        .flyer-container h2,
-        .flyer-container h3,
-        .flyer-container p,
-        .flyer-container span,
-        .flyer-container div {
-          text-shadow: none !important;
+        /* Fix footer border */
+        .flyer-container .border-t {
+          border-top: 1px solid rgba(46, 89, 54, 0.3) !important;
         }
       `;
       document.head.appendChild(styleTag);
@@ -140,19 +146,17 @@ const FlyerPage: React.FC = () => {
         </p>
         <div style={{ 
           backgroundColor: '#356A45', 
-          padding: '3px 14px 5px 14px', 
+          padding: '4px 16px', 
           display: 'inline-block',
-          borderRadius: '6px',
-          textAlign: 'center'
+          borderRadius: '6px'
         }}>
           <span style={{ 
             color: '#FFFFFF', 
             fontSize: '20px',
-            lineHeight: '1.1',
+            lineHeight: '24px',
             fontWeight: 800, 
             fontFamily: 'Montserrat, Arial, sans-serif',
-            whiteSpace: 'nowrap',
-            display: 'block'
+            whiteSpace: 'nowrap'
           }}>
             (369) 216-1512
           </span>
