@@ -2,25 +2,22 @@
 import Head from 'next/head';
 
 const FlyerPage: React.FC = () => {
-  // Single flyer component - 495px total height
-  // Padding: 12px top + 12px bottom = 24px
-  // Border: 4px top + 4px bottom = 8px
-  // Usable: 495 - 24 - 8 = 463px
-  // Logo: 56px | Headline: 50px | CTA: 56px | Photos: 280px | Footer: 20px = 462px
+  // Flyer uses percentage-based heights to work in both screen (495px) and print (5.5in)
+  // Logo: 12% | Headline: 11% | CTA: 12% | Photos: 58% | Footer: 5% = 98% (2% buffer)
   const Flyer = () => (
-    <div className="flyer-container bg-white p-3 shadow-lg rounded-lg border-4 border-moss overflow-hidden flex flex-col">
+    <div className="flyer-container bg-white p-3 shadow-lg rounded-lg border-4 border-moss overflow-hidden flex flex-col h-full">
       
-      {/* Logo - 56px */}
-      <div className="text-center h-14 flex-shrink-0">
+      {/* Logo - 12% */}
+      <div className="text-center flex-shrink-0" style={{ height: '12%' }}>
         <img
           src="/mendo_labor_coop_logo.png"
           alt="Mendo Labor Cooperative"
-          className="mx-auto w-14 h-14"
+          className="mx-auto h-full w-auto"
         />
       </div>
 
-      {/* Headline - 50px */}
-      <div className="text-center h-[50px] flex-shrink-0 flex flex-col justify-center">
+      {/* Headline - 11% */}
+      <div className="text-center flex-shrink-0 flex flex-col justify-center" style={{ height: '11%' }}>
         <h1 className="text-xl font-headline font-black text-gold leading-none">
           Need an Extra Hand?
         </h1>
@@ -29,8 +26,8 @@ const FlyerPage: React.FC = () => {
         </p>
       </div>
 
-      {/* Phone CTA - 56px */}
-      <div className="text-center h-14 flex-shrink-0 flex flex-col justify-center">
+      {/* Phone CTA - 12% */}
+      <div className="text-center flex-shrink-0 flex flex-col justify-center" style={{ height: '12%' }}>
         <p className="text-[10px] font-headline font-semibold text-moss leading-none">
           Call or Text Cheryl
         </p>
@@ -41,16 +38,16 @@ const FlyerPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Photos 2x2 grid - 280px */}
-      <div className="grid grid-cols-2 gap-1 h-[280px] flex-shrink-0">
+      {/* Photos 2x2 grid - 58% */}
+      <div className="grid grid-cols-2 gap-1 flex-shrink-0" style={{ height: '58%' }}>
         <img src="/co-op-job-photo-1.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded" />
         <img src="/co-op-job-photo-2.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded" />
         <img src="/co-op-job-photo-3.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded" />
         <img src="/co-op-job-photo-4.jpeg" alt="Workers" className="w-full h-full object-cover object-[center_30%] rounded" />
       </div>
 
-      {/* Footer - 20px */}
-      <div className="text-center h-5 flex-shrink-0 flex items-center justify-center border-t border-moss/30">
+      {/* Footer - 5% */}
+      <div className="text-center flex-shrink-0 flex items-center justify-center border-t border-moss/30" style={{ height: '5%' }}>
         <p className="text-[9px] font-body text-moss leading-none">
           mendolaborcoop@gmail.com • mendolaborcoop.ukiahumc.org
         </p>
