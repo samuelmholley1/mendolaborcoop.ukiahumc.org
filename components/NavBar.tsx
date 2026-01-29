@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
     { name: 'Our Crew', href: '/our-crew' },
     { name: 'Hire Worker(s)', href: '/hire' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact Us', href: '/contact-us' },
     { name: 'Newsletter', href: '/newsletter' },
   ];
 

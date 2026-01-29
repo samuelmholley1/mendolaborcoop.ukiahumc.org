@@ -317,6 +317,97 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
+        {/* Contact Form Section */}
+        <section id="contact-form" className="py-16 bg-cream">
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-gold mb-4">
+                Submit a Job Inquiry
+              </h2>
+              <p className="text-lg font-body text-moss">
+                Tell us about your project and we'll get back to you promptly.
+              </p>
+            </div>
+
+            {/* Phone CTA */}
+            <div className="bg-moss text-cream p-5 rounded-lg text-center border-4 border-gold shadow-xl mb-8">
+              <p className="text-base font-headline font-semibold mb-1">
+                Prefer to call? Reach us directly:
+              </p>
+              <a 
+                href="tel:+13692161512" 
+                className="text-2xl md:text-3xl font-headline font-extrabold block hover:opacity-90 transition-opacity"
+              >
+                (369) 216-1512
+              </a>
+            </div>
+
+            {/* Contact Form */}
+            <div className="bg-sand rounded-lg shadow-lg p-6 md:p-8 border-4 border-moss">
+              <form action="/contact-us" method="GET" className="space-y-5">
+                <div>
+                  <label htmlFor="home-name" className="block text-lg font-headline font-semibold text-gold mb-2">
+                    Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="home-name"
+                    name="name"
+                    required
+                    className="w-full px-4 py-3 border-2 border-moss rounded-lg font-body text-moss focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="home-phone" className="block text-lg font-headline font-semibold text-gold mb-2">
+                    Phone Number <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="home-phone"
+                    name="phone"
+                    required
+                    className="w-full px-4 py-3 border-2 border-moss rounded-lg font-body text-moss focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
+                    placeholder="(555) 123-4567"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="home-email" className="block text-lg font-headline font-semibold text-gold mb-2">
+                    Email <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="home-email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 border-2 border-moss rounded-lg font-body text-moss focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
+                    placeholder="you@example.com"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="home-job" className="block text-lg font-headline font-semibold text-gold mb-2">
+                    Job Description <span className="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    id="home-job"
+                    name="jobDescription"
+                    required
+                    rows={4}
+                    className="w-full px-4 py-3 border-2 border-moss rounded-lg font-body text-moss focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold resize-vertical"
+                    placeholder="Describe the job or work you need done..."
+                  />
+                </div>
+                <Link
+                  href="/contact-us"
+                  className="block w-full py-4 rounded-lg text-xl font-headline font-bold bg-gold text-cream hover:bg-opacity-90 transition-colors text-center"
+                >
+                  Submit Inquiry
+                </Link>
+              </form>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Band */}
         <section className="bg-gold py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -328,7 +419,7 @@ const HomePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="bg-cream text-gold px-8 py-3 rounded-lg text-lg font-headline font-semibold hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-4 focus:ring-sand"
               >
                 Get In Touch
