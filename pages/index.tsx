@@ -234,7 +234,7 @@ const HomePage: React.FC = () => {
                   {/* Logo + Tagline Row */}
                   <div className="flex flex-col lg:flex-row lg:gap-6 lg:items-center">
                     {/* Component 1: LOGO - larger, minimal gap, slightly right on desktop */}
-                    <div className="flex-shrink-0 mx-auto lg:mx-0 lg:ml-2 mb-[5px] lg:mb-0">
+                    <div className="flex-shrink-0 mx-auto lg:mx-0 lg:ml-2 mb-3 lg:mb-0">
                       <img
                         src="/mendo_labor_coop_logo.png"
                         alt="Mendo Labor Cooperative Logo"
@@ -257,29 +257,47 @@ const HomePage: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Component 3: CTA - Full column width, 7px wider than content above */}
+                  {/* Component 3: CTA - Two equal pathways: Call | Submit Inquiry */}
                   <div className="w-full lg:ml-2" style={{ marginLeft: '-7px', marginRight: '-7px', width: 'calc(100% + 14px)' }}>
-                    <div className="bg-moss text-cream p-5 lg:p-6 xl:p-8 rounded-lg text-center border-4 border-gold shadow-xl">
-                      <p className="text-sm lg:text-lg font-headline font-semibold mb-2">
-                        Call Our Coordinators<span className="inline"> Cheryl &amp; Braven</span>
+                    <div className="bg-moss text-cream p-4 lg:p-5 xl:p-6 rounded-lg border-4 border-gold shadow-xl">
+                      <p className="text-sm lg:text-base font-headline font-semibold mb-3 text-center">
+                        Contact Our Coordinators Cheryl &amp; Braven
                       </p>
-                      <a 
-                        href="tel:+13692161512" 
-                        className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-headline font-extrabold block hover:opacity-90 transition-opacity"
-                      >
-                        (369) 216-1512
-                      </a>
-                      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mt-3">
-                        <button
-                          onClick={() => setShowContactPopup(true)}
-                          className="bg-gold text-moss px-4 py-2 rounded-md font-headline font-semibold text-sm hover:bg-gold/90 transition-colors"
-                        >
-                          📝 Contact Form
-                        </button>
-                        <p className="text-sm lg:text-base font-body opacity-90">
-                          Hire a Worker • Join the Co-op
-                        </p>
+                      <div className="flex flex-col sm:flex-row items-stretch justify-center">
+                        {/* Left: Call */}
+                        <div className="flex-1 text-center py-2 sm:py-0 sm:pr-4">
+                          <p className="text-xs lg:text-sm font-body opacity-80 mb-1">Call Us</p>
+                          <a 
+                            href="tel:+13692161512" 
+                            className="text-2xl sm:text-3xl lg:text-4xl font-headline font-extrabold block hover:opacity-90 transition-opacity"
+                          >
+                            (369) 216-1512
+                          </a>
+                        </div>
+                        
+                        {/* Vertical Divider */}
+                        <div className="hidden sm:flex items-center px-4">
+                          <div className="w-px h-12 bg-cream/40"></div>
+                        </div>
+                        {/* Horizontal Divider for mobile */}
+                        <div className="sm:hidden flex justify-center py-2">
+                          <div className="h-px w-24 bg-cream/40"></div>
+                        </div>
+                        
+                        {/* Right: Submit Inquiry */}
+                        <div className="flex-1 text-center py-2 sm:py-0 sm:pl-4 flex flex-col justify-center">
+                          <p className="text-xs lg:text-sm font-body opacity-80 mb-2">Or Online</p>
+                          <button
+                            onClick={() => setShowContactPopup(true)}
+                            className="bg-gold text-moss px-5 py-2.5 rounded-md font-headline font-bold text-base lg:text-lg hover:bg-gold/90 transition-colors mx-auto"
+                          >
+                            Submit Inquiry
+                          </button>
+                        </div>
                       </div>
+                      <p className="text-xs lg:text-sm font-body mt-3 opacity-80 text-center">
+                        Hire a Worker • Join the Co-op
+                      </p>
                     </div>
                   </div>
                 </div>
