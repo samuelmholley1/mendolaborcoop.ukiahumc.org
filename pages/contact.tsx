@@ -145,7 +145,7 @@ const ContactPage: React.FC = () => {
           <div className="p-6">
             <div className="text-center">
               <p className="text-lg font-body text-moss mb-6">
-                Ready to get a helping hand?
+                Ready to get an extra hand?
               </p>
               <div className="bg-sand rounded-lg p-4 mb-6 space-y-4">
                 <div>

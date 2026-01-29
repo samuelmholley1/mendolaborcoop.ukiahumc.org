@@ -224,7 +224,7 @@ const OurCrewPage: React.FC = () => {
       <section className="py-16 bg-sand">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-headline font-bold text-gold mb-6">
-            Ready to Get a Helping Hand?
+            Ready to Get an Extra Hand?
           </h2>
           <p className="text-moss/80 text-lg mb-8 max-w-2xl mx-auto">
             Contact our coordinators Cheryl &amp; Braven to connect directly with independent workers. 
