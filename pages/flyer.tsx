@@ -100,8 +100,8 @@ const FlyerPage: React.FC = () => {
         />
       </div>
 
-      {/* Headline - 8% - tighter */}
-      <div ref={showDebug ? headlineRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-0.5" style={{ height: '8%' }}>
+      {/* Headline - 8% */}
+      <div ref={showDebug ? headlineRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-2" style={{ height: '8%' }}>
         <h1 className="text-xl font-headline font-black text-gold leading-none">
           Need an Extra Hand?
         </h1>
@@ -110,13 +110,13 @@ const FlyerPage: React.FC = () => {
         </p>
       </div>
 
-      {/* Phone CTA - 13% */}
-      <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-1" style={{ height: '13%' }}>
-        <p className="text-[10px] font-headline font-semibold text-moss leading-none mb-3">
+      {/* Phone CTA - 15% */}
+      <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 mb-2" style={{ height: '15%' }}>
+        <p className="text-[10px] font-headline font-semibold text-moss leading-none mt-2 mb-3">
           Call Our Coordinators Cheryl & Braven
         </p>
-        <div className="contact-box bg-[#356A45] text-white py-2.5 px-4 rounded-md inline-block mx-auto">
-          <span className="text-xl font-headline font-black whitespace-nowrap leading-none" style={{ color: '#FFFFFF', display: 'block' }}>
+        <div className="contact-box bg-[#356A45] text-white rounded-md inline-block mx-auto" style={{ padding: '12px 16px' }}>
+          <span className="text-xl font-headline font-black whitespace-nowrap" style={{ color: '#FFFFFF' }}>
             (369) 216-1512
           </span>
         </div>
