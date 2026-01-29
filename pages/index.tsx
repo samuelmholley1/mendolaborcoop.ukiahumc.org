@@ -269,7 +269,7 @@ const HomePage: React.FC = () => {
                           <p className="text-[10px] lg:text-sm font-body opacity-80 mb-0.5">Call Us</p>
                           <a 
                             href="tel:+13692161512" 
-                            className="text-xl sm:text-3xl lg:text-5xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
+                            className="text-2xl sm:text-4xl lg:text-6xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
                           >
                             (369) 216-1512
                           </a>
