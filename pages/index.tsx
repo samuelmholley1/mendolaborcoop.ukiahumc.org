@@ -229,7 +229,7 @@ const HomePage: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 items-start">
                 
                 {/* Left Column - Logo (desktop only) + Tagline + CTA */}
-                <div className="flex flex-col space-y-2 lg:space-y-4 order-2 lg:order-1">
+                <div className="flex flex-col space-y-2 lg:space-y-4 order-1 lg:order-1">
                   
                   {/* Logo + Tagline Row */}
                   <div className="flex flex-col lg:flex-row lg:gap-6 lg:items-center">
@@ -298,8 +298,8 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Right Column - Component 4: SLIDESHOW - shows first on mobile */}
-                <div className="w-full h-48 sm:h-64 lg:h-[28rem] xl:h-[32rem] order-1 lg:order-2">
+                {/* Right Column - Component 4: SLIDESHOW - shows after CTA on mobile */}
+                <div className="w-full aspect-square sm:aspect-auto sm:h-64 lg:h-[28rem] xl:h-[32rem] order-2 lg:order-2">
                   <HeroSlideshow autoPlayInterval={5000} />
                 </div>
 

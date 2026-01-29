@@ -56,11 +56,13 @@ const FlyerPage: React.FC = () => {
         { x: 4.25, y: 5.5 }  // bottom-right
       ];
       
-      // Inject style tag to override ALL box-shadows and outlines with !important
+      // Inject style tag to override Tailwind Preflight borders and box-shadows
+      // Tailwind's Preflight sets border-color: #e5e7eb on all elements, which
+      // dom-to-image can render as visible gray lines even with border-width: 0
       const styleTag = document.createElement('style');
       styleTag.id = 'pdf-export-overrides';
       styleTag.textContent = `
-        .flyer-container,
+        /* NUCLEAR RESET: Kill ALL default Tailwind borders globally */
         .flyer-container *,
         .flyer-container *::before,
         .flyer-container *::after {
@@ -69,12 +71,37 @@ const FlyerPage: React.FC = () => {
           outline: none !important;
           outline-offset: 0 !important;
           text-shadow: none !important;
+          border-color: transparent !important;
+        }
+        
+        /* RE-ENABLE borders ONLY for intentional border elements */
+        .flyer-container.border-4.border-moss {
+          border-color: #2e5936 !important;
+        }
+        .flyer-container .border-t.border-moss\\/30 {
+          border-color: rgba(46, 89, 54, 0.3) !important;
+        }
+        
+        /* Ensure images don't get weird borders */
+        .flyer-container img {
+          border: none !important;
+          border-color: transparent !important;
+        }
+        
+        /* Fix any text rendering artifacts */
+        .flyer-container h1,
+        .flyer-container h2,
+        .flyer-container h3,
+        .flyer-container p,
+        .flyer-container span,
+        .flyer-container div {
+          text-shadow: none !important;
         }
       `;
       document.head.appendChild(styleTag);
       
-      // Small delay to ensure styles are applied
-      await new Promise(resolve => setTimeout(resolve, 50));
+      // Small delay to ensure styles are applied and browser repaints
+      await new Promise(resolve => setTimeout(resolve, 100));
       
       for (let i = 0; i < Math.min(flyers.length, 4); i++) {
         const flyer = flyers[i] as HTMLElement;
@@ -83,7 +110,11 @@ const FlyerPage: React.FC = () => {
         const imgData = await domtoimage.toPng(flyer, {
           quality: 1,
           scale: 3,
-          bgcolor: '#ffffff'
+          bgcolor: '#ffffff',
+          style: {
+            transform: 'scale(1)',
+            transformOrigin: 'top left'
+          }
         });
         
         // Add to PDF at correct position (4.25 x 5.5 inches each)
