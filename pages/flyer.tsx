@@ -39,7 +39,7 @@ const FlyerPage: React.FC = () => {
     setGenerating(true);
     
     try {
-      const html2canvas = (await import('html2canvas')).default;
+      const domtoimage = (await import('dom-to-image-more')).default;
       const jsPDF = (await import('jspdf')).default;
       
       // Create PDF - Letter size (8.5 x 11 inches)
@@ -59,16 +59,12 @@ const FlyerPage: React.FC = () => {
       for (let i = 0; i < Math.min(flyers.length, 4); i++) {
         const flyer = flyers[i] as HTMLElement;
         
-        // Capture at high resolution (3x for better quality)
-        const canvas = await html2canvas(flyer, {
+        // Capture at high resolution using dom-to-image-more
+        const imgData = await domtoimage.toPng(flyer, {
+          quality: 1,
           scale: 3,
-          useCORS: true,
-          allowTaint: true,
-          backgroundColor: '#ffffff',
-          logging: false
+          bgcolor: '#ffffff'
         });
-        
-        const imgData = canvas.toDataURL('image/png');
         
         // Add to PDF at correct position (4.25 x 5.5 inches each)
         pdf.addImage(imgData, 'PNG', positions[i].x, positions[i].y, 4.25, 5.5);
