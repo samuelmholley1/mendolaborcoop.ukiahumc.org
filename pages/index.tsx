@@ -264,12 +264,12 @@ const HomePage: React.FC = () => {
                         Contact Our Coordinators Cheryl &amp; Braven
                       </p>
                       <div className="flex flex-row items-stretch justify-center">
-                        {/* Left: Call */}
-                        <div className="flex-1 text-center pr-2 lg:pr-4">
+                        {/* Left: Call - 2/3 width */}
+                        <div className="w-2/3 text-center pr-2 lg:pr-4 flex flex-col justify-center">
                           <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1">Call Us</p>
                           <a 
                             href="tel:+13692161512" 
-                            className="text-lg sm:text-2xl lg:text-4xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
+                            className="text-xl sm:text-3xl lg:text-5xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
                           >
                             (369) 216-1512
                           </a>
@@ -277,15 +277,15 @@ const HomePage: React.FC = () => {
                         
                         {/* Vertical Divider - always visible */}
                         <div className="flex items-center px-2 lg:px-4">
-                          <div className="w-px h-10 lg:h-12 bg-cream/40"></div>
+                          <div className="w-px h-12 lg:h-16 bg-cream/40"></div>
                         </div>
                         
-                        {/* Right: Submit Inquiry */}
-                        <div className="flex-1 text-center pl-2 lg:pl-4 flex flex-col justify-center">
+                        {/* Right: Submit Inquiry - 1/3 width */}
+                        <div className="w-1/3 text-center pl-2 lg:pl-4 flex flex-col justify-center">
                           <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1 lg:mb-2">Or Online</p>
                           <button
                             onClick={() => setShowContactPopup(true)}
-                            className="bg-gold text-moss px-3 lg:px-5 py-1.5 lg:py-2.5 rounded-md font-headline font-bold text-sm lg:text-lg hover:bg-gold/90 transition-colors mx-auto whitespace-nowrap"
+                            className="bg-gold text-moss px-3 lg:px-5 py-3 lg:py-4 rounded-md font-headline font-bold text-sm lg:text-lg hover:bg-gold/90 transition-colors mx-auto whitespace-nowrap shadow-lg border-2 border-cream/50 hover:scale-105 transform"
                           >
                             Submit Inquiry
                           </button>
@@ -565,7 +565,7 @@ const HomePage: React.FC = () => {
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
             <div className="bg-cream rounded-lg shadow-2xl max-w-md w-full border-4 border-gold overflow-hidden">
               {/* Header with Logo */}
-              <div className={`${submitResult.success ? 'bg-moss' : 'bg-red-700'} text-cream px-6 py-5`}>
+              <div className="bg-moss text-cream px-6 py-5">
                 <div className="flex items-center justify-center gap-3">
                   <img
                     src="/mendo_labor_coop_logo.png"
@@ -586,14 +586,14 @@ const HomePage: React.FC = () => {
                 <div className="text-center">
                   {/* Icon */}
                   <div className={`mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-4 ${
-                    submitResult.success ? 'bg-moss' : 'bg-red-100'
+                    submitResult.success ? 'bg-moss' : 'bg-sand'
                   }`}>
                     {submitResult.success ? (
                       <svg className="w-8 h-8 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     ) : (
-                      <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-8 h-8 text-moss" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     )}
