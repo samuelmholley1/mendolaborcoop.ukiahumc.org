@@ -265,11 +265,11 @@ const HomePage: React.FC = () => {
                       </p>
                       <div className="flex flex-row items-stretch justify-center">
                         {/* Left: Call - 2/3 width */}
-                        <div className="w-2/3 text-center pr-2 lg:pr-4 lg:pl-5 flex flex-col justify-center">
+                        <div className="w-2/3 text-center pr-2 lg:pr-4 pl-2 lg:pl-5 flex flex-col justify-center">
                           <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1">Call Us</p>
                           <a 
                             href="tel:+13692161512" 
-                            className="text-3xl sm:text-4xl lg:text-5xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
+                            className="text-4xl sm:text-4xl lg:text-5xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
                           >
                             (369) 216-1512
                           </a>
@@ -281,7 +281,7 @@ const HomePage: React.FC = () => {
                         </div>
                         
                         {/* Right: Submit Inquiry - 1/3 width */}
-                        <div className="w-1/3 text-center pl-2 lg:pl-4 lg:pr-5 flex flex-col justify-center">
+                        <div className="w-1/3 text-center pl-2 lg:pl-4 pr-2 lg:pr-5 flex flex-col justify-center">
                           <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1 lg:mb-2">Or Online</p>
                           <button
                             onClick={() => setShowContactPopup(true)}
