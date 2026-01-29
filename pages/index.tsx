@@ -284,7 +284,7 @@ const HomePage: React.FC = () => {
                         <div className="w-1/3 text-center pl-1 lg:pl-2 pr-4 lg:pr-8 flex flex-col justify-center">
                           <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1 lg:mb-2">Or Online</p>
                           <button
-                            onClick={() => setShowContactPopup(true)}
+                            onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
                             className="bg-gold text-moss px-3 lg:px-5 py-3 lg:py-4 rounded-md font-headline font-bold text-sm lg:text-lg hover:bg-gold/90 transition-colors mx-auto whitespace-nowrap shadow-lg border-2 border-cream/50 hover:scale-105 transform"
                           >
                             Submit Inquiry
