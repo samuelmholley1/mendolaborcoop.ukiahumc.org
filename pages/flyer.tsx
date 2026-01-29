@@ -100,8 +100,8 @@ const FlyerPage: React.FC = () => {
         />
       </div>
 
-      {/* Headline - 9% - tighter */}
-      <div ref={showDebug ? headlineRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-1" style={{ height: '9%' }}>
+      {/* Headline - 8% - tighter */}
+      <div ref={showDebug ? headlineRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-0.5" style={{ height: '8%' }}>
         <h1 className="text-xl font-headline font-black text-gold leading-none">
           Need an Extra Hand?
         </h1>
@@ -110,13 +110,13 @@ const FlyerPage: React.FC = () => {
         </p>
       </div>
 
-      {/* Phone CTA - 14% - more space for padding */}
-      <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-2" style={{ height: '14%' }}>
-        <p className="text-[10px] font-headline font-semibold text-moss leading-none mb-2">
+      {/* Phone CTA - 13% */}
+      <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-1" style={{ height: '13%' }}>
+        <p className="text-[10px] font-headline font-semibold text-moss leading-none mb-3">
           Call Our Coordinators Cheryl & Braven
         </p>
-        <div className="contact-box bg-[#356A45] text-white py-2 px-4 rounded-md inline-block mx-auto flex items-center justify-center">
-          <span className="text-xl font-headline font-black whitespace-nowrap" style={{ color: '#FFFFFF' }}>
+        <div className="contact-box bg-[#356A45] text-white py-2.5 px-4 rounded-md inline-block mx-auto">
+          <span className="text-xl font-headline font-black whitespace-nowrap leading-none" style={{ color: '#FFFFFF', display: 'block' }}>
             (369) 216-1512
           </span>
         </div>
@@ -130,8 +130,8 @@ const FlyerPage: React.FC = () => {
         <img src="/co-op-job-photo-4.jpeg" alt="Workers" className="w-full h-full object-cover object-[center_30%] rounded aspect-square" />
       </div>
 
-      {/* Footer - pinned to bottom - smaller margin */}
-      <div ref={showDebug ? footerRef : undefined} className="text-center flex-shrink-0 flex items-center justify-center border-t border-moss/30 mt-1 pt-1" style={{ height: '5%' }}>
+      {/* Footer - pinned to bottom */}
+      <div ref={showDebug ? footerRef : undefined} className="text-center flex-shrink-0 flex items-center justify-center border-t border-moss/30 mt-1 pt-1" style={{ height: '7%' }}>
         <p className="text-[9px] font-body text-moss leading-none">
           mendolaborcoop@gmail.com • mendolaborcoop.ukiahumc.org
         </p>
