@@ -260,7 +260,7 @@ const HomePage: React.FC = () => {
                   {/* Component 3: CTA - Two equal pathways side by side on all screens */}
                   <div className="w-full lg:ml-2" style={{ marginLeft: '-7px', marginRight: '-7px', width: 'calc(100% + 14px)' }}>
                     <div className="bg-moss text-cream p-3 lg:p-5 xl:p-6 rounded-lg border-4 border-gold shadow-xl">
-                      <p className="text-xs lg:text-base font-headline font-semibold mb-2 lg:mb-3 text-center">
+                      <p className="text-base lg:text-base font-headline font-semibold mb-2 lg:mb-3 text-center">
                         Contact Our Coordinators Cheryl &amp; Braven
                       </p>
                       <div className="flex flex-row items-stretch justify-center">
@@ -291,8 +291,8 @@ const HomePage: React.FC = () => {
                           </button>
                         </div>
                       </div>
-                      <p className="text-[10px] lg:text-sm font-body mt-2 lg:mt-3 opacity-80 text-center">
-                        Get a Helping Hand
+                      <p className="text-base lg:text-sm font-body mt-2 lg:mt-3 opacity-80 text-center">
+                        Get an Extra Hand
                       </p>
                     </div>
                   </div>
