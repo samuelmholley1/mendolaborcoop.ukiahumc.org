@@ -164,7 +164,7 @@ const FlyerPage: React.FC = () => {
 
       {/* Phone CTA - 15% */}
       <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 mb-2" style={{ height: '15%' }}>
-        <p className="text-[10px] font-headline font-semibold text-moss leading-none" style={{ marginTop: '4px', marginBottom: '6px' }}>
+        <p className="text-[10px] font-headline font-semibold text-moss leading-none" style={{ marginTop: '0px', marginBottom: '6px' }}>
           Call Our Coordinators Cheryl &amp; Braven
         </p>
         <div style={{ 
@@ -198,7 +198,7 @@ const FlyerPage: React.FC = () => {
       </div>
 
       {/* Footer - pinned to bottom */}
-      <div ref={showDebug ? footerRef : undefined} className="text-center flex-shrink-0 flex items-start justify-center border-t border-moss/30 mt-2 pt-2" style={{ height: '7%' }}>
+      <div ref={showDebug ? footerRef : undefined} className="text-center flex-shrink-0 flex items-start justify-center border-t border-moss/30 mt-2 pt-1" style={{ height: '7%' }}>
         <p className="font-body text-moss leading-none whitespace-nowrap" style={{ fontSize: '12px' }}>
           mendolaborcoop@gmail.com • mendolaborcoop.ukiahumc.org
         </p>
