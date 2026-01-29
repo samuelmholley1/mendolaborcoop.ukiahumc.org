@@ -32,7 +32,6 @@ const FlyerPage: React.FC = () => {
   }, [debug]);
 
   // Flyer uses percentage-based heights to work in both screen (495px) and print (5.5in)
-  // Logo: 12% | Headline: 11% | CTA: 12% | Photos: 58% | Footer: 5% = 98% (2% buffer)
   const Flyer = ({ showDebug = false }: { showDebug?: boolean }) => (
     <div 
       ref={showDebug ? containerRef : undefined}
@@ -41,7 +40,7 @@ const FlyerPage: React.FC = () => {
     >
       
       {/* Logo - 12% */}
-      <div ref={showDebug ? logoRef : undefined} className="text-center flex-shrink-0" style={{ height: '12%' }}>
+      <div ref={showDebug ? logoRef : undefined} className="text-center flex-shrink-0 mb-2" style={{ height: '12%' }}>
         <img
           src="/mendo_labor_coop_logo.png"
           alt="Mendo Labor Cooperative"
@@ -50,7 +49,7 @@ const FlyerPage: React.FC = () => {
       </div>
 
       {/* Headline - 11% */}
-      <div ref={showDebug ? headlineRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center" style={{ height: '11%' }}>
+      <div ref={showDebug ? headlineRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-2" style={{ height: '11%' }}>
         <h1 className="text-xl font-headline font-black text-gold leading-none">
           Need an Extra Hand?
         </h1>
@@ -60,7 +59,7 @@ const FlyerPage: React.FC = () => {
       </div>
 
       {/* Phone CTA - 12% */}
-      <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center" style={{ height: '12%' }}>
+      <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-3" style={{ height: '12%' }}>
         <p className="text-[10px] font-headline font-semibold text-moss leading-none">
           Call or Text Cheryl
         </p>
@@ -71,16 +70,16 @@ const FlyerPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Photos 2x2 grid - 29% (squares) */}
-      <div ref={showDebug ? photosRef : undefined} className="grid grid-cols-2 gap-1 flex-shrink-0 mx-auto" style={{ height: '29%', width: '60%' }}>
+      {/* Photos 2x2 grid - grows to fill space */}
+      <div ref={showDebug ? photosRef : undefined} className="grid grid-cols-2 gap-3 flex-grow mx-auto" style={{ width: '75%' }}>
         <img src="/co-op-job-photo-1.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded aspect-square" />
         <img src="/co-op-job-photo-2.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded aspect-square" />
         <img src="/co-op-job-photo-3.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded aspect-square" />
         <img src="/co-op-job-photo-4.jpeg" alt="Workers" className="w-full h-full object-cover object-[center_30%] rounded aspect-square" />
       </div>
 
-      {/* Footer - 5% */}
-      <div ref={showDebug ? footerRef : undefined} className="text-center flex-shrink-0 flex items-center justify-center border-t border-moss/30" style={{ height: '5%' }}>
+      {/* Footer - pinned to bottom */}
+      <div ref={showDebug ? footerRef : undefined} className="text-center flex-shrink-0 flex items-center justify-center border-t border-moss/30 mt-2 pt-1">
         <p className="text-[9px] font-body text-moss leading-none">
           mendolaborcoop@gmail.com • mendolaborcoop.ukiahumc.org
         </p>
