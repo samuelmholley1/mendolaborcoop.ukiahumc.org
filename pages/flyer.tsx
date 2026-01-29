@@ -133,14 +133,14 @@ const FlyerPage: React.FC = () => {
         </p>
       </div>
 
-      {/* Phone CTA - 15% */}
-      <div className="text-center flex-shrink-0 mb-2" style={{ height: '15%' }}>
-        <p className="text-[10px] font-headline font-semibold text-moss leading-none" style={{ marginTop: '0px', marginBottom: '6px' }}>
+      {/* Phone CTA - 12% */}
+      <div className="text-center flex-shrink-0 mb-2" style={{ height: '12%' }}>
+        <p className="text-[10px] font-headline font-semibold text-moss leading-none" style={{ marginTop: '0px', marginBottom: '4px' }}>
           Call Our Coordinators Cheryl &amp; Braven
         </p>
         <div style={{ 
           backgroundColor: '#356A45', 
-          padding: '6px 16px', 
+          padding: '2px 16px', 
           display: 'inline-block', 
           borderRadius: '6px'
         }}>
