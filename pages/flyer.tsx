@@ -5,7 +5,7 @@ const FlyerPage: React.FC = () => {
   // Flyer uses percentage-based heights to work in both screen (495px) and print (5.5in)
   // Logo: 12% | Headline: 11% | CTA: 12% | Photos: 58% | Footer: 5% = 98% (2% buffer)
   const Flyer = () => (
-    <div className="flyer-container bg-white p-3 shadow-lg rounded-lg border-4 border-moss overflow-hidden flex flex-col h-full">
+    <div className="flyer-container bg-white p-3 shadow-lg rounded-lg border-4 border-moss overflow-hidden flex flex-col" style={{ height: '495px' }}>
       
       {/* Logo - 12% */}
       <div className="text-center flex-shrink-0" style={{ height: '12%' }}>
