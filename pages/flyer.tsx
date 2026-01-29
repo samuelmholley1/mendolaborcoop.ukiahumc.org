@@ -164,12 +164,12 @@ const FlyerPage: React.FC = () => {
 
       {/* Phone CTA - 15% */}
       <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 mb-2" style={{ height: '15%' }}>
-        <p className="text-[10px] font-headline font-semibold text-moss leading-none" style={{ marginTop: '8px', marginBottom: '12px' }}>
+        <p className="text-[10px] font-headline font-semibold text-moss leading-none" style={{ marginTop: '4px', marginBottom: '6px' }}>
           Call Our Coordinators Cheryl &amp; Braven
         </p>
         <div style={{ 
           backgroundColor: '#356A45', 
-          padding: '10px 16px', 
+          padding: '6px 16px', 
           display: 'inline-block', 
           borderRadius: '6px'
         }}>
@@ -181,7 +181,7 @@ const FlyerPage: React.FC = () => {
             whiteSpace: 'nowrap',
             display: 'block',
             position: 'relative',
-            top: '-4px',
+            top: '-2px',
             left: '-5px'
           }}>
             (369) 216-1512
