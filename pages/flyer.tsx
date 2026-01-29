@@ -61,7 +61,7 @@ const FlyerPage: React.FC = () => {
       {/* Phone CTA - 12% */}
       <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-3" style={{ height: '12%' }}>
         <p className="text-[10px] font-headline font-semibold text-moss leading-none">
-          Call Cheryl & Braven
+          Call Our Coordinators Cheryl & Braven
         </p>
         <div className="contact-box bg-[#356A45] text-white py-1.5 px-3 rounded-md inline-block mt-1 mx-auto">
           <span className="text-xl font-headline font-black leading-none whitespace-nowrap" style={{ color: '#FFFFFF' }}>

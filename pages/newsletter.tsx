@@ -68,7 +68,7 @@ const NewsletterPage: React.FC = () => {
             </h3>
             <div className="space-y-3 text-base leading-loose ml-4">
               <p>
-                <strong>1.</strong> You call or text Cheryl & Braven at <strong>(369) 216-1512</strong> and 
+                <strong>1.</strong> You call or text our coordinators Cheryl & Braven at <strong>(369) 216-1512</strong> and 
                 tell her what kind of help you need.
               </p>
               <p>
@@ -132,7 +132,7 @@ const NewsletterPage: React.FC = () => {
                 Ready to Help?
               </h3>
               <p className="text-xl mb-6 leading-relaxed text-black font-semibold">
-                Call Cheryl & Braven to schedule work
+                Call Our Coordinators Cheryl & Braven
               </p>
               <div className="border-2 border-moss px-8 py-8 rounded-lg mb-6 bg-white">
                 <p className="text-lg font-bold mb-3 text-black">Cheryl & Braven, Co-Coordinators</p>
