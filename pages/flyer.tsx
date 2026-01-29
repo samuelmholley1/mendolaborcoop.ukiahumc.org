@@ -113,10 +113,10 @@ const FlyerPage: React.FC = () => {
       {/* Phone CTA - 15% */}
       <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 mb-2" style={{ height: '15%', border: showDebug ? '2px solid blue' : 'none' }}>
         <p className="text-[10px] font-headline font-semibold text-moss leading-none" style={{ marginTop: '8px', marginBottom: '12px', border: showDebug ? '1px dashed purple' : 'none' }}>
-          Call Our Coordinators Cheryl & Braven
+          Call Our Coordinators Cheryl &amp; Braven
         </p>
-        <div className="contact-box bg-[#356A45] text-white rounded-md inline-flex items-center justify-center mx-auto" style={{ padding: '12px 16px', border: showDebug ? '2px solid yellow' : 'none' }}>
-          <span className="text-xl font-headline font-black whitespace-nowrap" style={{ color: '#FFFFFF' }}>
+        <div className="contact-box bg-[#356A45] rounded-md mx-auto" style={{ padding: '10px 16px', display: 'inline-block', border: showDebug ? '2px solid yellow' : 'none' }}>
+          <span style={{ color: '#FFFFFF', fontSize: '20px', fontWeight: 800, fontFamily: 'var(--font-headline)', whiteSpace: 'nowrap' }}>
             (369) 216-1512
           </span>
         </div>
@@ -132,7 +132,7 @@ const FlyerPage: React.FC = () => {
 
       {/* Footer - pinned to bottom */}
       <div ref={showDebug ? footerRef : undefined} className="text-center flex-shrink-0 flex items-center justify-center border-t border-moss/30 mt-1 pt-1" style={{ height: '7%', border: showDebug ? '2px solid green' : 'none' }}>
-        <p className="text-[15px] font-body text-moss leading-none">
+        <p className="font-body text-moss leading-none whitespace-nowrap" style={{ fontSize: '11px' }}>
           mendolaborcoop@gmail.com • mendolaborcoop.ukiahumc.org
         </p>
       </div>
