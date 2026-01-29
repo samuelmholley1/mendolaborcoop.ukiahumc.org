@@ -226,21 +226,21 @@ const HomePage: React.FC = () => {
       <section className="relative w-full bg-sand">
           <div className="relative z-10 min-h-[100svh] flex flex-col justify-start pt-4 lg:pt-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 items-start">
                 
-                {/* Left Column - Logo (1/3) + Tagline (2/3) + CTA */}
-                <div className="flex flex-col space-y-3 lg:space-y-4">
+                {/* Left Column - Logo (desktop only) + Tagline + CTA */}
+                <div className="flex flex-col space-y-2 lg:space-y-4 order-2 lg:order-1">
                   
                   {/* Logo + Tagline Row */}
                   <div className="flex flex-col lg:flex-row lg:gap-6 lg:items-center">
-                    {/* Component 1: LOGO - larger, minimal gap, slightly right on desktop */}
-                    <div className="flex-shrink-0 mx-auto lg:mx-0 lg:ml-2 mb-3 lg:mb-0">
+                    {/* Component 1: LOGO - hidden on mobile (in navbar), show on desktop */}
+                    <div className="hidden lg:block flex-shrink-0 lg:mx-0 lg:ml-2">
                       <img
                         src="/mendo_labor_coop_logo.png"
                         alt="Mendo Labor Cooperative Logo"
                         width="200"
                         height="200"
-                        className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56"
+                        className="lg:w-48 lg:h-48 xl:w-56 xl:h-56"
                       />
                     </div>
                     
@@ -257,53 +257,49 @@ const HomePage: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Component 3: CTA - Two equal pathways: Call | Submit Inquiry */}
+                  {/* Component 3: CTA - Two equal pathways side by side on all screens */}
                   <div className="w-full lg:ml-2" style={{ marginLeft: '-7px', marginRight: '-7px', width: 'calc(100% + 14px)' }}>
-                    <div className="bg-moss text-cream p-4 lg:p-5 xl:p-6 rounded-lg border-4 border-gold shadow-xl">
-                      <p className="text-sm lg:text-base font-headline font-semibold mb-3 text-center">
+                    <div className="bg-moss text-cream p-3 lg:p-5 xl:p-6 rounded-lg border-4 border-gold shadow-xl">
+                      <p className="text-xs lg:text-base font-headline font-semibold mb-2 lg:mb-3 text-center">
                         Contact Our Coordinators Cheryl &amp; Braven
                       </p>
-                      <div className="flex flex-col sm:flex-row items-stretch justify-center">
+                      <div className="flex flex-row items-stretch justify-center">
                         {/* Left: Call */}
-                        <div className="flex-1 text-center py-2 sm:py-0 sm:pr-4">
-                          <p className="text-xs lg:text-sm font-body opacity-80 mb-1">Call Us</p>
+                        <div className="flex-1 text-center pr-2 lg:pr-4">
+                          <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1">Call Us</p>
                           <a 
                             href="tel:+13692161512" 
-                            className="text-2xl sm:text-3xl lg:text-4xl font-headline font-extrabold block hover:opacity-90 transition-opacity"
+                            className="text-lg sm:text-2xl lg:text-4xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
                           >
                             (369) 216-1512
                           </a>
                         </div>
                         
-                        {/* Vertical Divider */}
-                        <div className="hidden sm:flex items-center px-4">
-                          <div className="w-px h-12 bg-cream/40"></div>
-                        </div>
-                        {/* Horizontal Divider for mobile */}
-                        <div className="sm:hidden flex justify-center py-2">
-                          <div className="h-px w-24 bg-cream/40"></div>
+                        {/* Vertical Divider - always visible */}
+                        <div className="flex items-center px-2 lg:px-4">
+                          <div className="w-px h-10 lg:h-12 bg-cream/40"></div>
                         </div>
                         
                         {/* Right: Submit Inquiry */}
-                        <div className="flex-1 text-center py-2 sm:py-0 sm:pl-4 flex flex-col justify-center">
-                          <p className="text-xs lg:text-sm font-body opacity-80 mb-2">Or Online</p>
+                        <div className="flex-1 text-center pl-2 lg:pl-4 flex flex-col justify-center">
+                          <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1 lg:mb-2">Or Online</p>
                           <button
                             onClick={() => setShowContactPopup(true)}
-                            className="bg-gold text-moss px-5 py-2.5 rounded-md font-headline font-bold text-base lg:text-lg hover:bg-gold/90 transition-colors mx-auto"
+                            className="bg-gold text-moss px-3 lg:px-5 py-1.5 lg:py-2.5 rounded-md font-headline font-bold text-sm lg:text-lg hover:bg-gold/90 transition-colors mx-auto whitespace-nowrap"
                           >
                             Submit Inquiry
                           </button>
                         </div>
                       </div>
-                      <p className="text-xs lg:text-sm font-body mt-3 opacity-80 text-center">
+                      <p className="text-[10px] lg:text-sm font-body mt-2 lg:mt-3 opacity-80 text-center">
                         Get a Helping Hand
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Right Column - Component 4: SLIDESHOW - ~280-320px height */}
-                <div className="w-full h-80 sm:h-96 lg:h-[28rem] xl:h-[32rem]">
+                {/* Right Column - Component 4: SLIDESHOW - shows first on mobile */}
+                <div className="w-full h-48 sm:h-64 lg:h-[28rem] xl:h-[32rem] order-1 lg:order-2">
                   <HeroSlideshow autoPlayInterval={5000} />
                 </div>
 
