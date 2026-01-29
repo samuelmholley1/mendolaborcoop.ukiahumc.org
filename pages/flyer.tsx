@@ -31,7 +31,7 @@ const FlyerPage: React.FC = () => {
     }
   }, [debug]);
 
-  // Flyer uses flexbox - fixed sections shrink-0, photos flex-grow to fill remaining space
+  // Flyer uses percentage-based heights to work in both screen (495px) and print (5.5in)
   const Flyer = ({ showDebug = false }: { showDebug?: boolean }) => (
     <div 
       ref={showDebug ? containerRef : undefined}
@@ -39,8 +39,8 @@ const FlyerPage: React.FC = () => {
       style={{ height: '495px' }}
     >
       
-      {/* Logo - fixed height */}
-      <div ref={showDebug ? logoRef : undefined} className="text-center flex-shrink-0 h-[56px] mb-1">
+      {/* Logo - 12% */}
+      <div ref={showDebug ? logoRef : undefined} className="text-center flex-shrink-0 mb-2" style={{ height: '12%' }}>
         <img
           src="/mendo_labor_coop_logo.png"
           alt="Mendo Labor Cooperative"
@@ -48,8 +48,8 @@ const FlyerPage: React.FC = () => {
         />
       </div>
 
-      {/* Headline - fixed height */}
-      <div ref={showDebug ? headlineRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center h-[48px] mb-1">
+      {/* Headline - 11% */}
+      <div ref={showDebug ? headlineRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-2" style={{ height: '11%' }}>
         <h1 className="text-xl font-headline font-black text-gold leading-none">
           Need an Extra Hand?
         </h1>
@@ -58,8 +58,8 @@ const FlyerPage: React.FC = () => {
         </p>
       </div>
 
-      {/* Phone CTA - fixed height */}
-      <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center h-[56px] mb-2">
+      {/* Phone CTA - 12% */}
+      <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-3" style={{ height: '12%' }}>
         <p className="text-[10px] font-headline font-semibold text-moss leading-none">
           Call Cheryl & Braven
         </p>
@@ -70,16 +70,16 @@ const FlyerPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Photos 2x2 grid - FLEX-GROW to fill all remaining space */}
-      <div ref={showDebug ? photosRef : undefined} className="grid grid-cols-2 gap-2 flex-1 mx-auto h-full" style={{ width: '85%' }}>
-        <img src="/co-op-job-photo-1.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded" />
-        <img src="/co-op-job-photo-2.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded" />
-        <img src="/co-op-job-photo-3.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded" />
-        <img src="/co-op-job-photo-4.jpeg" alt="Workers" className="w-full h-full object-cover object-[center_30%] rounded" />
+      {/* Photos 2x2 grid - grows to fill space */}
+      <div ref={showDebug ? photosRef : undefined} className="grid grid-cols-2 gap-3 flex-grow mx-auto" style={{ width: '75%' }}>
+        <img src="/co-op-job-photo-1.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded aspect-square" />
+        <img src="/co-op-job-photo-2.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded aspect-square" />
+        <img src="/co-op-job-photo-3.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded aspect-square" />
+        <img src="/co-op-job-photo-4.jpeg" alt="Workers" className="w-full h-full object-cover object-[center_30%] rounded aspect-square" />
       </div>
 
-      {/* Footer - fixed at bottom */}
-      <div ref={showDebug ? footerRef : undefined} className="text-center flex-shrink-0 flex items-center justify-center border-t border-moss/30 h-[24px] mt-2">
+      {/* Footer - pinned to bottom */}
+      <div ref={showDebug ? footerRef : undefined} className="text-center flex-shrink-0 flex items-center justify-center border-t border-moss/30 mt-2 pt-1">
         <p className="text-[9px] font-body text-moss leading-none">
           mendolaborcoop@gmail.com • mendolaborcoop.ukiahumc.org
         </p>
