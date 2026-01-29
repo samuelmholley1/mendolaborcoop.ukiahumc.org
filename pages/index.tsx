@@ -12,6 +12,7 @@ import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import Head from 'next/head';
+import HeroSlideshow from '../components/HeroSlideshow';
 
 const HomePage: React.FC = () => {
   const [language, setLanguage] = useState<'en' | 'es'>('en');
@@ -168,50 +169,62 @@ const HomePage: React.FC = () => {
         />
       </Head>
 
-      {/* Hero Section */}
+      {/* Hero Section - Optimized for 13-16" laptop screens (768-900px viewport height) */}
+      {/* Layout: 4 components fit in ~600-700px total height */}
+      {/* Logo: ~100px | Tagline: ~80px | CTA: ~120px | Slideshow: ~280px */}
       <section className="relative w-full bg-sand">
-          {/* Content */}
-          <div className="relative z-10 min-h-[100svh] flex flex-col justify-center py-4 sm:py-8">
+          <div className="relative z-10 min-h-[100svh] flex flex-col justify-center py-4 lg:py-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
-                {/* Left Column */}
-                <div className="text-center md:text-left">
-                  {/* Logo */}
-                  <img
-                    src="/mendo_labor_coop_logo.png"
-                    alt="Mendo Labor Cooperative Logo"
-                    width="300"
-                    height="300"
-                    className="mb-4 mx-auto md:mx-0 w-40 h-40 sm:w-48 sm:h-48 md:w-72 md:h-72 lg:w-80 lg:h-80"
-                  />
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+                
+                {/* Left Column - Logo, Tagline, CTA stacked */}
+                <div className="flex flex-col items-center lg:items-start space-y-4 lg:space-y-5">
                   
-                  {/* Headlines */}
-                  <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-headline font-bold text-gold mb-3 leading-tight">
-                    {currentContent.heroTitle}
-                  </h1>
-                  <p className="text-base sm:text-lg md:text-2xl font-body text-moss mb-4 md:mb-8 leading-snug">
-                    {currentContent.heroSubtitle}
-                  </p>
-                </div>
-
-                {/* Right Column - CTAs */}
-                <div className="flex flex-col space-y-4 md:space-y-6">
-                  {/* Primary Phone CTA */}
-                  <div className="bg-moss text-cream p-4 sm:p-6 md:p-8 rounded-lg text-center border-4 border-gold shadow-xl">
-                    <p className="text-base sm:text-lg md:text-xl font-headline font-semibold mb-2 whitespace-nowrap">
-                      Call Our Coordinators
-                    </p>
-                    <a 
-                      href="tel:+13692161512" 
-                      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
-                    >
-                      (369) 216-1512
-                    </a>
-                    <p className="text-xs sm:text-sm font-body mt-2 opacity-90 whitespace-nowrap">
-                      Hire a Worker • Join the Co-op
+                  {/* Component 1: LOGO - ~100px height */}
+                  <div className="flex-shrink-0">
+                    <img
+                      src="/mendo_labor_coop_logo.png"
+                      alt="Mendo Labor Cooperative Logo"
+                      width="120"
+                      height="120"
+                      className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28"
+                    />
+                  </div>
+                  
+                  {/* Component 2: TAGLINE - ~80px height */}
+                  <div className="text-center lg:text-left">
+                    <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-headline font-bold text-gold leading-tight">
+                      {currentContent.heroTitle}
+                    </h1>
+                    <p className="text-sm sm:text-base lg:text-lg font-body text-moss mt-2 leading-snug max-w-lg">
+                      {currentContent.heroSubtitle}
                     </p>
                   </div>
+
+                  {/* Component 3: CTA - ~120px height */}
+                  <div className="w-full max-w-md">
+                    <div className="bg-moss text-cream p-4 lg:p-5 rounded-lg text-center border-4 border-gold shadow-xl">
+                      <p className="text-sm lg:text-base font-headline font-semibold mb-1">
+                        Call Our Coordinators
+                      </p>
+                      <a 
+                        href="tel:+13692161512" 
+                        className="text-2xl sm:text-3xl lg:text-4xl font-headline font-extrabold block hover:opacity-90 transition-opacity"
+                      >
+                        (369) 216-1512
+                      </a>
+                      <p className="text-xs font-body mt-1 opacity-90">
+                        Hire a Worker • Join the Co-op
+                      </p>
+                    </div>
+                  </div>
                 </div>
+
+                {/* Right Column - Component 4: SLIDESHOW - ~280-320px height */}
+                <div className="w-full h-64 sm:h-72 lg:h-80 xl:h-96">
+                  <HeroSlideshow autoPlayInterval={5000} />
+                </div>
+
               </div>
             </div>
           </div>
