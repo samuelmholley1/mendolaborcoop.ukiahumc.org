@@ -178,23 +178,23 @@ const HomePage: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
                 
                 {/* Left Column - Logo (1/3) + Tagline (2/3) + CTA */}
-                <div className="flex flex-col space-y-4 lg:space-y-5">
+                <div className="flex flex-col space-y-3 lg:space-y-4">
                   
                   {/* Logo + Tagline Row */}
-                  <div className="flex flex-col lg:flex-row lg:gap-4 lg:items-start">
-                    {/* Component 1: LOGO - 1/3 width on desktop */}
-                    <div className="flex-shrink-0 mx-auto lg:mx-0 lg:w-1/3">
+                  <div className="flex flex-col lg:flex-row lg:gap-2 lg:items-start">
+                    {/* Component 1: LOGO - larger, minimal gap */}
+                    <div className="flex-shrink-0 mx-auto lg:mx-0 lg:-ml-2">
                       <img
                         src="/mendo_labor_coop_logo.png"
                         alt="Mendo Labor Cooperative Logo"
-                        width="140"
-                        height="140"
-                        className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32"
+                        width="200"
+                        height="200"
+                        className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56"
                       />
                     </div>
                     
-                    {/* Component 2: TAGLINE - 2/3 width on desktop */}
-                    <div className="text-center lg:text-left lg:w-2/3 flex flex-col justify-start">
+                    {/* Component 2: TAGLINE - positioned next to logo */}
+                    <div className="text-center lg:text-left flex flex-col justify-start flex-1">
                       <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-headline font-bold text-gold leading-tight">
                         {currentContent.heroTitle}
                       </h1>
@@ -204,19 +204,19 @@ const HomePage: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Component 3: CTA - Full width */}
-                  <div className="w-full max-w-md mx-auto lg:mx-0">
-                    <div className="bg-moss text-cream p-4 lg:p-5 rounded-lg text-center border-4 border-gold shadow-xl">
-                      <p className="text-sm lg:text-base font-headline font-semibold mb-1">
+                  {/* Component 3: CTA - Full column width, taller */}
+                  <div className="w-full">
+                    <div className="bg-moss text-cream p-5 lg:p-6 xl:p-8 rounded-lg text-center border-4 border-gold shadow-xl">
+                      <p className="text-sm lg:text-lg font-headline font-semibold mb-2">
                         Call Our Coordinators
                       </p>
                       <a 
                         href="tel:+13692161512" 
-                        className="text-2xl sm:text-3xl lg:text-4xl font-headline font-extrabold block hover:opacity-90 transition-opacity"
+                        className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-headline font-extrabold block hover:opacity-90 transition-opacity"
                       >
                         (369) 216-1512
                       </a>
-                      <p className="text-xs font-body mt-1 opacity-90">
+                      <p className="text-sm lg:text-base font-body mt-2 opacity-90">
                         Hire a Worker • Join the Co-op
                       </p>
                     </div>
