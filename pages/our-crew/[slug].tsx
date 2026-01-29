@@ -719,7 +719,7 @@ const WorkerProfilePage: React.FC = () => {
                     <span className="bg-cream/20 text-cream w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">1</span>
                     <div>
                       <p className="font-medium">Contact Coordinator</p>
-                      <p className="text-cream/70 text-sm">Call or text Cheryl to check availability</p>
+                      <p className="text-cream/70 text-sm">Call Cheryl & Braven to check availability</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

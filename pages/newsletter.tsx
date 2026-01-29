@@ -68,11 +68,11 @@ const NewsletterPage: React.FC = () => {
             </h3>
             <div className="space-y-3 text-base leading-loose ml-4">
               <p>
-                <strong>1.</strong> You call or text Cheryl at <strong>(369) 216-1512</strong> and 
+                <strong>1.</strong> You call or text Cheryl & Braven at <strong>(369) 216-1512</strong> and 
                 tell her what kind of help you need.
               </p>
               <p>
-                <strong>2.</strong> Cheryl matches you with a worker from our co-op who has 
+                <strong>2.</strong> Cheryl & Braven match you with a worker from our co-op who has 
                 the right skills.
               </p>
               <p>
@@ -132,10 +132,10 @@ const NewsletterPage: React.FC = () => {
                 Ready to Help?
               </h3>
               <p className="text-xl mb-6 leading-relaxed text-black font-semibold">
-                Call or text Cheryl to schedule work
+                Call Cheryl & Braven to schedule work
               </p>
               <div className="border-2 border-moss px-8 py-8 rounded-lg mb-6 bg-white">
-                <p className="text-lg font-bold mb-3 text-black">Cheryl Vinson, Coordinator</p>
+                <p className="text-lg font-bold mb-3 text-black">Cheryl & Braven, Co-Coordinators</p>
                 <p className="text-6xl font-bold text-moss mb-2" style={{ letterSpacing: '0.02em' }}>
                   (369) 216-1512
                 </p>

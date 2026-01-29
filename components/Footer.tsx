@@ -46,7 +46,7 @@ const Footer: React.FC<{ onContactClick?: () => void }> = ({ onContactClick }) =
           <div>
               <h3 className="text-lg font-headline font-semibold text-cream mb-3">Contact</h3>
               <div>
-                <p className="text-sm text-cream">Cheryl Vinson, Coordinator</p>
+                <p className="text-sm text-cream">Cheryl Vinson & Braven Haynes, Co-Coordinators</p>
                 <a href="tel:+13692161512" className="hover:text-sand transition-colors">
                   (369) 216-1512
                 </a>
