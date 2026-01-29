@@ -115,8 +115,21 @@ const FlyerPage: React.FC = () => {
         <p className="text-[10px] font-headline font-semibold text-moss leading-none" style={{ marginTop: '8px', marginBottom: '12px', border: showDebug ? '1px dashed purple' : 'none' }}>
           Call Our Coordinators Cheryl &amp; Braven
         </p>
-        <div className="contact-box bg-[#356A45] rounded-md mx-auto" style={{ padding: '10px 16px', display: 'inline-block', border: showDebug ? '2px solid yellow' : 'none' }}>
-          <span style={{ color: '#FFFFFF', fontSize: '20px', fontWeight: 800, fontFamily: 'var(--font-headline)', whiteSpace: 'nowrap' }}>
+        <div style={{ 
+          backgroundColor: '#356A45', 
+          padding: '10px 16px', 
+          display: 'inline-block', 
+          borderRadius: '6px',
+          border: showDebug ? '2px solid yellow' : 'none' 
+        }}>
+          <span style={{ 
+            color: '#FFFFFF', 
+            fontSize: '20px', 
+            fontWeight: 800, 
+            fontFamily: 'Montserrat, Arial, sans-serif',
+            whiteSpace: 'nowrap',
+            display: 'block'
+          }}>
             (369) 216-1512
           </span>
         </div>
