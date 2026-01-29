@@ -71,12 +71,12 @@ const FlyerPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Photos 2x2 grid - 58% */}
-      <div ref={showDebug ? photosRef : undefined} className="grid grid-cols-2 gap-1 flex-shrink-0" style={{ height: '58%' }}>
-        <img src="/co-op-job-photo-1.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded" />
-        <img src="/co-op-job-photo-2.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded" />
-        <img src="/co-op-job-photo-3.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded" />
-        <img src="/co-op-job-photo-4.jpeg" alt="Workers" className="w-full h-full object-cover object-[center_30%] rounded" />
+      {/* Photos 2x2 grid - 29% (squares) */}
+      <div ref={showDebug ? photosRef : undefined} className="grid grid-cols-2 gap-1 flex-shrink-0 mx-auto" style={{ height: '29%', width: '60%' }}>
+        <img src="/co-op-job-photo-1.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded aspect-square" />
+        <img src="/co-op-job-photo-2.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded aspect-square" />
+        <img src="/co-op-job-photo-3.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded aspect-square" />
+        <img src="/co-op-job-photo-4.jpeg" alt="Workers" className="w-full h-full object-cover object-[center_30%] rounded aspect-square" />
       </div>
 
       {/* Footer - 5% */}
