@@ -2,56 +2,56 @@
 import Head from 'next/head';
 
 const FlyerPage: React.FC = () => {
-  // Single flyer component to avoid repetition
+  // Single flyer component - 495px total height
+  // Padding: 12px top + 12px bottom = 24px
+  // Border: 4px top + 4px bottom = 8px
+  // Usable: 495 - 24 - 8 = 463px
+  // Logo: 56px | Headline: 50px | CTA: 56px | Photos: 280px | Footer: 20px = 462px
   const Flyer = () => (
-    <div className="flyer-container bg-white p-3 shadow-lg rounded-lg border-4 border-moss overflow-hidden flex flex-col justify-between h-full">
+    <div className="flyer-container bg-white p-3 shadow-lg rounded-lg border-4 border-moss overflow-hidden flex flex-col">
       
-      {/* Logo */}
-      <div className="text-center">
+      {/* Logo - 56px */}
+      <div className="text-center h-14 flex-shrink-0">
         <img
           src="/mendo_labor_coop_logo.png"
           alt="Mendo Labor Cooperative"
-          className="mx-auto w-16 h-16"
+          className="mx-auto w-14 h-14"
         />
       </div>
 
-      {/* Main CTA Headline - Benefit focused */}
-      <div className="text-center">
-        <h1 className="text-2xl font-headline font-black text-gold leading-tight">
+      {/* Headline - 50px */}
+      <div className="text-center h-[50px] flex-shrink-0 flex flex-col justify-center">
+        <h1 className="text-xl font-headline font-black text-gold leading-none">
           Need an Extra Hand?
         </h1>
-        <p className="text-sm text-moss font-body font-semibold mt-1">
+        <p className="text-xs text-moss font-body font-semibold mt-1 leading-none">
           Yard work • Moving help • Odd jobs
         </p>
       </div>
 
-      {/* PRIMARY: PHONE NUMBER - Green only around number */}
-      <div className="text-center">
-        <p className="text-xs font-headline font-semibold text-moss mb-1">
+      {/* Phone CTA - 56px */}
+      <div className="text-center h-14 flex-shrink-0 flex flex-col justify-center">
+        <p className="text-[10px] font-headline font-semibold text-moss leading-none">
           Call or Text Cheryl
         </p>
-        <div className="contact-box bg-[#356A45] text-white py-2 px-4 rounded-lg inline-block">
-          <a 
-            href="tel:+13692161512" 
-            className="text-3xl font-headline font-black hover:opacity-90 transition-opacity leading-none whitespace-nowrap"
-            style={{ color: '#FFFFFF' }}
-          >
+        <div className="contact-box bg-[#356A45] text-white py-1.5 px-3 rounded-md inline-block mt-1 mx-auto">
+          <span className="text-xl font-headline font-black leading-none whitespace-nowrap" style={{ color: '#FFFFFF' }}>
             (369) 216-1512
-          </a>
+          </span>
         </div>
       </div>
 
-      {/* Photos 2x2 grid */}
-      <div className="grid grid-cols-2 gap-1 flex-1 min-h-0">
-        <img src="/co-op-job-photo-1.jpeg" alt="Workers on the job" className="w-full h-full object-cover object-top rounded" />
-        <img src="/co-op-job-photo-2.jpeg" alt="Workers on the job" className="w-full h-full object-cover object-top rounded" />
-        <img src="/co-op-job-photo-3.jpeg" alt="Workers on the job" className="w-full h-full object-cover object-top rounded" />
-        <img src="/co-op-job-photo-4.jpeg" alt="Workers on the job" className="w-full h-full object-cover object-[center_15%] rounded" />
+      {/* Photos 2x2 grid - 280px */}
+      <div className="grid grid-cols-2 gap-1 h-[280px] flex-shrink-0">
+        <img src="/co-op-job-photo-1.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded" />
+        <img src="/co-op-job-photo-2.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded" />
+        <img src="/co-op-job-photo-3.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded" />
+        <img src="/co-op-job-photo-4.jpeg" alt="Workers" className="w-full h-full object-cover object-[center_30%] rounded" />
       </div>
 
-      {/* Footer with email and website */}
-      <div className="text-center border-t border-moss/30 pt-1">
-        <p className="text-xs font-body text-moss leading-tight">
+      {/* Footer - 20px */}
+      <div className="text-center h-5 flex-shrink-0 flex items-center justify-center border-t border-moss/30">
+        <p className="text-[9px] font-body text-moss leading-none">
           mendolaborcoop@gmail.com • mendolaborcoop.ukiahumc.org
         </p>
       </div>
