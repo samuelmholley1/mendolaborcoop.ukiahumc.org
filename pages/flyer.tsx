@@ -59,18 +59,25 @@ const FlyerPage: React.FC = () => {
       for (let i = 0; i < Math.min(flyers.length, 4); i++) {
         const flyer = flyers[i] as HTMLElement;
         
-        // Capture at high resolution (2x for quality)
+        // Capture at high resolution with precise settings
         const canvas = await html2canvas(flyer, {
-          scale: 2,
+          scale: 3,  // Higher scale for better quality
           useCORS: true,
           allowTaint: true,
-          backgroundColor: '#ffffff'
+          backgroundColor: '#ffffff',
+          logging: false,
+          imageTimeout: 0,
+          // Force exact pixel rendering
+          width: flyer.offsetWidth,
+          height: flyer.offsetHeight,
+          windowWidth: flyer.offsetWidth,
+          windowHeight: flyer.offsetHeight
         });
         
-        const imgData = canvas.toDataURL('image/jpeg', 0.95);
+        const imgData = canvas.toDataURL('image/png');  // PNG for lossless
         
         // Add to PDF at correct position (4.25 x 5.5 inches each)
-        pdf.addImage(imgData, 'JPEG', positions[i].x, positions[i].y, 4.25, 5.5);
+        pdf.addImage(imgData, 'PNG', positions[i].x, positions[i].y, 4.25, 5.5);
       }
       
       pdf.save('mendo-labor-coop-flyers.pdf');
@@ -82,56 +89,57 @@ const FlyerPage: React.FC = () => {
     setGenerating(false);
   };
 
-  // Flyer uses percentage-based heights to work in both screen (495px) and print (5.5in)
+  // Flyer uses FIXED PIXEL heights for perfect html2canvas rendering
+  // Container: 495px, Logo: 59px, Headline: 54px, CTA: 67px, Photos: 271px, Footer: 20px = 471px + 24px padding
   const Flyer = ({ showDebug = false }: { showDebug?: boolean }) => (
     <div 
       ref={showDebug ? containerRef : undefined}
-      className="flyer-container bg-white p-3 shadow-lg rounded-lg border-4 border-moss overflow-hidden flex flex-col" 
-      style={{ height: '495px' }}
+      className="flyer-container bg-white shadow-lg rounded-lg border-4 border-moss overflow-hidden"
+      style={{ width: '380px', height: '495px', padding: '12px' }}
     >
       
-      {/* Logo - 12% */}
-      <div ref={showDebug ? logoRef : undefined} className="text-center flex-shrink-0 mb-2" style={{ height: '12%' }}>
+      {/* Logo - 59px */}
+      <div ref={showDebug ? logoRef : undefined} className="text-center" style={{ height: '59px', marginBottom: '8px' }}>
         <img
           src="/mendo_labor_coop_logo.png"
           alt="Mendo Labor Cooperative"
-          className="mx-auto h-full w-auto"
+          style={{ height: '59px', width: 'auto', margin: '0 auto', display: 'block' }}
         />
       </div>
 
-      {/* Headline - 11% */}
-      <div ref={showDebug ? headlineRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-2" style={{ height: '11%' }}>
-        <h1 className="text-xl font-headline font-black text-gold leading-none">
+      {/* Headline - 54px */}
+      <div ref={showDebug ? headlineRef : undefined} className="text-center" style={{ height: '54px', marginBottom: '8px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <h1 className="text-xl font-headline font-black text-gold" style={{ lineHeight: '1', margin: 0 }}>
           Need an Extra Hand?
         </h1>
-        <p className="text-xs text-moss font-body font-semibold mt-1 leading-none">
+        <p className="text-xs text-moss font-body font-semibold" style={{ lineHeight: '1', marginTop: '4px' }}>
           Yard work • Moving help • Odd jobs
         </p>
       </div>
 
-      {/* Phone CTA - 12% */}
-      <div ref={showDebug ? ctaRef : undefined} className="text-center flex-shrink-0 flex flex-col justify-center mb-3" style={{ height: '12%' }}>
-        <p className="text-[10px] font-headline font-semibold text-moss leading-none">
+      {/* Phone CTA - 67px */}
+      <div ref={showDebug ? ctaRef : undefined} className="text-center" style={{ height: '67px', marginBottom: '12px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <p className="font-headline font-semibold text-moss" style={{ fontSize: '10px', lineHeight: '1', margin: 0 }}>
           Call Our Coordinators Cheryl & Braven
         </p>
-        <div className="contact-box bg-[#356A45] text-white py-1.5 px-3 rounded-md inline-block mt-1 mx-auto">
-          <span className="text-xl font-headline font-black leading-none whitespace-nowrap" style={{ color: '#FFFFFF' }}>
+        <div className="contact-box" style={{ backgroundColor: '#356A45', color: 'white', padding: '6px 12px', borderRadius: '6px', display: 'inline-block', marginTop: '4px', marginLeft: 'auto', marginRight: 'auto' }}>
+          <span className="text-xl font-headline font-black" style={{ lineHeight: '1', whiteSpace: 'nowrap', color: '#FFFFFF' }}>
             (369) 216-1512
           </span>
         </div>
       </div>
 
-      {/* Photos 2x2 grid - grows to fill space */}
-      <div ref={showDebug ? photosRef : undefined} className="grid grid-cols-2 gap-3 flex-grow mx-auto" style={{ width: '75%' }}>
-        <img src="/co-op-job-photo-1.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded aspect-square" />
-        <img src="/co-op-job-photo-2.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded aspect-square" />
-        <img src="/co-op-job-photo-3.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded aspect-square" />
-        <img src="/co-op-job-photo-4.jpeg" alt="Workers" className="w-full h-full object-cover object-[center_30%] rounded aspect-square" />
+      {/* Photos 2x2 grid - 271px */}
+      <div ref={showDebug ? photosRef : undefined} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', height: '271px', width: '75%', margin: '0 auto' }}>
+        <img src="/co-op-job-photo-1.jpeg" alt="Workers" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', borderRadius: '4px' }} />
+        <img src="/co-op-job-photo-2.jpeg" alt="Workers" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', borderRadius: '4px' }} />
+        <img src="/co-op-job-photo-3.jpeg" alt="Workers" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', borderRadius: '4px' }} />
+        <img src="/co-op-job-photo-4.jpeg" alt="Workers" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', borderRadius: '4px' }} />
       </div>
 
-      {/* Footer - pinned to bottom */}
-      <div ref={showDebug ? footerRef : undefined} className="text-center flex-shrink-0 flex items-center justify-center border-t border-moss/30 mt-2 pt-1">
-        <p className="text-[9px] font-body text-moss leading-none">
+      {/* Footer - 20px */}
+      <div ref={showDebug ? footerRef : undefined} className="text-center" style={{ height: '20px', marginTop: '8px', paddingTop: '4px', borderTop: '1px solid rgba(53, 106, 69, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <p className="font-body text-moss" style={{ fontSize: '9px', lineHeight: '1', margin: 0 }}>
           mendolaborcoop@gmail.com • mendolaborcoop.ukiahumc.org
         </p>
       </div>
