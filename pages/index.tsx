@@ -173,15 +173,15 @@ const HomePage: React.FC = () => {
       {/* Layout: 4 components fit in ~600-700px total height */}
       {/* Logo: ~100px | Tagline: ~80px | CTA: ~120px | Slideshow: ~280px */}
       <section className="relative w-full bg-sand">
-          <div className="relative z-10 min-h-[100svh] flex flex-col justify-center py-4 lg:py-6">
+          <div className="relative z-10 min-h-[100svh] flex flex-col justify-start pt-4 lg:pt-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start">
                 
                 {/* Left Column - Logo (1/3) + Tagline (2/3) + CTA */}
                 <div className="flex flex-col space-y-3 lg:space-y-4">
                   
                   {/* Logo + Tagline Row */}
-                  <div className="flex flex-col lg:flex-row lg:gap-2 lg:items-start">
+                  <div className="flex flex-col lg:flex-row lg:gap-6 lg:items-center">
                     {/* Component 1: LOGO - larger, minimal gap */}
                     <div className="flex-shrink-0 mx-auto lg:mx-0 lg:-ml-2">
                       <img
@@ -193,8 +193,8 @@ const HomePage: React.FC = () => {
                       />
                     </div>
                     
-                    {/* Component 2: TAGLINE - positioned next to logo */}
-                    <div className="text-center lg:text-left flex flex-col justify-start flex-1">
+                    {/* Component 2: TAGLINE - centered with logo, padded between logo and slideshow */}
+                    <div className="text-center lg:text-left flex flex-col justify-center flex-1 lg:px-4">
                       <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-headline font-bold text-gold leading-tight">
                         {currentContent.heroTitle}
                       </h1>
