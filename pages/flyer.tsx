@@ -110,7 +110,7 @@ const FlyerPage: React.FC = () => {
   // Flyer uses percentage-based heights to work in both screen (495px) and print (5.5in)
   const Flyer = () => (
     <div 
-      className="flyer-container bg-white p-2 shadow-lg rounded-lg border-4 border-moss overflow-hidden flex flex-col" 
+      className="flyer-container bg-white p-2 shadow-lg rounded-lg overflow-hidden flex flex-col" 
       style={{ height: '495px' }}
     >
       
@@ -140,7 +140,7 @@ const FlyerPage: React.FC = () => {
         </p>
         <div style={{ 
           backgroundColor: '#356A45', 
-          padding: '5px 16px', 
+          padding: '3px 14px 5px 14px', 
           display: 'inline-block',
           borderRadius: '6px',
           textAlign: 'center'
@@ -148,12 +148,11 @@ const FlyerPage: React.FC = () => {
           <span style={{ 
             color: '#FFFFFF', 
             fontSize: '20px',
-            lineHeight: '1',
+            lineHeight: '1.1',
             fontWeight: 800, 
             fontFamily: 'Montserrat, Arial, sans-serif',
             whiteSpace: 'nowrap',
-            display: 'inline-block',
-            textAlign: 'center'
+            display: 'block'
           }}>
             (369) 216-1512
           </span>
