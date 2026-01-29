@@ -124,7 +124,10 @@ const FlyerPage: React.FC = () => {
             fontWeight: 800, 
             fontFamily: 'Montserrat, Arial, sans-serif',
             whiteSpace: 'nowrap',
-            display: 'block'
+            display: 'block',
+            position: 'relative',
+            top: '-2px',
+            left: '-3px'
           }}>
             (369) 216-1512
           </span>
@@ -141,7 +144,7 @@ const FlyerPage: React.FC = () => {
 
       {/* Footer - pinned to bottom */}
       <div ref={showDebug ? footerRef : undefined} className="text-center flex-shrink-0 flex items-start justify-center border-t border-moss/30 mt-2 pt-2" style={{ height: '7%', ...(showDebug && { border: '2px solid green' }) }}>
-        <p className="font-body text-moss leading-none whitespace-nowrap" style={{ fontSize: '13px' }}>
+        <p className="font-body text-moss leading-none whitespace-nowrap" style={{ fontSize: '12px' }}>
           mendolaborcoop@gmail.com • mendolaborcoop.ukiahumc.org
         </p>
       </div>

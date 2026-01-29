@@ -146,7 +146,7 @@ const OurCrewPage: React.FC = () => {
             </svg>
             <div className="flex items-center gap-2">
               <span className="bg-moss text-cream w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">2</span>
-              <span className="text-moss font-medium">Contact coordinator</span>
+              <span className="text-moss font-medium">Contact Cheryl &amp; Braven</span>
             </div>
             <svg className="hidden md:block w-6 h-6 text-moss/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -176,7 +176,7 @@ const OurCrewPage: React.FC = () => {
               </h2>
               <p className="text-moss/70 max-w-md mx-auto mb-8">
                 We're currently building out our worker directory. In the meantime, 
-                contact our coordinator to learn about available workers and their skills.
+                contact our coordinators Cheryl &amp; Braven to learn about available workers and their skills.
               </p>
               <Link
                 href="/hire"
@@ -224,10 +224,10 @@ const OurCrewPage: React.FC = () => {
       <section className="py-16 bg-sand">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-headline font-bold text-gold mb-6">
-            Ready to Hire a Worker?
+            Ready to Get a Helping Hand?
           </h2>
           <p className="text-moss/80 text-lg mb-8 max-w-2xl mx-auto">
-            The Mendo Labor Co-op connects you directly with independent workers. 
+            Contact our coordinators Cheryl &amp; Braven to connect directly with independent workers. 
             We facilitate fair wages and community support for every job.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -247,25 +247,6 @@ const OurCrewPage: React.FC = () => {
               Call Now
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Join CTA */}
-      <section className="py-12 bg-moss text-cream">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-headline font-bold mb-4">
-            Are You a Worker Looking to Join?
-          </h2>
-          <p className="text-cream/80 mb-6">
-            We're always welcoming new members. Join the co-op and get access to fair-paying jobs, 
-            community support, and worker solidarity.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-cream text-moss px-6 py-3 rounded-lg hover:bg-cream/90 transition-colors font-semibold"
-          >
-            Learn About Joining
-          </Link>
         </div>
       </section>
     </Layout>

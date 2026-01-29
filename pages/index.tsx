@@ -296,7 +296,7 @@ const HomePage: React.FC = () => {
                         </div>
                       </div>
                       <p className="text-xs lg:text-sm font-body mt-3 opacity-80 text-center">
-                        Hire a Worker • Join the Co-op
+                        Get a Helping Hand
                       </p>
                     </div>
                   </div>
@@ -537,7 +537,7 @@ const HomePage: React.FC = () => {
               <div className="p-6">
                 <div className="text-center">
                   <p className="text-lg font-body text-moss mb-6">
-                    Ready to hire a worker or join our cooperative?
+                    Ready to get a helping hand?
                   </p>
                   <div className="bg-sand rounded-lg p-4 mb-6">
                     <a
