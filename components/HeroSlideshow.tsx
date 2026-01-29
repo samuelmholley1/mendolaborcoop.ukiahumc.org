@@ -24,7 +24,7 @@ const slides = [
   {
     src: '/co-op-job-photo-4.jpeg',
     alt: 'Mendo Labor Cooperative workers on the job - Photo 4',
-    position: 'object-[center_15%]'
+    position: 'object-[center_30%]'
   }
 ];
 
