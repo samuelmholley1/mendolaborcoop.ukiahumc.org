@@ -1,9 +1,12 @@
 ﻿import React, { useRef, useEffect, useState } from 'react';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 
 const FlyerPage: React.FC = () => {
   const [debug, setDebug] = useState(false);
   const [measurements, setMeasurements] = useState<Record<string, number>>({});
+  const [generating, setGenerating] = useState(false);
+  const printRef = useRef<HTMLDivElement>(null);
   
   const containerRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<HTMLDivElement>(null);
@@ -30,6 +33,54 @@ const FlyerPage: React.FC = () => {
       return () => window.removeEventListener('resize', measure);
     }
   }, [debug]);
+
+  const generatePDF = async () => {
+    if (!printRef.current) return;
+    setGenerating(true);
+    
+    try {
+      const html2canvas = (await import('html2canvas')).default;
+      const jsPDF = (await import('jspdf')).default;
+      
+      // Create PDF - Letter size (8.5 x 11 inches)
+      const pdf = new jsPDF('portrait', 'in', 'letter');
+      
+      // Get all flyer elements
+      const flyers = printRef.current.querySelectorAll('.flyer-container');
+      
+      // Positions for 4-up layout (2x2 grid)
+      const positions = [
+        { x: 0, y: 0 },      // top-left
+        { x: 4.25, y: 0 },   // top-right
+        { x: 0, y: 5.5 },    // bottom-left
+        { x: 4.25, y: 5.5 }  // bottom-right
+      ];
+      
+      for (let i = 0; i < Math.min(flyers.length, 4); i++) {
+        const flyer = flyers[i] as HTMLElement;
+        
+        // Capture at high resolution (2x for quality)
+        const canvas = await html2canvas(flyer, {
+          scale: 2,
+          useCORS: true,
+          allowTaint: true,
+          backgroundColor: '#ffffff'
+        });
+        
+        const imgData = canvas.toDataURL('image/jpeg', 0.95);
+        
+        // Add to PDF at correct position (4.25 x 5.5 inches each)
+        pdf.addImage(imgData, 'JPEG', positions[i].x, positions[i].y, 4.25, 5.5);
+      }
+      
+      pdf.save('mendo-labor-coop-flyers.pdf');
+    } catch (error) {
+      console.error('PDF generation error:', error);
+      alert('Error generating PDF. Please try again.');
+    }
+    
+    setGenerating(false);
+  };
 
   // Flyer uses percentage-based heights to work in both screen (495px) and print (5.5in)
   const Flyer = ({ showDebug = false }: { showDebug?: boolean }) => (
@@ -169,12 +220,13 @@ const FlyerPage: React.FC = () => {
           {/* Print Button */}
           <div className="no-print mb-8 text-center">
             <button
-              onClick={() => window.print()}
-              className="bg-moss text-cream px-8 py-3 rounded-lg text-lg font-headline font-semibold hover:bg-moss/90 transition-colors"
+              onClick={generatePDF}
+              disabled={generating}
+              className="bg-moss text-cream px-8 py-3 rounded-lg text-lg font-headline font-semibold hover:bg-moss/90 transition-colors disabled:opacity-50"
             >
-              🖨️ Print Flyers
+              {generating ? '⏳ Generating PDF...' : '📄 Download PDF (4 per page)'}
             </button>
-            <p className="text-moss mt-2 font-body">Ink-saving version - Prints 4 per page</p>
+            <p className="text-moss mt-2 font-body">High-quality PDF - prints exactly like it looks</p>
             
             {/* Debug toggle */}
             <button
@@ -209,7 +261,7 @@ const FlyerPage: React.FC = () => {
           )}
 
           {/* Print wrapper for 4-per-page grid */}
-          <div className="print-page">
+          <div ref={printRef} className="print-page">
             <Flyer showDebug={debug} />
             <Flyer />
             <Flyer />
