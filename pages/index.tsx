@@ -229,12 +229,12 @@ const HomePage: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 items-start">
                 
                 {/* Left Column - Logo (desktop only) + Tagline + CTA */}
-                <div className="flex flex-col space-y-2 lg:space-y-4 order-1 lg:order-1">
+                <div className="flex flex-col space-y-2 lg:space-y-4 order-1 lg:order-1 lg:pt-2.5">
                   
                   {/* Logo + Tagline Row */}
                   <div className="flex flex-col lg:flex-row lg:gap-6 lg:items-center">
                     {/* Component 1: LOGO - hidden on mobile (in navbar), show on desktop */}
-                    <div className="hidden lg:block flex-shrink-0 lg:mx-0 lg:ml-2">
+                    <div className="hidden lg:block flex-shrink-0 lg:mx-0 lg:ml-6">
                       <img
                         src="/mendo_labor_coop_logo.png"
                         alt="Mendo Labor Cooperative Logo"
