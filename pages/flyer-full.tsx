@@ -149,8 +149,8 @@ const FlyerFullPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Photos 2x2 grid - grows to fill space */}
-      <div className="grid grid-cols-2 gap-4 flex-grow mx-auto" style={{ width: '85%' }}>
+      {/* Photos 2x2 grid - constrained height to leave room for footer */}
+      <div className="grid grid-cols-2 gap-4 mx-auto" style={{ width: '85%', height: '55%' }}>
         <img src="/co-op-job-photo-1.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded-lg aspect-square" />
         <img src="/co-op-job-photo-2.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded-lg aspect-square" />
         <img src="/co-op-job-photo-3.jpeg" alt="Workers" className="w-full h-full object-cover object-top rounded-lg aspect-square" />
@@ -158,7 +158,7 @@ const FlyerFullPage: React.FC = () => {
       </div>
 
       {/* Footer - pinned to bottom */}
-      <div className="text-center flex-shrink-0 flex items-start justify-center border-t border-moss/30 mt-4 pt-3" style={{ height: '6%' }}>
+      <div className="text-center flex-shrink-0 flex items-center justify-center border-t border-moss/30 mt-auto pt-3" style={{ height: '7%' }}>
         <p className="font-body text-moss leading-none whitespace-nowrap" style={{ fontSize: '24px' }}>
           mendolaborcoop@gmail.com • mendolaborcoop.ukiahumc.org
         </p>
