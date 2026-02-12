@@ -113,6 +113,24 @@ h1 {
   background-color: #0984e3 !important;
 }
 
+/* Samsung Galaxy fix: narrow screens (360px and below) */
+/* Targets Galaxy S series without affecting iPhones (390px+) or wider Androids */
+@media screen and (max-width: 379px) {
+  .cta-wrapper {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+  .cta-phone {
+    font-size: 26px !important;
+  }
+  .cta-button {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
 .bg-coop-cream {
   background-color: #fef9f3 !important;
 }

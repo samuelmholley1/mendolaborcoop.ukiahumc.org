@@ -259,7 +259,7 @@ const HomePage: React.FC = () => {
                   </div>
 
                   {/* Component 3: CTA - Two equal pathways side by side on all screens */}
-                  <div className="w-full lg:ml-2" style={{ marginLeft: '-7px', marginRight: '-7px', width: 'calc(100% + 14px)' }}>
+                  <div className="w-full lg:ml-2 cta-wrapper" style={{ marginLeft: '-7px', marginRight: '-7px', width: 'calc(100% + 14px)' }}>
                     <div className="bg-moss text-cream p-3 lg:p-5 xl:p-6 rounded-lg border-4 border-gold shadow-xl">
                       <p className="text-base lg:text-lg font-headline font-bold mb-1 text-center">
                         Need an Extra Hand?
@@ -273,7 +273,7 @@ const HomePage: React.FC = () => {
                           <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1">Call Us</p>
                           <a 
                             href="tel:+13692161512" 
-                            className="text-[33px] sm:text-4xl lg:text-5xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
+                            className="cta-phone text-[33px] sm:text-4xl lg:text-5xl font-headline font-extrabold block hover:opacity-90 transition-opacity whitespace-nowrap"
                           >
                             (369) 216-1512
                           </a>
@@ -289,7 +289,7 @@ const HomePage: React.FC = () => {
                           <p className="text-[10px] lg:text-sm font-body opacity-80 mb-1 lg:mb-2">Or Online</p>
                           <button
                             onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="bg-gold text-moss px-3 lg:px-5 py-3 lg:py-4 rounded-md font-headline font-bold text-sm lg:text-lg hover:bg-gold/90 transition-colors mx-auto whitespace-nowrap shadow-lg border-2 border-cream/50 hover:scale-105 transform"
+                            className="cta-button bg-gold text-moss px-3 lg:px-5 py-3 lg:py-4 rounded-md font-headline font-bold text-sm lg:text-lg hover:bg-gold/90 transition-colors mx-auto whitespace-nowrap shadow-lg border-2 border-cream/50 hover:scale-105 transform"
                           >
                             Submit Inquiry
                           </button>
