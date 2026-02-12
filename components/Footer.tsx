@@ -63,7 +63,15 @@ const Footer: React.FC<{ onContactClick?: () => void }> = ({ onContactClick }) =
           </div>
         </div>
 
-        <div className="border-t border-cream border-opacity-20 mt-8 pt-8 text-center">
+        {/* Mission Statement */}
+        <div className="border-t border-cream border-opacity-20 mt-8 pt-6 text-center">
+          <p className="text-cream text-sm italic max-w-2xl mx-auto leading-relaxed">
+            <span className="font-headline font-semibold not-italic">Our Mission:</span>{' '}
+            Local workers. Local jobs. Local prosperity. We connect unemployed and underemployed community members with opportunities that build economic stability, support housing security, and keep resources where we live.
+          </p>
+        </div>
+
+        <div className="border-t border-cream border-opacity-20 mt-6 pt-6 text-center">
           <p className="text-cream text-sm">
             © 2025 Mendo Labor Cooperative. Built by and for the working class.
           </p>

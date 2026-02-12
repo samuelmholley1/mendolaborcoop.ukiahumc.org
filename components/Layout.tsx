@@ -11,6 +11,7 @@ interface LayoutProps {
   ogImage?: string;
   canonical?: string;
   onContactClick?: () => void;
+  showMissionBanner?: boolean;
 }
 
 const Layout: React.FC<LayoutProps> = ({ 
@@ -20,7 +21,8 @@ const Layout: React.FC<LayoutProps> = ({
   keywords = "worker cooperative, Mendocino County, labor rights, economic justice, mutual aid, Ukiah CA, worker solidarity, cooperative jobs, unhoused workers",
   ogImage = "/mendo_labor_coop_logo.png",
   canonical,
-  onContactClick
+  onContactClick,
+  showMissionBanner = true
 }) => {
   const siteUrl = "https://mendolaborcoop.ukiahumc.org";
   const canonicalUrl = canonical || siteUrl;
@@ -66,6 +68,16 @@ const Layout: React.FC<LayoutProps> = ({
       </Head>
       <div className="min-h-screen flex flex-col">
         <NavBar />
+        {showMissionBanner && (
+          <div className="bg-moss text-cream py-3">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <p className="text-sm sm:text-base font-body italic leading-relaxed">
+                <span className="font-headline font-semibold not-italic">Our Mission:</span>{' '}
+                Local workers. Local jobs. Local prosperity. We connect unemployed and underemployed community members with opportunities that build economic stability, support housing security, and keep resources where we live.
+              </p>
+            </div>
+          </div>
+        )}
         <main className="flex-grow">
           {children}
         </main>

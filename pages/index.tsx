@@ -96,6 +96,7 @@ const HomePage: React.FC = () => {
       keywords="Ukiah workers, Mendocino County jobs, hire local workers, worker cooperative, fair wages, skilled labor, job placement Ukiah, cooperative jobs California"
       canonical="https://mendolaborcoop.ukiahumc.org"
       onContactClick={() => setShowContactPopup(true)}
+      showMissionBanner={false}
     >
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -305,6 +306,16 @@ const HomePage: React.FC = () => {
 
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Mission Statement */}
+        <section className="bg-moss text-cream py-10">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-headline font-bold mb-4">Our Mission</h2>
+            <p className="text-lg md:text-xl font-body italic leading-relaxed">
+              Local workers. Local jobs. Local prosperity. We connect unemployed and underemployed community members with opportunities that build economic stability, support housing security, and keep resources where we live.
+            </p>
           </div>
         </section>
 
