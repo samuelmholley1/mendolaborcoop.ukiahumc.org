@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* GLOBAL ACCESSIBILITY RULE: NO RED TEXT ON GREEN BACKGROUND */
+/* Applies to all moss, forest, green, and river backgrounds */
+/* Use cream, white, sand, or gold text on green/moss backgrounds only */
+
 /* CSS Custom Properties for Mendo Labor Coop brand colors */
 :root {
   /* New brand color system */
