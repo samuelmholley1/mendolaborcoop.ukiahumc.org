@@ -51,6 +51,13 @@ h2, h3, h4, h5, h6 {
   color: var(--color-solidarity-red);
 }
 
+/* OVERRIDE red headings on green backgrounds (accessibility fix) */
+.bg-moss h2, .bg-moss h3, .bg-moss h4, .bg-moss h5, .bg-moss h6,
+.bg-river h2, .bg-river h3, .bg-river h4, .bg-river h5, .bg-river h6,
+[className*="bg-green"] h2, [className*="bg-green"] h3, [className*="bg-green"] h4, [className*="bg-green"] h5, [className*="bg-green"] h6 {
+  color: var(--cream) !important;
+}
+
 /* h1 elements inherit color from their parent unless overridden */
 h1 {
   font-family: 'Public Sans', sans-serif;
