@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import Head from 'next/head';
+import ConfirmationModal from '../components/ConfirmationModal';
 
 interface FormData {
   name: string;
@@ -19,6 +20,7 @@ const ContactUsPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [showConfirmationModal, setShowConfirmationModal] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -45,6 +47,7 @@ const ContactUsPage: React.FC = () => {
       if (response.ok) {
         setSubmitStatus('success');
         setFormData({ name: '', phone: '', email: '', jobDescription: '' });
+        setShowConfirmationModal(true);
       } else {
         setSubmitStatus('error');
         setErrorMessage(data.error || 'Something went wrong. Please try again.');
@@ -84,9 +87,14 @@ const ContactUsPage: React.FC = () => {
             <h1 className="text-3xl md:text-4xl font-headline font-bold text-gold mb-4">
               Contact Us
             </h1>
-            <p className="text-lg font-body text-moss">
+            <p className="text-lg font-body text-moss mb-4">
               Submit your job inquiry and we'll get back to you promptly.
             </p>
+            <div className="bg-gold/10 border-l-4 border-l-gold p-4 rounded-r-lg max-w-xl mx-auto">
+              <p className="text-base font-body text-moss">
+                ⏱️ <span className="font-semibold">Response Time:</span> Our coordinators will contact you within 72 hours.
+              </p>
+            </div>
           </div>
 
           {/* Phone CTA */}
@@ -104,31 +112,12 @@ const ContactUsPage: React.FC = () => {
 
           {/* Contact Form */}
           <div className="bg-cream rounded-lg shadow-lg p-6 md:p-8 border-4 border-moss">
-            {submitStatus === 'success' ? (
-              <div className="text-center py-8">
-                <div className="bg-moss text-cream rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">✓</span>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {submitStatus === 'error' && (
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                  {errorMessage}
                 </div>
-                <h2 className="text-2xl font-headline font-bold text-gold mb-4">
-                  Thank You!
-                </h2>
-                <p className="text-moss font-body mb-6">
-                  Your inquiry has been submitted successfully. We'll get back to you soon.
-                </p>
-                <button
-                  onClick={() => setSubmitStatus('idle')}
-                  className="bg-moss text-cream px-6 py-3 rounded-lg font-headline font-semibold hover:bg-opacity-90 transition-colors"
-                >
-                  Submit Another Inquiry
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {submitStatus === 'error' && (
-                  <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-                    {errorMessage}
-                  </div>
-                )}
+              )}
 
                 {/* Name Field */}
                 <div>
@@ -211,10 +200,18 @@ const ContactUsPage: React.FC = () => {
                   {isSubmitting ? 'Submitting...' : 'Submit Inquiry'}
                 </button>
               </form>
-            )}
           </div>
         </div>
       </section>
+
+      {/* Confirmation Modal */}
+      <ConfirmationModal
+        isOpen={showConfirmationModal}
+        onClose={() => {
+          setShowConfirmationModal(false);
+          setSubmitStatus('idle');
+        }}
+      />
     </Layout>
   );
 };
