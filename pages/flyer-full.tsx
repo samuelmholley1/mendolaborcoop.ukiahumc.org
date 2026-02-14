@@ -128,7 +128,7 @@ const FlyerFullPage: React.FC = () => {
       {/* Phone CTA - 12% */}
       <div className="text-center flex-shrink-0 mb-4" style={{ height: '12%' }}>
         <p className="text-lg font-headline font-semibold text-moss leading-none" style={{ marginTop: '0px', marginBottom: '16px' }}>
-          Call Our Coordinators Cheryl &amp; Braven
+          Call Our Coordinators Cheryl, Braven, &amp; Tony
         </p>
         <div style={{ 
           backgroundColor: '#356A45', 

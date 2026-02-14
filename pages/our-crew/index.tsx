@@ -146,7 +146,7 @@ const OurCrewPage: React.FC = () => {
             </svg>
             <div className="flex items-center gap-2">
               <span className="bg-moss text-cream w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">2</span>
-              <span className="text-moss font-medium">Contact Cheryl &amp; Braven</span>
+              <span className="text-moss font-medium">Contact Cheryl, Braven, &amp; Tony</span>
             </div>
             <svg className="hidden md:block w-6 h-6 text-moss/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -176,7 +176,7 @@ const OurCrewPage: React.FC = () => {
               </h2>
               <p className="text-moss/70 max-w-md mx-auto mb-8">
                 We're currently building out our worker directory. In the meantime, 
-                contact our coordinators Cheryl &amp; Braven to learn about available workers and their skills.
+                contact our coordinators Cheryl, Braven, &amp; Tony to learn about available workers and their skills.
               </p>
               <Link
                 href="/hire"
@@ -227,7 +227,7 @@ const OurCrewPage: React.FC = () => {
             Ready to Get an Extra Hand?
           </h2>
           <p className="text-moss/80 text-lg mb-8 max-w-2xl mx-auto">
-            Contact our coordinators Cheryl &amp; Braven to connect directly with independent workers. 
+            Contact our coordinators Cheryl, Braven, &amp; Tony to connect directly with independent workers. 
             We facilitate fair wages and community support for every job.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

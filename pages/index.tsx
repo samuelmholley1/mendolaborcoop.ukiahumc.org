@@ -265,7 +265,7 @@ const HomePage: React.FC = () => {
                         Need an Extra Hand?
                       </p>
                       <p className="text-base lg:text-base font-headline font-semibold mb-2 lg:mb-3 text-center">
-                        Contact Our Coordinators Cheryl &amp; Braven
+                        Contact Our Coordinators Cheryl, Braven, &amp; Tony
                       </p>
                       <div className="flex flex-row items-stretch justify-center">
                         {/* Left: Call - 2/3 width */}
@@ -555,7 +555,7 @@ const HomePage: React.FC = () => {
                     </a>
                   </div>
                   <p className="text-sm font-body text-moss">
-                    Cheryl and Braven are our cooperative coordinators and will be happy to discuss your needs and answer any questions.
+                    Cheryl, Braven, and Tony are our cooperative coordinators and will be happy to discuss your needs and answer any questions.
                   </p>
                 </div>
                 <div className="flex justify-center mt-6">

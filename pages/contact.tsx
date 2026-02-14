@@ -168,7 +168,7 @@ const ContactPage: React.FC = () => {
                 </div>
               </div>
               <p className="text-sm font-body text-moss">
-                Cheryl and Braven are our cooperative coordinators and will be happy to discuss your needs and answer any questions.
+                Cheryl, Braven, and Tony are our cooperative coordinators and will be happy to discuss your needs and answer any questions.
               </p>
             </div>
             <div className="flex justify-center mt-6">

@@ -31,7 +31,7 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({ isOpen, onClose }
               📞 We'll be in touch within 72 hours
             </p>
             <p className="text-sm font-body text-moss">
-              One of our coordinators, Cheryl or Braven, will contact you to discuss your project.
+              One of our coordinators, Cheryl, Braven, or Tony, will contact you to discuss your project.
             </p>
           </div>
           <p className="text-sm font-body text-moss mb-6 opacity-75">
